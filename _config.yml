@@ -55,4 +55,4 @@ github_username:  jekyll
 #   - vendor/ruby/
 
 sass:
-  sass_dir: assets/css
+  sass_dir: _sass
