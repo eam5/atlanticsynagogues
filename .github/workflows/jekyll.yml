@@ -15,10 +15,10 @@ jobs:
           gem install --user-install jekyll bundler 
           bundle install
           bundle exec jekyll build --trace -V
-      # - name: Install SSH Client 🔑
-      #   uses: webfactory/ssh-agent@v0.2.0
-      #   with:
-      #     ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+      - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.2.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
