@@ -1,0 +1,18 @@
+---
+layout: fractals
+title: Facade Fractal Trees
+---
+    <svg id='vis' class='tree'></svg>
+
+      <div id='body'>
+        <svg id='legend' />
+        <div id='title'></div>
+        <div id = 'composition'></div>
+        <div id='content'></div>
+      </div>
+
+<script>
+let draw = fractal('allfac-7-26-20.csv', 350, 350, '#vis');
+
+let legend = fractalLegend('#legend');
+</script>

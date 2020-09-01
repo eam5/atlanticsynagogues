@@ -1,5 +1,9 @@
 #_data/navbar.yml
 - name: Home
   link: /
-- name: About
-  link: /about
+- name: Images
+  link: /images
+- name: Facade Fractal Trees
+  link: /allbldgs_allfac
+- name: Synagogue Timeline
+  link: /scatter

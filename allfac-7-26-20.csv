@@ -1,0 +1,797 @@
+building_name,facade_number,comp_type,comp_num,architectural_element,AE_type,materials_all,material_technique,moulding_type,level,year_add,orig,comp_quant,TS_quant,elem_total,location,region
+Berakha ve Shalom Synagogue,f17n,esc,e17a,door,,NULL,NULL,NULL,1,1685,TRUE,1,1,1,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17s,esc,e17a,door,,NULL,NULL,NULL,1,1685,TRUE,1,1,1,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17w,esc,e17b,door,,NULL,NULL,NULL,1,1685,TRUE,1,2,2,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17n,esc,e17a,door frame,flat-headed,NULL,NULL,NULL,1,1685,TRUE,1,1,1,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17s,esc,e17a,door frame,flat-headed,NULL,NULL,NULL,1,1685,TRUE,1,1,1,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17w,esc,e17b,door frame,flat-headed,NULL,NULL,NULL,1,1685,TRUE,1,2,2,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17w,rlc,r17a,roof,Dutch gable,red brick,NULL,NULL,2,1685,TRUE,1,1,1,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17e,rlc,r17a,roof,Dutch gable,red brick,NULL,NULL,2,1685,TRUE,1,1,1,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17w,wsc,w17a,shutter,,NULL,NULL,NULL,1,1685,TRUE,1,2,2,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17n,esc,e17a,stoop,semicircle steps,red brick,NULL,NULL,1,1685,TRUE,1,1,1,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17s,esc,e17a,stoop,semicircle steps,red brick,NULL,NULL,1,1685,TRUE,1,1,1,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17n,fac_elem,fac_elem,wall,,red brick,NULL,NULL,NULL,1685,TRUE,1,1,1,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17s,fac_elem,fac_elem,wall,,red brick,NULL,NULL,NULL,1685,TRUE,1,1,1,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17w,fac_elem,fac_elem,wall,,red brick,NULL,NULL,NULL,1685,TRUE,1,1,1,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17e,fac_elem,fac_elem,wall,,red brick,NULL,NULL,NULL,1685,TRUE,1,1,1,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17w,wsc,w17a,window,wall window,glass,NULL,NULL,1,1685,TRUE,1,2,2,"Jodensavanne, Suriname",South America
+Berakha ve Shalom Synagogue,f17w,wsc,w17a,window frame,rectangular ,wood,NULL,NULL,1,1685,TRUE,1,2,2,"Jodensavanne, Suriname",South America
+Beth Elohim Synagogue,f14w,esc,e14a,architrave,simple,NULL,NULL,NULL,1,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14a,architrave,simple,stone,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14b,architrave,simple,stone,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,rlc,r14b,architrave,simple,stone,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,fac_elem,fac_elem,band-course,moulded,stone,moulded,plain,1,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,fac_elem,fac_elem,band-course,moulded,stone,moulded,plain,1,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,fac_elem,fac_elem,band-course,moulded,stone,moulded,plain,1,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,fac_elem,fac_elem,band-course,moulded,stone,moulded,plain,1,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14a,cornice,roofline cornice,stone,moulded,double indent,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14a,cornice,raking cornice,stone,moulded,double indent,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14b,cornice,roofline cornice,stone,moulded,single indent,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,rlc,r14b,cornice,roofline cornice,stone,moulded,single indent,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,rlc,r14c,cornice,roofline cornice,stone,moulded,double indent,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,rlc,r14c,cornice,roofline cornice,stone,moulded,double indent,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14d,cornice,element cap cornice,stone,moulded,four indent,3,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14d,cornice,roofline cornice,stone,moulded,four indent,3,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,esc,e14a,door,double panelled,NULL,NULL,NULL,1,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,esc,e14a,door frame,flat-headed,NULL,NULL,NULL,1,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14d,keystone,plain,stone,moulded,plain,3,1794,TRUE,48,1,48,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14b,keystone,plain,stone,moulded,plain,2,1794,TRUE,3,1,3,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14a,keystone,plain,stone,moulded,plain,1,1794,TRUE,3,2,6,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14a,keystone,plain,stone,moulded,plain,2,1794,TRUE,3,2,6,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,wsc,w14a,keystone,plain,stone,moulded,plain,2,1794,TRUE,3,2,6,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,wsc,w14a,keystone,plain,stone,moulded,plain,1,1794,TRUE,3,5,15,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,wsc,w14a,keystone,plain,stone,moulded,plain,1,1794,TRUE,3,5,15,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,wsc,w14a,keystone,plain,stone,moulded,plain,2,1794,TRUE,3,6,18,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,wsc,w14a,keystone,plain,stone,moulded,plain,2,1794,TRUE,3,6,18,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14a,pediment,triangular,NULL,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14d,plinth,,NULL,NULL,NULL,3,1794,TRUE,2,1,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,fac_elem,fac_elem,quoin,in-and-out bond,stone,rustication,NULL,NULL,1794,TRUE,1,2,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,fac_elem,fac_elem,quoin,in-and-out bond,stone,rustication,NULL,NULL,1794,TRUE,1,3,3,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,fac_elem,fac_elem,quoin,in-and-out bond,stone,rustication,NULL,NULL,1794,TRUE,1,3,3,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,fac_elem,fac_elem,quoin,in-and-out bond,stone,rustication,NULL,NULL,1794,TRUE,1,4,4,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14b,roof,gable,NULL,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,rlc,r14b,roof,gable,NULL,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14d,shutter,,NULL,NULL,NULL,3,1794,TRUE,32,1,32,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14b,shutter,,NULL,NULL,NULL,2,1794,TRUE,2,1,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14a,shutter,,NULL,NULL,NULL,1,1794,TRUE,2,2,4,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14a,shutter,,NULL,NULL,NULL,2,1794,TRUE,2,2,4,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,wsc,w14a,shutter,,NULL,NULL,NULL,2,1794,TRUE,2,2,4,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,wsc,w14a,shutter,,NULL,NULL,NULL,1,1794,TRUE,2,5,10,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,wsc,w14a,shutter,,NULL,NULL,NULL,1,1794,TRUE,2,5,10,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,wsc,w14a,shutter,,NULL,NULL,NULL,2,1794,TRUE,2,6,12,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,wsc,w14a,shutter,,NULL,NULL,NULL,2,1794,TRUE,2,6,12,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,fac_elem,fac_elem,wall,,brick,painted,NULL,NULL,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,fac_elem,fac_elem,wall,,brick,painted,NULL,NULL,1794,TRUE,1,2,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,fac_elem,fac_elem,wall,,brick,painted,NULL,NULL,1794,TRUE,1,2,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,fac_elem,fac_elem,wall,,brick,painted,NULL,NULL,1794,TRUE,1,3,3,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14d,window,wall window,glass,NULL,NULL,3,1794,TRUE,16,1,16,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14b,window,wall window,glass,NULL,NULL,2,1794,TRUE,3,1,3,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14a,window,gable window,glass,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14b,window,gable window,glass,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,rlc,r14b,window,gable window,glass,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,wsc,w14d,window,wall window,glass,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14a,window,wall window,glass,NULL,NULL,1,1794,TRUE,1,2,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14a,window,wall window,glass,NULL,NULL,2,1794,TRUE,1,2,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,wsc,w14a,window,wall window,glass,NULL,NULL,2,1794,TRUE,1,2,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,wsc,w14a,window,wall window,glass,NULL,NULL,1,1794,TRUE,1,5,5,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,wsc,w14a,window,wall window,glass,NULL,NULL,1,1794,TRUE,1,5,5,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,wsc,w14a,window,wall window,glass,NULL,NULL,2,1794,TRUE,1,6,6,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,wsc,w14a,window,wall window,glass,NULL,NULL,2,1794,TRUE,1,6,6,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14d,window frame,round-headed,NULL,NULL,NULL,3,1794,TRUE,16,1,16,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14b,window frame,round-headed,NULL,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14b,window frame,rectangular ,NULL,NULL,NULL,2,1794,TRUE,2,1,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14a,window frame,oculus,NULL,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14b,window frame,oculus,NULL,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,rlc,r14b,window frame,oculus,NULL,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,wsc,w14d,window frame,fan,NULL,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,esc,e14a,window frame,fan,NULL,NULL,NULL,1,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14a,window frame,round-headed,NULL,NULL,NULL,1,1794,TRUE,1,2,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14a,window frame,round-headed,NULL,NULL,NULL,2,1794,TRUE,1,2,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,wsc,w14a,window frame,round-headed,NULL,NULL,NULL,2,1794,TRUE,1,2,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,wsc,w14a,window frame,round-headed,NULL,NULL,NULL,1,1794,TRUE,1,5,5,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,wsc,w14a,window frame,round-headed,NULL,NULL,NULL,1,1794,TRUE,1,5,5,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,wsc,w14a,window frame,round-headed,NULL,NULL,NULL,2,1794,TRUE,1,6,6,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,wsc,w14a,window frame,round-headed,NULL,NULL,NULL,2,1794,TRUE,1,6,6,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,rlc,r14d,window sill,,stone,NULL,NULL,3,1794,TRUE,16,1,16,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14b,window sill,,stone,NULL,NULL,2,1794,TRUE,1,1,1,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14a,window sill,,stone,NULL,NULL,1,1794,TRUE,1,2,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14w,wsc,w14a,window sill,,stone,NULL,NULL,2,1794,TRUE,1,2,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14e,wsc,w14a,window sill,,stone,NULL,NULL,2,1794,TRUE,1,2,2,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,wsc,w14a,window sill,,stone,NULL,NULL,1,1794,TRUE,1,5,5,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,wsc,w14a,window sill,,stone,NULL,NULL,1,1794,TRUE,1,5,5,"Charleston, United States",North America
+Beth Elohim Synagogue,f14s,wsc,w14a,window sill,,stone,NULL,NULL,2,1794,TRUE,1,6,6,"Charleston, United States",North America
+Beth Elohim Synagogue,f14n,wsc,w14a,window sill,,stone,NULL,NULL,2,1794,TRUE,1,6,6,"Charleston, United States",North America
+Bevis Marks Synagogue,f0w,wsc,w0c,architrave,simple,portland stone,moulded,single indent,2,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,wsc,w0c,architrave,simple,portland stone,moulded,single indent,2,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,esc,e0a,architrave,simple,portland stone,moulded,double indent,1,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0a,architrave,simple,portland stone,moulded,single indent,2,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,wsc,w0a,architrave,simple,portland stone,moulded,single indent,2,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0b,architrave,simple,portland stone,moulded,single indent,1,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,wsc,w0a,architrave,simple,portland stone,moulded,single indent,2,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,wsc,w0a,architrave,simple,portland stone,moulded,single indent,2,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,wsc,w0b,architrave,simple,portland stone,moulded,single indent,1,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,wsc,w0b,architrave,simple,portland stone,moulded,single indent,1,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0c,architrave,simple,red brick,flemish bond,NULL,2,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,wsc,w0c,architrave,simple,red brick,flemish bond,NULL,2,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0a,architrave,simple,red brick,flemish bond,NULL,2,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,wsc,w0a,architrave,simple,red brick,flemish bond,NULL,2,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0b,architrave,simple,red brick,flemish bond,NULL,1,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,wsc,w0a,architrave,simple,red brick,flemish bond,NULL,2,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,wsc,w0a,architrave,simple,red brick,flemish bond,NULL,2,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,wsc,w0b,architrave,simple,red brick,flemish bond,NULL,1,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,wsc,w0b,architrave,simple,red brick,flemish bond,NULL,1,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,fac_elem,fac_elem,band-course,moulded,portland stone,moulded,plain,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,fac_elem,fac_elem,band-course,moulded,portland stone,moulded,plain,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,fac_elem,fac_elem,band-course,moulded,portland stone,moulded,plain,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,fac_elem,fac_elem,band-course,moulded,portland stone,moulded,plain,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,esc,e0a,console,scrolled,portland stone,moulded,NULL,1,1701,TRUE,2,1,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,rlc,r0a,cornice,roofline cornice,portland stone,moulded,three indent,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,rlc,r0a,cornice,roofline cornice,portland stone,moulded,three indent,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,rlc,r0a,cornice,roofline cornice,portland stone,moulded,three indent,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,rlc,r0a,cornice,roofline cornice,portland stone,moulded,three indent,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,esc,e0a,cornice,element cap cornice,portland stone,moulded,NULL,1,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,esc,e0a,door,double panelled,oak,NULL,NULL,1,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,esc,e0a,door frame,flat-headed,NULL,NULL,NULL,1,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0c,keystone,plain,portland stone,moulded,plain,2,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,wsc,w0c,keystone,plain,portland stone,moulded,plain,2,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,esc,e0a,keystone,panelled,portland stone,NULL,NULL,1,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0a,keystone,plain,portland stone,moulded,plain,2,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,wsc,w0a,keystone,plain,portland stone,moulded,plain,2,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0b,keystone,plain,portland stone,moulded,plain,1,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,wsc,w0a,keystone,plain,portland stone,moulded,plain,2,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,wsc,w0a,keystone,plain,portland stone,moulded,plain,2,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,wsc,w0b,keystone,plain,portland stone,moulded,plain,1,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,wsc,w0b,keystone,plain,portland stone,moulded,plain,1,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,rlc,r0a,parapet,plain,red brick,flemish bond,NULL,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,rlc,r0a,parapet,plain,red brick,flemish bond,NULL,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,rlc,r0a,parapet,plain,red brick,flemish bond,NULL,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,rlc,r0a,parapet,plain,red brick,flemish bond,NULL,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,esc,e0a,pediment,segmental,portland stone,moulded,NULL,1,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,esc,e0a,plinth,square,portland stone,moulded,NULL,1,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,fac_elem,fac_elem,plinth,square,red brick,running bond,NULL,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,fac_elem,fac_elem,plinth,square,red brick,running bond,NULL,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,fac_elem,fac_elem,plinth,square,red brick,running bond,NULL,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,fac_elem,fac_elem,plinth,square,stone,NULL,NULL,NULL,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,fac_elem,fac_elem,quoin,in-and-out bond,red brick,NULL,NULL,NULL,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,fac_elem,fac_elem,quoin,in-and-out bond,red brick,NULL,NULL,NULL,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,fac_elem,fac_elem,quoin,in-and-out bond,red brick,NULL,NULL,NULL,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,fac_elem,fac_elem,quoin,in-and-out bond,red brick,NULL,NULL,NULL,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,esc,e0a,stoop,"rectangle, 3 step",stone,NULL,NULL,1,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,esc,e0a,tympanum,panelled,portland stone,moulded,NULL,1,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0c,window frame,elliptical,NULL,NULL,NULL,2,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,wsc,w0c,window frame,elliptical,NULL,NULL,NULL,2,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0a,window frame,round-headed,NULL,NULL,NULL,2,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,wsc,w0a,window frame,round-headed,NULL,NULL,NULL,2,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0b,window frame,segmental,NULL,NULL,NULL,1,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,wsc,w0a,window frame,round-headed,NULL,NULL,NULL,2,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,wsc,w0a,window frame,round-headed,NULL,NULL,NULL,2,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,wsc,w0b,window frame,segmental,NULL,NULL,NULL,1,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,wsc,w0b,window frame,segmental,NULL,NULL,NULL,1,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0c,window sill,,portland stone,moulded,NULL,2,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,wsc,w0c,window sill,,portland stone,moulded,NULL,2,1701,TRUE,1,1,1,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0a,window sill,,portland stone,moulded,NULL,2,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0e,wsc,w0a,window sill,,portland stone,moulded,NULL,2,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0w,wsc,w0b,window sill,,portland stone,moulded,NULL,1,1701,TRUE,1,2,2,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,wsc,w0a,window sill,,portland stone,moulded,NULL,2,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,wsc,w0a,window sill,,portland stone,moulded,NULL,2,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0n,wsc,w0b,window sill,,portland stone,moulded,NULL,1,1701,TRUE,1,5,5,"London, England",Western Europe
+Bevis Marks Synagogue,f0s,wsc,w0b,window sill,,portland stone,moulded,NULL,1,1701,TRUE,1,5,5,"London, England",Western Europe
+Creechurch Lane Synagogue,f1n,fac_elem,fac_elem,balcony,,NULL,NULL,NULL,2,1657,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue,f1n,esc,e1a,door,,wood,NULL,NULL,1,1657,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue,f1n,esc,e1a,door frame,flat-headed,NULL,NULL,NULL,1,1657,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue,f1s,fac_elem,fac_elem,wall,,brick,NULL,NULL,NULL,1657,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue,f1n,fac_elem,fac_elem,wall,,brick,NULL,NULL,NULL,1657,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue,f1n,fac_elem,fac_elem,window frame,,NULL,NULL,NULL,1,1657,TRUE,1,2,2,"London, England",Western Europe
+Creechurch Lane Synagogue,f1n,fac_elem,fac_elem,window frame,,NULL,NULL,NULL,2,1657,TRUE,1,3,3,"London, England",Western Europe
+Creechurch Lane Synagogue,f1s,fac_elem,fac_elem,window frame,,NULL,NULL,NULL,1,1657,TRUE,1,3,3,"London, England",Western Europe
+Creechurch Lane Synagogue,f1s,fac_elem,fac_elem,window frame,,NULL,NULL,NULL,2,1657,TRUE,1,3,3,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,esc,e2a,architrave,,wood,NULL,NULL,1,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2e,fac_elem,fac_elem,balcony,,NULL,NULL,NULL,2,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,esc,e2a,base,,NULL,NULL,NULL,1,1675,TRUE,2,1,2,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,esc,e2a,bench,,wood,NULL,NULL,1,1675,TRUE,2,1,2,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,esc,e2a,column shaft,,wood,NULL,NULL,1,1675,TRUE,2,1,2,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,esc,e2a,cornice,,NULL,NULL,NULL,1,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2e,fac_elem,fac_elem,door,,NULL,NULL,NULL,2,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,esc,e2a,door,double panelled,wood,NULL,NULL,1,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2e,esc,e2b,door,single panelled,wood,NULL,NULL,1,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,esc,e2a,door frame,flat-headed,NULL,NULL,NULL,1,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2e,esc,e2b,door frame,flat-headed,NULL,NULL,NULL,1,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2e,fac_elem,fac_elem,door frame,,NULL,NULL,NULL,2,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,esc,e2a,pediment,,NULL,NULL,NULL,1,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,esc,e2a,roof,,NULL,NULL,NULL,1,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,esc,e2a,stoop,,NULL,NULL,NULL,1,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,fac_elem,fac_elem,wall,,brick,NULL,NULL,NULL,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2e,fac_elem,fac_elem,wall,,brick,NULL,NULL,NULL,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2s,wsc,w2e,window,dormer,glass,NULL,NULL,3,1675,TRUE,1,4,4,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2s,wsc,w2a,window frame,rectangular ,NULL,NULL,NULL,1,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2s,wsc,w2b,window frame,rectangular ,NULL,NULL,NULL,2,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2s,wsc,w2d,window frame,rectangular ,NULL,NULL,NULL,2,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,esc,e2a,window frame,fan,NULL,NULL,NULL,1,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2e,fac_elem,fac_elem,window frame,,NULL,NULL,NULL,3,1675,TRUE,1,1,1,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2s,wsc,w2c,window frame,rectangular ,NULL,NULL,NULL,2,1675,TRUE,1,2,2,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2s,fac_elem,fac_elem,window frame,,NULL,NULL,NULL,1,1675,TRUE,1,3,3,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2s,wsc,w2e,window frame,rectangular ,NULL,NULL,NULL,3,1675,TRUE,1,4,4,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,fac_elem,fac_elem,window frame,,NULL,NULL,NULL,1,1675,TRUE,1,4,4,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,fac_elem,fac_elem,window frame,,NULL,NULL,NULL,2,1675,TRUE,1,5,5,"London, England",Western Europe
+Creechurch Lane Synagogue [1675],f2n,fac_elem,fac_elem,window frame,,NULL,NULL,NULL,3,1675,TRUE,1,5,5,"London, England",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4a,architrave,simple,red brick,soldier course,NULL,1,1675,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4b1773,architrave,simple,red brick,soldier course,NULL,1,1773,FALSE,1,2,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4a1773,architrave,simple,red brick,soldier course,NULL,2,1773,FALSE,1,3,3,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,wsc,w4a,architrave,simple,red brick,soldier course,NULL,1,1675,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,wsc,w4a,architrave,simple,red brick,soldier course,NULL,3,1675,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4a,architrave,simple,red brick,soldier course,NULL,3,1675,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,wsc,w4b,architrave,simple,red brick,soldier course,NULL,2,1675,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4b,architrave,simple,red brick,soldier course,NULL,2,1675,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,wsc,w4a,architrave,simple,red brick,soldier course,NULL,1,1675,TRUE,1,6,6,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,wsc,w4a,architrave,simple,red brick,soldier course,NULL,1,1675,TRUE,1,6,6,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,wsc,w4a,architrave,simple,red brick,soldier course,NULL,3,1675,TRUE,1,7,7,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,wsc,w4a,architrave,simple,red brick,soldier course,NULL,3,1675,TRUE,1,7,7,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,wsc,w4b,architrave,simple,red brick,soldier course,NULL,2,1675,TRUE,1,7,7,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,wsc,w4b,architrave,simple,red brick,soldier course,NULL,2,1675,TRUE,1,7,7,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,esc,e4a,architrave,simple,sandstone,rustication,NULL,1,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,rlc,r4a,architrave,simple,stone,moulded,three indent,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,rlc,r4a,architrave,simple,stone,moulded,three indent,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem,balcony,,NULL,NULL,NULL,2,1675,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,rlc,r4a,balustrade,,stone,NULL,NULL,NULL,1675,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,rlc,r4a,balustrade,,stone,NULL,NULL,NULL,1675,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,rlc,r4b,balustrade,,stone,NULL,NULL,NULL,1675,TRUE,4,1,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,rlc,r4b,balustrade,,stone,NULL,NULL,NULL,1675,TRUE,4,1,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,fac_elem,fac_elem,base,buttress (small) ,brick,NULL,NULL,NULL,1675,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,fac_elem,fac_elem,base,buttress (small) ,brick,NULL,NULL,NULL,1675,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,fac_elem,fac_elem,base,buttress (small) ,brick,NULL,NULL,NULL,1675,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem,base,buttress (small) ,brick,NULL,NULL,NULL,1675,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem1773,base,buttress (large),brick,NULL,NULL,1,1773,FALSE,1,4,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,esc,e4a,base,attic,sandstone,NULL,NULL,1,1675,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem1773,blind arch,round,brick,NULL,NULL,1,1773,FALSE,1,3,3,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,esc,e4a,capital,tuscan,sandstone,NULL,NULL,1,1675,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,esc,e4a,column shaft,smooth,sandstone,NULL,NULL,1,1675,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,esc,e4a,cornice,classical cornice,sandstone,moulded,three indent,1,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,esc,e4a,cornice,element cap cornice,sandstone,moulded,five indent,1,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,rlc,r4a,cornice,classical cornice,stone,moulded,five indent,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,rlc,r4a,cornice,classical cornice,stone,moulded,five indent,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,rlc,r4a,cornice,roofline cornice,stone,moulded,three indent,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,rlc,r4a,cornice,roofline cornice,stone,moulded,three indent,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,rlc,r4b,cornice,classical cornice,stone,moulded,five indent,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,rlc,r4b,cornice,classical cornice,stone,moulded,five indent,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,rlc,r4b,cornice,roofline cornice,stone,moulded,three indent,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,rlc,r4b,cornice,roofline cornice,stone,moulded,three indent,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem1773,cornice,classical cornice,stone,NULL,NULL,2,1773,FALSE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,fac_elem,fac_elem,cornice,classical cornice,stone,NULL,NULL,2,1773,FALSE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,fac_elem,fac_elem,cornice,classical cornice,stone,NULL,NULL,2,1773,FALSE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem,door,,NULL,NULL,NULL,1,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,esc,e4a,door,double panelled,wood,NULL,NULL,1,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,esc,e4b,door,double panelled,wood,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,esc,e4c,door,FALSE,wood,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,esc,e4d,door,double panelled,wood,NULL,NULL,NULL,1773,FALSE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,esc,e4d,door,double panelled,wood,NULL,NULL,NULL,1773,FALSE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,esc,e4a,door frame,flat-headed,NULL,NULL,NULL,1,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,esc,e4b,door frame,flat-headed,NULL,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,esc,e4c,door frame,flat-headed,NULL,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,esc,e4d,door frame,flat-headed,NULL,NULL,NULL,NULL,1773,FALSE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,esc,e4d,door frame,flat-headed,NULL,NULL,NULL,NULL,1773,FALSE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,esc,e4a,frieze,,sandstone,NULL,NULL,1,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,rlc,r4a,parapet,plain,brick,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,rlc,r4a,parapet,plain,brick,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,rlc,r4b,parapet,plain,brick,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,rlc,r4b,parapet,plain,brick,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,rlc,r4a,pedestal,,brick,NULL,NULL,NULL,1675,TRUE,4,1,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,rlc,r4a,pedestal,,brick,NULL,NULL,NULL,1675,TRUE,4,1,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,rlc,r4b,pedestal,,brick,NULL,NULL,NULL,1675,TRUE,6,1,6,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,rlc,r4b,pedestal,,brick,NULL,NULL,NULL,1675,TRUE,6,1,6,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem1773,pilaster,,brick,NULL,NULL,1,1773,FALSE,1,8,8,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,fac_elem,fac_elem,pilaster,,red brick,NULL,NULL,NULL,1675,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,fac_elem,fac_elem,pilaster,,red brick,NULL,NULL,NULL,1675,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,fac_elem,fac_elem,pilaster,,red brick,NULL,NULL,NULL,1675,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem,pilaster,,red brick,NULL,NULL,NULL,1675,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem1773,plinth,plinth course,copper,NULL,NULL,1,1773,FALSE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,esc,e4a,plinth,square,sandstone,NULL,NULL,1,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,fac_elem,fac_elem,plinth,plinth course,stone,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,fac_elem,fac_elem,plinth,plinth course,stone,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,fac_elem,fac_elem,plinth,plinth course,stone,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem,plinth,plinth course,stone,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem1773,roof,,NULL,NULL,NULL,2,1773,FALSE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem,roof,,NULL,NULL,NULL,1,1675,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,rlc,r4a,sculpted ornament,vase,stone,NULL,NULL,NULL,1675,TRUE,4,1,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,rlc,r4a,sculpted ornament,vase,stone,NULL,NULL,NULL,1675,TRUE,4,1,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,rlc,r4b,sculpted ornament,vase,stone,NULL,NULL,NULL,1675,TRUE,4,1,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,rlc,r4b,sculpted ornament,vase,stone,NULL,NULL,NULL,1675,TRUE,4,1,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem,stoop,,NULL,NULL,NULL,1,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,fac_elem,fac_elem,wall,,brick,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,fac_elem,fac_elem,wall,,brick,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,fac_elem,fac_elem,wall,,brick,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem,wall,,brick,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem1773,wall,,brick,NULL,NULL,1,1773,FALSE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,fac_elem,fac_elem,wall,,brick,NULL,NULL,1,1773,FALSE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,fac_elem,fac_elem,wall,,brick,NULL,NULL,1,1773,FALSE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,fac_elem,fac_elem,wall,,brick,NULL,NULL,1,1675,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,rlc,r4a,window,dormer,glass,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,rlc,r4a,window,dormer,glass,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,rlc,r4a,window frame,circular,NULL,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,rlc,r4a,window frame,circular,NULL,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,esc,e4b,window frame,rectangular ,NULL,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,esc,e4c,window frame,rectangular ,NULL,NULL,NULL,NULL,1675,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4a,window frame,rectangular ,NULL,NULL,NULL,1,1675,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4b1773,window frame,round-headed,NULL,NULL,NULL,1,1773,FALSE,1,2,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4a1773,window frame,rectangular ,NULL,NULL,NULL,2,1773,FALSE,1,3,3,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,wsc,w4a,window frame,rectangular ,NULL,NULL,NULL,1,1675,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,wsc,w4a,window frame,rectangular ,NULL,NULL,NULL,3,1675,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4a,window frame,rectangular ,NULL,NULL,NULL,3,1675,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,wsc,w4b,window frame,round-headed,NULL,NULL,NULL,2,1675,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4b,window frame,round-headed,NULL,NULL,NULL,2,1675,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,wsc,w4a,window frame,rectangular ,NULL,NULL,NULL,1,1675,TRUE,1,6,6,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,wsc,w4a,window frame,rectangular ,NULL,NULL,NULL,1,1675,TRUE,1,6,6,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,wsc,w4a,window frame,rectangular ,NULL,NULL,NULL,3,1675,TRUE,1,7,7,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,wsc,w4a,window frame,rectangular ,NULL,NULL,NULL,3,1675,TRUE,1,7,7,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,wsc,w4b,window frame,round-headed,NULL,NULL,NULL,2,1675,TRUE,1,7,7,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,wsc,w4b,window frame,round-headed,NULL,NULL,NULL,2,1675,TRUE,1,7,7,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4a,window sill,,NULL,NULL,NULL,1,1675,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4b1773,window sill,,NULL,NULL,NULL,1,1773,FALSE,1,2,2,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4a1773,window sill,,NULL,NULL,NULL,2,1773,FALSE,1,3,3,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,wsc,w4a,window sill,,NULL,NULL,NULL,1,1675,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,wsc,w4a,window sill,,NULL,NULL,NULL,3,1675,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4a,window sill,,NULL,NULL,NULL,3,1675,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4w,wsc,w4b,window sill,,NULL,NULL,NULL,2,1675,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4e,wsc,w4b,window sill,,NULL,NULL,NULL,2,1675,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,wsc,w4a,window sill,,NULL,NULL,NULL,1,1675,TRUE,1,6,6,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,wsc,w4a,window sill,,NULL,NULL,NULL,1,1675,TRUE,1,6,6,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,wsc,w4a,window sill,,NULL,NULL,NULL,3,1675,TRUE,1,7,7,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,wsc,w4a,window sill,,NULL,NULL,NULL,3,1675,TRUE,1,7,7,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4n,wsc,w4b,window sill,,NULL,NULL,NULL,2,1675,TRUE,1,7,7,"Amsterdam, Netherlands",Western Europe
+"Esnoga, Talmud Torah II",f4s,wsc,w4b,window sill,,NULL,NULL,NULL,2,1675,TRUE,1,7,7,"Amsterdam, Netherlands",Western Europe
+"Great Synagogue (Duke's Place, enlargement)",f133n,esc,e133a,door frame,,NULL,NULL,NULL,NULL,1766,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (Duke's Place, enlargement)",f133n,esc,e133b,door frame,,NULL,NULL,NULL,NULL,1766,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (Duke's Place, enlargement)",f133w,wsc,w133a,window frame,round-headed,NULL,NULL,NULL,NULL,1766,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (Duke's Place, enlargement)",f133n,wsc,w133a,window frame,round-headed,NULL,NULL,NULL,NULL,1766,TRUE,1,2,2,"London, England",Western Europe
+"Great Synagogue (Duke's Place, enlargement)",f133s,wsc,w133a,window frame,round-headed,NULL,NULL,NULL,NULL,1766,TRUE,1,2,2,"London, England",Western Europe
+"Great Synagogue (Duke's Place, enlargement)",f133e,wsc,w133a,window frame,round-headed,NULL,NULL,NULL,NULL,1766,TRUE,1,8,8,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,wsc,w31d,architrave,simple,brick,voussoir,NULL,2,1790,TRUE,1,2,2,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,wsc,w31b,architrave,simple,brick,voussoir,NULL,2,1790,TRUE,1,5,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31w,wsc,w31b,architrave,simple,brick,voussoir,NULL,2,1790,TRUE,1,5,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,esc,e31a,architrave,simple,NULL,NULL,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,esc,e31b,architrave,simple,NULL,NULL,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31n,esc,e31c,architrave,simple,stone,NULL,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,fac_elem,fac_elem,band-course,moulded,stone,moulded,plain,NULL,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,esc,e31a,blind arch,round,brick,voussoir,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,esc,e31b,blind arch,round,brick,voussoir,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31n,esc,e31c,blind arch,round,brick,voussoir,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,wsc,w31a,blind arch,round,brick,voussoir,NULL,1,1790,TRUE,1,5,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31w,wsc,w31a,blind arch,round,brick,voussoir,NULL,1,1790,TRUE,1,5,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31n,esc,e31c,console,,stone,NULL,NULL,1,1790,TRUE,2,1,2,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,esc,e31a,door,single panelled,NULL,NULL,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,esc,e31b,door,single panelled,NULL,NULL,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,esc,e31a,door frame,flat-headed,NULL,NULL,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,esc,e31b,door frame,flat-headed,NULL,NULL,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31n,esc,e31c,door frame,,NULL,NULL,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31w,esc,e31d,door frame,,NULL,NULL,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31w,esc,e31e,door frame,,NULL,NULL,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31n,esc,e31c,pediment,triangular,stone,NULL,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31n,esc,e31c,stoop,,NULL,NULL,NULL,1,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,rlc,r31a,window,clerestory window,glass,NULL,NULL,3,1790,TRUE,5,1,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31w,rlc,r31a,window,clerestory window,glass,NULL,NULL,3,1790,TRUE,5,1,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31s,rlc,r31b,window,clerestory window,glass,NULL,NULL,3,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,wsc,w31b,window,recessed window,glass,NULL,NULL,2,1790,TRUE,1,5,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31w,wsc,w31b,window,recessed window,glass,NULL,NULL,2,1790,TRUE,1,5,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,rlc,r31a,window frame,segmental,NULL,NULL,NULL,3,1790,TRUE,5,1,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31w,rlc,r31a,window frame,segmental,NULL,NULL,NULL,3,1790,TRUE,5,1,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31s,rlc,r31b,window frame,semicicular,NULL,NULL,NULL,3,1790,TRUE,1,1,1,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,wsc,w31d,window frame,rectangular ,NULL,NULL,NULL,2,1790,TRUE,1,2,2,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,wsc,w31a,window frame,rectangular ,NULL,NULL,NULL,1,1790,TRUE,1,5,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31w,wsc,w31a,window frame,rectangular ,NULL,NULL,NULL,1,1790,TRUE,1,5,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,wsc,w31b,window frame,round-headed,NULL,NULL,NULL,2,1790,TRUE,1,5,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31w,wsc,w31b,window frame,round-headed,NULL,NULL,NULL,2,1790,TRUE,1,5,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,wsc,w31d,window sill,,stone,moulded,plain,2,1790,TRUE,1,2,2,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31e,wsc,w31a,window sill,,stone,moulded,plain,1,1790,TRUE,1,5,5,"London, England",Western Europe
+"Great Synagogue (third, near Duke's Place)",f31w,wsc,w31a,window sill,,stone,moulded,plain,1,1790,TRUE,1,5,5,"London, England",Western Europe
+"Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)",f22n,esc,e22a,door frame,,NULL,NULL,NULL,NULL,1722,TRUE,1,2,2,"London, England",Western Europe
+Grote Sjoel (Great Synagogue),f7w,wsc,w7b,architrave,simple,red brick,soldier course,NULL,1,1671,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,wsc,w7a,architrave,simple,red brick,soldier course,NULL,2,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,wsc,w7a,architrave,simple,red brick,soldier course,NULL,2,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,wsc,w7a,architrave,simple,red brick,soldier course,NULL,2,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,wsc,w7a,architrave,simple,red brick,soldier course,NULL,2,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,wsc,w7b,architrave,simple,red brick,soldier course,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,wsc,w7b,architrave,simple,red brick,soldier course,NULL,1,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,wsc,w7b,architrave,simple,red brick,soldier course,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,wsc,w7b,architrave,simple,red brick,soldier course,NULL,1,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,wsc,w7b,architrave,simple,red brick,soldier course,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,wsc,w7b,architrave,simple,red brick,soldier course,NULL,1,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,wsc,w7b,architrave,simple,red brick,soldier course,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,esc,e7a,architrave,,stone,moulded,double indent,1,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,esc,e7a,console,,stone,moulded,NULL,1,1671,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,rlc,r7b,cornice,roofline cornice,stone,moulded,NULL,3,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,rlc,r7b,cornice,roofline cornice,stone,moulded,NULL,3,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,rlc,r7b,cornice,roofline cornice,stone,moulded,NULL,3,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,rlc,r7a,cornice,roofline cornice,stone,moulded,NULL,3,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,rlc,r7a,cornice,raking cornice,stone,moulded,NULL,3,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,esc,e7a,cornice,element cap cornice,stone,moulded,NULL,1,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,fac_elem,fac_elem,cornice,element cap cornice,stone,moulded,NULL,NULL,1671,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,fac_elem,fac_elem,cornice,element cap cornice,stone,moulded,NULL,NULL,1671,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,fac_elem,fac_elem,cornice,element cap cornice,stone,moulded,NULL,NULL,1671,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,fac_elem,fac_elem,cornice,element cap cornice,stone,moulded,NULL,NULL,1671,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,esc,e7a,door,double panelled,NULL,NULL,NULL,1,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,esc,e7a,door frame,flat-headed,NULL,NULL,NULL,1,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,esc,e7a,entablature,,NULL,NULL,NULL,1,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,rlc,r7a,pediment,triangular,red brick,NULL,NULL,3,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,fac_elem,fac_elem,pilaster,,red brick,NULL,NULL,NULL,1671,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,fac_elem,fac_elem,pilaster,,red brick,NULL,NULL,NULL,1671,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,fac_elem,fac_elem,pilaster,,red brick,NULL,NULL,NULL,1671,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,fac_elem,fac_elem,pilaster,,red brick,NULL,NULL,NULL,1671,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,esc,e7a,pilaster,,stone,rustication,NULL,1,1671,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,esc,e7a,sculpted ornament,festoon,stone,moulded,NULL,1,1671,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,fac_elem,fac_elem,wall,,red brick,NULL,NULL,NULL,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,fac_elem,fac_elem,wall,,red brick,NULL,NULL,NULL,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,fac_elem,fac_elem,wall,,red brick,NULL,NULL,NULL,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,fac_elem,fac_elem,wall,,red brick,NULL,NULL,NULL,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,wsc,w7b,window,wall window,glass,NULL,NULL,1,1671,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,wsc,w7a,window,wall window,glass,NULL,NULL,2,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,wsc,w7a,window,wall window,glass,NULL,NULL,2,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,wsc,w7a,window,wall window,glass,NULL,NULL,2,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,wsc,w7a,window,wall window,glass,NULL,NULL,2,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,wsc,w7b,window,wall window,glass,NULL,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,wsc,w7b,window,wall window,glass,NULL,NULL,1,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,wsc,w7b,window,wall window,glass,NULL,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,wsc,w7b,window,wall window,glass,NULL,NULL,1,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,wsc,w7b,window,wall window,glass,NULL,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,wsc,w7b,window,wall window,glass,NULL,NULL,1,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,wsc,w7b,window,wall window,glass,NULL,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,rlc,r7a,window frame,circular,NULL,NULL,NULL,3,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,wsc,w7b,window frame,rectangular ,NULL,NULL,NULL,1,1671,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,wsc,w7a,window frame,round-headed,NULL,NULL,NULL,2,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,wsc,w7a,window frame,round-headed,NULL,NULL,NULL,2,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,wsc,w7a,window frame,round-headed,NULL,NULL,NULL,2,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,wsc,w7a,window frame,round-headed,NULL,NULL,NULL,2,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,wsc,w7b,window frame,rectangular ,NULL,NULL,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,wsc,w7b,window frame,rectangular ,NULL,NULL,NULL,1,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,wsc,w7b,window frame,rectangular ,NULL,NULL,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,wsc,w7b,window frame,rectangular ,NULL,NULL,NULL,1,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,wsc,w7b,window frame,rectangular ,NULL,NULL,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,wsc,w7b,window frame,rectangular ,NULL,NULL,NULL,1,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,wsc,w7b,window frame,rectangular ,NULL,NULL,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,esc,e7a,window frame,circular,stone,moulded,double indent,1,1671,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,wsc,w7b,window sill,,NULL,NULL,NULL,1,1671,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,wsc,w7b,window sill,,NULL,NULL,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7n,wsc,w7b,window sill,,NULL,NULL,NULL,1,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,wsc,w7b,window sill,,NULL,NULL,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7s,wsc,w7b,window sill,,NULL,NULL,NULL,1,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,wsc,w7b,window sill,,NULL,NULL,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7e,wsc,w7b,window sill,,NULL,NULL,NULL,1,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Grote Sjoel (Great Synagogue),f7w,wsc,w7b,window sill,,NULL,NULL,NULL,3,1671,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+High German synagogue,f146n,rlc,r146a,parapet,stepped gable,brick,NULL,NULL,4,1648,TRUE,3,1,3,"Amsterdam, Netherlands",Western Europe
+High German synagogue,f146s,rlc,r146a,parapet,stepped gable,brick,NULL,NULL,4,1648,TRUE,3,1,3,"Amsterdam, Netherlands",Western Europe
+High German synagogue,f146n,fac_elem,fac_elem,window,wall window,glass,NULL,NULL,2,1648,TRUE,1,8,8,"Amsterdam, Netherlands",Western Europe
+High German synagogue,f146e,fac_elem,fac_elem,window,dormer,wood,NULL,NULL,4,1648,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+High German synagogue,f146w,fac_elem,fac_elem,window,dormer,wood,NULL,NULL,4,1648,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Honen Dalim Synagogue II,f134w,esc,e134a,architrave,simple,basalt,NULL,NULL,1,1773,TRUE,1,1,1,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134s,esc,e134b,architrave,simple,basalt,NULL,NULL,2,1773,TRUE,1,1,1,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134w,wsc,w134a,architrave,simple,basalt,NULL,NULL,1,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134e,wsc,w134a,architrave,simple,basalt,NULL,NULL,1,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134e,wsc,w134a,architrave,simple,basalt,NULL,NULL,2,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134w,wsc,w134a,architrave,simple,basalt,NULL,NULL,2,1773,TRUE,1,3,3,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134s,wsc,w134a,architrave,simple,basalt,NULL,NULL,2,1773,TRUE,1,3,3,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134s,wsc,w134a,architrave,simple,basalt,NULL,NULL,1,1773,TRUE,1,4,4,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134n,wsc,w134a,architrave,simple,basalt,NULL,NULL,1,1773,TRUE,1,4,4,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134n,wsc,w134a,architrave,simple,basalt,NULL,NULL,2,1773,TRUE,1,4,4,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134w,esc,e134a,door frame,round-headed,NULL,NULL,NULL,1,1773,TRUE,1,1,1,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134s,esc,e134b,door frame,round-headed,NULL,NULL,NULL,2,1773,TRUE,1,1,1,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134e,fac_elem,fac_elem,quoin,in-and-out bond,basalt,NULL,NULL,NULL,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134w,fac_elem,fac_elem,quoin,in-and-out bond,basalt,NULL,NULL,NULL,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134n,fac_elem,fac_elem,quoin,in-and-out bond,basalt,NULL,NULL,NULL,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134s,fac_elem,fac_elem,quoin,in-and-out bond,basalt,NULL,NULL,NULL,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134w,fac_elem,fac_elem,wall,,yellow brick,english bond,NULL,NULL,1773,TRUE,1,1,1,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134s,fac_elem,fac_elem,wall,,yellow brick,english bond,NULL,NULL,1773,TRUE,1,1,1,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134n,fac_elem,fac_elem,wall,,yellow brick,english bond,NULL,NULL,1773,TRUE,1,1,1,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134e,fac_elem,fac_elem,wall,,yellow brick,english bond,NULL,NULL,1773,TRUE,1,1,1,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134w,wsc,w134a,window,wall window,glass,NULL,NULL,1,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134e,wsc,w134a,window,wall window,glass,NULL,NULL,1,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134e,wsc,w134a,window,wall window,glass,NULL,NULL,2,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134w,wsc,w134a,window,wall window,glass,NULL,NULL,2,1773,TRUE,1,3,3,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134s,wsc,w134a,window,wall window,glass,NULL,NULL,2,1773,TRUE,1,3,3,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134s,wsc,w134a,window,wall window,glass,NULL,NULL,1,1773,TRUE,1,4,4,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134n,wsc,w134a,window,wall window,glass,NULL,NULL,1,1773,TRUE,1,4,4,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134n,wsc,w134a,window,wall window,glass,NULL,NULL,2,1773,TRUE,1,4,4,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134w,wsc,w134a,window frame,round-headed,NULL,NULL,NULL,1,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134e,wsc,w134a,window frame,round-headed,NULL,NULL,NULL,1,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134e,wsc,w134a,window frame,round-headed,NULL,NULL,NULL,2,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134w,wsc,w134a,window frame,round-headed,NULL,NULL,NULL,2,1773,TRUE,1,3,3,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134s,wsc,w134a,window frame,round-headed,NULL,NULL,NULL,2,1773,TRUE,1,3,3,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134s,wsc,w134a,window frame,round-headed,NULL,NULL,NULL,1,1773,TRUE,1,4,4,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134n,wsc,w134a,window frame,round-headed,NULL,NULL,NULL,1,1773,TRUE,1,4,4,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134n,wsc,w134a,window frame,round-headed,NULL,NULL,NULL,2,1773,TRUE,1,4,4,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134w,wsc,w134a,window sill,,basalt,NULL,NULL,1,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134e,wsc,w134a,window sill,,basalt,NULL,NULL,1,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134e,wsc,w134a,window sill,,basalt,NULL,NULL,2,1773,TRUE,1,2,2,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134w,wsc,w134a,window sill,,basalt,NULL,NULL,2,1773,TRUE,1,3,3,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134s,wsc,w134a,window sill,,basalt,NULL,NULL,2,1773,TRUE,1,3,3,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134s,wsc,w134a,window sill,,basalt,NULL,NULL,1,1773,TRUE,1,4,4,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134n,wsc,w134a,window sill,,basalt,NULL,NULL,1,1773,TRUE,1,4,4,"Orangjestad, St. Eustatius",Caribbean
+Honen Dalim Synagogue II,f134n,wsc,w134a,window sill,,basalt,NULL,NULL,2,1773,TRUE,1,4,4,"Orangjestad, St. Eustatius",Caribbean
+Kahal Kadosh Zur Israel Synagogue,f38e,esc,e38a,architrave,,stone,NULL,NULL,NULL,1641,TRUE,1,6,6,"Recife, Brazil",South America
+Kahal Kadosh Zur Israel Synagogue,f38e,esc,e38a,door frame,flat-headed,NULL,NULL,NULL,NULL,1641,TRUE,1,6,6,"Recife, Brazil",South America
+Mikve Israel Synagogue (IV),f43w,esc,e43a,architrave,simple,NULL,moulded,double indent,1,1732,TRUE,1,1,1,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,esc,e43a,base,attic,NULL,NULL,NULL,1,1732,TRUE,2,1,2,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,wsc,w43c,blind arch,round,NULL,NULL,NULL,3,1732,TRUE,1,3,3,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,fac_elem,fac_elem,capital,moulded,limestone,NULL,four indent,NULL,1732,TRUE,1,4,4,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,esc,e43a,capital,moulded,NULL,NULL,double indent,1,1732,TRUE,2,1,2,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,rlc,r43a,cornice,roofline cornice,NULL,moulded,double indent,4,1732,TRUE,1,1,1,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43e,rlc,r43a,cornice,roofline cornice,NULL,moulded,double indent,4,1732,TRUE,1,1,1,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,esc,e43a,cornice,element cap cornice,NULL,moulded,seven indent,1,1732,TRUE,1,1,1,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,esc,e43a,door,double panelled,NULL,NULL,NULL,1,1732,TRUE,1,1,1,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,esc,e43a,door frame,round-headed,NULL,NULL,NULL,1,1732,TRUE,1,1,1,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43s,esc,e43b,door frame,,NULL,NULL,NULL,2,1732,TRUE,1,1,1,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,fac_elem,fac_elem,engaged column,smooth,limestone,NULL,NULL,NULL,1732,TRUE,1,4,4,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,esc,e43a,engaged column,compound,NULL,NULL,NULL,1,1732,TRUE,2,1,2,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,esc,e43a,entablature,,NULL,NULL,NULL,1,1732,TRUE,1,1,1,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,esc,e43a,frieze,,NULL,NULL,NULL,1,1732,TRUE,1,1,1,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,rlc,r43a,parapet,shaped gable,limestone,lime mortar,NULL,4,1732,TRUE,3,1,3,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43e,rlc,r43a,parapet,shaped gable,limestone,lime mortar,NULL,4,1732,TRUE,3,1,3,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,fac_elem,fac_elem,plinth,square,limestone,NULL,NULL,NULL,1732,TRUE,1,4,4,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,esc,e43a,plinth,square,NULL,NULL,NULL,1,1732,TRUE,2,1,2,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,esc,e43a,spandrel,,NULL,NULL,NULL,1,1732,TRUE,2,1,2,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,rlc,r43a,window,gable window,glass,NULL,NULL,4,1732,TRUE,3,1,3,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43e,rlc,r43a,window,gable window,glass,NULL,NULL,4,1732,TRUE,3,1,3,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,rlc,r43a,window frame,rectangular ,NULL,NULL,NULL,4,1732,TRUE,3,1,3,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43e,rlc,r43a,window frame,rectangular ,NULL,NULL,NULL,4,1732,TRUE,3,1,3,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,rlc,r43a,window frame,fan,NULL,NULL,NULL,4,1732,TRUE,3,1,3,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43e,rlc,r43a,window frame,fan,NULL,NULL,NULL,4,1732,TRUE,3,1,3,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,wsc,w43c,window frame,rectangular ,NULL,NULL,NULL,3,1732,TRUE,1,3,3,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,wsc,w43a,window frame,rectangular ,NULL,NULL,NULL,1,1732,TRUE,1,4,4,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43e,wsc,w43b,window frame,rectangular ,NULL,NULL,NULL,2,1732,TRUE,1,4,4,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43e,wsc,w43b,window frame,fan,NULL,NULL,NULL,2,1732,TRUE,1,4,4,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43e,wsc,w43a,window frame,rectangular ,NULL,NULL,NULL,1,1732,TRUE,1,6,6,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,wsc,w43b,window frame,rectangular ,NULL,NULL,NULL,2,1732,TRUE,1,6,6,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43w,wsc,w43b,window frame,fan,NULL,NULL,NULL,2,1732,TRUE,1,6,6,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43s,wsc,w43a,window frame,rectangular ,NULL,NULL,NULL,1,1732,TRUE,1,8,8,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43s,wsc,w43b,window frame,rectangular ,NULL,NULL,NULL,2,1732,TRUE,1,8,8,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43s,wsc,w43b,window frame,fan,NULL,NULL,NULL,2,1732,TRUE,1,8,8,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43n,wsc,w43a,window frame,rectangular ,NULL,NULL,NULL,1,1732,TRUE,1,9,9,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43n,wsc,w43b,window frame,rectangular ,NULL,NULL,NULL,2,1732,TRUE,1,9,9,"Willemstad, Curacao",Caribbean
+Mikve Israel Synagogue (IV),f43n,wsc,w43b,window frame,fan,NULL,NULL,NULL,2,1732,TRUE,1,9,9,"Willemstad, Curacao",Caribbean
+"Mill Street Synagogue, Shearith Israel I",f33n,esc,e33a,architrave,,stone,NULL,NULL,NULL,1730,TRUE,1,1,1,"New York, United States",North America
+"Mill Street Synagogue, Shearith Israel I",f33n,wsc,w33a,architrave,,stone,NULL,NULL,NULL,1730,TRUE,1,2,2,"New York, United States",North America
+"Mill Street Synagogue, Shearith Israel I",f33e,wsc,w33a,architrave,,stone,NULL,NULL,NULL,1730,TRUE,1,2,2,"New York, United States",North America
+"Mill Street Synagogue, Shearith Israel I",f33w,wsc,w33a,architrave,,stone,NULL,NULL,NULL,1730,TRUE,1,3,3,"New York, United States",North America
+"Mill Street Synagogue, Shearith Israel I",f33s,wsc,w33a,architrave,,stone,NULL,NULL,NULL,1730,TRUE,1,3,3,"New York, United States",North America
+"Mill Street Synagogue, Shearith Israel I",f33n,wsc,w33a,window frame,round-headed,NULL,NULL,NULL,NULL,1730,TRUE,1,2,2,"New York, United States",North America
+"Mill Street Synagogue, Shearith Israel I",f33e,wsc,w33a,window frame,round-headed,NULL,NULL,NULL,NULL,1730,TRUE,1,2,2,"New York, United States",North America
+"Mill Street Synagogue, Shearith Israel I",f33w,wsc,w33a,window frame,round-headed,NULL,NULL,NULL,NULL,1730,TRUE,1,3,3,"New York, United States",North America
+"Mill Street Synagogue, Shearith Israel I",f33s,wsc,w33a,window frame,round-headed,NULL,NULL,NULL,NULL,1730,TRUE,1,3,3,"New York, United States",North America
+Neveh Shalom,f137w,esc,e137b,door,single panelled,NULL,painted,NULL,1,1612,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,esc,e137c,door,single panelled,NULL,painted,NULL,1,1612,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,esc,e137b,door,single panelled,oak,painted,NULL,1,1612,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,esc,e137c,door,single panelled,oak,painted,NULL,1,1612,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,esc,e137a,door,single panelled,oak,painted,NULL,1,1612,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137e,esc,e137a,door,single panelled,oak,painted,NULL,1,1612,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,esc,e137a,door frame,flat-headed,NULL,painted,NULL,1,1612,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137e,esc,e137a,door frame,flat-headed,NULL,painted,NULL,1,1612,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,rlc,r137a,roof,stepped gable,red brick,NULL,NULL,4,1612,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137e,rlc,r137a,roof,stepped gable,red brick,NULL,NULL,4,1612,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,rlc,r137a,shutter,,oak,painted,NULL,4,1612,TRUE,6,1,6,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137e,rlc,r137a,shutter,,oak,painted,NULL,4,1612,TRUE,6,1,6,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,wsc,w137b,shutter,,oak,painted,NULL,2,1612,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137e,wsc,w137b,shutter,,oak,painted,NULL,2,1612,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,fac_elem,fac_elem,wall,,red brick,NULL,NULL,21,1612,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137e,fac_elem,fac_elem,wall,,red brick,NULL,NULL,21,1612,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,rlc,r137a,window,gable window,glass,NULL,NULL,4,1612,TRUE,6,1,6,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137e,rlc,r137a,window,gable window,glass,NULL,NULL,4,1612,TRUE,6,1,6,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,wsc,w137b,window,wall window,plate glass,NULL,NULL,2,1612,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137e,wsc,w137b,window,wall window,plate glass,NULL,NULL,2,1612,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,rlc,r137a,window frame,rectangular ,oak,painted,NULL,4,1612,TRUE,6,1,6,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137e,rlc,r137a,window frame,rectangular ,oak,painted,NULL,4,1612,TRUE,6,1,6,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137w,wsc,w137b,window frame,rectangular ,oak,painted,NULL,2,1612,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom,f137e,wsc,w137b,window frame,rectangular ,oak,painted,NULL,2,1612,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Neveh Shalom Synagogue,f39w,wsc,w39a,architrave,simple,brick,NULL,NULL,1,1704,TRUE,1,2,2,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,wsc,w39a,architrave,simple,brick,NULL,NULL,1,1704,TRUE,1,3,3,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,fac_elem,fac_elem,band-course,running bond,brick,NULL,NULL,NULL,1704,TRUE,1,1,1,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,wsc,w39a,blind arch,round,brick,soldier course,NULL,1,1704,TRUE,1,2,2,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,wsc,w39a,blind arch,round,brick,soldier course,NULL,1,1704,TRUE,1,3,3,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,esc,e39a,capital,tuscan,NULL,NULL,NULL,1,1704,TRUE,4,1,4,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,esc,e39a,column shaft,smooth,NULL,NULL,NULL,1,1704,TRUE,4,1,4,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,esc,e39a,door,double panelled,NULL,NULL,NULL,1,1704,TRUE,1,1,1,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,esc,e39a,door frame,flat-headed,NULL,NULL,NULL,1,1704,TRUE,1,1,1,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,esc,e39a,entablature,,NULL,NULL,NULL,1,1704,TRUE,1,1,1,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,esc,e39a,pediment,triangular,NULL,NULL,NULL,1,1704,TRUE,1,1,1,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,esc,e39a,roof,gable,NULL,NULL,NULL,1,1704,TRUE,1,1,1,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,esc,e39a,stoop,,NULL,NULL,NULL,1,1704,TRUE,1,1,1,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,fac_elem,fac_elem,wall,,brick,NULL,NULL,NULL,1704,TRUE,1,1,1,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,wsc,w39a,window,wall window,glass,NULL,NULL,1,1704,TRUE,1,2,2,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,wsc,w39a,window,wall window,glass,NULL,NULL,1,1704,TRUE,1,3,3,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,esc,e39a,window frame,fan,NULL,NULL,NULL,1,1704,TRUE,1,1,1,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,wsc,w39a,window frame,round-headed,NULL,NULL,NULL,1,1704,TRUE,1,2,2,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,wsc,w39a,window frame,round-headed,NULL,NULL,NULL,1,1704,TRUE,1,3,3,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,wsc,w39a,window sill,,NULL,NULL,NULL,1,1704,TRUE,1,2,2,"Spanish Town, Jamaica",Caribbean
+Neveh Shalom Synagogue,f39w,wsc,w39a,window sill,,NULL,NULL,NULL,1,1704,TRUE,1,3,3,"Spanish Town, Jamaica",Caribbean
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11b,architrave,simple,brick,soldier course,NULL,2,1752,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11c,architrave,simple,brick,soldier course,NULL,1,1752,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,wsc,w11c,architrave,simple,brick,soldier course,NULL,1,1752,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,wsc,w11b,architrave,simple,brick,soldier course,NULL,2,1752,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11d,architrave,simple,stone,moulded,single indent,2,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,esc,e11a,architrave,simple,stone,rustication,NULL,1,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,rlc,r11a,balustrade,,stone,NULL,NULL,2,1752,TRUE,4,1,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,rlc,r11a,balustrade,,stone,NULL,NULL,6,1752,TRUE,4,1,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,esc,e11a,base,attic,stone,NULL,NULL,1,1752,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,esc,e11a,capital,ionic,stone,NULL,NULL,1,1752,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,esc,e11a,column shaft,smooth,stone,NULL,NULL,1,1752,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,rlc,r11a,cornice,roofline cornice,stone,moulded,four indent,2,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,rlc,r11a,cornice,roofline cornice,stone,moulded,four indent,6,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,esc,e11a,cornice,classical cornice,stone,moulded,dentils,1,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,esc,e11a,door,double panelled,wood,NULL,NULL,1,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,esc,e11a,door frame,flat-headed,NULL,NULL,NULL,1,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,esc,e11a,entablature,,stone,NULL,NULL,1,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,esc,e11a,frieze,,stone,NULL,NULL,1,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,fac_elem,fac_elem,frontispiece,,NULL,NULL,NULL,NULL,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11d,keystone,complex,stone,moulded,modillion,2,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,rlc,r11a,pedestal,,stone,NULL,NULL,2,1752,TRUE,4,1,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,rlc,r11a,pedestal,,stone,NULL,NULL,6,1752,TRUE,4,1,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,rlc,r11a,pediment,scrolled,stone,moulded,four indent,2,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,rlc,r11a,pediment,scrolled,stone,moulded,four indent,6,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,esc,e11a,pediment,scrolled,stone,moulded,four indent,1,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,fac_elem,fac_elem,pilaster,,brick,rustication,NULL,NULL,1752,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,fac_elem,fac_elem,pilaster,,brick,NULL,NULL,NULL,1752,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,esc,e11a,plinth,plinth block,stone,NULL,NULL,1,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,rlc,r11a,sculpted ornament,,stone,NULL,NULL,2,1752,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,rlc,r11a,sculpted ornament,,stone,NULL,NULL,6,1752,TRUE,2,1,2,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,esc,e11a,stoop,"rounded, 3 steps",stone,NULL,NULL,1,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11d,window,wall window,glass,NULL,NULL,2,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11b,window,wall window,glass,NULL,NULL,2,1752,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11c,window,wall window,glass,NULL,NULL,1,1752,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,wsc,w11c,window,wall window,glass,NULL,NULL,1,1752,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,wsc,w11b,window,wall window,glass,NULL,NULL,2,1752,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11d,window frame,round-headed,NULL,NULL,NULL,2,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11b,window frame,round-headed,NULL,NULL,NULL,2,1752,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11c,window frame,segmental,NULL,NULL,NULL,1,1752,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,wsc,w11c,window frame,segmental,NULL,NULL,NULL,1,1752,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,wsc,w11b,window frame,round-headed,NULL,NULL,NULL,2,1752,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11d,window sill,,NULL,NULL,NULL,2,1752,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11b,window sill,,NULL,NULL,NULL,2,1752,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11n,wsc,w11c,window sill,,NULL,NULL,NULL,1,1752,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,wsc,w11c,window sill,,NULL,NULL,NULL,1,1752,TRUE,1,4,4,"Amsterdam, Netherlands",Western Europe
+Nieuwe Ashkenazic Synagogue,f11e,wsc,w11b,window sill,,NULL,NULL,NULL,2,1752,TRUE,1,5,5,"Amsterdam, Netherlands",Western Europe
+Obbene Shul Synagogue,f9w,fac_elem,fac_elem,wall,,red brick,NULL,NULL,NULL,1686,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+Obbene Shul Synagogue,f9w,wsc,w9b,window frame,round-headed,NULL,NULL,NULL,3,1686,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+Obbene Shul Synagogue,f9e,wsc,w9b,window frame,round-headed,NULL,NULL,NULL,3,1686,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+Obbene Shul Synagogue,f9w,wsc,w9a,window frame,round-headed,NULL,NULL,NULL,NULL,1686,TRUE,1,3,3,"Amsterdam, Netherlands",Western Europe
+Obbene Shul Synagogue,f9e,wsc,w9a,window frame,round-headed,NULL,NULL,NULL,NULL,1686,TRUE,1,3,3,"Amsterdam, Netherlands",Western Europe
+Obbene Shul Synagogue,f9n,wsc,w9a,window frame,round-headed,NULL,NULL,NULL,NULL,1686,TRUE,1,3,3,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,fac_elem,fac_elem,band-course,moulded,NULL,NULL,festoon,NULL,1639,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,fac_elem,fac_elem,base,attic,NULL,NULL,NULL,NULL,1639,TRUE,1,8,8,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,fac_elem,fac_elem,capital,corinthian,NULL,NULL,NULL,NULL,1639,TRUE,1,8,8,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,esc,e6a,door,double panelled,NULL,NULL,NULL,1,1639,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,esc,e6b,door,single panelled,NULL,NULL,NULL,1,1639,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,esc,e6a,door frame,round-headed,NULL,NULL,NULL,1,1639,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,esc,e6b,door frame,flat-headed,NULL,NULL,NULL,1,1639,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,esc,e6a,keystone,,NULL,NULL,NULL,1,1639,TRUE,1,1,1,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,fac_elem,fac_elem,pedestal,,NULL,NULL,NULL,NULL,1639,TRUE,1,8,8,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,fac_elem,fac_elem,pilaster,,NULL,NULL,NULL,NULL,1639,TRUE,1,8,8,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,wsc,w6a,shutter,,NULL,NULL,NULL,1,1639,TRUE,1,6,6,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,wsc,w6a,shutter,,NULL,NULL,NULL,2,1639,TRUE,1,6,6,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,esc,e6b,stoop,,NULL,NULL,NULL,1,1639,TRUE,1,2,2,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,wsc,w6a,window,wall window,glass,NULL,NULL,1,1639,TRUE,1,6,6,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,wsc,w6a,window,wall window,glass,NULL,NULL,2,1639,TRUE,1,6,6,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,wsc,w6a,window frame,rectangular ,NULL,NULL,NULL,1,1639,TRUE,1,6,6,"Amsterdam, Netherlands",Western Europe
+"Talmud Torah, Portuguese Synagogue I",f6w,wsc,w6a,window frame,rectangular ,NULL,NULL,NULL,2,1639,TRUE,1,6,6,"Amsterdam, Netherlands",Western Europe
+Touro Synagogue,f34wi,esc,e34a,arch,round,wood,moulded,four indent,1,1763,TRUE,4,1,4,"Newport, United States",North America
+Touro Synagogue,f34wi,wsc,w34b,architrave,simple,red brick,voussoir,NULL,1,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34ei,wsc,w34b,architrave,simple,red brick,voussoir,NULL,1,1763,TRUE,1,3,3,"Newport, United States",North America
+Touro Synagogue,f34ei,wsc,w34b,architrave,simple,red brick,voussoir,NULL,2,1763,TRUE,1,3,3,"Newport, United States",North America
+Touro Synagogue,f34wi,wsc,w34b,architrave,simple,red brick,voussoir,NULL,2,1763,TRUE,1,3,3,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34b,architrave,simple,wood,moulded,four indent,1,1763,TRUE,2,1,2,"Newport, United States",North America
+Touro Synagogue,f34ei,wsc,w34a,architrave,simple,wood,moulded,double indent,1,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34ni,wsc,w34a,architrave,simple,wood,moulded,double indent,1,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34wi,wsc,w34a,architrave,simple,wood,moulded,double indent,1,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34ni,wsc,w34a,architrave,simple,wood,moulded,double indent,2,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34ei,wsc,w34a,architrave,simple,wood,moulded,double indent,2,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34wi,wsc,w34a,architrave,simple,wood,moulded,double indent,2,1763,TRUE,1,3,3,"Newport, United States",North America
+Touro Synagogue,f34s,wsc,w34a,architrave,simple,wood,moulded,double indent,1,1763,TRUE,1,4,4,"Newport, United States",North America
+Touro Synagogue,f34s,wsc,w34a,architrave,simple,wood,moulded,double indent,2,1763,TRUE,1,4,4,"Newport, United States",North America
+Touro Synagogue,f34wi,fac_elem,fac_elem,band-course,running bond,brown sandstone,running bond,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34ei,fac_elem,fac_elem,band-course,running bond,brown sandstone,running bond,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34ni,fac_elem,fac_elem,band-course,running bond,brown sandstone,running bond,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34s,fac_elem,fac_elem,band-course,running bond,brown sandstone,running bond,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34ni,fac_elem,fac_elem,band-course,common bond,red brick,plastered,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,fac_elem,fac_elem,band-course,common bond,red brick,plastered,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34ei,fac_elem,fac_elem,band-course,common bond,red brick,plastered,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,base,attic,wood,painted,NULL,1,1763,TRUE,4,1,4,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,capital,ionic,wood,painted,NULL,1,1763,TRUE,4,1,4,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,capital,tuscan,wood,painted,NULL,1,1763,TRUE,8,1,8,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,column shaft,smooth,wood,painted,NULL,1,1763,TRUE,2,1,2,"Newport, United States",North America
+Touro Synagogue,f34ei,rlc,r34a,cornice,roofline cornice,wood,moulded,dentils,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34ni,rlc,r34a,cornice,roofline cornice,wood,moulded,dentils,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34s,rlc,r34a,cornice,roofline cornice,wood,moulded,dentils,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,rlc,r34a,cornice,roofline cornice,wood,moulded,dentils,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34ei,rlc,r34b,cornice,roofline cornice,wood,moulded,three indent,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34ni,rlc,r34b,cornice,roofline cornice,wood,moulded,three indent,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,rlc,r34b,cornice,roofline cornice,wood,moulded,three indent,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,cornice,element cap cornice,wood,moulded,dentils,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,cornice,raking cornice,wood,moulded,dentils,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34b,cornice,element cap cornice,wood,moulded,dentils,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34b,cornice,raking cornice,wood,moulded,dentils,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,door,double panelled,wood,NULL,NULL,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34b,door,single panelled,wood,NULL,NULL,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,door frame,flat-headed,NULL,NULL,NULL,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34b,door frame,flat-headed,NULL,NULL,NULL,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,engaged column,smooth,wood,painted,NULL,1,1763,TRUE,2,1,2,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,entablature,,wood,moulded,four indent,1,1763,TRUE,4,1,4,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,pediment,triangular,wood,painted,NULL,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34b,pediment,triangular,wood,painted,NULL,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,pilaster,,wood,painted,NULL,1,1763,TRUE,8,1,8,"Newport, United States",North America
+Touro Synagogue,f34wi,fac_elem,fac_elem,plinth,square,brown sandstone,running bond,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34ei,fac_elem,fac_elem,plinth,square,brown sandstone,running bond,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34ni,fac_elem,fac_elem,plinth,square,brown sandstone,running bond,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34s,fac_elem,fac_elem,plinth,square,brown sandstone,running bond,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34ni,fac_elem,fac_elem,plinth,square,brown sandstone,running bond,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,fac_elem,fac_elem,plinth,square,brown sandstone,running bond,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34ei,fac_elem,fac_elem,plinth,square,brown sandstone,running bond,NULL,NULL,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,plinth,square,wood,painted,NULL,1,1763,TRUE,4,1,4,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,stoop,"square, 3 steps",brown sandstone,NULL,NULL,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34b,stoop,"square, 3 steps",brown sandstone,NULL,NULL,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34wi,esc,e34a,tympanum,sunburst,wood,painted,NULL,1,1763,TRUE,1,1,1,"Newport, United States",North America
+Touro Synagogue,f34ei,wsc,w34a,window frame,round-headed,NULL,NULL,NULL,1,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34ni,wsc,w34a,window frame,round-headed,NULL,NULL,NULL,1,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34wi,wsc,w34a,window frame,round-headed,NULL,NULL,NULL,1,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34ni,wsc,w34a,window frame,round-headed,NULL,NULL,NULL,2,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34ei,wsc,w34a,window frame,round-headed,NULL,NULL,NULL,2,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34wi,wsc,w34b,window frame,rectangular ,NULL,NULL,NULL,1,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34wi,wsc,w34a,window frame,round-headed,NULL,NULL,NULL,2,1763,TRUE,1,3,3,"Newport, United States",North America
+Touro Synagogue,f34ei,wsc,w34b,window frame,rectangular ,NULL,NULL,NULL,1,1763,TRUE,1,3,3,"Newport, United States",North America
+Touro Synagogue,f34ei,wsc,w34b,window frame,rectangular ,NULL,NULL,NULL,2,1763,TRUE,1,3,3,"Newport, United States",North America
+Touro Synagogue,f34wi,wsc,w34b,window frame,rectangular ,NULL,NULL,NULL,2,1763,TRUE,1,3,3,"Newport, United States",North America
+Touro Synagogue,f34s,wsc,w34a,window frame,round-headed,NULL,NULL,NULL,1,1763,TRUE,1,4,4,"Newport, United States",North America
+Touro Synagogue,f34s,wsc,w34a,window frame,round-headed,NULL,NULL,NULL,2,1763,TRUE,1,4,4,"Newport, United States",North America
+Touro Synagogue,f34ei,wsc,w34a,window sill,,brown sandstone,NULL,NULL,1,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34ni,wsc,w34a,window sill,,brown sandstone,NULL,NULL,1,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34wi,wsc,w34a,window sill,,brown sandstone,NULL,NULL,1,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34ni,wsc,w34a,window sill,,brown sandstone,NULL,NULL,2,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34ei,wsc,w34a,window sill,,brown sandstone,NULL,NULL,2,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34wi,wsc,w34a,window sill,,brown sandstone,NULL,NULL,2,1763,TRUE,1,3,3,"Newport, United States",North America
+Touro Synagogue,f34s,wsc,w34a,window sill,,brown sandstone,NULL,NULL,1,1763,TRUE,1,4,4,"Newport, United States",North America
+Touro Synagogue,f34s,wsc,w34a,window sill,,brown sandstone,NULL,NULL,2,1763,TRUE,1,4,4,"Newport, United States",North America
+Touro Synagogue,f34wi,wsc,w34b,window sill,,red brick,plastered,NULL,1,1763,TRUE,1,2,2,"Newport, United States",North America
+Touro Synagogue,f34ei,wsc,w34b,window sill,,red brick,plastered,NULL,1,1763,TRUE,1,3,3,"Newport, United States",North America
+Touro Synagogue,f34ei,wsc,w34b,window sill,,red brick,plastered,NULL,2,1763,TRUE,1,3,3,"Newport, United States",North America
+Touro Synagogue,f34wi,wsc,w34b,window sill,,red brick,plastered,NULL,2,1763,TRUE,1,3,3,"Newport, United States",North America
+Tzedek ve-Shalom Synagogue,f36s,esc,e36a,architrave,simple,wood,moulded,single indent,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,esc,e36a,architrave,simple,wood,moulded,single indent,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36w,esc,e36b,architrave,simple,wood,moulded,single indent,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,esc,e36a,capital,tuscan,wood,NULL,NULL,1,1735,TRUE,2,1,2,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,esc,e36a,capital,tuscan,wood,NULL,NULL,1,1735,TRUE,2,1,2,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,esc,e36a,cornice,element cap cornice,wood,moulded,dentils,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,esc,e36a,cornice,element cap cornice,wood,moulded,dentils,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,esc,e36a,cornice,element cap cornice,wood,moulded,four indent,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,esc,e36a,cornice,element cap cornice,wood,moulded,four indent,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,esc,e36a,door,double panelled,wood,painted,NULL,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,esc,e36a,door,double panelled,wood,painted,NULL,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36w,esc,e36b,door,double panelled,wood,painted,NULL,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,esc,e36a,door frame,flat-headed,NULL,NULL,NULL,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,esc,e36a,door frame,flat-headed,NULL,NULL,NULL,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36w,esc,e36b,door frame,flat-headed,NULL,NULL,NULL,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,esc,e36a,pilaster,,wood,NULL,NULL,1,1735,TRUE,2,1,2,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,esc,e36a,pilaster,,wood,NULL,NULL,1,1735,TRUE,2,1,2,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,esc,e36a,plinth,square,brick,painted,NULL,1,1735,TRUE,2,1,2,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,esc,e36a,plinth,square,brick,painted,NULL,1,1735,TRUE,2,1,2,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,fac_elem,fac_elem,plinth,,brick,NULL,NULL,NULL,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,fac_elem,fac_elem,plinth,,brick,NULL,NULL,NULL,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36w,fac_elem,fac_elem,plinth,,copper,NULL,NULL,NULL,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36e,fac_elem,fac_elem,plinth,,copper,NULL,NULL,NULL,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36e,wsc,w36a,shutter,,wood,NULL,NULL,2,1735,TRUE,4,2,8,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,wsc,w36a,shutter,,wood,NULL,NULL,1,1735,TRUE,4,6,24,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,wsc,w36a,shutter,,wood,NULL,NULL,1,1735,TRUE,4,6,24,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,esc,e36a,stoop,semicircle steps,brick,painted,NULL,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,esc,e36a,stoop,semicircle steps,brick,painted,NULL,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,fac_elem,fac_elem,wall,,wood,NULL,NULL,NULL,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,fac_elem,fac_elem,wall,,wood,NULL,NULL,NULL,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36w,fac_elem,fac_elem,wall,,wood,NULL,NULL,NULL,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36e,fac_elem,fac_elem,wall,,wood,NULL,NULL,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36e,wsc,w36a,window,wall window,glass,NULL,NULL,2,1735,TRUE,1,2,2,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36w,wsc,w36b,window,wall window,glass,NULL,NULL,2,1735,TRUE,1,2,2,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,wsc,w36a,window,wall window,glass,NULL,NULL,1,1735,TRUE,1,6,6,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,wsc,w36a,window,wall window,glass,NULL,NULL,1,1735,TRUE,1,6,6,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,esc,e36a,window frame,fan,NULL,NULL,NULL,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,esc,e36a,window frame,fan,NULL,NULL,NULL,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36w,esc,e36b,window frame,fan,NULL,NULL,NULL,1,1735,TRUE,1,1,1,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36e,wsc,w36a,window frame,rectangular ,NULL,NULL,NULL,2,1735,TRUE,1,2,2,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36e,wsc,w36a,window frame,fan,NULL,NULL,NULL,2,1735,TRUE,1,2,2,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36w,wsc,w36b,window frame,rectangular ,NULL,NULL,NULL,2,1735,TRUE,1,2,2,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36w,wsc,w36b,window frame,fan,NULL,NULL,NULL,2,1735,TRUE,1,2,2,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,wsc,w36a,window frame,rectangular ,NULL,NULL,NULL,1,1735,TRUE,1,6,6,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,wsc,w36a,window frame,rectangular ,NULL,NULL,NULL,1,1735,TRUE,1,6,6,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36s,wsc,w36a,window frame,fan,NULL,NULL,NULL,1,1735,TRUE,1,6,6,"Paramaribo, Suriname",South America
+Tzedek ve-Shalom Synagogue,f36n,wsc,w36a,window frame,fan,NULL,NULL,NULL,1,1735,TRUE,1,6,6,"Paramaribo, Suriname",South America
