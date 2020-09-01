@@ -1,0 +1,44 @@
+[
+    {
+        "building_name": "Talmud Torah, Portuguese Synagogue I",
+        "year_opened": "1639",
+        "image_file": "/assets/images/006_001_result.jpg",
+        "lat":52.368346,
+        "lon":4.902987
+    },
+    {
+        "building_name": "Creechurch Lane Synagogue",
+        "year_opened": "1657",
+        "image_file": "/assets/images/001_001_result.jpg",
+        "lat":51.513685,
+        "lon":-0.079298
+    },
+    {
+        "building_name": "Creechurch Lane Synagogue [1675]",
+        "year_opened": "1675",
+        "image_file": "/assets/images/002_001_result.jpg",
+        "lat":51.513685,
+        "lon":-0.079298
+    },
+    {
+        "building_name": "Esnoga, Talmud Torah II",
+        "year_opened": "1675",
+        "image_file": "/assets/images/004_001_result.jpg",
+        "lat":52.36753,
+        "lon":4.905336
+    },
+    {
+        "building_name": "Bevis Marks Synagogue",
+        "year_opened": "1701",
+        "image_file": "/assets/images/000_107_result.jpg",
+        "lat":51.514473,
+        "lon":-0.078938
+    },
+    {
+        "building_name": "Mikve Israel Synagogue (IV)",
+        "year_opened": "1732",
+        "image_file": "/assets/images/043_006_result.jpg",
+        "lat":12.10511,
+        "lon":-68.932573
+    }
+  ]

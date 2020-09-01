@@ -34,3 +34,13 @@ url: "https://eam5.github.io" # the base hostname & protocol for your site, e.g.
 
 sass:
   sass_dir: _sass
+
+page_gen-dirs: true # uncomment, if you prefer to generate named folders
+
+page_gen:
+
+  - data: 'buildings'
+    template: 'building'
+    name: 'building_name'
+    dir: 'buildings'
+    title: 'building_name'

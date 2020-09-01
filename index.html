@@ -2,4 +2,11 @@
 layout: default
 title: Home
 ---
-<h1>Hello World</h1>
+
+<h1>Synagogues</h1>
+
+<ul>
+{% for building in site.data.buildings %}
+    <li><a href="{{ building.building_name | datapage_url: 'buildings' }}">{{building.building_name}} ({{building.year_opened}})</a></li>
+{% endfor %}
+</ul>
