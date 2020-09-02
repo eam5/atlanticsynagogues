@@ -37,8 +37,8 @@
         <div>
             {% assign filenameparts = page.image_file | split: "/" %}
             {% assign filename = filenameparts | last | replace: file.extname,"" %}
-        <a href="{{ page.image_file | relative_url }}" title="{{ filename }}">
-            <img src="{{ page.image_file | relative_url }}" alt="{{ filename }}" title="{{ filename }}" height="300px"/>
+        <a href="{{ page.image_file | prepend: site.url }}" title="{{ filename }}">
+            <img src="{{ page.image_file | prepend: site.url }}" alt="{{ filename }}" title="{{ filename }}" height="300px"/>
         </a>
         
         </div>

@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-  <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl}}">{{site.title}}</a>
+  <a class="navbar-brand" href="{{ site.url }}">{{site.title}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
             {% for item in site.data.navbar %}
-            <a class="nav-item nav-link" href="{{item.link | prepend: site.baseurl}}">{{ item.name }}</a>
+            <a class="nav-item nav-link" href="{{item.link | prepend: site.url}}">{{ item.name }}</a>
             {% endfor %}  
         </div>
     </div>
