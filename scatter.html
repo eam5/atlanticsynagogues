@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Scatterplot - Atlantic Synagogues</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/atlanticsynagogues/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js'></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/gka/chroma.js/master/chroma.min.js"></script> 
+
+    <style>
+    
+    body{font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;}
+    #body {
+        font-family: 'Roboto', sans-serif;
+        height: 100%;
+        position: fixed;
+        max-width: 300px;
+        top: 86px;
+        /* left: 960px; */
+        right: 0px;
+        overflow: scroll;
+    }
+
+    div.tooltip {
+    /*    color: white;*/
+    position: absolute;
+    text-align: center;
+    max-width: 250px;
+    /*    max-height: 100px;*/
+    padding: 7px;
+    font: 12px 'Roboto', sans-serif;
+    background: lightgrey;
+    border: 0px;
+    border-radius: 12px;
+    line-height: 16px;
+    pointer-events: none;
+    box-shadow: 0px 0px 12px -10px;
+    }
+    .tweet {
+    padding: 10px;
+    }
+    text {
+    font-size: .8em;
+    }
+
+    #content:after {
+    display: block;
+    content: " ";
+    height: 1px;
+    width: 100px;
+    background: #e1e8ed;
+    margin: 10px auto;}
+
+    #tweet {
+    background-color: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 5px;
+    max-width: 320px !important;
+    opacity: 0;
+    }
+
+    .tweet-wrapper {
+    padding: 0.7rem;
+    }
+    .tweet-date, .tweet-name, .tweet-user {
+    font-weight: 500;
+    }
+
+    .tweet-date, .tweet-user {
+    display: inline-block;
+    margin: 0;
+    }
+    .tweet-text, .tweet-followers, .tweet-link {
+    margin: 10px 0 9px;
+    }
+    .tweet-name {
+    margin: 0;
+    }
+    .tweet-followers {
+    font-weight: 300;
+    margin-top: 5px;
+    }
+    .tweet-followers-label {
+    color: #999;
+    }
+/*
+    .tweet-retweets {
+    margin-left: 20px;
+    }
+*/
+
+/*
+    .tweet-favourites, .tweet-replies, .tweet-retweets {
+    display: inline-block;
+    margin: 0 1rem 0 0.5rem;
+    position: relative;
+    }
+*/
+    .element, .shared-site {
+        margin: 0 0 0.5rem 1rem;
+        cursor: pointer;
+    }
+    
+    .element:hover, .shared-site:hover {
+        background-color: #96ffea;
+    }
+    
+    #xAxisLong{
+        visibility: hidden;
+    }
+    
+     #yAxisSmall{
+        visibility: hidden;
+    }
+    
+    #yAxisDate {
+        visibility: hidden;
+    }
+    
+    #longitude-label{
+        visibility: hidden;
+    }
+/*
+    #latitude-label{
+        visibility: visible;
+    }
+*/
+    
+    button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 0em 0.25em 0.25em 0em;
+  padding: 0.78571429em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: bold;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  will-change: '';
+  -webkit-tap-highlight-color: transparent;
+  background: transparent none !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-weight: normal;
+  border-radius: 0.28571429rem;
+  text-transform: none;
+  text-shadow: none !important;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) inset;
+        box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) inset;
+}
+    
+button:hover, button:focus, button:active {
+  background: #FFFFFF !important;
+ -webkit-box-shadow: 0 0 0 1px #6435c9 inset!important;
+    box-shadow: 0 0 0 1px #6435c9 inset!important;
+    color: #6435c9!important;
+}
+
+button:active {
+  background: #F8F8F8 !important;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+    
+/* blend options taken from visual cinnamon tutorial: http://www.visualcinnamon.com/2016/05/beautiful-color-blending-svg-d3.html */
+    /*Set isolate on the group element*/
+    .footprint {
+      isolation: isolate;
+      cursor: pointer;
+    }  
+    /*Set blend mode on SVG element: e.g. screen, multiply*/
+    .footprint circle {  mix-blend-mode: multiply; }
+        </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="/atlanticsynagogues/">Atlantic Synagogues</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+            
+            <a class="nav-item nav-link" href="/atlanticsynagogues/">Home</a>
+            
+            <a class="nav-item nav-link" href="/atlanticsynagogues/images">Images</a>
+            
+            <a class="nav-item nav-link" href="/atlanticsynagogues/allbldgs_allfac">Facade Fractal Trees</a>
+            
+            <a class="nav-item nav-link" href="/atlanticsynagogues/scatter">Synagogue Timeline</a>
+              
+        </div>
+    </div>
+  </nav>
+    <div id="main" class="container-fluid">
+      <div style="margin-top:86px"></div>
+<div id='axis-buttons'></div>
+<div id="vis"></div>
+<div id='body'>
+    <!-- <div>
+        <h1>Atlantic Synagogues</h1>
+    </div> -->
+    <div id='buttons'></div>
+    <div id='title' class="tweet-name"></div>
+    <div id='username' class="tweet-user"></div>
+    <div id='userbio' class="tweet-text"></div> 
+    <div id='tweet-followers' class="tweet-followers"></div>
+    <div id='tweet-date' class='tweet-date'></div>
+    <div id='content' class="tweet-text"></div>
+    <div id='likes' class="tweet-favourites"></div>
+    <div id="retweets" class="tweet-retweets"></div>
+</div>
+</div>
+<script>
+    //basic scatterplot: https://www.d3-graph-gallery.com/graph/scatter_basic.html
+    // set the dimensions and margins of the graph
+    const margin = {top: 40, right: 30, bottom: 60, left: 60},
+        width = 950 - margin.left - margin.right,
+        height = 680 - margin.top - margin.bottom;
+    
+    const color = d3.scaleOrdinal()
+            .range(chroma.scale(['#0000b3','#b800c6', '#96ffea', 
+            'lightyellow', 
+            '#ff005e','#ff9000','#ec229f']).colors(22));
+    //        .range(['#00429d', '#8a51c5', '#a687d4', '#acc2e0', '#96ffea', '#fe7c3f', '#fb655c', '#fa496d', '#ff005e']);
+        
+    const colorCongr = d3.scaleOrdinal()
+        .range(chroma.scale(['#0000b3','#8a51c5','#a687d4','#b800c6', '#96ffea','#ff005e','#fb655c','#ff9000','#ec229f']).colors(17));
+    const colorRite = d3.scaleOrdinal()
+    .range(['#8a51c5','#ec229f', '#fb655c', '#96ffea']);
+    //        .range(['#00429d', '#8a51c5', '#a687d4', '#acc2e0', '#96ffea', '#fe7c3f', '#fb655c', '#fa496d', '#ff005e']);
+        
+         const petalPaths = [['M 0 0 H 90 V 90 H 0 L 0 0'],
+                ['M 0 0 H 90 V 120 H 0 L 0 0'],
+        ['M 0 0 H 90 V 120 H 0 L 0 0 M 0 40 H 30 V 120 M 0 50 H 30 M 0 60 H 30 M 0 70 H 30 M 0 80 H 30 M 0 90 H 30 M 0 100 H 30']];
+        
+         // instantiate scales and petal path lookup
+        const sizeScale = d3.scaleLinear()
+            .range([0.1, 1]);
+           const numPetalsScale = d3.scaleQuantize()
+            .range([5, 10]);
+            const pathLookup = {
+          'modified square basilica': petalPaths[0],
+          'rectangular basilica': petalPaths[1],
+          'repurposed tenement w/ upstairs prayer hall': petalPaths[2],
+        };
+        var petalScale = d3.scaleOrdinal()
+            .domain(['modified square basilica', 'rectangular basilica', 'repurposed tenement w/ upstairs prayer hall'])
+            .range(3); 
+          
+        // Define the div for the tooltip
+        let div = d3.select('body')
+            .append('div') 
+            .attr('class', 'tooltip')
+            .style('opacity', 0);
+          
+        const tweet = d3.select('#tweet');
+        const content = d3.select('#content');
+        const tweetdate = d3.select('#tweet-date');
+        const title = d3.select('#title');
+        const username = d3.select('#username');
+        const userbio = d3.select('#userbio');
+        const likes = d3.select('#likes');
+        const retweets = d3.select('#retweets');
+        const biolocation = d3.select('#biolocation');  
+        const followercount = d3.select('#tweet-followers');
+        const fulltweet = d3.select('#tweet-full');  
+        
+    //Read the data
+    d3.csv("footprint-congregations.csv", function(data) {
+    console.log(data)
+        
+    const congSort = _.chain(data)
+        .groupBy(d=>d.congregation_name)
+        .map(function(d){
+            return {
+                buildings: d,
+                congregation_name: d[0].congregation_name
+            }
+        })
+        .value();
+    const siteSort = _.chain(data)
+        .groupBy(d=>d.lat)
+        .map(function(d){
+            return {
+                buildings: d,
+                lat: d[0].lat,
+                lon: d[0].lon
+            }
+        })
+        .value();
+        
+    const years = data.map(d=>parseInt(d.year_add))
+        
+    const latitude = data.map(d=>parseInt(d.lat))
+    
+    const longitude = data.map(d=>parseInt(d.lon));
+    
+    const sizeExtent = d3.extent(data, d => d.dim_sq);
+    const numPetalsExtent = d3.extent(data, d => d.dim_length);
+          // set domain on scales
+          sizeScale.domain(sizeExtent);
+          numPetalsScale.domain(numPetalsExtent);
+    
+        // append the svg object to the body of the page
+        const svg = d3.select("#vis")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        
+        // blur effect taken from visualcinnamon:
+        // http://www.visualcinnamon.com/2016/05/real-life-motion-effects-d3-visualization.html
+        var defs = svg.append("defs");
+        defs.append("filter")
+            .attr("id", "motionFilter") 	//Give it a unique ID
+            .attr("width", "300%")		//Increase the width of the filter region to remove blur "boundary"
+            .attr("x", "-100%") 			//Make sure the center of the "width" lies in the middle of the element
+            .append("feGaussianBlur")	//Append a filter technique
+            .attr("in", "SourceGraphic")	//Perform the blur on the applied element
+            .attr("stdDeviation", "8 8");	//Do a blur of 8 standard deviations in the horizontal and vertical direction
+    
+        // Add X axis
+        const x = d3.scaleTime()
+            .domain([new Date(1600, 0, 1), new Date(d3.max(years), 0, 1)])
+            .range([0, width]);
+        svg.append("g")
+            .attr('id', 'xAxisDate')
+            .attr("color", "#333")
+            .style('font-size', '0.9rem')
+            .call(d3.axisBottom(x).tickSize(height).tickFormat(d3.timeFormat("%Y")))
+            .call(d3.axisBottom(x).tickSize(height).tickFormat(d3.timeFormat("%Y")))
+            .call(g => g.select(".domain").attr("display", "none"))
+            .call(g => g.selectAll(".tick").selectAll("line").attr("stroke", "#D8D8D8").style("stroke-dasharray", "5 5"))
+            .call(g => g.selectAll(".tick").selectAll("text").attr("transform", "translate(0," + (-height-20) + ")"));
+        
+        const xLong = d3.scaleLinear()
+            .domain([-110, 30])
+            .range([ 0, width ]);
+        svg.append("g")
+            .attr('id', 'xAxisLong')
+            .call(d3.axisBottom(xLong))
+            .call(g => g.select(".domain").attr("display", "none"))
+            .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
+            .call(g => g.selectAll(".tick").selectAll("text").attr("display", "none"));
+        
+        // Add Y axis
+        const y = d3.scaleLinear()
+            .domain([-40, 70])
+            .range([height, 0]);
+        svg.append("g")
+            .attr('id', 'yAxisLarge')
+            .attr("color", "#96ffea")
+            .style('font-size', '1rem')
+            .call(d3.axisLeft(y).tickValues([0, 23.43661]).tickFormat(function(d){if(d===0){return 'equator'} else {return 'tropic of cancer'}}))
+            .call(g => g.select(".domain").attr("display", "none"))
+            .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
+            .call(g => g.selectAll(".tick").selectAll("text").attr('text-anchor', 'start').attr('x',-25).attr("dy", "-0.32em").attr("fill", "#96ffea"));
+        
+        const yDate = d3.scaleTime()
+            .domain([new Date(d3.max(years), 0, 1), new Date(1600, 0, 1)])
+            .range([height, 0]);
+        svg.append("g")
+            .attr('id', 'yAxisDate')
+            .attr("color", "#333")
+            .style('font-size', '0.9rem')
+            .call(d3.axisLeft(yDate).tickSize(-width).tickFormat(d3.timeFormat("%Y")))
+            .call(g => g.select(".domain").attr("display", "none"))
+            .call(g => g.selectAll(".tick").selectAll("line").attr("stroke", "#D8D8D8").style("stroke-dasharray", "5 5"))
+            .call(g => g.selectAll(".tick").selectAll("text"));
+    
+        
+        _.each(data, function(bldg, k){
+            bldg.id = parseInt(bldg.idbuildings)
+            bldg.cxYear = x(new Date(bldg.year_add,0,1))
+            bldg.cyLat = y(bldg.lat)
+            bldg.cxLong = xLong(bldg.lon)
+            bldg.cyYear = yDate(new Date(bldg.year_add,0,1))
+            
+    //        if (bldg.parent_id != "NULL"){
+    //            bldg.cx0 = 12
+    //            bldg.cy0 = 411.5959981818182
+    //        } else {
+    //            bldg.cx0 = bldg.cx
+    //            bldg.cy0 = bldg.cy
+    //        }
+        })
+    
+       const equator = svg.append('line')
+        .attr('class', 'lat-line')
+        .style("stroke", "#96ffea")
+        .attr('stroke-width', '1.5px')
+        .attr('stroke-dasharray','10,10')
+        .attr("x1", 0)
+        .attr("y1", y(0))
+        .attr("x2", width+20)
+        .attr("y2", y(0)); 
+        
+        const tropicCancer = svg.append('line')
+        .attr('class', 'lat-line')
+        .style("stroke", "#96ffea")
+        .attr('stroke-width', '1.5px')
+        .attr('stroke-dasharray','10,10')
+        .attr("x1", 0)
+        .attr("y1", y(23.43661))
+        .attr("x2", width+20)
+        .attr("y2", y(23.43661)); 
+        
+        
+      // Add dots
+      svg.append('g')
+        .selectAll("circle")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr('class', 'circle')
+          .attr("cx", d=>d.cxYear)
+          .attr("cy", d=>d.cyLat)
+        .attr('r', d=>Math.sqrt(d.dim_sq)/3)
+    //      .style("fill", "#69b3a2")
+          .style("fill", function(d) { return color(d.lat);})
+          .style("opacity", 0.6)
+        .style('cursor', 'pointer')
+        .on('mouseover.tooltip', function(d) {
+                div.transition()    
+                    .duration(100)    
+                    .style("opacity", .7);    
+                div .html( d.building_name )  
+                    .style("left", (d3.event.pageX + 12) + "px")   
+                    .style("top", (d3.event.pageY - 28) + "px");  
+                })          
+        .on('mouseout.tooltip', function(d) {   
+            div.transition()    
+                .duration(100)    
+                .style("opacity", 0); 
+        })
+        .on('mouseover.fade', fade(0.1))
+        .on('mouseout.fade', fade(0.6))
+    //     .on('mouseover.links', showLinks('block'))
+    //        .on('mouseout.links', showLinks('none'))
+        .on('click', function(d) {
+            d3.select(this).transition().style('opacity', 1);
+            d3.select('#tweet').style('opacity', 1);
+            
+            const building = d.building_name;
+                title.text(building);
+            const year = d.year_add;
+                username.text('Opened ' + year);
+            const biotext = d.user_description;
+                userbio.text(d.city + ', ' + d.country); 
+            followercount.text(d.region);
+            const tweets = d.footprint_type;
+                content.text('Footprint: ' + tweets);
+            tweetdate.text(d.rite[0].toUpperCase() + d.rite.substring(1))
+          
+          let currentCong = d.congregation_name;
+            const congr = congSort.filter(l=>(l.congregation_name === currentCong )).map(d=>d.buildings)
+            const congrF = _.flatten(congr)
+            console.log(currentCong)
+          console.log(congrF)
+          likes.text('Congregation: ' + d.congregation_name)
+          
+          
+          var congBldgs = likes.selectAll('.element')
+            .data(congrF).enter()
+            .append('div')
+            .attr('class', 'element')
+                .append('div').text(f=>f.year_add + ': ' + f.building_name)
+          .on('mouseover', function(d){
+                let currentBldg = d.year_add;
+                svg.selectAll('g .circle')
+                .style('stroke-width', function(o) {
+                    if (o.year_add === currentBldg){
+                        return 3;
+                    } else return 0;
+                   })
+                .style('stroke', function(o) {
+                    if (o.year_add === currentBldg){
+                        return "#17202A";
+                    } else return 'none';
+                   });
+            })
+          .on('mouseout', function(d){
+                let currentBldg = d.year_add;
+                svg.selectAll('g .circle')
+                .style('stroke-width', function(o) {
+                    if (o.year_add === currentBldg){
+                        return 0;
+                    } else return 0;
+                   })
+                .style('stroke', function(o) {
+                    if (o.year_add === currentBldg){
+                        return 'none';
+                    } else return 'none';
+                   });
+            });
+          
+          let currentSite = d.lat;
+            const site = siteSort.filter(l=>(l.lat === currentSite )).map(d=>d.buildings)
+            const siteF = _.flatten(site)
+            console.log(currentSite)
+          console.log(siteF)
+          
+          retweets.text('Shares site with:')
+          
+          var siteBldgs = retweets.selectAll('.shared-site')
+            .data(siteF).enter()
+            .append('div')
+            .attr('class', 'shared-site')
+            .text(f=>f.year_add + ': ' + f.building_name)
+            .on('mouseover', function(d){
+                let currentBldg = d.year_add;
+                svg.selectAll('g .circle')
+                .style('stroke-width', function(o) {
+                    if (o.year_add === currentBldg){
+                        return 3;
+                    } else return 0;
+                   })
+                .style('stroke', function(o) {
+                    if (o.year_add === currentBldg){
+                        return '#17202A';
+                    } else return 'none';
+                   });
+            })
+          .on('mouseout', function(d){
+                let currentBldg = d.year_add;
+                svg.selectAll('g .circle')
+                .style('stroke-width', function(o) {
+                    if (o.year_add === currentBldg){
+                        return 0;
+                    } else return 0;
+                   })
+                .style('stroke', function(o) {
+                    if (o.year_add === currentBldg){
+                        return 'none';
+                    } else return 'none';
+                   });
+            });
+          
+          
+          
+    //        likes.text(d.favorite_count);
+    //        retweets.text(d.retweet_count);
+    //        const url = d.tweet_url;
+    //        const tweetdata = fulltweet.style('cursor', 'pointer')
+    //            .on('click', function(d) {
+    //                window.open(url, '_new');
+    //            })
+    //            .text('Click here to see tweet');
+        });
+        ;
+        
+    //    svg.on("click", function(d) {
+    //  d3.selectAll('circle').style('opacity', 0.5).style('stroke-width', '0px');
+    //});
+    
+    //    const footprints = svg.selectAll('g.footprint')
+    //    .data(data)
+    //    .enter().append('g')
+    //    .attr('class', 'footprint')
+    //    .attr('transform', function(d){
+    //        const posx = x(new Date(d.year_add,0,1));
+    //        const posy = y(d.lat);
+    //        const scale = Math.sqrt(d.dim_sq/1000)/4;
+    ////        return `translate(${posx},${posy})scale(${scale})`;
+    //        return 'translate('+ (posx) + ','+ posy +')scale('+scale+')';
+    //    });
+    
+    //    footprints.selectAll('circle')
+    //    .data(data)
+    //    .enter()
+    //    .append("circle")
+    //      .attr("cx", function (d) { return x(new Date(d.year_add,0,1)); } )
+    //      .attr("cy", function (d) { return y(d.lat); } )
+    //    .attr('r', d=>Math.sqrt(d.dim_sq)/2)
+    //      .style("fill", function(d) { return color(d.region);})
+    //    .style("filter", "url(#motionFilter)");
+            
+        
+        
+    //footprints.append('path')
+    //           .attr('d', d => pathLookup[d.footprint_type])
+    //     .attr('transform', d=>'translate(-20,-20)')
+    //        .attr('stroke-width', d=>1.5 / (Math.sqrt(d.dim_sq/1000)/4) )
+    //        .attr('fill', 'none')
+    //        .attr('stroke', '#444');
+            
+       
+            //add links between composition elements
+    //    const links = svg.selectAll('g .links')
+    //        .data(data)
+    //        .enter().append('g')
+    //        .attr('class', 'links')
+    ////        .style('display', 'none')
+    //    ;
+        
+    //    links.selectAll('circle .links')
+    //        .data(function(d){
+    //            let numPetals = parseInt(d.comp_quant);
+    //            return _.times(numPetals, function(i){
+    //                return {
+    //                x: d.branch.x, x0:d.branch.x0, y:d.branch.y, y0:d.branch.y0
+    //                }
+    //            });
+    //        })
+    //        .enter()
+    //        .append('circle')
+    //        .attr('r', 3)
+    //        .attr('fill', 'red')
+    //        .attr('cx', function(d) { return (d.x); })
+    //        .attr('cy', function(d) { return (d.y); });
+        
+    //    links.selectAll('path .links')
+    //        .data(function(d){
+    //            let cx = d.cx;
+    //            let cy = d.cy;
+    //        let cx0 = 151.34027402411223;
+    //            let cy0 = 411.5959981818182;
+    ////            let numPetals = parseInt(d.comp_quant);
+    ////         console.log(cx, cy)
+    //        return _.times(1, function(i){
+    //                return {
+    //                x: cx, x0:cx0, y: cy, y0:cy0
+    //                }
+    //          });
+    //        })
+    //        .enter().append('path')
+    //        .attr('d', linkArc)
+    //        .attr('fill', 'none')
+    //        .attr('stroke-width', '1.5px')
+    //        .attr('stroke-dasharray','10,10')
+    //        .attr('stroke', 'red');
+        
+        const buttonXSmall = d3.select('#buttons')
+            .append('button')
+            .text("Shared Sites")
+            .on('click', function(d){
+                d3.selectAll("circle")
+                .style("fill", function(d) { return color(d.lat);})
+            });
+        const buttonXLarge = d3.select('#buttons')
+            .append('button')
+            .text("Religious Rite")
+            .on('click', function(d){
+                d3.selectAll("circle")
+                .style("fill", function(d) { return colorRite(d.rite);})
+            });
+        
+        const buttonYSmall = d3.select('#buttons')
+            .append('button')
+            .text("Congregations")
+            .on('click', function(d){
+                d3.selectAll("circle")
+                .style("fill", function(d) { return colorCongr(d.congregation_name);})
+            });
+        const buttonYLarge = d3.select('#buttons')
+            .append('button')
+            .text("Footprint")
+            .on('click', function(d){
+                d3.selectAll("circle")
+                .style("fill", function(d) { return colorRite(d.footprint_type);})
+    //                .transition().duration(1000)
+    //            .attr("cy", function (d) { return y(d.retweet_count); } )
+    //            d3.select("#yAxisLarge").style("visibility","visible");
+    //            d3.select("#yAxisSmall").style("visibility","hidden");
+            });
+        
+        const changeX = d3.select('#axis-buttons')
+            .append('button')
+            .text('change x')
+            .on('click', function(d){
+                 d3.selectAll("circle")
+                .transition().duration(1000)
+                .attr("cx", d=>d.cxLong)
+               d3.select("#xAxisLong").style("visibility","visible"); d3.select("#xAxisDate").style("visibility","hidden");
+            d3.select('#longitude-label').style("visibility","visible"); 
+            });
+        
+        const changeY = d3.select('#axis-buttons')
+            .append('button')
+            .text('change y')
+            .on('click', function(d){
+                 d3.selectAll("circle")
+                .transition().duration(1000)
+                .attr("cy", d=>d.cyYear)
+               d3.select("#yAxisDate").style("visibility","visible");
+                 d3.select('#yAxisLarge').style("visibility","hidden"); 
+                d3.selectAll(".lat-line").style("visibility","hidden");
+            d3.select('#latitude-label').style("visibility","hidden"); 
+            });
+       
+        // text label for the x axis
+      svg.append("text")             
+          .attr("transform", "translate(" + (width/2) + ",-20)")
+    //    .attr("x", (width/2))
+        .attr('id', 'longitude-label')
+          .style("text-anchor", "middle")
+        .style('font-size', "0.9em")
+          .text("Longitude");
+        
+        // text label for the y axis
+      svg.append("text")
+          .attr("transform", "rotate(-90)")
+          .attr("y", 0 - margin.left)
+          .attr("x",0 - (height / 2))
+          .attr("dy", "1em")
+        .attr('id', 'latitude-label')
+          .style("text-anchor", "middle")
+            .style('font-size', "0.9em")
+          .text("Latitude");      
+        
+        function linkArc(d) {
+          var dx = d.x - d.x0,
+              dy = d.y - d.y0,
+              dr = Math.sqrt(dx * dx + dy * dy);
+          return 'M' + d.x0 + ',' + d.y0 + 'A' + dr + ',' + dr + ' 0 0,1 ' + d.x + ',' + d.y;
+        }
+        
+           function fade(opacity) {
+            return d => {
+               let currentComp = d.congregation_name;
+    //            console.log(currentComp)
+                svg.selectAll('g .circle')
+    //            .filter(l=>(l.comp_num === currentComp ))
+                .style('opacity', function(o) {
+                    if (o.congregation_name === currentComp){
+                        return 1;
+                    } else return opacity;
+                   
+                   });
+    //            svg.selectAll('.branch')
+    //            .style('opacity', function(o) {
+    //                if (o.comp_num === currentComp){
+    //                    return 1;
+    //                } else return opacity;
+    //               
+    //               });
+            }}
+        
+         function showLinks(display) {
+            return d => {
+               let currentComp = d.congregation_name;
+    //            console.log(currentComp)
+                svg.selectAll('g .links')
+                .filter(l=>(l.congregation_name === currentComp ))
+                .style('display', function(o) {
+                   return display;
+                   }); 
+            }}
+    
+    });
+        
+        
+    
+    </script>
+
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

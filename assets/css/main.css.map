@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"main.scss",
+		"_sass/base.scss"
+	],
+	"sourcesContent": [
+		"@import 'base';",
+		"#main {\n    margin-top: 86px;\n}"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,KAAK,CAAC,EACF,UAAU,EAAE,IAAI,GACnB"
+}
