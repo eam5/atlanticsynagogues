@@ -3,5 +3,39 @@ layout: default
 title: Images
 ---
 <h1>Image Gallery</h1>
+<div class="album py-4 bg-light">
+<h2>Synagogues</h2>
+<!-- <ul>
+    {% for building in site.data.building_images %}
+        <li><a href="{{ building.building_name | datapage_url: 'building-images' }}">{{building.building_name}} ({{building.year_opened}})</a></li>
+    {% endfor %}
+</ul> -->
 
-{% include image-gallery.html folder="/assets/images" %}
+<div class="container">
+    <div class="row">
+
+        {% for building in site.data.building_images %}
+        
+    <div class="col-md-3 py-2">
+        <div class="card shadow-sm" style="background: transparent url({{ building.image_file | prepend: site.url }}) center center no-repeat;background-size:400px;height:200px;" >
+            <a href="{{ building.building_name | datapage_url: 'building-images' }}" style="color:#fff;text-decoration: none;text-shadow: 0px 3px 3px #000;">
+            {% if building.region == "Western Europe" %}
+            <div class="card-img-overlay"  style="background-image: linear-gradient(rgba(112, 128, 144,0.6), rgba(112, 128, 144,0.8));background-size:cover;text-align: center;">
+            {% endif %}
+            {% if building.region == "Caribbean" %}
+            <div class="card-img-overlay"  style="background-image: linear-gradient(rgba(72, 61, 139,0.6), rgba(72, 61, 139,0.8));background-size:cover;text-align: center;">
+            {% endif %}
+
+              <h5 class="card-title" style="padding-top: 25%;">{{building.building_name}} ({{building.year_opened}})</h5>
+            </div>
+        </a>
+          </div>
+      </div>
+      
+      {% endfor %}
+    </div>
+  </div>
+
+<h2>Locations</h2>
+{% include image-gallery.html folder="/assets/images/locations" %}
+</div>

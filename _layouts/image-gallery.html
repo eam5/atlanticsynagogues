@@ -1,0 +1,76 @@
+---
+layout: default
+---
+<h1>Image Gallery</h1>
+<h2>{{page.building_name}}</h2>
+
+<div class="album py-4 bg-light">
+    <div class="container">
+      <div class="row">
+
+        {% for file in site.static_files %}
+    {% if file.path contains page.file_path %}
+    {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
+    {% assign filenameparts = file.path | split: "/" %}
+    {% assign filename = filenameparts | last | replace: file.extname,"" %}
+            {% for image in page.images %}
+                {% if image.file_name contains filename %}
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="{{ file.path | prepend: site.url }}" title="{{ filename }}">
+            <img src="{{ file.path | prepend: site.url }}" alt="{{ filename }}" title="{{ filename }}" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> {{ image.title }}</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> {{ image.description }}</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modal{{filename}}">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modal{{filename}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="{{ file.path | prepend: site.url }}" title="{{ filename }}">
+                                    <img src="{{ file.path | prepend: site.url }}" alt="{{ filename }}" title="{{ filename }}" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                    <li class="card-text"><strong>Title:</strong> {{ image.title }}</li>
+                                    <li class="card-text text-truncate"><strong>Description:</strong> {{ image.description }}</li>
+                                    <li class="card-text"><strong>Creator:</strong> {{ image.creator }}</li>
+                                </ul>
+                            </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          {% endif %}
+              {% endfor %}
+        
+        {% endif %}{% endif %}{% endfor %}
+      </div>
+    </div>
+  </div>
+

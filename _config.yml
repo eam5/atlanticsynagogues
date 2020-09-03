@@ -43,3 +43,9 @@ page_gen:
     name: 'building_name'
     dir: 'buildings'
     title: 'building_name'
+    
+  - data: 'building_images'
+    template: 'image-gallery'
+    name: 'building_name'
+    dir: 'building-images'
+    title: 'building_name'
