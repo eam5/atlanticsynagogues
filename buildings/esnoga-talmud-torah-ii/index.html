@@ -14,7 +14,7 @@
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
    <style>
-       #mapid { height: 200px;width: 280px; }
+       .map {height: 200px;}
    </style>
   </head>
   <body>
@@ -30,6 +30,8 @@
             
             <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
             
+            <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/synagogue-map">Synagogue Map</a>
+            
             <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/allbldgs_allfac">Facade Fractal Trees</a>
             
             <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/scatter">Synagogue Timeline</a>
@@ -37,36 +39,57 @@
         </div>
     </div>
   </nav>
-    <div id="main" class="container">
-        <h1>Esnoga, Talmud Torah II</h1>
-        <div class="row py-2">
-            <div class="col-sm-8"> 
+    <div id="main" class="container-lg">
+        <div class="row">
+            <div class="col-sm-9">
+                <h1>Esnoga, Talmud Torah II</h1>
                 <p>Year Opened: 1675</p>
                 <p>Building ID: 4</p>
-            </div>
-            <div class="col-sm-4">
-                
-                
-                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/4/004_001_result.jpg" title="004_001_result.jpg">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/4/004_001_result.jpg" alt="004_001_result.jpg" title="004_001_result.jpg" height="200px"/>
-                </a>
-            </div>
-        </div>
-        <div class="row py-2">
-            <div class="col-sm-8"> 
                 <p>Latitude: 52.36753</p>
                 <p>Longitude: 4.905336</p>
             </div>
-            <div class="col-sm-4">
-                <div id="mapid"></div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <a href="https://eam5.github.io/atlanticsynagogues/assets/images/4/004_001_result.jpg" title="/assets/images/4/004_001_result.jpg">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/4/004_001_result.jpg" alt="/assets/images/4/004_001_result.jpg" title="/assets/images/4/004_001_result.jpg" class="card-img-top image-fluid"/>
+                    </a> 
+                    <!-- <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div> -->
+                    <ul class="list-group list-group-flush">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="https://eam5.github.io/atlanticsynagogues/building-images/esnoga-talmud-torah-ii"><li type="button" class="btn btn-light list-group-item">Image Gallery</li></a>
+                        
+                        
+                        
+                        
+                        
+                        
+                      <li class="list-group-item" style="padding:0;"><div class="map" id="esnoga-talmud-torah-ii" width="100%"></div></div></li>
+                      <a href="https://eam5.github.io/atlanticsynagogues/synagogue-map"><li type="button" class="btn btn-light list-group-item">Synagogue Map</li></a>
+                    </ul>
+                  </div>                  
             </div>
-        </div>        
+        </div>
+        
 
         
-        <h2>Image Gallery</h2>
-        <div class="row">
+        <!-- <div class="row">
 
             
+        
+        
         
         
         
@@ -1487,14 +1510,18 @@
         
         
         
-          </div>
+        
+        
+          </div> -->
     </div>
     <script>
-        var mymap = L.map('mapid').setView([51.5, -0.09], 13);
+        
+        var esnogatalmudtorahii= L.map('esnoga-talmud-torah-ii').setView([52.36753, 4.905336], 13);
         var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
         var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-        L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(mymap);
-        var marker = L.marker([51.5, -0.09]).addTo(mymap);
+        L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(esnogatalmudtorahii);
+        var marker = L.marker([52.36753, 4.905336]).addTo(esnogatalmudtorahii);
+        marker.bindPopup("<strong>Esnoga, Talmud Torah II</strong>");
 
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
