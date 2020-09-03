@@ -1,6 +1,16 @@
 ---
-layout: default
+layout: page
 ---
+{% assign pagepathone = page.path | remove: "building-images/"%}
+{% assign pagepathtwo = pagepathone | remove: "/index.html"%}
+{% assign pagepath = pagepathtwo | prepend: "/buildings/"%}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-transparent" style="padding-inline-start:0;">
+      <li class="breadcrumb-item"><a href="{{ pagepath | prepend: site.url}}">Building Page</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Image Gallery</li>
+    </ol>
+  </nav>
+
 <h1>Image Gallery</h1>
 <h2>{{page.building_name}}</h2>
 
@@ -8,13 +18,13 @@ layout: default
     <div class="container">
       <div class="row">
 
-        {% for file in site.static_files %}
+    {% for file in site.static_files %}
     {% if file.path contains page.file_path %}
     {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
     {% assign filenameparts = file.path | split: "/" %}
     {% assign filename = filenameparts | last | replace: file.extname,"" %}
-            {% for image in page.images %}
-                {% if image.file_name contains filename %}
+    {% for image in page.images %}
+    {% if image.file_name contains filename %}
         <div class="col-md-3 py-2">
           <div class="card mb-2 shadow-sm">
             <a href="{{ file.path | prepend: site.url }}" title="{{ filename }}">

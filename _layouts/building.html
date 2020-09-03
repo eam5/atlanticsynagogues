@@ -14,39 +14,48 @@
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
    <style>
-       #mapid { height: 200px;width: 280px; }
+       .map {height: 200px;}
    </style>
   </head>
   <body>
     {% include navbar.html %}
-    <div id="main" class="container">
-        <h1>{{page.title}}</h1>
-        <div class="row py-2">
-            <div class="col-sm-8"> 
+    <div id="main" class="container-lg">
+        <div class="row">
+            <div class="col-sm-9">
+                <h1>{{page.title}}</h1>
                 <p>Year Opened: {{page.year_opened}}</p>
                 <p>Building ID: {{page.idbuildings}}</p>
-            </div>
-            <div class="col-sm-4">
-                {% assign filenameparts = page.image_file | split: "/" %}
-                {% assign filename = filenameparts | last | replace: file.extname,"" %}
-                <a href="{{ page.image_file | prepend: site.url }}" title="{{ filename }}">
-                    <img src="{{ page.image_file | prepend: site.url }}" alt="{{ filename }}" title="{{ filename }}" height="200px"/>
-                </a>
-            </div>
-        </div>
-        <div class="row py-2">
-            <div class="col-sm-8"> 
                 <p>Latitude: {{page.lat}}</p>
                 <p>Longitude: {{page.lon}}</p>
             </div>
-            <div class="col-sm-4">
-                <div id="mapid"></div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <a href="{{ page.image_file | prepend: site.url }}" title="{{ page.image_file }}">
+                        <img src="{{ page.image_file | prepend: site.url }}" alt="{{ page.image_file }}" title="{{ page.image_file }}" class="card-img-top image-fluid"/>
+                    </a> 
+                    <!-- <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div> -->
+                    <ul class="list-group list-group-flush">
+                        {% for image in site.data.building_images %}
+                        {% if image.idbuildings == page.idbuildings %}
+                        {% assign pagepathone = page.path | remove: "buildings/"%}
+                        {% assign pagepathtwo = pagepathone | remove: "/index.html"%}
+                        {% assign pagepath = pagepathtwo | prepend: "/building-images/"%}
+                        <a href="{{ pagepath | prepend: site.url }}"><li type="button" class="btn btn-light list-group-item">Image Gallery</li></a>
+                        {% endif %}
+                        {% endfor %}
+                      <li class="list-group-item" style="padding:0;"><div class="map" id="{{ pagepathtwo }}" width="100%"></div></div></li>
+                      <a href="{{ "/synagogue-map" | prepend: site.url }}"><li type="button" class="btn btn-light list-group-item">Synagogue Map</li></a>
+                    </ul>
+                  </div>                  
             </div>
-        </div>        
+        </div>
+        
 
         
-        <h2>Image Gallery</h2>
-        <div class="row">
+        <!-- <div class="row">
 
             {% for file in site.static_files %}
         {% if file.path contains page.file_path %}
@@ -62,14 +71,16 @@
             </div>
             
             {% endif %}{% endif %}{% endfor %}
-          </div>
+          </div> -->
     </div>
     <script>
-        var mymap = L.map('mapid').setView([51.5, -0.09], 13);
+        {% assign varid = pagepathtwo | remove: "-"%}
+        var {{ varid }}= L.map('{{ pagepathtwo }}').setView([{{ page.lat }}, {{ page.lon }}], 13);
         var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
         var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-        L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(mymap);
-        var marker = L.marker([51.5, -0.09]).addTo(mymap);
+        L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo({{varid}});
+        var marker = L.marker([{{ page.lat }}, {{ page.lon }}]).addTo({{ varid }});
+        marker.bindPopup("<strong>{{ page.building_name }}</strong>");
 
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
