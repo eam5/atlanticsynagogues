@@ -66,8 +66,8 @@
     <script>
         {% assign varid = pagepathtwo | remove: "-"%}
         var {{ varid }}= L.map('{{ pagepathtwo }}').setView([{{ page.lat }}, {{ page.lon }}], 13);
-        var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-        var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
         L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo({{varid}});
         var marker = L.marker([{{ page.lat }}, {{ page.lon }}]).addTo({{ varid }});
         marker.bindPopup("<strong>{{ page.building_name }}</strong>");

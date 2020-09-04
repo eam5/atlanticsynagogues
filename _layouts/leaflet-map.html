@@ -33,8 +33,8 @@
  
 
 <script>
- var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-      var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+ var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
       var osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
       var map = L.map('map', {layers: [osm],center: [28.079555, -35.940793], zoom: 3 });
     
