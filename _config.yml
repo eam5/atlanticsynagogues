@@ -49,3 +49,9 @@ page_gen:
     name: 'building_name'
     dir: 'building-images'
     title: 'building_name'
+
+  - data: 'location_images'
+    template: 'locations'
+    name: 'location_name'
+    dir: 'locations'
+    title: 'location_name'

@@ -25,7 +25,7 @@ title: Images
             <div class="card-img-overlay"  style="background-image: linear-gradient(rgba(72, 61, 139,0.6), rgba(72, 61, 139,0.8));background-size:cover;text-align: center;">
             {% endif %}
 
-              <h5 class="card-title" style="padding-top: 25%;">{{building.building_name}} ({{building.year_opened}})</h5>
+              <h5 class="card-title" style="padding-top: 25%;">{{building.building_name}}</h5>
             </div>
         </a>
           </div>
@@ -35,5 +35,28 @@ title: Images
   </div>
 
 <h2>Locations</h2>
-{% include image-gallery.html folder="/assets/images/locations" %}
+<!-- {% include image-gallery.html folder="/assets/images/locations" %} -->
+<div class="container">
+  <div class="row">
+
+      {% for location in site.data.location_images %}
+  <div class="col-md-3 py-2">
+      <div class="card shadow-sm" style="background: transparent url({{ location.image_file | prepend: site.url }}) center center no-repeat;background-size:400px;height:200px;" >
+          <a href="{{ location.location_name | datapage_url: 'locations' }}" style="color:#fff;text-decoration: none;text-shadow: 0px 3px 3px #000;">
+          {% if location.region == "Western Europe" %}
+          <div class="card-img-overlay"  style="background-image: linear-gradient(rgba(112, 128, 144,0.6), rgba(112, 128, 144,0.8));background-size:cover;text-align: center;">
+          {% endif %}
+          {% if location.region == "Caribbean" %}
+          <div class="card-img-overlay"  style="background-image: linear-gradient(rgba(72, 61, 139,0.6), rgba(72, 61, 139,0.8));background-size:cover;text-align: center;">
+          {% endif %}
+
+            <h5 class="card-title" style="padding-top: 25%;">{{location.location_name}}</h5>
+          </div>
+      </a>
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
 </div>

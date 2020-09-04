@@ -2,11 +2,27 @@
 layout: default
 title: Home
 ---
+<div class="container-lg">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Synagogues</h2>
+                <ul>
+                    {% for building in site.data.buildings %}
+                    <li><a href="{{ building.building_name | datapage_url: 'buildings' }}">{{building.building_name}} ({{building.year_opened}})</a></li>
+                    {% endfor %}
+                </ul>
+        </div>
+        <div class="col-sm-6">
+            <h2>Locations</h2>
+                <ul>
+                    {% for location in site.data.location_images %}
+                    {% assign locpath = location.location_name | prepend: "/locations/" %}
+                    <li><a href="{{ locpath | prepend: site.url}}">{{location.location_name}}</a></li>
+                    {% endfor %}
+                </ul>
+        </div>
 
-<h1>Synagogues</h1>
+    </div>
+</div>
 
-<ul>
-{% for building in site.data.buildings %}
-    <li><a href="{{ building.building_name | datapage_url: 'buildings' }}">{{building.building_name}} ({{building.year_opened}})</a></li>
-{% endfor %}
-</ul>
+

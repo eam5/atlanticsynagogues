@@ -39,39 +39,29 @@
                     </div> -->
                     <ul class="list-group list-group-flush">
                         {% for image in site.data.building_images %}
-                        {% if image.idbuildings == page.idbuildings %}
-                        {% assign pagepathone = page.path | remove: "buildings/"%}
-                        {% assign pagepathtwo = pagepathone | remove: "/index.html"%}
-                        {% assign pagepath = pagepathtwo | prepend: "/building-images/"%}
+                        {% assign stringid = image.idbuilding | downcase %}
+                        {% if stringid == page.idbuildings %}
+                        {% assign pagepathone = page.path | remove: "buildings/" %}
+                        {% assign pagepathtwo = pagepathone | remove: "/index.html" %}
+                        {% assign pagepath = pagepathtwo | prepend: "/building-images/" %}
                         <a href="{{ pagepath | prepend: site.url }}"><li type="button" class="btn btn-light list-group-item">Image Gallery</li></a>
                         {% endif %}
                         {% endfor %}
-                      <li class="list-group-item" style="padding:0;"><div class="map" id="{{ pagepathtwo }}" width="100%"></div></div></li>
+                        {% for location in site.data.location_images %}
+                        {% if location.idlocation == page.idlocation %}
+                        {% assign locpath = location.location_name | prepend: "/locations/" %}
+                        <a href="{{ locpath | prepend: site.url}}"><li type="button" class="btn btn-light list-group-item">{{ page.idlocation }}</li></a>
+                        {% endif %}
+                        {% endfor %}
+                        <li class="list-group-item" style="padding:0;">
+                        <div class="map" id="{{ pagepathtwo }}" width="100%"></div>
+                    </li>
                       <a href="{{ "/synagogue-map" | prepend: site.url }}"><li type="button" class="btn btn-light list-group-item">Synagogue Map</li></a>
                     </ul>
                   </div>                  
             </div>
         </div>
         
-
-        
-        <!-- <div class="row">
-
-            {% for file in site.static_files %}
-        {% if file.path contains page.file_path %}
-        {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
-        {% assign filenameparts = file.path | split: "/" %}
-        {% assign filename = filenameparts | last | replace: file.extname,"" %}
-            <div class="col-md-3 py-1">
-              <div class="card mb-1 h-100" style="border:none;">
-                <a href="{{ file.path | prepend: site.url }}" title="{{ filename }}">
-                <img src="{{ file.path | prepend: site.url }}" alt="{{ filename }}" title="{{ filename }}" class="card-img-top image-fluid img-thumbnail" style="max-height:200px;width:auto"/>
-                </a>
-              </div>
-            </div>
-            
-            {% endif %}{% endif %}{% endfor %}
-          </div> -->
     </div>
     <script>
         {% assign varid = pagepathtwo | remove: "-"%}

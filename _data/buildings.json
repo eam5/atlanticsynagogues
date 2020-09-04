@@ -6,7 +6,8 @@
         "image_file": "/assets/images/6/006_001_result.jpg",
         "file_path": "/assets/images/6/",
         "lat":52.368346,
-        "lon":4.902987
+        "lon":4.902987,
+        "idlocation": 1
     },
     {
         "idbuildings": "1",
@@ -15,7 +16,8 @@
         "image_file": "/assets/images/1/001_001_result.jpg",
         "file_path": "/assets/images/1/",
         "lat":51.513685,
-        "lon":-0.079298
+        "lon":-0.079298,
+        "idlocation": 8
     },
     {
         "idbuildings": "2",
@@ -24,7 +26,8 @@
         "image_file": "/assets/images/2/002_001_result.jpg",
         "file_path": "/assets/images/2/",
         "lat":51.513685,
-        "lon":-0.079298
+        "lon":-0.079298,
+        "idlocation": 8
     },
     {
         "idbuildings": "4",
@@ -33,7 +36,8 @@
         "image_file": "/assets/images/4/004_001_result.jpg",
         "file_path": "/assets/images/4/",
         "lat":52.36753,
-        "lon":4.905336
+        "lon":4.905336,
+        "idlocation": 1
     },
     {
         "idbuildings": "0",
@@ -42,7 +46,8 @@
         "image_file": "/assets/images/0/000_107_result.jpg",
         "file_path": "/assets/images/0/",
         "lat":51.514473,
-        "lon":-0.078938
+        "lon":-0.078938,
+        "idlocation": 8
     },
     {
         "idbuildings": "43",
@@ -51,6 +56,7 @@
         "image_file": "/assets/images/43/043_045_result.jpg",
         "file_path": "/assets/images/43/",
         "lat":12.10511,
-        "lon":-68.932573
+        "lon":-68.932573,
+        "idlocation": 6
     }
   ]

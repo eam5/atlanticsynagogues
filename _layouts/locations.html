@@ -1,19 +1,28 @@
 ---
 layout: page
 ---
-{% assign pagepathone = page.path | remove: "building-images/"%}
-{% assign pagepathtwo = pagepathone | remove: "/index.html"%}
-{% assign pagepath = pagepathtwo | prepend: "/buildings/"%}
+{% assign pagepath = "/images/" %}
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-transparent" style="padding-inline-start:0;">
-      <li class="breadcrumb-item"><a href="{{ pagepath | prepend: site.url}}">Building Page</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Image Gallery</li>
+      <li class="breadcrumb-item"><a href="{{ site.url}}">Locations</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{page.location_name}}</li>
     </ol>
   </nav>
 
-<h1>Image Gallery</h1>
-<h2>{{page.building_name}}</h2>
+<h1>{{page.location_name}}</h1>
 
+<h2>Related Buildings:</h2>
+    <ul>
+        {% for building in site.data.buildings %}
+        {% if building.idlocation == page.idlocation %}
+        {% assign bldgnameone = building.building_name | downcase %}
+        {% assign bldgnametwo = bldgnameone | remove: "," | remove: "[" | remove: "]" %}
+        {% assign bldgname = bldgnametwo | replace: " ", "-" | prepend: "/buildings/" %}
+            <li><a href="{{ bldgname | prepend: site.url }}">{{building.building_name}} ({{building.year_opened}})</a></li>
+        {% endif %}{% endfor %}
+    </ul>
+
+<h2>Image Gallery</h2>
 <div class="album py-4 bg-light">
     <div class="container">
       <div class="row">
@@ -24,7 +33,7 @@ layout: page
     {% assign filenameparts = file.path | split: "/" %}
     {% assign filename = filenameparts | last | replace: file.extname,"" %}
     {% for image in page.images %}
-    {% assign filenamepart = image.file_name | slice: 0,7 %}
+    {% assign filenamepart = image.file_name | slice: 0,10 %}
     {% if filename contains filenamepart  %}
         <div class="col-md-3 py-2">
           <div class="card mb-2 shadow-sm">
