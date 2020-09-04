@@ -211,8 +211,8 @@
     <script>
         
         var mikveisraelsynagogueiv= L.map('mikve-israel-synagogue-iv').setView([12.10511, -68.932573], 13);
-        var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-        var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
         L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(mikveisraelsynagogueiv);
         var marker = L.marker([12.10511, -68.932573]).addTo(mikveisraelsynagogueiv);
         marker.bindPopup("<strong>Mikve Israel Synagogue (IV)</strong>");

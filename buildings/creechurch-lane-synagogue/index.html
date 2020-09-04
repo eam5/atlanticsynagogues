@@ -211,8 +211,8 @@
     <script>
         
         var creechurchlanesynagogue= L.map('creechurch-lane-synagogue').setView([51.513685, -0.079298], 13);
-        var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-        var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
         L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(creechurchlanesynagogue);
         var marker = L.marker([51.513685, -0.079298]).addTo(creechurchlanesynagogue);
         marker.bindPopup("<strong>Creechurch Lane Synagogue</strong>");

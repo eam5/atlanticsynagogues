@@ -211,8 +211,8 @@
     <script>
         
         var talmudtorahportuguesesynagoguei= L.map('talmud-torah-portuguese-synagogue-i').setView([52.368346, 4.902987], 13);
-        var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-        var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
         L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(talmudtorahportuguesesynagoguei);
         var marker = L.marker([52.368346, 4.902987]).addTo(talmudtorahportuguesesynagoguei);
         marker.bindPopup("<strong>Talmud Torah, Portuguese Synagogue I</strong>");

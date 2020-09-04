@@ -211,8 +211,8 @@
     <script>
         
         var esnogatalmudtorahii= L.map('esnoga-talmud-torah-ii').setView([52.36753, 4.905336], 13);
-        var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-        var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
         L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(esnogatalmudtorahii);
         var marker = L.marker([52.36753, 4.905336]).addTo(esnogatalmudtorahii);
         marker.bindPopup("<strong>Esnoga, Talmud Torah II</strong>");
