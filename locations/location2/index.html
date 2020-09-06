@@ -6,6 +6,19 @@
     <title>location2 - Atlantic Synagogues</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/marker-cluster.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   <script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet.markercluster-src.js"></script>
+
+   <style>
+       .map {height: 300px;}
+   </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
@@ -29,8 +42,9 @@
         </div>
     </div>
   </nav>
-    <div id="main" class="container" style="margin-top:56px;">
-      
+    <div id="main" class="container-lg">
+
+
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-transparent" style="padding-inline-start:0;">
       <li class="breadcrumb-item"><a href="https://eam5.github.io/atlanticsynagogues">Locations</a></li>
@@ -49,9 +63,91 @@
         
         
         
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/38">Kahal Kadosh Zur Israel Synagogue (1641)</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     </ul>
 
-<h2>Image Gallery</h2>
+<h2>Map</h2>
+
+<div class="map" id="mapid" width="100%"></div>
+
+<h2 class="mt-2">Image Gallery</h2>
 <div class="album py-4 bg-light">
     <div class="container">
       <div class="row">
@@ -1930,8 +2026,199 @@
     </div>
   </div>
 
+  <script>
+var locArray = [];
 
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(-8.06131);
+bldLatLon.push(-34.87132);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(locArray)
+
+var map = L.map('mapid');
+var bounds = new L.LatLngBounds(locArray);
+map.fitBounds(bounds);
+// .setView([51.505, -0.09], 13);
+var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+    L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(map);
+
+    var markers = L.markerClusterGroup({showCoverageOnHover: false, zoomToBoundsOnClick: false, maxClusterRadius:4});
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(-8.06131);
+bldLatLon.push(-34.87132);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/38\">Kahal Kadosh Zur Israel Synagogue (1641)</a></strong>"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+map.addLayer(markers);
+
+</script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

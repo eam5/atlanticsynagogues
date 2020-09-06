@@ -6,6 +6,19 @@
     <title>location1 - Atlantic Synagogues</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/marker-cluster.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   <script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet.markercluster-src.js"></script>
+
+   <style>
+       .map {height: 300px;}
+   </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
@@ -29,8 +42,9 @@
         </div>
     </div>
   </nav>
-    <div id="main" class="container" style="margin-top:56px;">
-      
+    <div id="main" class="container-lg">
+
+
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-transparent" style="padding-inline-start:0;">
       <li class="breadcrumb-item"><a href="https://eam5.github.io/atlanticsynagogues">Locations</a></li>
@@ -46,22 +60,127 @@
         
         
         
-        
-            <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/talmud-torah-portuguese-synagogue-i">Talmud Torah, Portuguese Synagogue I (1639)</a></li>
-        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/137">Neveh Shalom (1612)</a></li>
         
         
         
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/136">Beth Jacob (1614)</a></li>
         
         
         
-            <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/esnoga-talmud-torah-ii">Esnoga, Talmud Torah II (1675)</a></li>
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/138">Beth Israel (1618)</a></li>
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/6">Talmud Torah, Portuguese Synagogue I (1639)</a></li>
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/146">High German synagogue (1648)</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/7">Grote Sjoel (Great Synagogue) (1671)</a></li>
+        
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/4">Esnoga, Talmud Torah II (1675)</a></li>
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/9">Obbene Shul Synagogue (1686)</a></li>
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/10">Dritt Shul (1700)</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/11">Nieuwe Ashkenazic Synagogue (1752)</a></li>
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/12">Uilenburgerstraat synagoge (1766)</a></li>
+        
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/142">Dritt Sjoel (1778)</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
     </ul>
 
-<h2>Image Gallery</h2>
+<h2>Map</h2>
+
+<div class="map" id="mapid" width="100%"></div>
+
+<h2 class="mt-2">Image Gallery</h2>
 <div class="album py-4 bg-light">
     <div class="container">
       <div class="row">
@@ -1730,8 +1849,342 @@
     </div>
   </div>
 
+  <script>
+var locArray = [];
 
-    </div>
+
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.368577);
+bldLatLon.push(4.902246);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.36859);
+bldLatLon.push(4.900492);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.367259);
+bldLatLon.push(4.903681);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.367259);
+bldLatLon.push(4.903681);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.36753);
+bldLatLon.push(4.905336);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.367274);
+bldLatLon.push(4.903893);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.367887);
+bldLatLon.push(4.901825);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.368346);
+bldLatLon.push(4.902987);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.367077);
+bldLatLon.push(4.904008);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.367139);
+bldLatLon.push(4.903745);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.368346);
+bldLatLon.push(4.902987);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.370217);
+bldLatLon.push(4.90533);
+locArray.push(bldLatLon);
+console.log(bldLatLon)
+
+
+
+console.log(locArray)
+
+var map = L.map('mapid');
+var bounds = new L.LatLngBounds(locArray);
+map.fitBounds(bounds);
+// .setView([51.505, -0.09], 13);
+var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+    L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(map);
+
+    var markers = L.markerClusterGroup({showCoverageOnHover: false, zoomToBoundsOnClick: false, maxClusterRadius:4});
+    
+    
+
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.368577);
+bldLatLon.push(4.902246);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/138\">Beth Israel (1618)</a></strong>"));
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.36859);
+bldLatLon.push(4.900492);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/136\">Beth Jacob (1614)</a></strong>"));
+
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.367259);
+bldLatLon.push(4.903681);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/10\">Dritt Shul (1700)</a></strong>"));
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.367259);
+bldLatLon.push(4.903681);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/142\">Dritt Sjoel (1778)</a></strong>"));
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.36753);
+bldLatLon.push(4.905336);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/4\">Esnoga, Talmud Torah II (1675)</a></strong>"));
+
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.367274);
+bldLatLon.push(4.903893);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/7\">Grote Sjoel (Great Synagogue) (1671)</a></strong>"));
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.367887);
+bldLatLon.push(4.901825);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/146\">High German synagogue (1648)</a></strong>"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.368346);
+bldLatLon.push(4.902987);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/137\">Neveh Shalom (1612)</a></strong>"));
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.367077);
+bldLatLon.push(4.904008);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/11\">Nieuwe Ashkenazic Synagogue (1752)</a></strong>"));
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.367139);
+bldLatLon.push(4.903745);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/9\">Obbene Shul Synagogue (1686)</a></strong>"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.368346);
+bldLatLon.push(4.902987);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/6\">Talmud Torah, Portuguese Synagogue I (1639)</a></strong>"));
+
+
+
+
+
+
+
+
+var bldLatLon = [];
+bldLatLon.push(52.370217);
+bldLatLon.push(4.90533);
+markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/12\">Uilenburgerstraat synagoge (1766)</a></strong>"));
+
+
+
+map.addLayer(markers);
+
+</script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
