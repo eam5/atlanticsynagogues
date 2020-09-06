@@ -69,6 +69,7 @@
                         <a href="{{ locpath | prepend: site.url}}"><li type="button" class="btn btn-light list-group-item px-1">{% if page.city != null %}{{page.city}}{%endif%}{% if page.state != null %}, {{page.state}}{%endif%}{% if page.country != null %}, {{page.country}}{%endif%}</li></a>
                         {% endif %}
                         {% endfor %}
+                        <li class="list-group-item px-1 text-center">Location accuracy: {{ page.loc_def }}</li>
                         <li class="list-group-item" style="padding:0;">
                             {% assign bldgnameone = page.building_name | downcase %}
                             {% assign bldgnametwo = bldgnameone | remove: "," | remove: "[" | remove: "]" | remove: "(" | remove: ")" | remove: "'"%}

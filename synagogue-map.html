@@ -1,5 +1,41 @@
 ---
 layout: leaflet-map
+title: Synagogue Map
 ---
 <h1>Atlantic Synagogues</h1>
-<div id="map"></div>
+<style>
+    #mapid {height: 500px;width: 70%;}
+</style>
+<div id="mapid"></div>
+<script>
+    var locArray = [];
+    {% for building in site.data.buildings %}
+    
+    var bldLatLon = [];
+    bldLatLon.push({{building.lat}});
+    bldLatLon.push({{building.lon}});
+    locArray.push(bldLatLon);
+    console.log(bldLatLon)
+    {% endfor %}
+    console.log(locArray)
+    
+    var map = L.map('mapid');
+    var bounds = new L.LatLngBounds(locArray);
+    map.fitBounds(bounds);
+    // var map = L.map('map', {layers: [osm],center: [28.079555, -35.940793], zoom: 3 });
+    var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(map);
+    
+        var markers = L.markerClusterGroup({showCoverageOnHover: false, maxClusterRadius:28});
+        
+        {% for building in site.data.buildings %}
+    {% assign pagepath = building.idbuildings | prepend: "/buildings/"%}
+    var bldLatLon = [];
+    bldLatLon.push({{building.lat}});
+    bldLatLon.push({{building.lon}});
+    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a></strong>"));
+    {% endfor %}
+    map.addLayer(markers);
+    
+</script>
