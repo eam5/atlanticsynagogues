@@ -1,9 +1,7 @@
 ---
 layout: page
 ---
-{% assign pagepathone = page.path | remove: "building-images/"%}
-{% assign pagepathtwo = pagepathone | remove: "/index.html"%}
-{% assign pagepath = pagepathtwo | prepend: "/buildings/"%}
+{% assign pagepath = page.idbuilding | prepend: "/buildings/"%}
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-transparent" style="padding-inline-start:0;">
       <li class="breadcrumb-item"><a href="{{ pagepath | prepend: site.url}}">Building Page</a></li>

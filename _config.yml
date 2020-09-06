@@ -40,7 +40,7 @@ page_gen:
 
   - data: 'buildings'
     template: 'building'
-    name: 'building_name'
+    name: 'idbuildings'
     dir: 'buildings'
     title: 'building_name'
     
