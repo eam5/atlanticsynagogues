@@ -56,10 +56,8 @@
                     </div> -->
                     <ul class="list-group list-group-flush">
                         {% for image in site.data.building_images %}
-                        {% if image.idbuilding == page.idbuildings %}
-                        {% assign pagepathone = page.path | remove: "buildings/" %}
-                        {% assign pagepathtwo = pagepathone | remove: "/index.html" %}
-                        {% assign pagepath = pagepathtwo | prepend: "/building-images/" %}
+                        {% if image.idbuildings == page.idbuildings %}
+                        {% assign pagepath = page.idbuildings | prepend: "/building-images/" %}
                         <a href="{{ pagepath | prepend: site.url }}"><li type="button" class="btn btn-light list-group-item px-1">Image Gallery</li></a>
                         {% endif %}
                         {% endfor %}
@@ -69,7 +67,7 @@
                         <a href="{{ locpath | prepend: site.url}}"><li type="button" class="btn btn-light list-group-item px-1">{% if page.city != null %}{{page.city}}{%endif%}{% if page.state != null %}, {{page.state}}{%endif%}{% if page.country != null %}, {{page.country}}{%endif%}</li></a>
                         {% endif %}
                         {% endfor %}
-                        <li class="list-group-item px-1 text-center">Location accuracy: {{ page.loc_def }}</li>
+                        <li class="list-group-item px-1 text-center">Location Accuracy: {{ page.loc_def }}</li>
                         <li class="list-group-item" style="padding:0;">
                             {% assign bldgnameone = page.building_name | downcase %}
                             {% assign bldgnametwo = bldgnameone | remove: "," | remove: "[" | remove: "]" | remove: "(" | remove: ")" | remove: "'"%}

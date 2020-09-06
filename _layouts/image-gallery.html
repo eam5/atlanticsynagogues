@@ -1,13 +1,13 @@
 ---
 layout: page
 ---
-{% assign pagepath = page.idbuilding | prepend: "/buildings/"%}
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-transparent" style="padding-inline-start:0;">
+        {% assign pagepath = page.idbuildings | prepend: "/buildings/"%}
       <li class="breadcrumb-item"><a href="{{ pagepath | prepend: site.url}}">Building Page</a></li>
       <li class="breadcrumb-item active" aria-current="page">Image Gallery</li>
     </ol>
-  </nav>
+</nav>
 
 <h1>Image Gallery</h1>
 <h2>{{page.building_name}}</h2>
@@ -68,7 +68,8 @@ layout: page
                                     <li class="card-text"><strong>Original Source:</strong> {{ image.source_orig }}</li>
                                     <li class="card-text"><strong>Source URL:</strong> <a href="{{ image.source_url }}">{{ image.source_url }}</a></li>
                                     <li class="card-text"><strong>Permissions:</strong> {{ image.permissions }}</li>
-                                    <li class="card-text"><strong>Citation:</strong> {{ image.idcitation }}, pg. {{ image.pg }}</li>
+                                    
+                                    <li class="card-text"><strong>Citation:</strong>{% if image.citation != null %} {{ image.citation }}, pg. {{ image.pg }}{% endif %}</li>
                                 </ul>
                             </div>
                             </div>
