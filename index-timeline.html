@@ -1,0 +1,201 @@
+---
+layout: home
+---
+
+<style>
+    body{font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;}
+    #body {
+        font-family: 'Roboto', sans-serif;
+        height: 100%;
+        position: fixed;
+        max-width: 300px;
+        top: 0;
+        left: 960px;
+        right: 0px;
+        overflow: scroll;
+    }
+
+    div.tooltip {
+    /*    color: white;*/
+    position: absolute;
+    text-align: center;
+    max-width: 250px;
+    /*    max-height: 100px;*/
+    padding: 7px;
+    font: 12px 'Roboto', sans-serif;
+    background: lightgrey;
+    border: 0px;
+    border-radius: 12px;
+    line-height: 16px;
+    pointer-events: none;
+    box-shadow: 0px 0px 12px -10px;
+    }
+    .tweet {
+    padding: 10px;
+    }
+    text {
+    font-size: .8em;
+    }
+
+    #content:after {
+    display: block;
+    content: " ";
+    height: 1px;
+    width: 100px;
+    background: #e1e8ed;
+    margin: 10px auto;}
+
+    #tweet {
+    background-color: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 5px;
+    max-width: 320px !important;
+    opacity: 0;
+    }
+
+    .tweet-wrapper {
+    padding: 0.7rem;
+    }
+    .tweet-date, .tweet-name, .tweet-user {
+    font-weight: 500;
+    }
+
+    .tweet-date, .tweet-user {
+    display: inline-block;
+    margin: 0;
+    }
+    .tweet-text, .tweet-followers, .tweet-link {
+    margin: 10px 0 9px;
+    }
+    .tweet-name {
+    margin: 0;
+    }
+    .tweet-followers {
+    font-weight: 300;
+    margin-top: 5px;
+    }
+    .tweet-followers-label {
+    color: #999;
+    }
+/*
+    .tweet-retweets {
+    margin-left: 20px;
+    }
+*/
+
+/*
+    .tweet-favourites, .tweet-replies, .tweet-retweets {
+    display: inline-block;
+    margin: 0 1rem 0 0.5rem;
+    position: relative;
+    }
+*/
+    .element, .shared-site {
+        margin: 0 0 0.5rem 1rem;
+        cursor: pointer;
+    }
+    
+    .element:hover, .shared-site:hover {
+        background-color: #96ffea;
+    }
+    
+    #xAxisLong{
+        visibility: hidden;
+    }
+    
+     #yAxisSmall{
+        visibility: hidden;
+    }
+    
+    #yAxisDate {
+        visibility: hidden;
+    }
+    
+    #longitude-label{
+        visibility: hidden;
+    }
+/*
+    #latitude-label{
+        visibility: visible;
+    }
+*/
+    
+    button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 0em 0.25em 0.25em 0em;
+  padding: 0.78571429em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: bold;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  will-change: '';
+  -webkit-tap-highlight-color: transparent;
+  background: transparent none !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-weight: normal;
+  border-radius: 0.28571429rem;
+  text-transform: none;
+  text-shadow: none !important;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) inset;
+        box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) inset;
+}
+    
+button:hover, button:focus, button:active {
+  background: #FFFFFF !important;
+ -webkit-box-shadow: 0 0 0 1px #6435c9 inset!important;
+    box-shadow: 0 0 0 1px #6435c9 inset!important;
+    color: #6435c9!important;
+}
+
+button:active {
+  background: #F8F8F8 !important;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+    
+/* blend options taken from visual cinnamon tutorial: http://www.visualcinnamon.com/2016/05/beautiful-color-blending-svg-d3.html */
+    /*Set isolate on the group element*/
+    .footprint {
+      isolation: isolate;
+      cursor: pointer;
+    }  
+    /*Set blend mode on SVG element: e.g. screen, multiply*/
+    .footprint circle {  mix-blend-mode: multiply; }
+
+</style>
+    <div id='axis-buttons'></div>
+    <div id="vis"></div>
+    <!-- <div id='body'>
+        <div>
+            <h1>Atlantic Synagogues</h1>
+        </div>
+        <div id='buttons'></div>
+        <div id='title' class="tweet-name"></div>
+        <div id='username' class="tweet-user"></div>
+        <div id='userbio' class="tweet-text"></div> 
+        <div id='tweet-followers' class="tweet-followers"></div>
+        <div id='tweet-date' class='tweet-date'></div>
+        <div id='content' class="tweet-text"></div>
+        <div id='likes' class="tweet-favourites"></div>
+        <div id="retweets" class="tweet-retweets"></div>
+    </div> -->
