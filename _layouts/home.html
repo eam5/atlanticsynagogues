@@ -31,7 +31,7 @@
         width = 450 - margin.left - margin.right,
         height = 2000 - margin.top - margin.bottom;
         
-    d3.json( '/assets/data/buildings.json', function(data) {
+    d3.json( '{{site.url}}/assets/data/buildings.json', function(data) {
         console.log(data)
         _.each(data, function(bldg, k){
             bldg.nameIndex = bldg.building_name + " " + bldg.year_opened
@@ -40,7 +40,7 @@
         const allYears = data.map(d=>parseInt(d.year_opened)).filter(d=> !Number.isNaN(d));
         // console.log(allYears)
         const allYearNames = data.map(d=> 'a' + parseInt(d.year_opened )+ d.building_name.substring(0,3) ).filter(d=> !Number.isNaN(d)).sort((a, b) => b.localeCompare(a));
-        console.log(allYearNames)
+        // console.log(allYearNames)
         const allNames = data.map(d=>d.nameIndex).sort((a, b) => b.localeCompare(a));
         // console.log(allNames)
 

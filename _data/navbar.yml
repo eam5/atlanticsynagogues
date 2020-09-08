@@ -1,6 +1,6 @@
 #_data/navbar.yml
 - name: Home
-  link: /
+  link: /index-timeline
 - name: Images
   link: /images
 - name: Synagogue Map
