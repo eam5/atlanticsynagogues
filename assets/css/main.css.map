@@ -7,8 +7,8 @@
 	],
 	"sourcesContent": [
 		"@import 'base';",
-		"#main {\n    margin-top: 86px;\n}"
+		"#main {\n    // margin-top: 86px;\n    margin-top: 26px;\n}"
 	],
 	"names": [],
-	"mappings": "ACAA,AAAA,KAAK,CAAC,EACF,UAAU,EAAE,IAAI,GACnB"
+	"mappings": "ACAA,AAAA,KAAK,CAAC,EAEF,UAAU,EAAE,IAAI,GACnB"
 }
