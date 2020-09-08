@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Home - Atlantic Synagogues</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js'></script>
     <script src="https://d3js.org/d3.v4.js"></script>
@@ -38,24 +38,24 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-  <a class="navbar-brand" href="http://localhost:4000">Atlantic Synagogues</a>
+  <a class="navbar-brand" href="https://eam5.github.io/atlanticsynagogues">Atlantic Synagogues</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
             
-            <a class="nav-item nav-link" href="http://localhost:4000/">Home</a>
+            <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/">Home</a>
             
-            <a class="nav-item nav-link" href="http://localhost:4000/images">Images</a>
+            <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
             
-            <a class="nav-item nav-link" href="http://localhost:4000/synagogue-map">Synagogue Map</a>
+            <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/synagogue-map">Synagogue Map</a>
             
-            <a class="nav-item nav-link" href="http://localhost:4000/allbldgs_allfac">Facade Fractal Trees</a>
+            <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/allbldgs_allfac">Facade Fractal Trees</a>
             
-            <a class="nav-item nav-link" href="http://localhost:4000/scatter">Synagogue Timeline</a>
+            <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/scatter">Synagogue Timeline</a>
             
-            <a class="nav-item nav-link" href="http://localhost:4000/site-index">Site Index</a>
+            <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
               
         </div>
     </div>
@@ -266,7 +266,7 @@ button:hover {
         width = 450 - margin.left - margin.right,
         height = 2000 - margin.top - margin.bottom;
         
-    d3.json( 'http://localhost:4000/assets/data/buildings.json', function(data) {
+    d3.json( 'https://eam5.github.io/atlanticsynagogues/assets/data/buildings.json', function(data) {
         console.log(data)
         _.each(data, function(bldg, k){
             bldg.nameIndex = bldg.building_name + " " + bldg.year_opened
@@ -514,7 +514,7 @@ const yellow = '#fad67d';
         .attr('transform', d => 'translate(' + [d.cxLong, d.cyName] +
             ')rotate(' + [p5.prototype.randomGaussian((40),6)] + ')scale(0.35)')
         // .on('click', d=>console.log(d.building_name))
-        .on('click', d => window.open('http://localhost:4000/buildings/' + d.idbuildings, '_self'));
+        .on('click', d => window.open('https://eam5.github.io/atlanticsynagogues/buildings/' + d.idbuildings, '_self'));
 
     leaves.selectAll('path .leaf')
         .data(function(d){
@@ -589,7 +589,7 @@ const yellow = '#fad67d';
             // .attr('text-anchor', 'middle')
           .attr("x", d=>d.cxLong)
           .attr("y", d=>d.cyName)
-          .on('click', d => window.open('http://localhost:4000/buildings/' + d.idbuildings, '_self'));
+          .on('click', d => window.open('https://eam5.github.io/atlanticsynagogues/buildings/' + d.idbuildings, '_self'));
      
 
 const changeY = d3.select('#axis-buttons')
