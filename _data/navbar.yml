@@ -1,6 +1,6 @@
 #_data/navbar.yml
 - name: Home
-  link: /index-timeline
+  link: /
 - name: Images
   link: /images
 - name: Synagogue Map
@@ -9,3 +9,5 @@
   link: /allbldgs_allfac
 - name: Synagogue Timeline
   link: /scatter
+- name: Site Index
+  link: /site-index

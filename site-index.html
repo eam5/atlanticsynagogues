@@ -1,0 +1,34 @@
+---
+layout: default
+title: Site Index
+---
+<h1><a href="#syn-tag">Synagogues</a> - <a href="#location-tag">Locations</a></h1>
+<!-- <div class="container-lg">
+    <div class="row">
+        <div class="col-sm-7"> -->
+            <h2 id="syn-tag" class="pt-5">Synagogues</h2>
+                <ul>
+                    {% for building in site.data.buildings %}
+                    <li><a href="{{ building.idbuildings | datapage_url: 'buildings' }}">
+                        {{building.building_name}} ({{building.year_opened}}), 
+                        {% if building.city != null %}{{building.city}}{%endif%}{% if building.state != null %}, {{building.state}}{%endif%}{% if building.country != null %}, {{building.country}}{%endif%}
+
+
+                    </a></li>
+                    {% endfor %}
+                </ul>
+        <!-- </div>
+        <div class="col-sm-5"> -->
+            <h2 id="location-tag" class="pt-5">Locations</h2>
+                <ul>
+                    {% for location in site.data.location_images %}
+                    {% assign locpath = location.location_name | prepend: "/locations/" %}
+                    <li><a href="{{ locpath | prepend: site.url}}">{{location.location_name}}</a></li>
+                    {% endfor %}
+                </ul>
+        <!-- </div>
+
+    </div>
+</div> -->
+
+

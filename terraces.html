@@ -1,0 +1,236 @@
+---
+layout: terraces
+title: Terraces
+---
+<style>
+    .svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    /* padding-bottom: 100%; */
+    vertical-align: top;
+    overflow: visible;
+    margin: 1rem 0 4rem ;
+}
+.svg-content {
+    display: inline-block;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+}
+text.label {
+            cursor: pointer;
+        }
+        .label:hover {
+            text-decoration: underline;
+        }
+</style>
+<div id="container" class="svg-container"></div>
+<script>
+// const margin = {top: 40, right: 0, bottom: 200, left: 0};
+const SVG_HEIGHT = 2200;
+const SVG_WIDTH = 600;
+// const viewbox = [0, 0, SVG_WIDTH, SVG_HEIGHT];
+const UNIT_SIZE = 20;
+const HOUSE_SPACING = 60;
+const doorUnit = UNIT_SIZE * 2 / 3
+const doorHeight = UNIT_SIZE * 1.5
+const COLORS = ["#c7ecee", "#778beb", "#f7d794", "#63cdda", "#cf6a87", "#e77f67", "#786fa6", "#FDA7DF"];
+    
+var colorScale = d3.scaleOrdinal()
+        .domain([200,0])
+        .range(chroma.scale(["#076173", "#7E9ED6","#778beb"]).colors(8));
+
+d3.json('{{site.url}}/assets/data/bldgs_index_fac.json', function(data) {
+console.log(data) 
+// const data = stuff.filter(d=>d.year_opened<1800);
+// const bldgSort = _.chain(data)
+//     .groupBy(d=>d.building_name)
+//     .map(function(d){
+//         return {
+//             building_elements: d,
+//             building_name: d[0].building_name,
+//             idbuildings: 0,
+//             footprint_type: 2,
+//             year_opened: 1701,
+//             floors: 2,
+//             lat: 51.514473,
+//             lon: -0.078938,
+//             bldg_element_count: d.length
+//         }
+//     }).sort((a, b) => a.building_name.localeCompare(b.building_name))
+//     .value();
+    
+_.each( data, function(bldg, i){
+    bldg.nameIndex = bldg.building_name + " " + bldg.year_opened
+    bldg.width = (Math.floor(Math.random() * Math.floor(3))+1) * UNIT_SIZE
+    bldg.height = (Math.floor(Math.random() * Math.floor(2))+1) * UNIT_SIZE
+    // bldg.width = bldg.footprint_type * UNIT_SIZE,
+    // bldg.height = bldg.floors * UNIT_SIZE,
+    bldg.color = COLORS[Math.floor(Math.random() * COLORS.length)]
+    bldg.facades = _.chain(bldg.building_elements)
+            .groupBy(t=> t.facade_number)
+            .map(function(t){
+                return {
+                    facade_elements: t,
+                    facade_number: t[0].facade_number,
+                    element_count: t.length
+                };
+            })
+            .sort((a, b) => b.facade_number.localeCompare(a.facade_number))
+            .value();
+})
+console.log(data)
+const allNames = data.map(d=>d.nameIndex).sort((a, b) => a.localeCompare(b));
+// console.log(allNames)
+
+const allLon = data.map(d=>d.lon);
+    
+// const wFac = bldgSort.map(d=>d.facades[0])
+// console.log(wFac)
+ 
+var svg = d3.select("div#container")
+  .append("svg")
+  .attr("preserveAspectRatio", "xMinYMin meet")
+  .attr("viewBox", "0 0 600 2200")
+  .classed("svg-content", true)
+// const svg = d3.select('#vis')
+//     .append('svg')
+//    .attr('viewbox', `0 0 ${SVG_HEIGHT} ${SVG_WIDTH}` )
+//     // .attr('width', SVG_WIDTH + margin.left + margin.right)
+//     // .attr('height', SVG_HEIGHT+ margin.top + margin.bottom)
+//     .attr('preserveAspectRatio',"xMidYMid")
+    .attr('class', 'shapes')
+    .style('overflow', 'visible')
+ .append("g");
+            // .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
+const x = d3.scaleLinear()
+    .domain([-90, 70])
+//  .domain([d3.min(allLon), d3.max(allLon)])
+    .range([ 0, SVG_WIDTH ]);
+    
+const y = d3.scaleBand()
+	.domain(allNames)
+    .range([0,SVG_HEIGHT]); 
+    
+_.each(data, function(bldg, i){
+    bldg.x = x(bldg.lon)
+    bldg.y = y(bldg.nameIndex)
+})
+  
+const building = svg.selectAll('.shapes')
+    .data(data)
+    .enter().append('g')
+    .attr('class', 'building')
+    .style('animation-delay','0.8s')
+    .append('g')
+    .attr('transform', d => `translate(${d.x}, ${d.y}) scale(${0.5})` );
+//    transform={`translate(${d.x}, ${d.y}) scale(${d.y * 2 / SVG_HEIGHT})`}
+    
+const hillWidth = (Math.floor(Math.random() * Math.floor(10))+1) * UNIT_SIZE
+//const hill = (Math.round(d.bldg_element_count/10)*UNIT_SIZE)
+
+// const bldghill = building.append('svg:path')
+//     .attr('class', 'bldghill')
+//     .attr('d', d=>
+//         //    `M${- (Math.round(d.bldg_element_count/10)*UNIT_SIZE) - HOUSE_SPACING * 0.5},${SVG_HEIGHT} L${-(Math.round(d.bldg_element_count/10)*UNIT_SIZE)},${d.height + SVG_HEIGHT * 0.2} C${-(Math.round(d.bldg_element_count/10)*UNIT_SIZE)},${d.height - SVG_HEIGHT * 0.1} ${d.width + (Math.round(d.bldg_element_count/10)*UNIT_SIZE) + UNIT_SIZE * 2},${d.height - SVG_HEIGHT * 0.1} ${d.width + (Math.round(d.bldg_element_count/10)*UNIT_SIZE) + UNIT_SIZE * 2},${d.height + SVG_HEIGHT * 0.2} L${d.width + (Math.round(d.bldg_element_count/10)*UNIT_SIZE) + HOUSE_SPACING * 0.5},${SVG_HEIGHT}`
+//         `M${-hillWidth - HOUSE_SPACING * 0.5},${SVG_HEIGHT} 
+//         L${-hillWidth},${d.height + SVG_HEIGHT * 0.2} 
+//         C${-hillWidth},${(d.height) - SVG_HEIGHT * 0.1} ${d.width + hillWidth + UNIT_SIZE * 2},${(d.height) - SVG_HEIGHT * 0.1} ${d.width + hillWidth + UNIT_SIZE * 2},${d.height + SVG_HEIGHT * 0.2} 
+//         L${d.width + hillWidth + HOUSE_SPACING * 0.5},${SVG_HEIGHT}`
+
+//         )
+// .attr('fill', d=>colorScale(d.lat));
+//    .attr('fill', "rgb(126, 158, 214)");
+    
+const roof = building.append('svg:path')
+    .attr('class', 'roof')
+    .attr('d', d=>
+           `M${UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width},${0} L${0},${0}`
+     )
+    .attr('fill', d=>d.color);
+
+       
+const frontfac = building.append('svg:path')
+    .attr('class', 'frontfac')
+    .attr('d', d=>
+           `M${d.width},${0} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE * 2},${0} L${d.width + UNIT_SIZE * 2},${d.height} L${d.width},${d.height} L${d.width},${0}`
+     )
+    .attr('fill', "#CECCD9");
+    
+const sidefac = building.append('rect')
+    .attr('class', 'sidefac')
+    .attr('width', d=>d.width)
+    .attr('height', d=>d.height)
+    .attr('fill', "#fff");
+    
+const door = building.append('svg:path')
+    .attr('class', 'frontdoor')
+    .attr('d', d=>
+           `M${d.width + doorUnit},${d.height} L${d.width + doorUnit},${d.height - doorHeight * 0.7} C${d.width + doorUnit},${d.height - doorHeight} ${d.width + doorUnit * 2},${d.height - doorHeight} ${d.width + doorUnit * 2},${d.height - doorHeight * 0.7} L${d.width + doorUnit * 2},${d.height - doorHeight * 0.7} L${d.width + doorUnit * 2},${d.height}`
+     )
+    .attr('fill', "#503A4B");
+    
+const bldgwindow = building.append('circle')
+    .attr('class', 'window')
+    .attr('cx', d=>d.width + UNIT_SIZE)
+    .attr('cy',d=> d.height - UNIT_SIZE * (0 + 2))
+    .attr('r', 3)
+    .attr('fill', "#503A4B")
+     .attr('opacity', function(d,i){
+         return 1 - i * 0.3;
+     });
+    
+const bldgshadow = building.append('svg:path')
+    .attr('class', 'shadow')
+    .attr('d', d=>
+           `M${d.width + UNIT_SIZE * 2},${d.height} L${d.width + + UNIT_SIZE * 2 - d.height},${d.height + d.height} L${UNIT_SIZE * 2 - d.height},${d.height + d.height} L${0},${d.height}`
+     )
+    .attr('fill', "#503A4B")
+    .attr('opacity', '0.1')
+    .style('mix-blend-mode', 'multiply');
+
+const label = building.append('text')
+            .attr('class', 'label')
+//            .attr('text-anchor', 'middle')
+            .attr('y', d=>d.height/4)
+            .attr('x', d=> d.width + UNIT_SIZE*2)
+            .attr('dy', 0.05)
+            .attr('font-size', '1.5rem')
+            .text(d=>d.building_name)
+            .on('click', d => window.open('{{site.url}}/buildings/' + d.idbuildings, '_self'))
+            .call(wrap, 345);
+    
+    
+      //wrap label text
+//    https://bl.ocks.org/mbostock/7555321
+   function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        x = text.attr("x"),
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
+}
+})
+
+
+
+</script>

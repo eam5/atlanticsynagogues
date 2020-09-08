@@ -12,6 +12,21 @@
     <script type="text/javascript" src="https://cdn.rawgit.com/gka/chroma.js/master/chroma.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
     <style>
+            .svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    /* padding-bottom: 100%; */
+    vertical-align: top;
+    overflow: visible;
+    margin: 1rem 0 4rem ;
+}
+.svg-content {
+    display: inline-block;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+}
         path.petal, text.label {
             cursor: pointer;
         }
@@ -27,7 +42,7 @@
       {{ content}}
     </div>
     <script>
-    const margin = {top: 40, right: 10, bottom: 200, left: 30},
+    const margin = {top: 40, right: 10, bottom: 40, left: 10},
         width = 450 - margin.left - margin.right,
         height = 2000 - margin.top - margin.bottom;
         
@@ -46,11 +61,17 @@
 
         const allLon = data.map(d=>d.lon);
         // console.log(allLon)
+
+        var svg = d3.select("div#container")
+  .append("svg")
+  .attr("preserveAspectRatio", "xMinYMin meet")
+  .attr("viewBox", "0 0 650 2000")
+  .classed("svg-content", true)
             
-        const svg = d3.select("#vis")
-            .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
+        // const svg = d3.select("#vis")
+        //     .append("svg")
+        //     .attr("width", width + margin.left + margin.right)
+        //     .attr("height", height + margin.top + margin.bottom)
             .style("overflow", "visible")
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -197,6 +218,7 @@ const yellow = '#fad67d';
         .attr('stroke-width', 15)
         .attr('class', 'trunk')
         .attr('stroke-weight', 0)
+        .style('cursor', 'pointer')
         // .attr('opacity', '0.4')
         // .attr('stroke', function (d) { return colorBranch(d.lat); })
         .attr('fill', '#f0ede5');
@@ -272,7 +294,7 @@ const yellow = '#fad67d';
         .attr('transform', d => 'translate(' + [d.cxLong, d.cyName] +
             ')rotate(' + [p5.prototype.randomGaussian((40),6)] + ')scale(0.35)')
         // .on('click', d=>console.log(d.building_name))
-        .on('click', d => window.open('/buildings/' + d.idbuildings, '_self'));
+        .on('click', d => window.open('{{site.url}}/buildings/' + d.idbuildings, '_self'));
 
     leaves.selectAll('path .leaf')
         .data(function(d){
@@ -343,24 +365,63 @@ const yellow = '#fad67d';
         .attr('class', 'label')
           .text(d=>d.building_name + ' (' + d.year_opened + ')')
         //   .attr("color", "#333")
-            .style('font-size', '1rem')
+            .style('font-size', '0.9rem')
             // .attr('text-anchor', 'middle')
           .attr("x", d=>d.cxLong)
           .attr("y", d=>d.cyName)
-          .on('click', d => window.open('/buildings/' + d.idbuildings, '_self'));
-;     
+          .on('click', d => window.open('{{site.url}}/buildings/' + d.idbuildings, '_self'));
+     
 
+const changeY = d3.select('#axis-buttons')
+        .append('button')
+        .attr('class', 'changeaxis')
+        .text('Sorted by: Names')
+        .on('click', function(){console.log(shape);
+       	    if (shape=='names'){listYears(); shape ='years'}
+            else {listNames(); shape = 'names'}
+        });
+    
         
     //    svg.on("click", function(d) {
     //  d3.selectAll('circle').style('opacity', 0.5).style('stroke-width', '0px');
     //});
-    
+    var shape = 'names'
+    function listNames(){
+        d3.selectAll('.branch')
+            .transition().duration(1000)
+            .attr('d', function(d){
+            if (d.cxLong>=xTree) {
+                var i;
+                for (i = 1; i <= 8; i++) {
+                    if (((i-1) * yBranch)<=d.cyName && d.cyName<=(i * yBranch)) {
+                        return `M${xBranchR},${i * yBranch} Q${p5.prototype.randomGaussian((xBranchR + d.cxLong) / 2, 3)},${p5.prototype.randomGaussian((d.cyName + (i * yBranch) -20) / 2, 3)} ${d.cxLong},${d.cyName}`
+                    }
+                }
+            } else if (d.cxLong<xTree) {
+                var i;
+                for (i = 1; i <= 8; i++) {
+                    if (((i-1) * yBranch)<d.cyName && d.cyName<=(i * yBranch)) {
+                        return `M${xBranchL},${i * yBranch} Q${p5.prototype.randomGaussian((xBranchL + d.cxLong) / 2, 3)},${p5.prototype.randomGaussian((d.cyName + (i * yBranch) -20) / 2, 3)} ${d.cxLong},${d.cyName}`
+                    }
+                }
+            }
+            else {
+              return  `M${xTree},${yTree} L${(xTree + d.cxLong) / 2},${d.cyName} L${d.cxLong},${d.cyName}`
+            }           
+        });
+        d3.selectAll('g .leaf')
+        .transition().duration(1000)
+        .attr('transform', d => 'translate(' + [d.cxLong, d.cyName] +
+            ')rotate(' + [p5.prototype.randomGaussian((40),6)] + ')scale(0.35)');
+        d3.selectAll('text')
+        .transition().duration(1000)
+        .attr("y", d=>d.cyName);
+        d3.selectAll('.changeaxis')
+        .text('Sorted by: Name');
+    }
 
-    const changeY = d3.select('#axis-buttons')
-        .append('button')
-        .text('change y')
-        .on('click', function(d){
-            d3.selectAll('.branch')
+    function listYears(){
+        d3.selectAll('.branch')
             .transition().duration(1000)
             .attr('d', function(d){
             if (d.cxLong>=xTree) {
@@ -368,10 +429,8 @@ const yellow = '#fad67d';
                 for (i = 1; i <= 8; i++) {
                     if (((i-1) * yBranch)<=d.cyYear && d.cyYear<=(i * yBranch)) {
                         return `M${xBranchR},${i * yBranch} Q${p5.prototype.randomGaussian((xBranchR + d.cxLong) / 2, 3)},${p5.prototype.randomGaussian((d.cyYear + (i * yBranch) -20) / 2, 3)} ${d.cxLong},${d.cyYear}`
-                        //   return  `M${xBranchR},${yTree/4} L${(xBranchR + d.cxLong)/ 2},${d.cyName + (Math.abs(d.cyName - (height/4))/1.5)} L${d.cxLong},${d.cyName}`
                     }
                 }
-
             } else if (d.cxLong<xTree) {
                 var i;
                 for (i = 1; i <= 8; i++) {
@@ -391,7 +450,18 @@ const yellow = '#fad67d';
         d3.selectAll('text')
         .transition().duration(1000)
         .attr("y", d=>d.cyYear);
-        });
+        d3.selectAll('.changeaxis')
+        .text('Sorted by: Year Opened');
+    }
+
+
+    d3.selectAll('.trunk')
+        .on('click',function(){console.log(shape);
+       	    if (shape=='names'){listYears(); shape ='years'}
+            else {listNames(); shape = 'names'}
+        })
+
+  
         
        
         // text label for the x axis
@@ -412,7 +482,8 @@ const yellow = '#fad67d';
     //     .attr('id', 'latitude-label')
     //       .style("text-anchor", "middle")
     //         .style('font-size', "0.9em")
-    //       .text("Latitude");      
+    //       .text("Latitude");    
+      
         
         function linkArc(d) {
           var dx = d.x - d.x0,
