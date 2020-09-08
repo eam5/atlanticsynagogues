@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title> - Atlantic Synagogues</title>
+    <title>Home - Atlantic Synagogues</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
             
-            <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/">Home</a>
+            <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/index-timeline">Home</a>
             
             <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
             
@@ -248,7 +248,7 @@ button:hover {
         width = 450 - margin.left - margin.right,
         height = 2000 - margin.top - margin.bottom;
         
-    d3.json( '/assets/data/buildings.json', function(data) {
+    d3.json( 'https://eam5.github.io/atlanticsynagogues/assets/data/buildings.json', function(data) {
         console.log(data)
         _.each(data, function(bldg, k){
             bldg.nameIndex = bldg.building_name + " " + bldg.year_opened
@@ -257,7 +257,7 @@ button:hover {
         const allYears = data.map(d=>parseInt(d.year_opened)).filter(d=> !Number.isNaN(d));
         // console.log(allYears)
         const allYearNames = data.map(d=> 'a' + parseInt(d.year_opened )+ d.building_name.substring(0,3) ).filter(d=> !Number.isNaN(d)).sort((a, b) => b.localeCompare(a));
-        console.log(allYearNames)
+        // console.log(allYearNames)
         const allNames = data.map(d=>d.nameIndex).sort((a, b) => b.localeCompare(a));
         // console.log(allNames)
 
