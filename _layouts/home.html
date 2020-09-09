@@ -46,7 +46,7 @@
         width = 450 - margin.left - margin.right,
         height = 2000 - margin.top - margin.bottom;
         
-    d3.json( '{{site.url}}/assets/data/buildings.json', function(data) {
+    d3.json( '{{site.url}}/assets/data/bldgs_index_fac.json', function(data) {
         console.log(data)
         _.each(data, function(bldg, k){
             bldg.nameIndex = bldg.building_name + " " + bldg.year_opened
@@ -54,7 +54,9 @@
 
         const allYears = data.map(d=>parseInt(d.year_opened)).filter(d=> !Number.isNaN(d));
         // console.log(allYears)
-        const allYearNames = data.map(d=> 'a' + parseInt(d.year_opened )+ d.building_name.substring(0,3) ).filter(d=> !Number.isNaN(d)).sort((a, b) => b.localeCompare(a));
+        const allYearNames = data.map(d=> d.year_opened + d.building_name.substring(0,3) + d.idbuildings).sort((a, b) => b.localeCompare(a));
+
+        // const allYearNames = data.map(d=> 'a' + parseInt(d.year_opened )+ d.building_name.substring(0,3) ).filter(d=> !Number.isNaN(d)).sort((a, b) => b.localeCompare(a));
         // console.log(allYearNames)
         const allNames = data.map(d=>d.nameIndex).sort((a, b) => b.localeCompare(a));
         // console.log(allNames)
@@ -64,8 +66,8 @@
 
         var svg = d3.select("div#container")
   .append("svg")
-  .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "0 0 650 2000")
+  .attr("preserveAspectRatio", "xMinYMin")
+  .attr("viewBox", "0 0 800 2000")
   .classed("svg-content", true)
             
         // const svg = d3.select("#vis")
@@ -141,7 +143,9 @@
     _.each(data, function(bldg, k){
         const sub = bldg.building_name.substring(0, 2)
         // bldg.year = parseInt(bldg.year_opened)
-            bldg.year = 'a'  + parseInt(bldg.year_opened)+ bldg.building_name.substring(0,3)
+            // bldg.year = 'a'  + parseInt(bldg.year_opened)+ bldg.building_name.substring(0,3)
+            bldg.year = bldg.year_opened + bldg.building_name.substring(0,3) + bldg.idbuildings
+
             // bldg.nameIndex = bldg.building_name + "-" + bldg.year_opened
             // bldg.cxYear = x(new Date(bldg.year_add,0,1))
             // bldg.cyLat = y(bldg.lat)
@@ -365,7 +369,7 @@ const yellow = '#fad67d';
         .attr('class', 'label')
           .text(d=>d.building_name + ' (' + d.year_opened + ')')
         //   .attr("color", "#333")
-            .style('font-size', '0.9rem')
+            // .style('font-size', '0.9rem')
             // .attr('text-anchor', 'middle')
           .attr("x", d=>d.cxLong)
           .attr("y", d=>d.cyName)
@@ -374,7 +378,7 @@ const yellow = '#fad67d';
 
 const changeY = d3.select('#axis-buttons')
         .append('button')
-        .attr('class', 'changeaxis')
+        .attr('class', 'changeaxis btn btn-link')
         .text('Sorted by: Names')
         .on('click', function(){console.log(shape);
        	    if (shape=='names'){listYears(); shape ='years'}
