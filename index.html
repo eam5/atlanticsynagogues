@@ -61,188 +61,7 @@
     </div>
   </nav>
     <div id="main" class="container">
-      <style>
-    body{font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;}
-    #body {
-        font-family: 'Roboto', sans-serif;
-        height: 100%;
-        position: fixed;
-        max-width: 300px;
-        top: 0;
-        left: 960px;
-        right: 0px;
-        overflow: scroll;
-    }
-
-    div.tooltip {
-    /*    color: white;*/
-    position: absolute;
-    text-align: center;
-    max-width: 250px;
-    /*    max-height: 100px;*/
-    padding: 7px;
-    font: 12px 'Roboto', sans-serif;
-    background: lightgrey;
-    border: 0px;
-    border-radius: 12px;
-    line-height: 16px;
-    pointer-events: none;
-    box-shadow: 0px 0px 12px -10px;
-    }
-    .tweet {
-    padding: 10px;
-    }
-    text {
-    font-size: .8em;
-    }
-
-    #content:after {
-    display: block;
-    content: " ";
-    height: 1px;
-    width: 100px;
-    background: #e1e8ed;
-    margin: 10px auto;}
-
-    #tweet {
-    background-color: #fff;
-    border: 1px solid #e1e8ed;
-    border-radius: 5px;
-    max-width: 320px !important;
-    opacity: 0;
-    }
-
-    .tweet-wrapper {
-    padding: 0.7rem;
-    }
-    .tweet-date, .tweet-name, .tweet-user {
-    font-weight: 500;
-    }
-
-    .tweet-date, .tweet-user {
-    display: inline-block;
-    margin: 0;
-    }
-    .tweet-text, .tweet-followers, .tweet-link {
-    margin: 10px 0 9px;
-    }
-    .tweet-name {
-    margin: 0;
-    }
-    .tweet-followers {
-    font-weight: 300;
-    margin-top: 5px;
-    }
-    .tweet-followers-label {
-    color: #999;
-    }
-/*
-    .tweet-retweets {
-    margin-left: 20px;
-    }
-*/
-
-/*
-    .tweet-favourites, .tweet-replies, .tweet-retweets {
-    display: inline-block;
-    margin: 0 1rem 0 0.5rem;
-    position: relative;
-    }
-*/
-    .element, .shared-site {
-        margin: 0 0 0.5rem 1rem;
-        cursor: pointer;
-    }
-    
-    .element:hover, .shared-site:hover {
-        background-color: #96ffea;
-    }
-    
-    #xAxisLong{
-        visibility: hidden;
-    }
-    
-     #yAxisSmall{
-        visibility: hidden;
-    }
-    
-    #yAxisDate {
-        visibility: hidden;
-    }
-    
-    #longitude-label{
-        visibility: hidden;
-    }
-/*
-    #latitude-label{
-        visibility: visible;
-    }
-*/
-    
-    button {
-  cursor: pointer;
-  display: inline-block;
-  min-height: 1em;
-  outline: none;
-  border: none;
-  vertical-align: baseline;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  margin: 0em 0.25em 0.25em 0em;
-  padding: 0.78571429em;
-  text-transform: none;
-  text-shadow: none;
-  font-weight: bold;
-  line-height: 1em;
-  font-style: normal;
-  text-align: center;
-  text-decoration: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
-  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
-  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
-  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
-  will-change: '';
-  -webkit-tap-highlight-color: transparent;
-  background: transparent none !important;
-  color: rgba(0, 0, 0, 0.6) !important;
-  font-weight: normal;
-  border-radius: 0.28571429rem;
-  text-transform: none;
-  text-shadow: none !important;
-  -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) inset;
-        box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15) inset;
-}
-    
-button:hover, button:focus, button:active {
-  background: #FFFFFF !important;
- -webkit-box-shadow: 0 0 0 1px #6435c9 inset!important;
-    box-shadow: 0 0 0 1px #6435c9 inset!important;
-    color: #6435c9!important;
-}
-
-button:active {
-  background: #F8F8F8 !important;
-}
-
-button:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-    
-/* blend options taken from visual cinnamon tutorial: http://www.visualcinnamon.com/2016/05/beautiful-color-blending-svg-d3.html */
-    /*Set isolate on the group element*/
-    .footprint {
-      isolation: isolate;
-      cursor: pointer;
-    }  
-    /*Set blend mode on SVG element: e.g. screen, multiply*/
-    .footprint circle {  mix-blend-mode: multiply; }
-
-</style>
-    <div id='axis-buttons'></div>
+          <div id='axis-buttons'></div>
     <div id="container" class="svg-container"></div>
     <!-- <div id="vis"></div> -->
     <!-- <div id='body'>
@@ -266,7 +85,7 @@ button:hover {
         width = 450 - margin.left - margin.right,
         height = 2000 - margin.top - margin.bottom;
         
-    d3.json( 'https://eam5.github.io/atlanticsynagogues/assets/data/buildings.json', function(data) {
+    d3.json( 'https://eam5.github.io/atlanticsynagogues/assets/data/bldgs_index_fac.json', function(data) {
         console.log(data)
         _.each(data, function(bldg, k){
             bldg.nameIndex = bldg.building_name + " " + bldg.year_opened
@@ -274,7 +93,9 @@ button:hover {
 
         const allYears = data.map(d=>parseInt(d.year_opened)).filter(d=> !Number.isNaN(d));
         // console.log(allYears)
-        const allYearNames = data.map(d=> 'a' + parseInt(d.year_opened )+ d.building_name.substring(0,3) ).filter(d=> !Number.isNaN(d)).sort((a, b) => b.localeCompare(a));
+        const allYearNames = data.map(d=> d.year_opened + d.building_name.substring(0,3) + d.idbuildings).sort((a, b) => b.localeCompare(a));
+
+        // const allYearNames = data.map(d=> 'a' + parseInt(d.year_opened )+ d.building_name.substring(0,3) ).filter(d=> !Number.isNaN(d)).sort((a, b) => b.localeCompare(a));
         // console.log(allYearNames)
         const allNames = data.map(d=>d.nameIndex).sort((a, b) => b.localeCompare(a));
         // console.log(allNames)
@@ -284,8 +105,8 @@ button:hover {
 
         var svg = d3.select("div#container")
   .append("svg")
-  .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "0 0 650 2000")
+  .attr("preserveAspectRatio", "xMinYMin")
+  .attr("viewBox", "0 0 800 2000")
   .classed("svg-content", true)
             
         // const svg = d3.select("#vis")
@@ -361,7 +182,9 @@ button:hover {
     _.each(data, function(bldg, k){
         const sub = bldg.building_name.substring(0, 2)
         // bldg.year = parseInt(bldg.year_opened)
-            bldg.year = 'a'  + parseInt(bldg.year_opened)+ bldg.building_name.substring(0,3)
+            // bldg.year = 'a'  + parseInt(bldg.year_opened)+ bldg.building_name.substring(0,3)
+            bldg.year = bldg.year_opened + bldg.building_name.substring(0,3) + bldg.idbuildings
+
             // bldg.nameIndex = bldg.building_name + "-" + bldg.year_opened
             // bldg.cxYear = x(new Date(bldg.year_add,0,1))
             // bldg.cyLat = y(bldg.lat)
@@ -585,7 +408,7 @@ const yellow = '#fad67d';
         .attr('class', 'label')
           .text(d=>d.building_name + ' (' + d.year_opened + ')')
         //   .attr("color", "#333")
-            .style('font-size', '0.9rem')
+            // .style('font-size', '0.9rem')
             // .attr('text-anchor', 'middle')
           .attr("x", d=>d.cxLong)
           .attr("y", d=>d.cyName)
@@ -594,7 +417,7 @@ const yellow = '#fad67d';
 
 const changeY = d3.select('#axis-buttons')
         .append('button')
-        .attr('class', 'changeaxis')
+        .attr('class', 'changeaxis btn btn-link')
         .text('Sorted by: Names')
         .on('click', function(){console.log(shape);
        	    if (shape=='names'){listYears(); shape ='years'}

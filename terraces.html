@@ -57,11 +57,18 @@ text.label {
         .label:hover {
             text-decoration: underline;
         }
+        .stop-left {
+                stop-color: #3f51b5;  /* Indigo */
+            }
+
+            .stop-right {
+                stop-color: #009688;  /* Teal */
+            }
 </style>
 <div id="container" class="svg-container"></div>
 <script>
-// const margin = {top: 40, right: 0, bottom: 200, left: 0};
-const SVG_HEIGHT = 2200;
+const margin = {top: 10, right: 0, bottom: 40, left: 10};
+const SVG_HEIGHT = 2000;
 const SVG_WIDTH = 600;
 // const viewbox = [0, 0, SVG_WIDTH, SVG_HEIGHT];
 const UNIT_SIZE = 20;
@@ -72,117 +79,220 @@ const COLORS = ["#c7ecee", "#778beb", "#f7d794", "#63cdda", "#cf6a87", "#e77f67"
     
 var colorScale = d3.scaleOrdinal()
         .domain([200,0])
-        .range(chroma.scale(["#076173", "#7E9ED6","#778beb"]).colors(8));
+        // .range(chroma.scale(["#c7ecee","#076173", "#7E9ED6","#778beb"]).colors(8));
+        .range(chroma.scale(["#076173", "#7E9ED6"]).colors(5));
 
 d3.json('https://eam5.github.io/atlanticsynagogues/assets/data/bldgs_index_fac.json', function(data) {
 console.log(data) 
-// const data = stuff.filter(d=>d.year_opened<1800);
-// const bldgSort = _.chain(data)
-//     .groupBy(d=>d.building_name)
-//     .map(function(d){
-//         return {
-//             building_elements: d,
-//             building_name: d[0].building_name,
-//             idbuildings: 0,
-//             footprint_type: 2,
-//             year_opened: 1701,
-//             floors: 2,
-//             lat: 51.514473,
-//             lon: -0.078938,
-//             bldg_element_count: d.length
-//         }
-//     }).sort((a, b) => a.building_name.localeCompare(b.building_name))
-//     .value();
-    
+
 _.each( data, function(bldg, i){
     bldg.nameIndex = bldg.building_name + " " + bldg.year_opened
-    bldg.width = (Math.floor(Math.random() * Math.floor(3))+1) * UNIT_SIZE
-    bldg.height = (Math.floor(Math.random() * Math.floor(2))+1) * UNIT_SIZE
+    // bldg.width = (Math.floor(Math.random() * Math.floor(3))+1) * UNIT_SIZE
+    // bldg.height = (Math.floor(Math.random() * Math.floor(2))+1) * UNIT_SIZE
+   
     // bldg.width = bldg.footprint_type * UNIT_SIZE,
     // bldg.height = bldg.floors * UNIT_SIZE,
     bldg.color = COLORS[Math.floor(Math.random() * COLORS.length)]
     bldg.facades = _.chain(bldg.building_elements)
-            .groupBy(t=> t.facade_number)
+            .groupBy(t=> t.TS_number)
             .map(function(t){
                 return {
-                    facade_elements: t,
-                    facade_number: t[0].facade_number,
+                    TS_elements: t,
+                    TS_number: t[0].TS_number,
                     element_count: t.length
                 };
-            })
-            .sort((a, b) => b.facade_number.localeCompare(a.facade_number))
+            }).filter()
+            // .sort((a, b) => b.TS_number.localeCompare(a.TS_number))
             .value();
-})
-console.log(data)
-const allNames = data.map(d=>d.nameIndex).sort((a, b) => a.localeCompare(b));
-// console.log(allNames)
+    _.each(bldg.facades, function(elem, k){
+        // console.log(elem.TS_number)
+        if (elem.TS_number != null){
+            // console.log(elem.TS_number)
+            _.each(elem.TS_elements, function(l,m){
+                if (l.architectural_element == "footprint"){
+                    console.log(l.AE_type)
+                    bldg.footprint_type = l.AE_type
+                }
+            })
+        } else {bldg.footprint_type = null}
+       
+        // if (elem.architectural_element = "footprint"){
+        //     console.log(elem.AE_type)
+        // }
+    })
 
-const allLon = data.map(d=>d.lon);
+    if (bldg.stories != 0){
+        bldg.height = bldg.stories * UNIT_SIZE
+    } else if (bldg.stories == 0){bldg.height = 1 * UNIT_SIZE}
+
+    if (bldg.footprint_type == "rectangular basilica"){
+        bldg.width = 2.5 * UNIT_SIZE
+    } else if (bldg.footprint_type == "rectangular basilica with appendage"){
+        bldg.width = 2.5 * UNIT_SIZE
+    } else if (bldg.footprint_type == "repurposed tenement w/ upstairs prayer hall"){
+        bldg.width = 1 * UNIT_SIZE
+    } else if (bldg.footprint_type == "modified square basilica"){
+        bldg.width = 1.5 * UNIT_SIZE
+    } else { bldg.width = 1 * UNIT_SIZE}
     
-// const wFac = bldgSort.map(d=>d.facades[0])
-// console.log(wFac)
- 
+})
+// data.sort((a, b) => a.nameIndex.localeCompare(b.nameIndex))
+console.log(data)
+
+const allLon = data.map(d=>d.lon).sort();
+// console.log(allLon)
+
+var shape = 'years';
+// const changeY = d3.select("div#container").append('div')
+//     .append('button')
+//     .attr('class', 'changeaxis btn btn-link')
+//     .text('Sorted by: Years')
+//     .on('click', function(){console.log(shape);
+//         if (shape=='years'){listNames(); shape ='names'}
+//         else {listYears(); shape = 'years'}
+//     });
+    
 var svg = d3.select("div#container")
-  .append("svg")
-  .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "0 0 600 2200")
-  .classed("svg-content", true)
-// const svg = d3.select('#vis')
-//     .append('svg')
-//    .attr('viewbox', `0 0 ${SVG_HEIGHT} ${SVG_WIDTH}` )
-//     // .attr('width', SVG_WIDTH + margin.left + margin.right)
-//     // .attr('height', SVG_HEIGHT+ margin.top + margin.bottom)
-//     .attr('preserveAspectRatio',"xMidYMid")
+    .append("svg")
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "0 0 600 2000")
+    .classed("svg-content", true)
     .attr('class', 'shapes')
     .style('overflow', 'visible')
- .append("g");
+    .append("g");
+    // .attr('transform', d => `scale(${0.475})` );
             // .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    
+
+//https://www.visualcinnamon.com/2016/05/data-based-svg-gradient-d3.html
+var hillGradients = svg.append("defs").selectAll("linearGradient")
+    .data(data)
+    .enter().append("linearGradient")
+    //Create a unique id per "hill"
+    .attr("id", function(d){ return "gradient-" + d.idbuildings; })
+    .attr("x1", "100%")
+    .attr("x2", "100%")
+    .attr("y1", "0%")
+    .attr("y2", "60%");
+
+//Add colors to the gradient
+hillGradients.append("stop")
+    .attr('class', 'start')
+    .attr("offset", "0%")
+    .attr("stop-color", function(d) {
+        return colorScale(d.region);
+    })
+    .attr("stop-opacity", 1);
+hillGradients.append("stop")
+    .attr('class', 'end')
+    .attr("offset", "100%")
+    .attr("stop-color", "#fff")
+    .attr("stop-opacity", 1);
+
 const x = d3.scaleLinear()
-    .domain([-90, 70])
+    .domain([-90, 90])
 //  .domain([d3.min(allLon), d3.max(allLon)])
     .range([ 0, SVG_WIDTH ]);
     
+const allNames = data.map(d=>d.nameIndex).sort((a, b) => a.localeCompare(b));
+// console.log(allNames)
+
 const y = d3.scaleBand()
 	.domain(allNames)
     .range([0,SVG_HEIGHT]); 
+
+const allYearNames = data.map(d=> d.year_opened + d.building_name.substring(0,3) + d.idbuildings);
+allYearNames.push('1600a1','1650a1','1750a1','1800a1','1850a1');
+allYearNames.sort((a, b) => a.localeCompare(b));
+console.log(allYearNames)
+
+const yDate = d3.scaleBand()
+	.domain(allYearNames)
+    .range([0,SVG_HEIGHT]);
+    svg.append("g")
+            .attr('id', 'yYear')
+            .attr("color", "#333")
+            // .style('font-size', '1rem')
+            .call(d3.axisRight(yDate)
+            .tickValues(['1600a1','1650a1','1700Dri10','1750a1','1800a1','1850a1'])
+            .tickFormat(function(d){
+                return d=='1600a1' ? "1600"
+                : d=='1650a1' ? '1650'
+                : d=='1700Dri10' ? '1700'
+                : d=='1750a1' ? '1750'
+                : d=='1800a1' ? "1800"
+                : "1850";
+            }))
+                // if(d=='1600a1'){return '1600'} else {return 'tropic of cancer'}})
+            // .tickSize(SVG_WIDTH))
+            .call(g => g.select(".domain").attr("display", "none"))
+            .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
+            .call(g => g.selectAll(".tick").selectAll("text").attr('text-anchor', 'end').attr('x',SVG_WIDTH-10).attr("dy", "-1.5em").attr("fill", "rgb(29, 108, 132)"));
+
+            const dateLines = svg.selectAll('.dateline')
+    .data(['1600a1','1650a1','1700Dri10','1750a1','1800a1','1850a1']).enter()
+    .append('line')
+        .attr('class', 'dateline')
+        .style("stroke", "rgb(29, 108, 132)")
+        .attr('stroke-width', '1.5px')
+        .attr('stroke-dasharray','10,10')
+        .attr("x1", 0)
+        .attr("y1", d=>yDate(d))
+        .attr("x2", SVG_WIDTH)
+        .attr("y2", d=>yDate(d)); 
     
 _.each(data, function(bldg, i){
+    bldg.year = bldg.year_opened + bldg.building_name.substring(0,3) + bldg.idbuildings
     bldg.x = x(bldg.lon)
     bldg.y = y(bldg.nameIndex)
+    bldg.yYear = yDate(bldg.year)
 })
   
-const building = svg.selectAll('.shapes')
-    .data(data)
+var building = svg.selectAll('.shapes')
+    // .data(data.sort((a, b) => a.nameIndex.localeCompare(b.nameIndex)))
+    .data(data.sort((a, b) => a.year.localeCompare(b.year)))
     .enter().append('g')
     .attr('class', 'building')
     .style('animation-delay','0.8s')
     .append('g')
-    .attr('transform', d => `translate(${d.x}, ${d.y}) scale(${0.5})` );
+    .attr('class', 'transform')
+    .attr('transform', d => `translate(${d.x}, ${d.yYear}) scale(${0.45})` );
+
+    // .attr('transform', d => `translate(${d.x}, ${d.y}) scale(${0.475})` );
+    // .attr('transform', d => `translate(${d.x}, ${d.y}) scale(${d.y * 2 / SVG_HEIGHT})` );
 //    transform={`translate(${d.x}, ${d.y}) scale(${d.y * 2 / SVG_HEIGHT})`}
-    
-const hillWidth = (Math.floor(Math.random() * Math.floor(10))+1) * UNIT_SIZE
-//const hill = (Math.round(d.bldg_element_count/10)*UNIT_SIZE)
+      
+const bldghill = building.append('svg:path')
+    .attr('class', 'bldghill')
+    .attr('d', function(d){
+        const hillWidth = (Math.floor(Math.random() * Math.floor(6))+1) * UNIT_SIZE
+        return (
+    //         `M${-hillWidth - HOUSE_SPACING * 0.5},${HOUSE_SPACING} 
+       
+    //    C${-hillWidth},${(d.height * 0.5) - HOUSE_SPACING * 0.1} ${d.width + hillWidth + UNIT_SIZE * 2},${(d.height * 0.5) - HOUSE_SPACING * 0.1} ${d.width + hillWidth + UNIT_SIZE * 2},${(d.height * 0.5) + HOUSE_SPACING * 0.2} 
+    //    `
+       `M${-hillWidth - HOUSE_SPACING * 0.6},${(SVG_HEIGHT - d.height )/4} 
+       L${-hillWidth - HOUSE_SPACING * 0.5},${(d.height * 0.5) + SVG_HEIGHT * 0.2} 
+       C${-hillWidth},${(d.height * 0.5) - SVG_HEIGHT * 0.1} ${d.width + hillWidth + UNIT_SIZE * 2},${(d.height * 0.5) - HOUSE_SPACING * 0.1} ${d.width + hillWidth + UNIT_SIZE * 2.5},${(d.height * 0.5) + HOUSE_SPACING * 2.5 } 
+       L${d.width + hillWidth + HOUSE_SPACING * 1.4},${(SVG_HEIGHT - d.height)/4}
+       `
+        )
+    }
+        );
 
-// const bldghill = building.append('svg:path')
-//     .attr('class', 'bldghill')
-//     .attr('d', d=>
-//         //    `M${- (Math.round(d.bldg_element_count/10)*UNIT_SIZE) - HOUSE_SPACING * 0.5},${SVG_HEIGHT} L${-(Math.round(d.bldg_element_count/10)*UNIT_SIZE)},${d.height + SVG_HEIGHT * 0.2} C${-(Math.round(d.bldg_element_count/10)*UNIT_SIZE)},${d.height - SVG_HEIGHT * 0.1} ${d.width + (Math.round(d.bldg_element_count/10)*UNIT_SIZE) + UNIT_SIZE * 2},${d.height - SVG_HEIGHT * 0.1} ${d.width + (Math.round(d.bldg_element_count/10)*UNIT_SIZE) + UNIT_SIZE * 2},${d.height + SVG_HEIGHT * 0.2} L${d.width + (Math.round(d.bldg_element_count/10)*UNIT_SIZE) + HOUSE_SPACING * 0.5},${SVG_HEIGHT}`
-//         `M${-hillWidth - HOUSE_SPACING * 0.5},${SVG_HEIGHT} 
-//         L${-hillWidth},${d.height + SVG_HEIGHT * 0.2} 
-//         C${-hillWidth},${(d.height) - SVG_HEIGHT * 0.1} ${d.width + hillWidth + UNIT_SIZE * 2},${(d.height) - SVG_HEIGHT * 0.1} ${d.width + hillWidth + UNIT_SIZE * 2},${d.height + SVG_HEIGHT * 0.2} 
-//         L${d.width + hillWidth + HOUSE_SPACING * 0.5},${SVG_HEIGHT}`
-
-//         )
-// .attr('fill', d=>colorScale(d.lat));
-//    .attr('fill', "rgb(126, 158, 214)");
+//Fill each with its corresponding gradient
+d3.selectAll(".bldghill")
+    .style("fill", function(d) {
+        return "url(#gradient-" + d.idbuildings + ")";
+    });
     
 const roof = building.append('svg:path')
     .attr('class', 'roof')
     .attr('d', d=>
            `M${UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width},${0} L${0},${0}`
      )
-    .attr('fill', d=>d.color);
+    .attr('fill', d=>d.color)
+    .attr('cursor', 'pointer')
+    .on('click', d => window.open('https://eam5.github.io/atlanticsynagogues/buildings/' + d.idbuildings, '_self'));
 
        
 const frontfac = building.append('svg:path')
@@ -190,13 +300,18 @@ const frontfac = building.append('svg:path')
     .attr('d', d=>
            `M${d.width},${0} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE * 2},${0} L${d.width + UNIT_SIZE * 2},${d.height} L${d.width},${d.height} L${d.width},${0}`
      )
-    .attr('fill', "#CECCD9");
+    .attr('fill', "#CECCD9")
+    .attr('cursor', 'pointer')
+    .on('click', d => window.open('https://eam5.github.io/atlanticsynagogues/buildings/' + d.idbuildings, '_self'))
+;
     
 const sidefac = building.append('rect')
     .attr('class', 'sidefac')
     .attr('width', d=>d.width)
     .attr('height', d=>d.height)
-    .attr('fill', "#fff");
+    .attr('fill', "#fff")
+    .attr('cursor', 'pointer')
+    .on('click', d => window.open('https://eam5.github.io/atlanticsynagogues/buildings/' + d.idbuildings, '_self'));
     
 const door = building.append('svg:path')
     .attr('class', 'frontdoor')
@@ -230,11 +345,44 @@ const label = building.append('text')
             .attr('y', d=>d.height/4)
             .attr('x', d=> d.width + UNIT_SIZE*2)
             .attr('dy', 0.05)
-            .attr('font-size', '1.5rem')
+            // .attr('font-size', '1.5rem')
             .text(d=>d.building_name)
             .on('click', d => window.open('https://eam5.github.io/atlanticsynagogues/buildings/' + d.idbuildings, '_self'))
-            .call(wrap, 345);
-    
+            .call(wrap, 175);
+
+
+          
+
+function listNames(){
+    d3.selectAll('.shapes')
+        // .transition().duration(1000)
+        .data(data.sort((a, b) => a.nameIndex.localeCompare(b.nameIndex)))
+        .enter();
+    d3.selectAll("linearGradient")
+    .data(data.sort((a, b) => a.nameIndex.localeCompare(b.nameIndex)))
+    .enter();
+    d3.selectAll('.building')
+    .transition().duration(1000)
+        .attr('transform', d => `translate(${d.x}, ${d.y}) scale(${0.475})` );
+    d3.selectAll('.changeaxis')
+        .text('Sorted by: Name');
+}
+
+function listYears(){
+    d3.selectAll('.shapes')
+        // .transition().duration(1000)
+        .data(data.sort((a, b) => a.year.localeCompare(b.year)))
+        .enter();
+    d3.selectAll("linearGradient")
+    .data(data.sort((a, b) => a.year.localeCompare(b.year)))
+    .enter();
+    d3.selectAll('.building')
+        .transition().duration(1000)
+        .attr('transform', d => `translate(${d.x}, ${d.yYear}) scale(${0.475})` );
+    d3.selectAll('.changeaxis')
+        .text('Sorted by: Year Opened');
+
+}
     
       //wrap label text
 //    https://bl.ocks.org/mbostock/7555321
