@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Terraces - Atlantic Synagogues</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js'></script>
     <script src="https://d3js.org/d3.v4.js"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/gka/chroma.js/master/chroma.min.js"></script> 
@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
             
-            <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/">Home</a>
+            <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/terraces">Home</a>
             
             <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
             
@@ -112,6 +112,12 @@ _.each( data, function(bldg, i){
                 if (l.architectural_element == "footprint"){
                     console.log(l.AE_type)
                     bldg.footprint_type = l.AE_type
+                }
+                if (l.architectural_element == "parapet"){
+                    bldg.parapet_type = l.AE_type
+                }
+                if (l.architectural_element == "roof"){
+                    bldg.roof_type = l.AE_type
                 }
             })
         } else {bldg.footprint_type = null}
@@ -285,26 +291,39 @@ d3.selectAll(".bldghill")
     .style("fill", function(d) {
         return "url(#gradient-" + d.idbuildings + ")";
     });
-    
-const roof = building.append('svg:path')
-    .attr('class', 'roof')
-    .attr('d', d=>
-           `M${UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width},${0} L${0},${0}`
-     )
-    .attr('fill', d=>d.color)
-    .attr('cursor', 'pointer')
-    .on('click', d => window.open('https://eam5.github.io/atlanticsynagogues/buildings/' + d.idbuildings, '_self'));
-
-       
+           
 const frontfac = building.append('svg:path')
     .attr('class', 'frontfac')
-    .attr('d', d=>
-           `M${d.width},${0} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE * 2},${0} L${d.width + UNIT_SIZE * 2},${d.height} L${d.width},${d.height} L${d.width},${0}`
-     )
+    .attr('d', function(d){
+     if (d.parapet_type==="shaped gable" || d.parapet_type==="stepped gable" || d.roof_type==="Dutch gable" || d.roof_type==="stepped gable"){
+        return   `M${d.width},${-UNIT_SIZE} L${d.width + UNIT_SIZE + (UNIT_SIZE/3)},${-UNIT_SIZE} L${d.width + UNIT_SIZE + (UNIT_SIZE/3)},${-UNIT_SIZE + (UNIT_SIZE/3)} L${d.width + UNIT_SIZE + 2*(UNIT_SIZE/3)},${-UNIT_SIZE + (UNIT_SIZE/3)} L${d.width + UNIT_SIZE + 2*(UNIT_SIZE/3)},${-UNIT_SIZE + 2*(UNIT_SIZE/3)} L${d.width + UNIT_SIZE + 3*(UNIT_SIZE/3)},${-UNIT_SIZE + 2*(UNIT_SIZE/3)} L${d.width + UNIT_SIZE * 2},${d.height} L${d.width},${d.height} L${d.width},${0}`
+     } else {
+       return  `M${d.width},${0} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE * 2},${0} L${d.width + UNIT_SIZE * 2},${d.height} L${d.width},${d.height} L${d.width},${0}` }
+    })
+    // .attr('d', d=>
+    //        `M${d.width},${0} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE * 2},${0} L${d.width + UNIT_SIZE * 2},${d.height} L${d.width},${d.height} L${d.width},${0}`
+    //  )
     .attr('fill', "#CECCD9")
     .attr('cursor', 'pointer')
     .on('click', d => window.open('https://eam5.github.io/atlanticsynagogues/buildings/' + d.idbuildings, '_self'))
 ;
+
+const roof = building.append('svg:path')
+    .attr('class', 'roof')
+    .attr('d', function(d){
+        if (d.parapet_type==="shaped gable" || d.parapet_type==="stepped gable" || d.roof_type==="Dutch gable" || d.roof_type==="stepped gable"){
+        return  `M${UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE - (UNIT_SIZE/3)},${-UNIT_SIZE} L${d.width + UNIT_SIZE- (UNIT_SIZE/3)},${-UNIT_SIZE + (UNIT_SIZE/3)}L${d.width + UNIT_SIZE- 2*(UNIT_SIZE/3)},${-UNIT_SIZE + (UNIT_SIZE/3)}L${d.width + UNIT_SIZE- 2*(UNIT_SIZE/3)},${-UNIT_SIZE + 2*(UNIT_SIZE/3)}L${d.width + UNIT_SIZE- 3*(UNIT_SIZE/3)},${-UNIT_SIZE + 2*(UNIT_SIZE/3)}L${d.width + UNIT_SIZE- 3*(UNIT_SIZE/3)},${-UNIT_SIZE + 3*(UNIT_SIZE/3)} L${0},${0}`
+        } else {
+        return   `M${UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width},${0} L${0},${0}`
+        }
+    })
+    // .attr('d', d=>
+    //        `M${UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width},${0} L${0},${0}`
+    //  )
+    .attr('fill', d=>d.color)
+    .attr('cursor', 'pointer')
+    .on('click', d => window.open('https://eam5.github.io/atlanticsynagogues/buildings/' + d.idbuildings, '_self'));
+
     
 const sidefac = building.append('rect')
     .attr('class', 'sidefac')
