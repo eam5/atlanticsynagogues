@@ -80,6 +80,12 @@ _.each( data, function(bldg, i){
                     console.log(l.AE_type)
                     bldg.footprint_type = l.AE_type
                 }
+                if (l.architectural_element == "parapet"){
+                    bldg.parapet_type = l.AE_type
+                }
+                if (l.architectural_element == "roof"){
+                    bldg.roof_type = l.AE_type
+                }
             })
         } else {bldg.footprint_type = null}
        
@@ -252,26 +258,39 @@ d3.selectAll(".bldghill")
     .style("fill", function(d) {
         return "url(#gradient-" + d.idbuildings + ")";
     });
-    
-const roof = building.append('svg:path')
-    .attr('class', 'roof')
-    .attr('d', d=>
-           `M${UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width},${0} L${0},${0}`
-     )
-    .attr('fill', d=>d.color)
-    .attr('cursor', 'pointer')
-    .on('click', d => window.open('{{site.url}}/buildings/' + d.idbuildings, '_self'));
-
-       
+           
 const frontfac = building.append('svg:path')
     .attr('class', 'frontfac')
-    .attr('d', d=>
-           `M${d.width},${0} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE * 2},${0} L${d.width + UNIT_SIZE * 2},${d.height} L${d.width},${d.height} L${d.width},${0}`
-     )
+    .attr('d', function(d){
+     if (d.parapet_type==="shaped gable" || d.parapet_type==="stepped gable" || d.roof_type==="Dutch gable" || d.roof_type==="stepped gable"){
+        return   `M${d.width},${-UNIT_SIZE} L${d.width + UNIT_SIZE + (UNIT_SIZE/3)},${-UNIT_SIZE} L${d.width + UNIT_SIZE + (UNIT_SIZE/3)},${-UNIT_SIZE + (UNIT_SIZE/3)} L${d.width + UNIT_SIZE + 2*(UNIT_SIZE/3)},${-UNIT_SIZE + (UNIT_SIZE/3)} L${d.width + UNIT_SIZE + 2*(UNIT_SIZE/3)},${-UNIT_SIZE + 2*(UNIT_SIZE/3)} L${d.width + UNIT_SIZE + 3*(UNIT_SIZE/3)},${-UNIT_SIZE + 2*(UNIT_SIZE/3)} L${d.width + UNIT_SIZE * 2},${d.height} L${d.width},${d.height} L${d.width},${0}`
+     } else {
+       return  `M${d.width},${0} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE * 2},${0} L${d.width + UNIT_SIZE * 2},${d.height} L${d.width},${d.height} L${d.width},${0}` }
+    })
+    // .attr('d', d=>
+    //        `M${d.width},${0} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE * 2},${0} L${d.width + UNIT_SIZE * 2},${d.height} L${d.width},${d.height} L${d.width},${0}`
+    //  )
     .attr('fill', "#CECCD9")
     .attr('cursor', 'pointer')
     .on('click', d => window.open('{{site.url}}/buildings/' + d.idbuildings, '_self'))
 ;
+
+const roof = building.append('svg:path')
+    .attr('class', 'roof')
+    .attr('d', function(d){
+        if (d.parapet_type==="shaped gable" || d.parapet_type==="stepped gable" || d.roof_type==="Dutch gable" || d.roof_type==="stepped gable"){
+        return  `M${UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE - (UNIT_SIZE/3)},${-UNIT_SIZE} L${d.width + UNIT_SIZE- (UNIT_SIZE/3)},${-UNIT_SIZE + (UNIT_SIZE/3)}L${d.width + UNIT_SIZE- 2*(UNIT_SIZE/3)},${-UNIT_SIZE + (UNIT_SIZE/3)}L${d.width + UNIT_SIZE- 2*(UNIT_SIZE/3)},${-UNIT_SIZE + 2*(UNIT_SIZE/3)}L${d.width + UNIT_SIZE- 3*(UNIT_SIZE/3)},${-UNIT_SIZE + 2*(UNIT_SIZE/3)}L${d.width + UNIT_SIZE- 3*(UNIT_SIZE/3)},${-UNIT_SIZE + 3*(UNIT_SIZE/3)} L${0},${0}`
+        } else {
+        return   `M${UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width},${0} L${0},${0}`
+        }
+    })
+    // .attr('d', d=>
+    //        `M${UNIT_SIZE},${-UNIT_SIZE} L${d.width + UNIT_SIZE},${-UNIT_SIZE} L${d.width},${0} L${0},${0}`
+    //  )
+    .attr('fill', d=>d.color)
+    .attr('cursor', 'pointer')
+    .on('click', d => window.open('{{site.url}}/buildings/' + d.idbuildings, '_self'));
+
     
 const sidefac = building.append('rect')
     .attr('class', 'sidefac')
