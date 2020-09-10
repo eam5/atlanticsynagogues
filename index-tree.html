@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Synagogues - Atlantic Synagogues</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+    <!-- d3 and others -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js'></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/gka/chroma.js/master/chroma.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="https://eam5.github.io/atlanticsynagogues">Atlantic Synagogues</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav">
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/">Home</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/synagogue-map">Synagogue Map</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/allbldgs_allfac">Facade Fractal Trees</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/scatter">Synagogue Timeline</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+            
+      </div>
+  </div>
+</nav>
+    <div id="main" class="container-lg">
+      <style>
+    .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        /* padding-bottom: 100%; */
+        vertical-align: top;
+        overflow: visible;
+        margin: 1rem 0 4rem ;
+    }
+    .svg-content {
+        display: inline-block;
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+    }
+    path.petal, text.label {
+        cursor: pointer;
+    }
+    .label:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div id='axis-buttons'></div>
+<div id="container" class="svg-container"></div>
+
+<script>
+    const margin = {top: 40, right: 10, bottom: 40, left: 10},
+        width = 450 - margin.left - margin.right,
+        height = 2000 - margin.top - margin.bottom;
+        
+    d3.json( 'https://eam5.github.io/atlanticsynagogues/assets/data/bldgs_index_fac.json', function(data) {
+        console.log(data)
+        _.each(data, function(bldg, k){
+            bldg.nameIndex = bldg.building_name + " " + bldg.year_opened
+        })
+
+        const allYears = data.map(d=>parseInt(d.year_opened)).filter(d=> !Number.isNaN(d));
+        // console.log(allYears)
+        const allYearNames = data.map(d=> d.year_opened + d.building_name.substring(0,3) + d.idbuildings).sort((a, b) => b.localeCompare(a));
+
+        // const allYearNames = data.map(d=> 'a' + parseInt(d.year_opened )+ d.building_name.substring(0,3) ).filter(d=> !Number.isNaN(d)).sort((a, b) => b.localeCompare(a));
+        // console.log(allYearNames)
+        const allNames = data.map(d=>d.nameIndex).sort((a, b) => b.localeCompare(a));
+        // console.log(allNames)
+
+        const allLon = data.map(d=>d.lon);
+        // console.log(allLon)
+
+        var svg = d3.select("div#container")
+  .append("svg")
+  .attr("preserveAspectRatio", "xMinYMin")
+  .attr("viewBox", "0 0 800 2000")
+  .classed("svg-content", true)
+            
+        // const svg = d3.select("#vis")
+        //     .append("svg")
+        //     .attr("width", width + margin.left + margin.right)
+        //     .attr("height", height + margin.top + margin.bottom)
+            .style("overflow", "visible")
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        
+    
+        // Add X axis
+        const x = d3.scaleLinear()
+            // .domain([-110, 30])
+            .domain([d3.min(allLon), d3.max(allLon)])
+            .range([ 0, width ]);
+        svg.append("g")
+            .attr('id', 'xAxis')
+            .style('font-size', '1rem')
+            .call(d3.axisBottom(x))
+            .call(g => g.select(".domain").attr("display", "none"))
+            .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
+            .call(g => g.selectAll(".tick").selectAll("text").attr("display", "none"));
+        
+        // Add Y axis
+        // const y = d3.scaleLinear()
+        //     .domain([-40, 70])
+        //     .range([height, 0]);
+        // svg.append("g")
+        //     .attr('id', 'yAxis')
+        //     // .attr("color", "#96ffea")
+        //     .style('font-size', '1rem')
+        //     .call(d3.axisLeft(y));
+            // .call(g => g.select(".domain").attr("display", "none"))
+            // .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
+            // .call(g => g.selectAll(".tick").selectAll("text").attr('text-anchor', 'start').attr('x',-25).attr("dy", "-0.32em").attr("fill", "#96ffea"));
+        
+        const y = d3.scaleBand()
+	.domain(allNames)
+
+        // d3.scaleTime()
+        //     .domain([new Date(d3.max(allYears), 0, 1), new Date(d3.min(allYears), 0, 1)])
+            .range([height, 0]);
+
+        svg.append("g")
+            .attr('id', 'yAxis')
+            .attr("color", "#333")
+            .style('font-size', '1rem')
+            .call(d3.axisLeft(y).tickSize(-width))
+            // .tickFormat(d3.timeFormat("%Y")));
+            .call(g => g.select(".domain").attr("display", "none"))
+            .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
+            .call(g => g.selectAll(".tick").selectAll("text").attr("display", "none"))
+            // .call(g => g.selectAll(".tick").selectAll("line").attr("stroke", "#D8D8D8").style("stroke-dasharray", "5 5"))
+            // .call(g => g.selectAll(".tick").selectAll("text"));
+    ;
+
+    const yDate = 
+    d3.scaleBand()
+	.domain(allYearNames)
+    // d3.scaleLinear()
+    // .domain([d3.max(allYears),d3.min(allYears)])
+    // d3.scaleTime()
+    // .domain([new Date(d3.max(allYears), 0, 1), new Date(d3.min(allYears), 0, 1)])
+    .range([height, 0]);
+    // svg.append("g")
+    //         .attr('id', 'yYear')
+    //         .attr("color", "#333")
+    //         .style('font-size', '1rem')
+    //         .call(d3.axisLeft(yDate).tickSize(-width));
+            // .tickFormat(d3.timeFormat("%Y")));
+        
+    _.each(data, function(bldg, k){
+        const sub = bldg.building_name.substring(0, 2)
+        // bldg.year = parseInt(bldg.year_opened)
+            // bldg.year = 'a'  + parseInt(bldg.year_opened)+ bldg.building_name.substring(0,3)
+            bldg.year = bldg.year_opened + bldg.building_name.substring(0,3) + bldg.idbuildings
+
+            // bldg.nameIndex = bldg.building_name + "-" + bldg.year_opened
+            // bldg.cxYear = x(new Date(bldg.year_add,0,1))
+            // bldg.cyLat = y(bldg.lat)
+            bldg.cxLong = x(bldg.lon)
+            // bldg.cyYear = yDate(new Date(bldg.year_opened,0,1))
+            bldg.cyYear = yDate(bldg.year)
+            bldg.cyName = y(bldg.nameIndex)
+        })
+
+        const colorBranch = d3.scaleOrdinal().domain([200,0]).range(chroma.scale(['#594d42', 
+//                         '#808080', 
+                         '#d4d4d4','#D9C99A', '#c77179', '#8c5b49', '#735C5C','#8c5b49','#c77179','#D9C99A','#d4d4d4',
+//                        '#808080',
+                         '#594d42']).colors(15));
+                         let petalPaths = [
+    [
+      'M0 0',
+      'C25 42 40 55 0 100',
+      'C-25 55 -40 42 0 0'
+    ],
+    [
+      'M0 0',
+      'C50 40 50 70 20 100',
+      'L0 85',
+      'L-20 100',
+      'C-50 70 -50 40 0 0'
+    ],
+    [
+      'M0 0',
+      'C50 25 50 75 0 100',
+      'C-50 75 -50 25 0 0'
+    ],
+    [
+    	'M0 0',
+      "C50 50 50 100 0 100",
+      "C-50 100 -50 50 0 0"
+    ],
+    [
+      'M0 0',
+      'C50 40 50 70 20 100',
+      'L0 85',
+      'L-20 100',
+      'C-50 70 -50 40 0 0'
+    ]
+]
+
+        var leaf = [
+      'M0 0',
+      'C15 22 10 35 0 55',
+      'C-15 35 -10 22 0 0'
+    ];
+    const purple = '#563250'; //'#2c2040';
+const pink = '#bf6078';
+const yellow = '#fad67d';
+    var colorScale = d3.scaleOrdinal()
+        .domain([200,0])
+        .range(chroma.scale([purple, pink, '#fa8072', yellow, yellow, '#fa8072', pink, purple]).colors(15));
+
+    var colorPick = function (branchL) {
+            return colorScale(branchL)
+        };
+    var petalScale = d3.scaleOrdinal()
+    	.domain(allNames)
+        .range(_.range(80));
+        
+    const xTree = width/2;
+    const yTree = height + 50;
+    const xBranchR = xTree + 35;
+    const xBranchL = xTree - 35;
+    const yBranch = height/8
+
+    const trunk = svg.append('svg:path')
+        .attr('d', d => `M${xTree-32},${yTree + 100} Q${p5.prototype.randomGaussian((xTree-16) / 1, 3)},${p5.prototype.randomGaussian(yTree-15, 3)} ${xTree-8},${(height/8)+55} L${xTree+6},${(height/8)+55} Q${p5.prototype.randomGaussian((xTree+ 16) / 1, 3)},${p5.prototype.randomGaussian(yTree-55, 3)} ${xTree+36},${yTree + 100}`)
+        .attr('stroke-width', 15)
+        .attr('class', 'trunk')
+        .attr('stroke-weight', 0)
+        .style('cursor', 'pointer')
+        // .attr('opacity', '0.4')
+        // .attr('stroke', function (d) { return colorBranch(d.lat); })
+        .attr('fill', '#f0ede5');
+
+    const xBranch = svg.append('g')
+        .selectAll('branchx')
+        .data([1,2,3,4,5,6,7,8]).enter().append('svg:path')
+        .attr('d', function(d,i){
+            return `M${xTree},${(d*yBranch)+55} Q${p5.prototype.randomGaussian((xTree+ xBranchR) / 2, 3)},${p5.prototype.randomGaussian(((d * yBranch)+55 + (d * yBranch)) / 2, 3)} ${xBranchR},${d * yBranch} M${xTree},${(d * yBranch)+55} Q${p5.prototype.randomGaussian((xTree+ xBranchL) / 2, 3)},${p5.prototype.randomGaussian(((d * yBranch)+55 + (d * yBranch)) / 2, 3)} ${xBranchL},${d * yBranch}`
+        })
+        .attr('stroke-width', 10)
+        .attr('class', 'trunk')
+        .attr('stroke', '#f0ede5')
+        // .attr('opacity', '0.4')
+        // .attr('stroke', function (d) { return colorBranch(d.lat); })
+        .attr('fill', 'none');
+
+    const branchPetalsR = svg.append('g').selectAll('path .leaf')
+        .data([1,2,3,4,5,6,7,8]).enter().append('svg:path')
+        .attr('d', function(d) {return petalPaths[0].join(' ')})
+        .attr('fill', d=>colorPick(d))
+        .attr('transform', d => 'translate(' + [xBranchR, d * yBranch] + ')rotate(' + [p5.prototype.randomGaussian((-30),6)] + ')scale(0.35)')
+        .attr('opacity', '0.4');
+    const branchPetalsL = svg.append('g').selectAll('path .leaf')
+        .data([1,2,3,4,5,6,7,8]).enter().append('svg:path')
+        .attr('d', function(d) {return petalPaths[0].join(' ')})
+        .attr('fill', d=>colorPick(d))
+        .attr('transform', d => 'translate(' + [xBranchL, d * yBranch] + ')rotate(' + [p5.prototype.randomGaussian((50),6)] + ')scale(0.35)')
+        .attr('opacity', '0.4');
+
+    const branch = svg.append('g')
+        .selectAll('branch')
+        .data(data)
+        .enter()
+        .append('svg:path')
+        .attr('d', function(d){
+            if (d.cxLong>=xTree) {
+                var i;
+                for (i = 1; i <= 8; i++) {
+                    if (((i-1) * yBranch)<=d.cyName && d.cyName<=(i * yBranch)) {
+                        return `M${xBranchR},${i * yBranch} Q${p5.prototype.randomGaussian((xBranchR + d.cxLong) / 2, 3)},${p5.prototype.randomGaussian((d.cyName + (i * yBranch) -20) / 2, 3)} ${d.cxLong},${d.cyName}`
+                        //   return  `M${xBranchR},${yTree/4} L${(xBranchR + d.cxLong)/ 2},${d.cyName + (Math.abs(d.cyName - (height/4))/1.5)} L${d.cxLong},${d.cyName}`
+                    }
+                }
+
+            } else if (d.cxLong<xTree) {
+                var i;
+                for (i = 1; i <= 8; i++) {
+                    if (((i-1) * yBranch)<d.cyName && d.cyName<=(i * yBranch)) {
+                        return `M${xBranchL},${i * yBranch} Q${p5.prototype.randomGaussian((xBranchL + d.cxLong) / 2, 3)},${p5.prototype.randomGaussian((d.cyName + (i * yBranch) -20) / 2, 3)} ${d.cxLong},${d.cyName}`
+                    }
+                }
+            }
+            else {
+              return  `M${xTree},${yTree} L${(xTree + d.cxLong) / 2},${d.cyName} L${d.cxLong},${d.cyName}`
+            }           
+        })
+        .attr('stroke-width', 7)
+        .attr('class', 'branch')
+        // .attr('stroke', '#d6cfbb')
+        .attr('stroke', '#f0ede5')
+        // .attr('opacity', '0.4')
+        // .attr('stroke', function (d) { return colorBranch(d.lat); })
+        .attr('fill', 'none');
+
+
+    const leaves = svg.selectAll('g .leaf')
+        .data(data)
+        .enter().append('g')
+        .attr('class', 'leaf')
+        .attr('fill', d=>colorPick(d.city))
+        .attr('opacity', '0.5')
+        .attr('transform', d => 'translate(' + [d.cxLong, d.cyName] +
+            ')rotate(' + [p5.prototype.randomGaussian((40),6)] + ')scale(0.35)')
+        // .on('click', d=>console.log(d.building_name))
+        .on('click', d => window.open('https://eam5.github.io/atlanticsynagogues/buildings/' + d.idbuildings, '_self'));
+
+    leaves.selectAll('path .leaf')
+        .data(function(d){
+            let numPetals = Math.floor(Math.random() * Math.floor(4)) + 1;
+            let path = petalPaths[Math.floor(Math.random() * Math.floor(5))];
+            return _.times(numPetals, function(i){
+                return {
+                // scale: flowerSizeScale(1),
+                angle: (360/numPetals) *i,
+                path: path
+                }
+            });
+        })
+        .enter().append('path')
+        .attr('class', 'petal')
+        //        .attr('stroke', '#F8F8FF')
+        // .attr('stroke-width', function(d) {
+        //     return 2 / d.scale;
+        // })
+        .attr('d', function(d) {return d.path.join(' ')})
+        .attr('transform', function(d) {
+            return 'rotate(' + [d.angle] + ')';
+        });
+        
+        
+      // Add dots
+    //   const leaves = svg.append('g')
+    //     .selectAll("circle")
+    //     .data(data)
+    //     .enter()
+    //     .append("circle")
+    //     .attr('class', 'circle')
+    //       .attr("cx", d=>d.cxLong)
+    //       .attr("cy", d=>d.cyName)
+    //     .attr('r', 3)
+    //      .style("fill", "#69b3a2")
+    //     //   .style("fill", function(d) { return color(d.lat);})
+    //       .style("opacity", 0.6)
+    //     .style('cursor', 'pointer')
+    //     // .on('mouseover.tooltip', function(d) {
+    //     //         div.transition()    
+    //     //             .duration(100)    
+    //     //             .style("opacity", .7);    
+    //     //         div .html( d.building_name )  
+    //     //             .style("left", (d3.event.pageX + 12) + "px")   
+    //     //             .style("top", (d3.event.pageY - 28) + "px");  
+    //     //         })          
+    //     // .on('mouseout.tooltip', function(d) {   
+    //     //     div.transition()    
+    //     //         .duration(100)    
+    //     //         .style("opacity", 0); 
+    //     // })
+    //     // .on('mouseover.fade', fade(0.1))
+    //     // .on('mouseout.fade', fade(0.6))
+    //     ;
+
+//     const label = leaves.selectAll('circle').append('text')
+//     .attr("x", d=>d.cxLong)
+//           .attr("y", d=>d.cyName)
+//           .attr("font-size", "10px")
+//   .attr("text-anchor", "middle")
+//           .text(d=>d.building_name);
+
+          const label = svg.append('g')
+        .selectAll("text")
+        .data(data)
+        .enter().append('text')
+        .attr('class', 'label')
+          .text(d=>d.building_name + ' (' + d.year_opened + ')')
+        //   .attr("color", "#333")
+            // .style('font-size', '0.9rem')
+            // .attr('text-anchor', 'middle')
+          .attr("x", d=>d.cxLong)
+          .attr("y", d=>d.cyName)
+          .on('click', d => window.open('https://eam5.github.io/atlanticsynagogues/buildings/' + d.idbuildings, '_self'));
+     
+
+const changeY = d3.select('#axis-buttons')
+        .append('button')
+        .attr('class', 'changeaxis btn btn-link')
+        .text('Sorted by: Names')
+        .on('click', function(){console.log(shape);
+       	    if (shape=='names'){listYears(); shape ='years'}
+            else {listNames(); shape = 'names'}
+        });
+    
+        
+    //    svg.on("click", function(d) {
+    //  d3.selectAll('circle').style('opacity', 0.5).style('stroke-width', '0px');
+    //});
+    var shape = 'names'
+    function listNames(){
+        d3.selectAll('.branch')
+            .transition().duration(1000)
+            .attr('d', function(d){
+            if (d.cxLong>=xTree) {
+                var i;
+                for (i = 1; i <= 8; i++) {
+                    if (((i-1) * yBranch)<=d.cyName && d.cyName<=(i * yBranch)) {
+                        return `M${xBranchR},${i * yBranch} Q${p5.prototype.randomGaussian((xBranchR + d.cxLong) / 2, 3)},${p5.prototype.randomGaussian((d.cyName + (i * yBranch) -20) / 2, 3)} ${d.cxLong},${d.cyName}`
+                    }
+                }
+            } else if (d.cxLong<xTree) {
+                var i;
+                for (i = 1; i <= 8; i++) {
+                    if (((i-1) * yBranch)<d.cyName && d.cyName<=(i * yBranch)) {
+                        return `M${xBranchL},${i * yBranch} Q${p5.prototype.randomGaussian((xBranchL + d.cxLong) / 2, 3)},${p5.prototype.randomGaussian((d.cyName + (i * yBranch) -20) / 2, 3)} ${d.cxLong},${d.cyName}`
+                    }
+                }
+            }
+            else {
+              return  `M${xTree},${yTree} L${(xTree + d.cxLong) / 2},${d.cyName} L${d.cxLong},${d.cyName}`
+            }           
+        });
+        d3.selectAll('g .leaf')
+        .transition().duration(1000)
+        .attr('transform', d => 'translate(' + [d.cxLong, d.cyName] +
+            ')rotate(' + [p5.prototype.randomGaussian((40),6)] + ')scale(0.35)');
+        d3.selectAll('text')
+        .transition().duration(1000)
+        .attr("y", d=>d.cyName);
+        d3.selectAll('.changeaxis')
+        .text('Sorted by: Name');
+    }
+
+    function listYears(){
+        d3.selectAll('.branch')
+            .transition().duration(1000)
+            .attr('d', function(d){
+            if (d.cxLong>=xTree) {
+                var i;
+                for (i = 1; i <= 8; i++) {
+                    if (((i-1) * yBranch)<=d.cyYear && d.cyYear<=(i * yBranch)) {
+                        return `M${xBranchR},${i * yBranch} Q${p5.prototype.randomGaussian((xBranchR + d.cxLong) / 2, 3)},${p5.prototype.randomGaussian((d.cyYear + (i * yBranch) -20) / 2, 3)} ${d.cxLong},${d.cyYear}`
+                    }
+                }
+            } else if (d.cxLong<xTree) {
+                var i;
+                for (i = 1; i <= 8; i++) {
+                    if (((i-1) * yBranch)<d.cyYear && d.cyYear<=(i * yBranch)) {
+                        return `M${xBranchL},${i * yBranch} Q${p5.prototype.randomGaussian((xBranchL + d.cxLong) / 2, 3)},${p5.prototype.randomGaussian((d.cyYear + (i * yBranch) -20) / 2, 3)} ${d.cxLong},${d.cyYear}`
+                    }
+                }
+            }
+            else {
+              return  `M${xTree},${yTree} L${(xTree + d.cxLong) / 2},${d.cyYear} L${d.cxLong},${d.cyYear}`
+            }           
+        });
+        d3.selectAll('g .leaf')
+        .transition().duration(1000)
+        .attr('transform', d => 'translate(' + [d.cxLong, d.cyYear] +
+            ')rotate(' + [p5.prototype.randomGaussian((40),6)] + ')scale(0.35)');
+        d3.selectAll('text')
+        .transition().duration(1000)
+        .attr("y", d=>d.cyYear);
+        d3.selectAll('.changeaxis')
+        .text('Sorted by: Year Opened');
+    }
+
+
+    d3.selectAll('.trunk')
+        .on('click',function(){console.log(shape);
+       	    if (shape=='names'){listYears(); shape ='years'}
+            else {listNames(); shape = 'names'}
+        })
+
+  
+        
+       
+        // text label for the x axis
+    //   svg.append("text")             
+    //       .attr("transform", "translate(" + (width/2) + ",-20)")
+    // //    .attr("x", (width/2))
+    //     .attr('id', 'longitude-label')
+    //       .style("text-anchor", "middle")
+    //     .style('font-size', "0.9em")
+    //       .text("Longitude");
+        
+        // text label for the y axis
+    //   svg.append("text")
+    //       .attr("transform", "rotate(-90)")
+    //       .attr("y", 0 - margin.left)
+    //       .attr("x",0 - (height / 2))
+    //       .attr("dy", "1em")
+    //     .attr('id', 'latitude-label')
+    //       .style("text-anchor", "middle")
+    //         .style('font-size', "0.9em")
+    //       .text("Latitude");    
+      
+        
+        function linkArc(d) {
+          var dx = d.x - d.x0,
+              dy = d.y - d.y0,
+              dr = Math.sqrt(dx * dx + dy * dy);
+          return 'M' + d.x0 + ',' + d.y0 + 'A' + dr + ',' + dr + ' 0 0,1 ' + d.x + ',' + d.y;
+        }
+        
+           function fade(opacity) {
+            return d => {
+               let currentComp = d.congregation_name;
+    //            console.log(currentComp)
+                svg.selectAll('g .circle')
+    //            .filter(l=>(l.comp_num === currentComp ))
+                .style('opacity', function(o) {
+                    if (o.congregation_name === currentComp){
+                        return 1;
+                    } else return opacity;
+                   
+                   });
+    //            svg.selectAll('.branch')
+    //            .style('opacity', function(o) {
+    //                if (o.comp_num === currentComp){
+    //                    return 1;
+    //                } else return opacity;
+    //               
+    //               });
+            }}
+        
+    //      function showLinks(display) {
+    //         return d => {
+    //            let currentComp = d.congregation_name;
+    // //            console.log(currentComp)
+    //             svg.selectAll('g .links')
+    //             .filter(l=>(l.congregation_name === currentComp ))
+    //             .style('display', function(o) {
+    //                return display;
+    //                }); 
+    //         }}
+    
+    });
+        
+</script>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
