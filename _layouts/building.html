@@ -1,102 +1,78 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url }}">
+---
+layout: leaflet-map
+---
+<style>
+    .map {height: 200px;}
+</style>
+<div class="row">
+    <div class="col-sm-9">
+        <h1>{{page.title}}</h1>
+        <p>Building ID: {{page.idbuildings}}</p>
+        <p>Year Built: {{page.year_built}}</p>
+        <p>Year Opened: {{page.year_opened}}</p>
+        <p>Year Non-extant: {{page.year_nonextant}}</p>
+        <p>Location: {% if page.city != null %}{{page.city}}{%endif%}{% if page.state != null %}, {{page.state}}{%endif%}{% if page.country != null %}, {{page.country}}{%endif%}</p>
+        <p>Latitude: {{page.lat}}</p>
+        <p>Longitude: {{page.lon}}</p>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
-   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-   crossorigin=""></script>
-   <style>
-       .map {height: 200px;}
-   </style>
-  </head>
-  <body>
-    {% include navbar.html %}
-    <div id="main" class="container-lg">
-        <div class="row">
-            <div class="col-sm-9">
-                <h1>{{page.title}}</h1>
-                <p>Building ID: {{page.idbuildings}}</p>
-                <p>Year Built: {{page.year_built}}</p>
-                <p>Year Opened: {{page.year_opened}}</p>
-                <p>Year Non-extant: {{page.year_nonextant}}</p>
-                <p>Location: {% if page.city != null %}{{page.city}}{%endif%}{% if page.state != null %}, {{page.state}}{%endif%}{% if page.country != null %}, {{page.country}}{%endif%}</p>
-                <p>Latitude: {{page.lat}}</p>
-                <p>Longitude: {{page.lon}}</p>
-
-                <h3>Related Buildings:</h3>
-                <ul>
-                    {% assign bldgs_sort = site.data.buildings | sort:"year_opened" %}
-                    {% for building in bldgs_sort %}
-                    {% if building.idbuildings != page.idbuildings %}
-                    {% if building.lat == page.lat %}
-                    {% assign bldgname = building.idbuildings | prepend: "/buildings/" %}
-                    <li><a href="{{ bldgname | prepend: site.url }}">{{building.building_name}} ({{building.year_opened}})</a></li>
-                    {% endif %}{% endif %}{% endfor %}
-                </ul>
-            
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    {% if page.image_file != null %}
-                    <a href="{{ page.image_file | prepend: site.url }}" title="{{ page.image_file }}">
-                        <img src="{{ page.image_file | prepend: site.url }}" alt="{{ page.image_file }}" title="{{ page.image_file }}" class="card-img-top image-fluid"/>
-                    </a> 
-                    {%endif%}
-                    <!-- <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div> -->
-                    <ul class="list-group list-group-flush">
-                        {% for image in site.data.building_images %}
-                        {% if image.idbuildings == page.idbuildings %}
-                        {% assign pagepath = page.idbuildings | prepend: "/building-images/" %}
-                        <a href="{{ pagepath | prepend: site.url }}"><li type="button" class="btn btn-light list-group-item px-1">Image Gallery</li></a>
-                        {% endif %}
-                        {% endfor %}
-                        {% for location in site.data.location_images %}
-                        {% if location.idlocation == page.idlocation %}
-                        {% assign locpath = location.location_name | prepend: "/locations/" %}
-                        <a href="{{ locpath | prepend: site.url}}"><li type="button" class="btn btn-light list-group-item px-1">{% if page.city != null %}{{page.city}}{%endif%}{% if page.state != null %}, {{page.state}}{%endif%}{% if page.country != null %}, {{page.country}}{%endif%}</li></a>
-                        {% endif %}
-                        {% endfor %}
-                        <li class="list-group-item px-1 text-center">Location Accuracy: {{ page.loc_def }}</li>
-                        <li class="list-group-item" style="padding:0;">
-                            {% assign bldgnameone = page.building_name | downcase %}
-                            {% assign bldgnametwo = bldgnameone | remove: "," | remove: "[" | remove: "]" | remove: "(" | remove: ")" | remove: "'"%}
-                            {% assign bldgname = bldgnametwo | replace: " ", "-" %}
-                            <div class="map" id="{{ bldgname }}" width="100%"></div>
-                        </li>
-                      <a href="{{ "/synagogue-map" | prepend: site.url }}"><li type="button" class="btn btn-light list-group-item px-1">Synagogue Map</li></a>
-                    </ul>
-                  </div>                  
-            </div>
-        </div>
-        
+        <h3>Related Buildings:</h3>
+        <ul>
+            {% assign bldgs_sort = site.data.buildings | sort:"year_opened" %}
+            {% for building in bldgs_sort %}
+            {% if building.idbuildings != page.idbuildings %}
+            {% if building.lat == page.lat %}
+            {% assign bldgname = building.idbuildings | prepend: "/buildings/" %}
+            <li><a href="{{ bldgname | prepend: site.url }}">{{building.building_name}} ({{building.year_opened}})</a></li>
+            {% endif %}{% endif %}{% endfor %}
+        </ul>
+    
     </div>
-    <script>
-        
-        {% assign varid = bldgname | remove: "-"%}
-        var {{ varid }}= L.map('{{ bldgname }}').setView([{{ page.lat }}, {{ page.lon }}], 13);
-        var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-        var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-        L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo({{varid}});
-        var marker = L.marker([{{ page.lat }}, {{ page.lon }}]).addTo({{ varid }});
-        marker.bindPopup("<strong>{{ page.building_name }}</strong>");
-    </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </body>
-</html>
-
+    <div class="col-sm-3">
+        <div class="card">
+            {% if page.image_file != null %}
+            <a href="{{ page.image_file | prepend: site.url }}" title="{{ page.image_file }}">
+                <img src="{{ page.image_file | prepend: site.url }}" alt="{{ page.image_file }}" title="{{ page.image_file }}" class="card-img-top image-fluid"/>
+            </a> 
+            {%endif%}
+            <!-- <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+                {% for image in site.data.building_images %}
+                {% if image.idbuildings == page.idbuildings %}
+                {% assign pagepath = page.idbuildings | prepend: "/building-images/" %}
+                <a href="{{ pagepath | prepend: site.url }}"><li type="button" class="btn btn-light list-group-item px-1">Image Gallery</li></a>
+                {% endif %}
+                {% endfor %}
+                {% for location in site.data.location_images %}
+                {% if location.idlocation == page.idlocation %}
+                {% assign locpath = location.location_name | prepend: "/locations/" %}
+                <a href="{{ locpath | prepend: site.url}}"><li type="button" class="btn btn-light list-group-item px-1">{% if page.city != null %}{{page.city}}{%endif%}{% if page.state != null %}, {{page.state}}{%endif%}{% if page.country != null %}, {{page.country}}{%endif%}</li></a>
+                {% endif %}
+                {% endfor %}
+                <li class="list-group-item px-1 text-center">Location Accuracy: {{ page.loc_def }}</li>
+                <li class="list-group-item" style="padding:0;">
+                    {% assign bldgnameone = page.building_name | downcase %}
+                    {% assign bldgnametwo = bldgnameone | remove: "," | remove: "[" | remove: "]" | remove: "(" | remove: ")" | remove: "'"%}
+                    {% assign bldgname = bldgnametwo | replace: " ", "-" %}
+                    <div class="map" id="{{ bldgname }}" width="100%"></div>
+                </li>
+                <a href="{{ "/synagogue-map" | prepend: site.url }}"><li type="button" class="btn btn-light list-group-item px-1">Synagogue Map</li></a>
+            </ul>
+            </div>                  
+    </div>
+</div>
+<script>
+    
+    {% assign varid = bldgname | remove: "-"%}
+    var {{ varid }}= L.map('{{ bldgname }}').setView([{{ page.lat }}, {{ page.lon }}], 13);
+    var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+    L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo({{varid}});
+    var marker = L.marker([{{ page.lat }}, {{ page.lon }}]).addTo({{ varid }});
+    marker.bindPopup("<strong>{{ page.building_name }}</strong>");
+</script>
 
 
 
