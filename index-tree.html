@@ -38,7 +38,7 @@
       </div>
   </div>
 </nav>
-    <div id="main" class="container-lg">
+    <div id="main" class="container-fluid">
       <style>
     .svg-container {
         display: inline-block;
@@ -51,7 +51,7 @@
     }
     .svg-content {
         display: inline-block;
-        /* position: absolute; */
+        position: absolute;
         top: 0;
         left: 0;
     }
@@ -68,8 +68,8 @@
 
 <script>
     const margin = {top: 40, right: 10, bottom: 40, left: 10},
-        width = 450 - margin.left - margin.right,
-        height = 2000 - margin.top - margin.bottom;
+        width = 1200 - margin.left - margin.right,
+        height = 1800 - margin.top - margin.bottom;
         
     d3.json( 'https://eam5.github.io/atlanticsynagogues/assets/data/bldgs_index_fac.json', function(data) {
         console.log(data)
@@ -92,7 +92,7 @@
         var svg = d3.select("div#container")
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin")
-  .attr("viewBox", "0 0 800 2000")
+  .attr("viewBox", "0 0 1200 1800")
   .classed("svg-content", true)
             
         // const svg = d3.select("#vis")
@@ -106,9 +106,9 @@
     
         // Add X axis
         const x = d3.scaleLinear()
-            // .domain([-110, 30])
-            .domain([d3.min(allLon), d3.max(allLon)])
-            .range([ 0, width ]);
+            .domain([-90, 20])
+            // .domain([d3.min(allLon), d3.max(allLon)])
+            .range([ 0, (width-(width*0.5)) ]);
         svg.append("g")
             .attr('id', 'xAxis')
             .style('font-size', '1rem')
@@ -137,18 +137,18 @@
         //     .domain([new Date(d3.max(allYears), 0, 1), new Date(d3.min(allYears), 0, 1)])
             .range([height, 0]);
 
-        svg.append("g")
-            .attr('id', 'yAxis')
-            .attr("color", "#333")
-            .style('font-size', '1rem')
-            .call(d3.axisLeft(y).tickSize(-width))
-            // .tickFormat(d3.timeFormat("%Y")));
-            .call(g => g.select(".domain").attr("display", "none"))
-            .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
-            .call(g => g.selectAll(".tick").selectAll("text").attr("display", "none"))
-            // .call(g => g.selectAll(".tick").selectAll("line").attr("stroke", "#D8D8D8").style("stroke-dasharray", "5 5"))
-            // .call(g => g.selectAll(".tick").selectAll("text"));
-    ;
+    //     svg.append("g")
+    //         .attr('id', 'yAxis')
+    //         .attr("color", "#333")
+    //         .style('font-size', '1rem')
+    //         .call(d3.axisLeft(y).tickSize(-width))
+    //         // .tickFormat(d3.timeFormat("%Y")));
+    //         .call(g => g.select(".domain").attr("display", "none"))
+    //         .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
+    //         .call(g => g.selectAll(".tick").selectAll("text").attr("display", "none"))
+    //         // .call(g => g.selectAll(".tick").selectAll("line").attr("stroke", "#D8D8D8").style("stroke-dasharray", "5 5"))
+    //         // .call(g => g.selectAll(".tick").selectAll("text"));
+    // ;
 
     const yDate = 
     d3.scaleBand()
@@ -236,7 +236,7 @@ const yellow = '#fad67d';
     	.domain(allNames)
         .range(_.range(80));
         
-    const xTree = width/2;
+    const xTree = (width-(width/2))*0.5;
     const yTree = height + 50;
     const xBranchR = xTree + 35;
     const xBranchL = xTree - 35;
@@ -398,6 +398,7 @@ const yellow = '#fad67d';
             // .attr('text-anchor', 'middle')
           .attr("x", d=>d.cxLong)
           .attr("y", d=>d.cyName)
+          .attr('font-size', '0.9rem;')
           .on('click', d => window.open('https://eam5.github.io/atlanticsynagogues/buildings/' + d.idbuildings, '_self'));
      
 
