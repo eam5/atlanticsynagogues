@@ -47,7 +47,6 @@
         width: 100%;
         vertical-align: top;
         overflow: visible;
-        isolation: isolate;
     }
     .svg-content {
         display: inline-block;
@@ -57,482 +56,871 @@
         z-index: -1;
     }
     #image-galley-content {
-        position: absolute;
-        top: 56px;
-        left: 3%;
-    }
-    /* .card{
-        background-color: ;
-        opacity: 0.6;
-    } */
-    a {
-        color:#212529;
-        mix-blend-mode: normal;
+        margin-top: 26px;
+        /* position: absolute; */
+        /* top: 56px; */
+        /* left: 3%; */
+    } 
 
-    }
-    .container, .svg-content {
-        
-        mix-blend-mode: multiply;
-    }
-.gradient-box {
-  /* display: flex; */
-  align-items: center;
-  padding: 5% 1em;
-  background-clip: padding-box; /* !importanté */
-  border: solid 5x transparent; /* !importanté */
-  border-radius: 1em; }
-
-  .gradient-box:before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    z-index: -1;
-    margin: -5px; /* !importanté */
-    border-radius: inherit; /* !importanté */
-    background: linear-gradient(to right, #63cdda, #7E9ED6);
-  
-}
 .cover {
     object-fit: cover;
-    width:150px;
-    height: 150px;
-
+    /* width:150px;
+    height: 150px; */
+    /* display: flex;  */
+    align-items: stretch; 
+    height: 100px;
 }
+.cover:hover{filter: brightness(70%); }
+.card {border:none;background: none;}
+a {color:#212529; text-decoration: none;}
+a:hover {color:#212529; text-decoration: underline;}
 </style>
 <div id="container" class="svg-container">
-<div id="image-galley-content" class='container'>
-<div class='container'>
-    <h1>Images</h1>
-    <h2>Synagogues</h2>
-    <div class="container">
-        <div class="row">
-    
-            
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/17/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/17/017_035.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Berakha ve Shalom Synagogue</h5>
-                    <p>Jodensavanne, Suriname</p>
+<div id="image-galley-content">
+    <div class='container'>
+        <h1>Images</h1>
+        <h2>Synagogues</h2>
+    </div>
+    <div class="d-flex flex-row flex-wrap justify-content-start container">            
         
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/17/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/17/017_035.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/17/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Berakha ve Shalom Synagogue</h6>
+                            <p><small>Jodensavanne, Suriname</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/14/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/14/014_001.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Beth Elohim Synagogue</h5>
-                    <p>Charleston, South Carolina, United States</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/14/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/14/014_001.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/14/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Beth Elohim Synagogue</h6>
+                            <p><small>Charleston, South Carolina, United States</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/0/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/0/000_237.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Bevis Marks Synagogue</h5>
-                    <p>London, England</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/0/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/0/000_237.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/0/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Bevis Marks Synagogue</h6>
+                            <p><small>London, England</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/1/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/1/001_001.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Creechurch Lane Synagogue</h5>
-                    <p>London, England</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/1/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/1/001_001.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/1/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Creechurch Lane Synagogue</h6>
+                            <p><small>London, England</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/2/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/2/002_004.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Creechurch Lane Synagogue [1675]</h5>
-                    <p>London, England</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/2/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/2/002_004.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/2/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Creechurch Lane Synagogue [1675]</h6>
+                            <p><small>London, England</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/10/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/10/010_001.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Dritt Shul</h5>
-                    <p>Amsterdam, Netherlands</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/10/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/10/010_001.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/10/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Dritt Shul</h6>
+                            <p><small>Amsterdam, Netherlands</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/142/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/142/142_001.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Dritt Sjoel</h5>
-                    <p>Amsterdam, Netherlands</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/142/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/142/142_001.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/142/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Dritt Sjoel</h6>
+                            <p><small>Amsterdam, Netherlands</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/4/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/4/004_030.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Esnoga, Talmud Torah II</h5>
-                    <p>Amsterdam, Netherlands</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/4/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/4/004_030.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/4/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Esnoga, Talmud Torah II</h6>
+                            <p><small>Amsterdam, Netherlands</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/133/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/133/133_003.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Great Synagogue (Duke's Place, enlargement)</h5>
-                    <p>London, England</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/133/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/133/133_003.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/133/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Great Synagogue (Duke's Place, enlargement)</h6>
+                            <p><small>London, England</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/31/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/31/031_040.png" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Great Synagogue (third, near Duke's Place)</h5>
-                    <p>London, England</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/31/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/31/031_040.png" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/31/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Great Synagogue (third, near Duke's Place)</h6>
+                            <p><small>London, England</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/22/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/22/022_002.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)</h5>
-                    <p>London, England</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/22/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/22/022_002.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/22/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)</h6>
+                            <p><small>London, England</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/7/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/7/007_004.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Grote Sjoel (Great Synagogue)</h5>
-                    <p>Amsterdam, Netherlands</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/7/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/7/007_004.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/7/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Grote Sjoel (Great Synagogue)</h6>
+                            <p><small>Amsterdam, Netherlands</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/146/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/146/146_002.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">High German synagogue</h5>
-                    <p>Amsterdam, Netherlands</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/146/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/146/146_002.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/146/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">High German synagogue</h6>
+                            <p><small>Amsterdam, Netherlands</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/135/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/135/135_001.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Honen Dal </h5>
-                    <p>The Hague, Netherlands</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/135/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/135/135_001.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/135/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Honen Dal </h6>
+                            <p><small>The Hague, Netherlands</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/134/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/134/134_009.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Honen Dalim Synagogue II</h5>
-                    <p>Orangjestad, St. Eustatius</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/134/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/134/134_009.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/134/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Honen Dalim Synagogue II</h6>
+                            <p><small>Orangjestad, St. Eustatius</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/38/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/38/038_003.png" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Kahal Kadosh Zur Israel Synagogue</h5>
-                    <p>Recife, Pernambuco, Brazil</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/38/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/38/038_003.png" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/38/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Kahal Kadosh Zur Israel Synagogue</h6>
+                            <p><small>Recife, Pernambuco, Brazil</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/43/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/43/043_045.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Mikve Israel Synagogue (IV)</h5>
-                    <p>Willemstad, Curacao</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/43/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/43/043_045.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/43/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Mikve Israel Synagogue (IV)</h6>
+                            <p><small>Willemstad, Curacao</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/33/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/33/033_007.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Mill Street Synagogue, Shearith Israel I</h5>
-                    <p>New York, New York, United States</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/33/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/33/033_007.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/33/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Mill Street Synagogue, Shearith Israel I</h6>
+                            <p><small>New York, New York, United States</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/100/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/100/100_003.png" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Neve Shalom</h5>
-                    <p>Paramaribo, Suriname</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/100/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/100/100_003.png" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/100/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Neve Shalom</h6>
+                            <p><small>Paramaribo, Suriname</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/137/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/137/137_005.png" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Neveh Shalom</h5>
-                    <p>Amsterdam, Netherlands</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/137/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/137/137_005.png" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/137/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Neveh Shalom</h6>
+                            <p><small>Amsterdam, Netherlands</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/39/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/39/039_002.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Neveh Shalom Synagogue</h5>
-                    <p>Spanish Town, Jamaica</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/39/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/39/039_002.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/39/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Neveh Shalom Synagogue</h6>
+                            <p><small>Spanish Town, Jamaica</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/29/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/29/029_001.png" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">New Synagogue [Bricklayer's Hall]</h5>
-                    <p>London, England</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/29/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/29/029_001.png" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/29/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">New Synagogue [Bricklayer's Hall]</h6>
+                            <p><small>London, England</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/13/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/13/013_004.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Nidhe Israel</h5>
-                    <p>Bridgetown, Barbados</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/13/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/13/013_004.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/13/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Nidhe Israel</h6>
+                            <p><small>Bridgetown, Barbados</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/97/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/97/097_001.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Nidhe Israel</h5>
-                    <p>Bridgetown, Barbados</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/97/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/97/097_001.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/97/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Nidhe Israel</h6>
+                            <p><small>Bridgetown, Barbados</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/11/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/11/011_004.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Nieuwe Ashkenazic Synagogue</h5>
-                    <p>Amsterdam, Netherlands</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/11/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/11/011_004.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/11/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Nieuwe Ashkenazic Synagogue</h6>
+                            <p><small>Amsterdam, Netherlands</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/9/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/9/009_003.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Obbene Shul Synagogue</h5>
-                    <p>Amsterdam, Netherlands</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/9/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/9/009_003.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/9/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Obbene Shul Synagogue</h6>
+                            <p><small>Amsterdam, Netherlands</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/115/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/115/115_001.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Shaar Ha Shamaim I</h5>
-                    <p>Kingston, Jamaica</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/115/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/115/115_001.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/115/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Shaar Ha Shamaim I</h6>
+                            <p><small>Kingston, Jamaica</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/19/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/19/019_002.png" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Shaar Ha Shamaim Synagogue (II)</h5>
-                    <p>Kingston, Jamaica</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/19/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/19/019_002.png" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/19/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Shaar Ha Shamaim Synagogue (II)</h6>
+                            <p><small>Kingston, Jamaica</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/143/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/143/143_001.png" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Shaare Yosher (II)</h5>
-                    <p>Kingston, Jamaica</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/143/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/143/143_001.png" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/143/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Shaare Yosher (II)</h6>
+                            <p><small>Kingston, Jamaica</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/103/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/103/103_001.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Shearith Israel</h5>
-                    <p>New York, New York, United States</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/103/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/103/103_001.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/103/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Shearith Israel</h6>
+                            <p><small>New York, New York, United States</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/6/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/6/006_001.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Talmud Torah, Portuguese Synagogue I</h5>
-                    <p>Amsterdam, Netherlands</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/6/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/6/006_001.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/6/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Talmud Torah, Portuguese Synagogue I</h6>
+                            <p><small>Amsterdam, Netherlands</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/23/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/23/023_001.png" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">The Hambro Synagogue [Wolf Prager's Shul]</h5>
-                    <p>London, England</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/23/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/23/023_001.png" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/23/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">The Hambro Synagogue [Wolf Prager's Shul]</h6>
+                            <p><small>London, England</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/34/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/34/034_037.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Touro Synagogue</h5>
-                    <p>Newport, Rhode Island, United States</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/34/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/34/034_037.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/34/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Touro Synagogue</h6>
+                            <p><small>Newport, Rhode Island, United States</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/36/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/36/036_026.png" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Tzedek ve-Shalom Synagogue</h5>
-                    <p>Paramaribo, Suriname</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/36/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/36/036_026.png" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/36/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Tzedek ve-Shalom Synagogue</h6>
+                            <p><small>Paramaribo, Suriname</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="building-images/12/">
-                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/12/012_001.jpg" alt="" title="" class="cover card-img-top"/>
-
-                    <h5 class="card-title">Uilenburgerstraat synagoge</h5>
-                    <p>Amsterdam, Netherlands</p>
-        
-                </a>
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="building-images/12/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/12/012_001.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="building-images/12/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Uilenburgerstraat synagoge</h6>
+                            <p><small>Amsterdam, Netherlands</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         
-        </div>
+    </div>
+    <div class='container'>
+        <h2>Locations</h2>
+    </div>
+    <div class="d-flex flex-row flex-wrap justify-content-start container">            
+        
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="locations/location1/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/1/loc001_001_result.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="locations/location1/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">location1</h6>
+                            <!-- <p><small></small></p> -->
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="locations/location2/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_001_result.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="locations/location2/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">location2</h6>
+                            <!-- <p><small></small></p> -->
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="locations/location6/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/6/loc006_001_result.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="locations/location6/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">location6</h6>
+                            <!-- <p><small></small></p> -->
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="locations/location8/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/8/loc008_001_result.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="locations/location8/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">location8</h6>
+                            <!-- <p><small></small></p> -->
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="locations/location10/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/10/loc010_001_result.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="locations/location10/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">location10</h6>
+                            <!-- <p><small></small></p> -->
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="locations/location11/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/11/loc011_001_result.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="locations/location11/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">location11</h6>
+                            <!-- <p><small></small></p> -->
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="locations/location17/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/17/loc017_001_result.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="locations/location17/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">location17</h6>
+                            <!-- <p><small></small></p> -->
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="locations/location18/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/18/loc018_001_result.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="locations/location18/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">location18</h6>
+                            <!-- <p><small></small></p> -->
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="locations/location24/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_001_result.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="locations/location24/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">location24</h6>
+                            <!-- <p><small></small></p> -->
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="locations/location31/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/31/loc031_001_result.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="locations/location31/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">location31</h6>
+                            <!-- <p><small></small></p> -->
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="locations/location42/">
+                        <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/42/loc042_001_result.jpg" alt="" title="" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="locations/location42/">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">location42</h6>
+                            <!-- <p><small></small></p> -->
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
     </div>
 </div>
 </div>
-</div>
+
 <script>
 const height = document.body.scrollHeight;
 const width = document.body.scrollWidth;
