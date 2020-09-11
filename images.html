@@ -10,7 +10,6 @@ title: Image Test
         width: 100%;
         vertical-align: top;
         overflow: visible;
-        isolation: isolate;
     }
     .svg-content {
         display: inline-block;
@@ -20,74 +19,79 @@ title: Image Test
         z-index: -1;
     }
     #image-galley-content {
-        position: absolute;
-        top: 56px;
-        left: 3%;
-    }
-    /* .card{
-        background-color: ;
-        opacity: 0.6;
-    } */
-    a {
-        color:#212529;
-        mix-blend-mode: normal;
+        margin-top: 26px;
+        /* position: absolute; */
+        /* top: 56px; */
+        /* left: 3%; */
+    } 
 
-    }
-    .container, .svg-content {
-        
-        mix-blend-mode: multiply;
-    }
-.gradient-box {
-  /* display: flex; */
-  align-items: center;
-  padding: 5% 1em;
-  background-clip: padding-box; /* !importanté */
-  border: solid 5x transparent; /* !importanté */
-  border-radius: 1em; }
-
-  .gradient-box:before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    z-index: -1;
-    margin: -5px; /* !importanté */
-    border-radius: inherit; /* !importanté */
-    background: linear-gradient(to right, #63cdda, #7E9ED6);
-  
-}
 .cover {
     object-fit: cover;
-    width:150px;
-    height: 150px;
-
+    /* width:150px;
+    height: 150px; */
+    /* display: flex;  */
+    align-items: stretch; 
+    height: 100px;
 }
+.cover:hover{filter: brightness(70%); }
+.card {border:none;background: none;}
+a {color:#212529; text-decoration: none;}
+a:hover {color:#212529; text-decoration: underline;}
 </style>
 <div id="container" class="svg-container">
-<div id="image-galley-content" class='container'>
-<div class='container'>
-    <h1>Images</h1>
-    <h2>Synagogues</h2>
-    <div class="container">
-        <div class="row">
-    
-            {% for building in site.data.building_images %}
-        <div class="col-md-3 py-2">
-            <div class="card gradient-box justify-content-center">
-                <a href="{{ building.idbuildings | datapage_url: 'building-images' }}">
-                    <img src="{{ building.cover_image | prepend: site.url }}" alt="{{ filename }}" title="{{ filename }}" class="cover card-img-top"/>
-
-                    <h5 class="card-title">{{building.building_name}}</h5>
-                    <p>{% if building.city != null %}{{building.city}}{%endif%}{% if building.state != null %}, {{building.state}}{%endif%}{% if building.country != null %}, {{building.country}}{%endif%}</p>
-        
-                </a>
+<div id="image-galley-content">
+    <div class='container'>
+        <h1>Images</h1>
+        <h2>Synagogues</h2>
+    </div>
+    <div class="d-flex flex-row flex-wrap justify-content-start container">            
+        {% for building in site.data.building_images %}
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="{{ building.idbuildings | datapage_url: 'building-images' }}">
+                        <img src="{{ building.cover_image | prepend: site.url }}" alt="{{ filename }}" title="{{ filename }}" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="{{ building.idbuildings | datapage_url: 'building-images' }}">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">{{building.building_name}}</h6>
+                            <p><small>{% if building.city != null %}{{building.city}}{%endif%}{% if building.state != null %}, {{building.state}}{%endif%}{% if building.country != null %}, {{building.country}}{%endif%}</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         {% endfor %}
-        </div>
+    </div>
+    <div class='container'>
+        <h2>Locations</h2>
+    </div>
+    <div class="d-flex flex-row flex-wrap justify-content-start container">            
+        {% for location in site.data.location_images %}
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="{{ location.location_name | datapage_url: 'locations' }}">
+                        <img src="{{ location.image_file | prepend: site.url }}" alt="{{ filename }}" title="{{ filename }}" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="{{ location.location_name | datapage_url: 'locations' }}">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">{{location.location_name}}</h6>
+                            <!-- <p><small>{% if building.city != null %}{{building.city}}{%endif%}{% if building.state != null %}, {{building.state}}{%endif%}{% if building.country != null %}, {{building.country}}{%endif%}</small></p> -->
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
 </div>
 </div>
-</div>
+
 <script>
 const height = document.body.scrollHeight;
 const width = document.body.scrollWidth;
