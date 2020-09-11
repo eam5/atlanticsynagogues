@@ -17,7 +17,13 @@
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
   <script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet.markercluster-src.js"></script>
-
+  <!-- After Leaflet and Leaflet.markercluster scripts -->
+<script src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"></script>
+<!-- Beautify Icons -->
+<script src="https://kit.fontawesome.com/b399f411bc.js" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/leaflet-beautify-marker-icon.css">
+<script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet-beautify-marker-icon.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -121,7 +127,7 @@
         
         
         
-        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/123">Unknown Synagogue (1783)</a></li>
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/123">Synagogue St. Maarten (1783)</a></li>
         
         
         
@@ -157,6 +163,7 @@
     <div class="container">
       <div class="row">
 
+    
     
     
     
@@ -1163,6 +1170,7 @@
     
     
     
+    
       </div>
     </div>
 </div>
@@ -1243,19 +1251,19 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
 
     var bldLatLon = [];
     bldLatLon.push(18.022557);
     bldLatLon.push(-63.04208);
     locArray.push(bldLatLon);
     console.log(bldLatLon)
+    
+    
+    
+    
+    
+    
+    
     
     console.log(locArray)
 
@@ -1344,17 +1352,17 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
     var bldLatLon = [];
     bldLatLon.push(18.022557);
     bldLatLon.push(-63.04208);
-    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/123\">Unknown Synagogue (1783)</a></strong>"));
+    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/123\">Synagogue St. Maarten (1783)</a></strong>"));
+    
+    
+    
+    
+    
+    
+    
     
     map.addLayer(markers);
 

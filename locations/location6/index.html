@@ -17,7 +17,13 @@
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
   <script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet.markercluster-src.js"></script>
-
+  <!-- After Leaflet and Leaflet.markercluster scripts -->
+<script src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"></script>
+<!-- Beautify Icons -->
+<script src="https://kit.fontawesome.com/b399f411bc.js" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/leaflet-beautify-marker-icon.css">
+<script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet-beautify-marker-icon.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -178,6 +184,7 @@
     <div class="container">
       <div class="row">
 
+    
     
     
     
@@ -1418,6 +1425,7 @@
     
     
     
+    
       </div>
     </div>
 </div>
@@ -1494,14 +1502,6 @@
     
     
     
-
-    var bldLatLon = [];
-    bldLatLon.push(12.107819);
-    bldLatLon.push(-68.935972);
-    locArray.push(bldLatLon);
-    console.log(bldLatLon)
-    
-    
     
 
     var bldLatLon = [];
@@ -1517,6 +1517,16 @@
     bldLatLon.push(-68.935972);
     locArray.push(bldLatLon);
     console.log(bldLatLon)
+    
+    
+
+    var bldLatLon = [];
+    bldLatLon.push(12.107819);
+    bldLatLon.push(-68.935972);
+    locArray.push(bldLatLon);
+    console.log(bldLatLon)
+    
+    
     
     
     
@@ -1553,8 +1563,6 @@
     bldLatLon.push(-68.932747);
     locArray.push(bldLatLon);
     console.log(bldLatLon)
-    
-    
     
     
     
@@ -1640,11 +1648,11 @@
     
     
     
+    
     var bldLatLon = [];
     bldLatLon.push(12.107819);
     bldLatLon.push(-68.935972);
     markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/117\">Neve Shalom (1746)</a></strong>"));
-    
     
     
     
@@ -1690,12 +1698,12 @@
     
     
     
+    
+    
     var bldLatLon = [];
     bldLatLon.push(12.104168);
     bldLatLon.push(-68.932747);
     markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/102\">Temple Emanuel (1867)</a></strong>"));
-    
-    
     
     
     

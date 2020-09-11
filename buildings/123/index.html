@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>Unknown Synagogue - Atlantic Synagogues</title>
+    <title>Synagogue St. Maarten - Atlantic Synagogues</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
     <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
@@ -17,7 +17,13 @@
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
   <script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet.markercluster-src.js"></script>
-
+  <!-- After Leaflet and Leaflet.markercluster scripts -->
+<script src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"></script>
+<!-- Beautify Icons -->
+<script src="https://kit.fontawesome.com/b399f411bc.js" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/leaflet-beautify-marker-icon.css">
+<script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet-beautify-marker-icon.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -51,7 +57,7 @@
 </style>
 <div class="row">
     <div class="col-sm-9">
-        <h1>Unknown Synagogue</h1>
+        <h1>Synagogue St. Maarten</h1>
         <p>Building ID: 123</p>
         <p>Year Built: 1783</p>
         <p>Year Opened: 1783</p>
@@ -336,7 +342,7 @@
                     
                     
                     
-                    <div class="map" id="unknown-synagogue" width="100%"></div>
+                    <div class="map" id="synagogue-st.-maarten" width="100%"></div>
                 </li>
                 <a href="https://eam5.github.io/atlanticsynagogues/synagogue-map"><li type="button" class="btn btn-light list-group-item px-1">Synagogue Map</li></a>
             </ul>
@@ -346,12 +352,12 @@
 <script>
     
     
-    var unknownsynagogue= L.map('unknown-synagogue').setView([18.022557, -63.04208], 13);
+    var synagoguest.maarten= L.map('synagogue-st.-maarten').setView([18.022557, -63.04208], 13);
     var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-    L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(unknownsynagogue);
-    var marker = L.marker([18.022557, -63.04208]).addTo(unknownsynagogue);
-    marker.bindPopup("<strong>Unknown Synagogue</strong>");
+    L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(synagoguest.maarten);
+    var marker = L.marker([18.022557, -63.04208]).addTo(synagoguest.maarten);
+    marker.bindPopup("<strong>Synagogue St. Maarten</strong>");
 </script>
 
 
