@@ -1,71 +1,183 @@
 ---
-layout: default
-title: Images
+layout: data-vis
+title: Image Test
 ---
-<h1>Image Gallery</h1>
-<div class="album py-4 bg-light">
-<h2>Synagogues</h2>
-<!-- <ul>
-    {% for building in site.data.building_images %}
-        <li><a href="{{ building.building_name | datapage_url: 'building-images' }}">{{building.building_name}} ({{building.year_opened}})</a></li>
-    {% endfor %}
-</ul> -->
+<style>
+    #main {margin:0;padding:0;}
+    .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        vertical-align: top;
+        overflow: visible;
+        isolation: isolate;
+    }
+    .svg-content {
+        display: inline-block;
+         position: absolute; 
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    #image-galley-content {
+        position: absolute;
+        top: 56px;
+        left: 3%;
+    }
+    /* .card{
+        background-color: ;
+        opacity: 0.6;
+    } */
+    a {
+        color:#212529;
+        mix-blend-mode: normal;
 
-<div class="container">
-    <div class="row">
+    }
+    .container, .svg-content {
+        
+        mix-blend-mode: multiply;
+    }
+.gradient-box {
+  /* display: flex; */
+  align-items: center;
+  padding: 5% 1em;
+  background-clip: padding-box; /* !importanté */
+  border: solid 5x transparent; /* !importanté */
+  border-radius: 1em; }
 
-        {% for building in site.data.building_images %}
-    <div class="col-md-3 py-2">
-        <div class="card shadow-sm" style="background: transparent url({{ building.cover_image | prepend: site.url }}) center center no-repeat;background-size:400px;height:200px;" >
-            <a href="{{ building.idbuildings | datapage_url: 'building-images' }}" style="color:#fff;text-decoration: none;text-shadow: 0px 3px 3px #000;">
-            {% if building.region == "Western Europe" %}
-            <div class="card-img-overlay"  style="background-image: linear-gradient(rgba(85, 137, 189,0.3), rgba(85, 137, 189,0.6));background-size:cover;text-align: center;">
-            {% endif %}
-            {% if building.region == "Caribbean" %}
-            <div class="card-img-overlay"  style="background-image: linear-gradient(rgba(124, 224, 208,0.3), rgba(124, 224, 208,0.6));background-size:cover;text-align: center;">
-            {% endif %}
-            {% if building.region == "North America" %}
-            <div class="card-img-overlay"  style="background-image: linear-gradient(rgba(237, 95, 161,0.3), rgba(237, 95, 161,0.6));background-size:cover;text-align: center;">
-            {% endif %}
-            {% if building.region == "South America" %}
-            <div class="card-img-overlay"  style="background-image: linear-gradient(rgba(194, 92, 200,0.3), rgba(194, 92, 200,0.6));background-size:cover;text-align: center;">
-            {% endif %}
+  .gradient-box:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -5px; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(to right, #63cdda, #7E9ED6);
+  
+}
+.cover {
+    object-fit: cover;
+    width:150px;
+    height: 150px;
 
+}
+</style>
+<div id="container" class="svg-container">
+<div id="image-galley-content" class='container'>
+<div class='container'>
+    <h1>Images</h1>
+    <h2>Synagogues</h2>
+    <div class="container">
+        <div class="row">
+    
+            {% for building in site.data.building_images %}
+        <div class="col-md-3 py-2">
+            <div class="card gradient-box justify-content-center">
+                <a href="{{ building.idbuildings | datapage_url: 'building-images' }}">
+                    <img src="{{ building.cover_image | prepend: site.url }}" alt="{{ filename }}" title="{{ filename }}" class="cover card-img-top"/>
 
-
-              <h5 class="card-title">{{building.building_name}}</h5>
-              <p>{% if building.city != null %}{{building.city}}{%endif%}{% if building.state != null %}, {{building.state}}{%endif%}{% if building.country != null %}, {{building.country}}{%endif%}</p>
+                    <h5 class="card-title">{{building.building_name}}</h5>
+                    <p>{% if building.city != null %}{{building.city}}{%endif%}{% if building.state != null %}, {{building.state}}{%endif%}{% if building.country != null %}, {{building.country}}{%endif%}</p>
+        
+                </a>
             </div>
-        </a>
-          </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-
-<h2>Locations</h2>
-<!-- {% include image-gallery.html folder="/assets/images/locations" %} -->
-<div class="container">
-  <div class="row">
-
-      {% for location in site.data.location_images %}
-  <div class="col-md-3 py-2">
-      <div class="card shadow-sm" style="background: transparent url({{ location.image_file | prepend: site.url }}) center center no-repeat;background-size:400px;height:200px;" >
-          <a href="{{ location.location_name | datapage_url: 'locations' }}" style="color:#fff;text-decoration: none;text-shadow: 0px 3px 3px #000;">
-          {% if location.region == "Western Europe" %}
-          <div class="card-img-overlay"  style="background-image: linear-gradient(rgba(112, 128, 144,0.6), rgba(112, 128, 144,0.8));background-size:cover;text-align: center;">
-          {% endif %}
-          {% if location.region == "Caribbean" %}
-          <div class="card-img-overlay"  style="background-image: linear-gradient(rgba(172, 242, 235,0.6), rgba(172, 242, 235,0.8));background-size:cover;text-align: center;">
-          {% endif %}
-
-            <h5 class="card-title" style="padding-top: 25%;">{{location.location_name}}</h5>
-          </div>
-      </a>
+        </div>
+        {% endfor %}
         </div>
     </div>
-    {% endfor %}
-  </div>
 </div>
+</div>
+</div>
+<script>
+const height = document.body.scrollHeight;
+const width = document.body.scrollWidth;
+const teal = "#63cdda";
+const ltblue ="#7E9ED6";
+const peri = "#778beb";
+const dkgreen ="#076173";
 
-</div>
+const data = [[0,0],[width*0.5,height+30]]
+    
+   var i;
+    for (i = 0; i < 7; i++) {
+     const x = Math.floor(Math.random() * Math.floor(width*0.7));
+    const y = Math.floor(Math.random() * Math.floor(height));
+        data.push([x,y])
+    }
+    
+    console.log(data)
+    data.sort(function(a,b){ return a[1] - b[1];});
+    
+var svg = d3.select("div#container")
+    .append("svg")
+    .attr("preserveAspectRatio", "xMinYMax meet")
+    .attr("viewBox", `0 0 ${document.body.scrollWidth} ${document.body.scrollHeight}`)
+    .attr('overflow','visible')
+    .attr('opacity', 0.6)
+    .attr('class', 'svg-content shapes');
+    
+var defs = svg.append("defs");
+
+//Filter for the outside glow
+var filter = defs.append("filter")
+    .attr("id","glow");
+filter.append("feGaussianBlur")
+    .attr("stdDeviation","1.5")
+    .attr("result","coloredBlur");
+var feMerge = filter.append("feMerge");
+feMerge.append("feMergeNode")
+    .attr("in","coloredBlur");
+feMerge.append("feMergeNode")
+    .attr("in","SourceGraphic");
+    
+var gradient = defs.append("linearGradient")
+   .attr("id", "svgGradient")
+   .attr("x1", "100%")
+   .attr("x2", "100%")
+   .attr("y1", "0%")
+   .attr("y2", "100%");
+
+gradient.append("stop")
+   .attr('class', 'start')
+   .attr("offset", "0%")
+   .attr("stop-color", ltblue)
+   .attr("stop-opacity", 1);
+gradient.append("stop")
+   .attr('class', 'start')
+   .attr("offset", "20%")
+   .attr("stop-color", teal)
+   .attr("stop-opacity", 1);
+gradient.append("stop")
+   .attr('class', 'end')
+   .attr("offset", "50%")
+   .attr("stop-color", dkgreen)
+   .attr("stop-opacity", 1);
+// gradient.append("stop")
+//    .attr('class', 'start')
+//    .attr("offset", "70%")
+//    .attr("stop-color", teal)
+//    .attr("stop-opacity", 1);
+gradient.append("stop")
+   .attr('class', 'start')
+   .attr("offset", "75%")
+   .attr("stop-color", peri)
+   .attr("stop-opacity", 1);
+gradient.append("stop")
+   .attr('class', 'start')
+   .attr("offset", "100%")
+   .attr("stop-color", "#fff")
+   .attr("stop-opacity", 1);
+        
+const line = d3.line().curve(d3.curveBasis)
+const flow = svg.selectAll('g .line').append('g')
+    .data(data).enter()
+    .append('path')
+    .attr('class', 'line')
+    .attr('d', line(data))
+    .attr('fill', 'none')
+    .attr('stroke', "url(#svgGradient)")
+    .attr('stroke-width', 70)
+   .style("filter", "url(#glow)")
+   ;
+ 
+</script>

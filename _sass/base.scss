@@ -7,13 +7,17 @@ body {
     font-family: 'Roboto Slab', serif;
     // font-family: 'Roboto', sans-serif;
     // font-family: 'Lora', serif;
+    height: 100vh;
 
 }
 nav {
     font-family: 'Roboto', sans-serif;
+    z-index: 9999;
 }
 
 #main {
     // margin-top: 86px;
     margin-top: 26px;
+    height: 100vh;
 }
+
