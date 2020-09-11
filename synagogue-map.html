@@ -629,11 +629,11 @@
     var bounds = new L.LatLngBounds(locArray);
     map.fitBounds(bounds);
     // var map = L.map('map', {layers: [osm],center: [28.079555, -35.940793], zoom: 3 });
-    // var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    var cartoUrl = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png'
-        // var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-        var cartoAttrib = 'Map tiles by Carto, under CC BY 3.0. Data by <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>, under ODbL.'
-        L.tileLayer(cartoUrl, {maxZoom: 18, attribution: cartoAttrib}).addTo(map);
+    var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var cartoUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
+        var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        var cartoAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        L.tileLayer(cartoUrl, {subdomains: 'abcd', maxZoom: 18, attribution: cartoAttrib}).addTo(map);
     
         var markers = L.markerClusterGroup.layerSupport({showCoverageOnHover: false, maxClusterRadius:28});
         var group1 = L.layerGroup(),
