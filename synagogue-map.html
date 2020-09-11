@@ -2,10 +2,13 @@
 layout: leaflet-map
 title: Synagogue Map
 ---
-<h1>Atlantic Synagogues</h1>
 <style>
-    #mapid {height: 500px;width: 70%;}
+    #mapid {height: 500px;width: 100%;}
 </style>
+<div class="d-flex align-items-baseline">
+    <h1>Atlantic Synagogues</h1>
+    <button id="clearBtn" class='btn btn-link' onClick="refreshPage()">(show all)</button>    
+</div>
 <div id="mapid"></div>
 <script>
     var locArray = [];
@@ -15,27 +18,75 @@ title: Synagogue Map
     bldLatLon.push({{building.lat}});
     bldLatLon.push({{building.lon}});
     locArray.push(bldLatLon);
-    console.log(bldLatLon)
+    // console.log(bldLatLon)
     {% endfor %}
-    console.log(locArray)
+    // console.log(locArray)
     
     var map = L.map('mapid');
     var bounds = new L.LatLngBounds(locArray);
     map.fitBounds(bounds);
     // var map = L.map('map', {layers: [osm],center: [28.079555, -35.940793], zoom: 3 });
-    var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-        var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-        L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(map);
+    // var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var cartoUrl = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png'
+        // var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        var cartoAttrib = 'Map tiles by Carto, under CC BY 3.0. Data by <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>, under ODbL.'
+        L.tileLayer(cartoUrl, {maxZoom: 18, attribution: cartoAttrib}).addTo(map);
     
-        var markers = L.markerClusterGroup({showCoverageOnHover: false, maxClusterRadius:28});
-        
+        var markers = L.markerClusterGroup.layerSupport({showCoverageOnHover: false, maxClusterRadius:28});
+        var group1 = L.layerGroup(),
+            group2 = L.layerGroup();
+
         {% for building in site.data.buildings %}
     {% assign pagepath = building.idbuildings | prepend: "/buildings/"%}
+    {% for congregation in building.congregations %}
+    {% assign rite = congregation.rite | capitalize %}
+    // console.log({{congregation.rite}});
     var bldLatLon = [];
     bldLatLon.push({{building.lat}});
     bldLatLon.push({{building.lon}});
-    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a></strong>"));
+    // markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a></strong>"));
+    {% if congregation.rite == "sephardic" %}
+    var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+
+    marker.addTo(group1)
+    {% endif %}
+    {% if congregation.rite == "ashkenazi" %}
+    var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+
+    marker.addTo(group2)
+    {% endif %}
     {% endfor %}
-    map.addLayer(markers);
+    {% endfor %}
+    // map.addLayer(markers);
+    markers.addTo(map);
+    markers.checkIn([group1, group2]);
+    var control = L.control.layers(null, null, { collapsed: true })
+
+control.addOverlay(group1, 'Sephardi');
+control.addOverlay(group2, 'Ashkenazi');
+control.addTo(map);
+group1.addTo(map);
+group2.addTo(map);
     
+function refreshPage(){
+    window.location.reload();
+} 
 </script>
