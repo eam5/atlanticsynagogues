@@ -53,7 +53,7 @@ div.tooltip {
     max-width: 20%;
 }
 #content {
-    max-height: 70vh;
+    max-height: 80vh;
     overflow: scroll;
 }
 .contr {
@@ -75,8 +75,8 @@ div.tooltip {
     <div id="vis" class="svg-content"></div>
     </div>
 <script>
-var width = 1060,
-    height = 800;
+var width = 1200,
+    height = 900;
 
 const color = d3.scaleOrdinal(d3.schemeCategory20);
 const shape = d3.scaleOrdinal(d3.symbols);
@@ -171,7 +171,7 @@ d3.csv("{{site.url}}/assets/data/contributions.csv", function (error, links) {
         .jaccardLinkLengths(40, 0.7)
         .avoidOverlaps(true)
         // .symmetricDiffLinkLengths(5)
-        .start(50, 0, 50);
+        .start(15, 0, 15);
 
     var group = svg.selectAll('.group')
         .data(groups)
@@ -193,11 +193,6 @@ d3.csv("{{site.url}}/assets/data/contributions.csv", function (error, links) {
         else if (d.id==="8"){return "England"}
         else{return d.id}
         });
-
-    // let title = d3.select('#title')
-    //     .data(nodes).enter()
-    //     .append('g')
-    //     .attr('class', 'title');    
 
     const link = svg.selectAll('path')
         .data(links).enter()
@@ -291,23 +286,19 @@ d3.csv("{{site.url}}/assets/data/contributions.csv", function (error, links) {
         })
         .call(wrap, 105)
         // .call(cola.drag)
-        .on('click', function(links){
-            title.text(links.recipient_name);
-        })
         ;
 
         
     cola.on("tick", ticked);
         
     function ticked() {
-        var radius = 20;
         node
-            .attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
-            .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
+            .attr("cx", d=>d.x)
+            .attr("cy", d=>d.y);
        
         nodeLabel 
-            .attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
-            .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
+            .attr("cx", d=>d.x)
+            .attr("cy", d=>d.y);
         
         link.attr("d", linkArc);
             
