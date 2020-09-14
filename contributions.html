@@ -41,7 +41,8 @@
   </div>
 </nav>
     <div id="main" class="container-fluid">
-      <script src="https://eam5.github.io/atlanticsynagogues/assets/js/cola.min.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.0.1/spin.min.js'></script> 
+<script src="https://eam5.github.io/atlanticsynagogues/assets/js/cola.min.js"></script>
 <style>
 .node {
     stroke: #fff;
@@ -70,7 +71,7 @@
     opacity: 0.2;
 }
     
-div.tooltip {
+/* div.tooltip {
     position: absolute;
     text-align: center;
     max-width: 250px;
@@ -82,7 +83,7 @@ div.tooltip {
     line-height: 16px;
     pointer-events: none;
     box-shadow: 0px 0px 12px -10px;
-}
+} */
 #exhibit-container {
     display: block;
     position: relative;
@@ -92,7 +93,7 @@ div.tooltip {
     max-width: 20%;
 }
 #content {
-    max-height: 80vh;
+    max-height: 90vh;
     overflow: scroll;
 }
 .contr {
@@ -102,11 +103,18 @@ div.tooltip {
     font-size: 0.8rem;
     margin-left: 0.45rem;
 }
-
+#clearBtn {
+    display: none;
+    /* vertical-align: baseline; */
+}
 </style>
 <div id='exhibit-container'>
     <h1>Contributions</h1>
-    <p>Funding and Items contributed towards the construction of Atlantic synagogues</p>
+    <div class="d-flex align-items-baseline">
+        <p>Funding and Items contributed towards the construction of Atlantic synagogues</p>
+        <button id="clearBtn" class='btn btn-link'>(show all)</button>    
+    </div>
+    
     <div id="body">
         <div id="title"></div>
         <div id="content"></div>
@@ -115,24 +123,27 @@ div.tooltip {
     </div>
 <script>
 var width = 1200,
-    height = 900;
+    height = 800;
 
 const color = d3.scaleOrdinal(d3.schemeCategory20);
 const shape = d3.scaleOrdinal(d3.symbols);
 
 var cola = cola.d3adaptor(d3)
-    .size([width, height]);
+    .jaccardLinkLengths(38, 0.7)
+    .avoidOverlaps(true)
+    // .handleDisconnected(false)
+    .size([width, height])
+    .stop();
 
 let svg = d3.select("#vis").append("svg")
-.attr("preserveAspectRatio", "xMinYMax meet")
-.attr("viewBox", `0 0 ${width} ${height}`);
+    .attr("preserveAspectRatio", "xMinYMax meet")
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .style('overflow','visible');
 
-let div = d3.select('#vis')
-    .append('div') 
-    .attr('class', 'tooltip')
-    .style('opacity', 0);
-
-    
+// let div = d3.select('#vis')
+//     .append('div') 
+//     .attr('class', 'tooltip')
+//     .style('opacity', 0);
     
 d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv", function (error, links) {
     const allDonors = _.chain(links)
@@ -146,7 +157,6 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
             }
         })
         .value();
-    console.log(allDonors)
     const allRecipients = _.chain(links)
         .groupBy(d=>d.recipient_id)
         .map(function(d){
@@ -159,10 +169,7 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
             }
         })
         .value();
-    console.log(allRecipients)
     const data = {};
-    // console.log(data)
-
     links.forEach(function(link) {
         const linksSource = link.source = nodeByName(
             link.donor, 
@@ -182,10 +189,8 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
         );
 
     });
-    // console.log(links)
 
     const nodes = d3.values(data);
-    // console.log(nodes)
         
     var groupMap = {};
     nodes.forEach(function (v, i) {
@@ -200,17 +205,19 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
 
     var groups = [];
     for (var g in groupMap) {
-        groups.push({ id: g, leaves: groupMap[g] });
+        groups.push({ id: g, leaves: groupMap[g], padding: 18 });
     }
         
     cola
         .nodes(nodes)
         .links(links)
         .groups(groups)
-        .jaccardLinkLengths(40, 0.7)
-        .avoidOverlaps(true)
-        // .symmetricDiffLinkLengths(5)
         .start(15, 0, 15);
+    // cola.tick();
+    for (var i = 0; i < 300; ++i) cola.tick();
+    var clearBtn = d3.select('#clearBtn');
+    const title = d3.select('#title');
+    const content = d3.select('#content');
 
     var group = svg.selectAll('.group')
         .data(groups)
@@ -219,34 +226,61 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
         .attr('rx',5)
         .attr('ry',5)
         .style("fill", function (d) { return color(d.id); })
+        .attr('x', function (d) { return d.bounds.x })
+        .attr('y', function (d) { return d.bounds.y })
+        .attr('width', function (d) { return d.bounds.width() })
+        .attr('height', function(d) { return d.bounds.height() });
         // .call(cola.drag)
-        ;
+        // .on('click', function(d){
+        //     node.style('stroke-opacity', function (o) {
+        //         const thisOpacity = isConnected(d, o) ? 1 : 1;
+        //         this.setAttribute('fill-opacity', thisOpacity);
+        //         return thisOpacity;
+        //     });
+        //     nodeLabel.style('stroke-opacity', function (o) {
+        //         const thisOpacity = isConnected(d, o) ? 1 : 1;
+        //         this.setAttribute('fill-opacity', thisOpacity);
+        //         return thisOpacity;
+        //     });    
+        //     link.style('stroke-opacity', o => (o.source === d || o.target === d ? 1 : 1));
+        //     title.text("");
+        //     content.text("");
+        //     content.selectAll('.contr').text('');
+        //     clearBtn.style('display', 'none');
+        // });
         
     const groupLabel = svg.selectAll('groupLabel')
         .data(groups).enter()
         .append('text')
         .attr('class', 'groupLabel')
+        .attr('x', function (d) { return d.bounds.x })
+        .attr('y', function (d) { return d.bounds.y + 15})
+        .attr('width', function (d) { return d.bounds.width() })
+        .attr('height', function(d) { return d.bounds.height() })
         .attr('fill', function (d) { return color(d.id); })
         .text(function(d){
         if(d.id==="NULL"){return ""}
         else if (d.id==="8"){return "England"}
         else{return d.id}
-        });
+        })
+        ;
 
     const link = svg.selectAll('path')
         .data(links).enter()
         .append('path')
-        .attr('class', 'link');
+        .attr('class', 'link')
+        .attr("d", linkArc);
 
-    const title = d3.select('#title');
-    const content = d3.select('#content');
     var node = svg.selectAll(".node")
         .data(nodes).enter()
         .append("path")
         .attr("class", "node")
+        .attr("cx", d=>d.x)
+        .attr("cy", d=>d.y)
+        .attr("transform", transform)
         .attr("d", d3.symbol()
             .size(function(d) {
-            if (d.type==="building" || d.type==="congregation") {return 250;} else {return 70;}
+            if (d.type==="building" || d.type==="congregation") {return 220;} else {return 50;}
             }) 
             .type(function(d) {
             if (d.type==="building") {return d3.symbolCircle}
@@ -254,20 +288,20 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
             })
         )
         .style("fill", function (d) { return color(d.group); })
-        .on('mouseover', fade(0.1))
-        .on('mouseout', fade(1))
-        .on('mouseover.tooltip', tooltip)
-        .on('mouseout.tooltip', function(d) {   
-        div.transition()    
-            .duration(100)    
-            .style("opacity", 0); 
-        })
+        // .on('mouseover', fade(0.1))
+        // .on('mouseout', fade(1))
+        // .on('mouseover.tooltip', tooltip)
+        // .on('mouseout.tooltip', function(d) {   
+        // div
+        // // .transition()    
+        //     // .duration(100)    
+        //     .style("opacity", 0); 
+        // })
         .on('click', function(d){
             if (d.RE_type==="building" || d.RE_type==="congregation"){
                 var recipId = d.name
                 var recip = allRecipients.filter(l=>l.recipient_id===recipId);
                 var bldgcontr = _.flatten(recip.map(d=>d.contributions)).sort((a,b)=>a.contr_year - b.contr_year)
-                // console.log(bldgcontr)
                 title.text(d.label);
                 const contrTotal = recip[0].contr_num;
                 content.text("Contributions Received ("+contrTotal+"):");
@@ -281,8 +315,6 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
                 var donorId = d.name;
                 var donor = allDonors.filter(l=>l.donor===donorId);
                 var donations = _.flatten(donor.map(d=>d.contributions)).sort((a,b)=>a.contr_year - b.contr_year)
-                // console.log(donorId)
-                // console.log(donations)
                 title.text(d.name);
                 const contrTotal = donor[0].contr_num;
                 content.text("Contributions ("+contrTotal+"):");
@@ -300,63 +332,94 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
                 contr.append('div')
                     .attr('class', 'contr-sub')
                     .text(function(f){if(f.contr_honors==="" || f.contr_honors==="NULL"){return null}else{return "Honors Received: " + f.contr_honors}});
+        
             }
-        })
-        // .call(cola.drag)
-        ;
+            node.style('stroke-opacity', function (o) {
+                const thisOpacity = isConnected(d, o) ? 1 : 0.1;
+                this.setAttribute('fill-opacity', thisOpacity);
+                return thisOpacity;
+            });
+            nodeLabel.style('stroke-opacity', function (o) {
+                const thisOpacity = isConnected(d, o) ? 1 : 0.1;
+                this.setAttribute('fill-opacity', thisOpacity);
+                return thisOpacity;
+            });    
+            link.style('stroke-opacity', o => (o.source === d || o.target === d ? 1 : 0.1));  
+            clearBtn.style('display', 'block')
+                .on('click', function(b){
+                    node.style('stroke-opacity', function (o) {
+                        const thisOpacity = isConnected(d, o) ? 1 : 1;
+                        this.setAttribute('fill-opacity', thisOpacity);
+                        return thisOpacity;
+                    });
+                    nodeLabel.style('stroke-opacity', function (o) {
+                        const thisOpacity = isConnected(d, o) ? 1 : 1;
+                        this.setAttribute('fill-opacity', thisOpacity);
+                        return thisOpacity;
+                    });    
+                    link.style('stroke-opacity', o => (o.source === d || o.target === d ? 1 : 1));
+                    title.text("");
+                    content.text("");
+                    content.selectAll('.contr').text('');
+                    clearBtn.style('display', 'none');
+                });
+        });
       
     const nodeLabel = svg.selectAll('nodetext')
         .data(nodes)
         .enter().append('text')
         .attr('class', 'nodetext')
+        .attr("cx", d=>d.x)
+            .attr("cy", d=>d.y)
+            .attr("transform", transform)
         .attr('text-anchor', 'middle')
         .attr('dy', 0.05)
-        .attr('font-size', 10)
-        .on('mouseover', fade(0.1))
-        .on('mouseout', fade(1))
+        .attr('font-size', '0.6rem')
+        // .on('mouseover', fade(0.1))
+        // .on('mouseout', fade(1))
         .text(function(d) { 
             if (d.type==="building" || d.type==="congregation") {return d.label;} else {return null;}
         })
-        .on('mouseover.tooltip', tooltip)
-        .on('mouseout.tooltip', function(d) {   
-            div.transition()    
-                .duration(100)    
-                .style("opacity", 0); 
-        })
+        // .on('mouseover.tooltip', tooltip)
+        // .on('mouseout.tooltip', function(d) {   
+        //     div
+        //     // .transition()    
+        //     //     .duration(100)    
+        //         .style("opacity", 0); 
+        // })
         .call(wrap, 105)
         // .call(cola.drag)
         ;
 
         
-    cola.on("tick", ticked);
-        
-    function ticked() {
-        node
-            .attr("cx", d=>d.x)
-            .attr("cy", d=>d.y);
+    // cola.on("tick", ticked);
+    // function ticked() {
+    //     node
+    //         .attr("cx", d=>d.x)
+    //         .attr("cy", d=>d.y);
        
-        nodeLabel 
-            .attr("cx", d=>d.x)
-            .attr("cy", d=>d.y);
+    //     nodeLabel 
+    //         .attr("cx", d=>d.x)
+    //         .attr("cy", d=>d.y);
         
-        link.attr("d", linkArc);
+    //     link.attr("d", linkArc);
             
-        group
-            .attr('x', function (d) { return d.bounds.x })
-            .attr('y', function (d) { return d.bounds.y })
-            .attr('width', function (d) { return d.bounds.width() })
-            .attr('height', function(d) { return d.bounds.height() });
+    //     group
+    //         .attr('x', function (d) { return d.bounds.x })
+    //         .attr('y', function (d) { return d.bounds.y })
+    //         .attr('width', function (d) { return d.bounds.width() })
+    //         .attr('height', function(d) { return d.bounds.height() });
 
-        groupLabel 
-            .attr('x', function (d) { return d.bounds.x })
-            .attr('y', function (d) { return d.bounds.y })
-            .attr('width', function (d) { return d.bounds.width() })
-            .attr('height', function(d) { return d.bounds.height() });
+    //     groupLabel 
+    //         .attr('x', function (d) { return d.bounds.x })
+    //         .attr('y', function (d) { return d.bounds.y })
+    //         .attr('width', function (d) { return d.bounds.width() })
+    //         .attr('height', function(d) { return d.bounds.height() });
 
-        node.attr("transform", transform);
-        nodeLabel.attr("transform", transform);
-    }
-       
+    //     node.attr("transform", transform);
+    //     nodeLabel.attr("transform", transform);
+    // }
+
     function tooltip(d) {
         if (d.type==="building" || d.type==="congregation") {
             return null
@@ -367,13 +430,25 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
 //                .style("left", (d3.event.pageX + 12) + "px")   
 //                .style("top", (d3.event.pageY - 28) + "px");  
         } else {
-            div.transition()    
-                .duration(100)    
+            div
+            // .transition()    
+            //     .duration(100)    
                 .style("opacity", .7);    
             div.html(d.label + "<br/>" + d.RE_type + "<br/>")
                 .style("left", (d3.event.pageX + 12) + "px")   
                 .style("top", (d3.event.pageY - 28) + "px");  
         }     
+    }
+
+    function nodeByName(name, label, type, loc_id, RE_type, recipient_name) {
+        return data[name] || (data[name] = {
+            name: name, 
+            label: label, 
+            type:type, 
+            group:loc_id, 
+            RE_type: RE_type,
+            recipient_name: recipient_name
+        });
     }
 
     function linkArc(d) {
@@ -385,17 +460,6 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
 
     function transform(d) {
         return "translate(" + d.x + "," + d.y + ")";
-    }
-        
-    function nodeByName(name, label, type, loc_id, RE_type, recipient_name) {
-        return data[name] || (data[name] = {
-            name: name, 
-            label: label, 
-            type:type, 
-            group:loc_id, 
-            RE_type: RE_type,
-            recipient_name: recipient_name
-        });
     }
         
     const linkedByIndex = {};
