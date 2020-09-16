@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>New York, New York - Atlantic Synagogues</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+<!-- leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/marker-cluster.css">
+<!-- leaflet script -->
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+  <script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet.markercluster-src.js"></script>
+  <!-- After Leaflet and Leaflet.markercluster scripts -->
+<script src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"></script>
+<!-- Beautify Icons -->
+<script src="https://kit.fontawesome.com/b399f411bc.js" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/leaflet-beautify-marker-icon.css">
+<script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet-beautify-marker-icon.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="https://eam5.github.io/atlanticsynagogues">Atlantic Synagogues</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav">
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/">Home</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/synagogue-map">Synagogue Map</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/contributions">Contributions</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/allbldgs_allfac">Facade Fractal Trees</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/scatter">Synagogue Timeline</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+            
+      </div>
+  </div>
+</nav>
+  <div id="main" class="container-lg">
+    <style>
+    .map {height: 300px;}
+</style>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-transparent" style="padding-inline-start:0;">
+      <li class="breadcrumb-item"><a href="https://eam5.github.io/atlanticsynagogues/site-index#location-tag">Locations</a></li>
+      <li class="breadcrumb-item active" aria-current="page">New York, New York</li>
+    </ol>
+</nav>
+
+<h1>New York, New York</h1>
+
+<h2>Related Buildings:</h2>
+    <ul>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/33">Mill Street Synagogue, Shearith Israel I (1730)</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/129">Shearith Israel (II) (1818)</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/103">Shearith Israel (1897)</a></li>
+        
+        
+        
+        
+        
+    </ul>
+
+<h2>Map</h2>
+
+<div class="map" id="mapid" width="100%"></div>
+
+<div class="album py-4">
+  <h2 class="mt-2" id="loc-gallery-tag">Image Gallery</h2>
+
+    <div class="container">
+      <div class="row">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_001.jpg" title="loc024_001">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_001.jpg" alt="loc024_001" title="loc024_001" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> New Quaker meeting lot</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Lot on Queen Street in Montgomery Ward for proposed house of public worship.Block 112. Cit: Manuscripts and Archives Division, The New York Public Library. "New Quaker meeting lot" The New York Public Library Digital Collections. 1774. http://digitalcollections.nypl.org/items/4c5cb7f0-756e-0135-43cf-0bb21d6cfb1e</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc024_001">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc024_001" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_001.jpg" title="loc024_001">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_001.jpg" alt="loc024_001" title="loc024_001" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> New Quaker meeting lot</li>
+                                  <li class="card-text"><strong>Description:</strong> Lot on Queen Street in Montgomery Ward for proposed house of public worship.Block 112. Cit: Manuscripts and Archives Division, The New York Public Library. "New Quaker meeting lot" The New York Public Library Digital Collections. 1774. http://digitalcollections.nypl.org/items/4c5cb7f0-756e-0135-43cf-0bb21d6cfb1e</li>
+                                  <li class="card-text"><strong>Creator:</strong> </li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1774</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://digitalcollections.nypl.org/items/4c5cb7f0-756e-0135-43cf-0bb21d6cfb1e">https://digitalcollections.nypl.org/items/4c5cb7f0-756e-0135-43cf-0bb21d6cfb1e</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_002.jpg" title="loc024_002">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_002.jpg" alt="loc024_002" title="loc024_002" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> View of the old City Hall, Wall St. in the year 1789.</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> "Drawn & Engraved for the New York Mirror." "Eng:d on Steel by Hatch & Smillie." "Printed by J & G Neale" "Drawn by Diedrich Knickerbocker, Jr."--printed on border. Diedrich Knickerbocker, Jr. is Pseudonym for Washington Irving. Citation: Art and Picture Collection, The New York Public Library. "View of the old City Hall, Wall St. in the year 1789." The New York Public Library Digital Collections. 1850. http://digitalcollections.nypl.org/items/510d47e0-cd8e-a3d9-e040-e00a18064a99</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc024_002">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc024_002" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_002.jpg" title="loc024_002">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_002.jpg" alt="loc024_002" title="loc024_002" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> View of the old City Hall, Wall St. in the year 1789.</li>
+                                  <li class="card-text"><strong>Description:</strong> "Drawn & Engraved for the New York Mirror." "Eng:d on Steel by Hatch & Smillie." "Printed by J & G Neale" "Drawn by Diedrich Knickerbocker, Jr."--printed on border. Diedrich Knickerbocker, Jr. is Pseudonym for Washington Irving. Citation: Art and Picture Collection, The New York Public Library. "View of the old City Hall, Wall St. in the year 1789." The New York Public Library Digital Collections. 1850. http://digitalcollections.nypl.org/items/510d47e0-cd8e-a3d9-e040-e00a18064a99</li>
+                                  <li class="card-text"><strong>Creator:</strong> </li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1850</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://digitalcollections.nypl.org/items/510d47e0-cd8e-a3d9-e040-e00a18064a99">https://digitalcollections.nypl.org/items/510d47e0-cd8e-a3d9-e040-e00a18064a99</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_003.jpg" title="loc024_003">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_003.jpg" alt="loc024_003" title="loc024_003" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Public buildings in the City of New-York</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> "Brick Meeting - Beekman Street, First Presbyterian Church - Wall Street, Reformed Presbyterian Church - Murray Street, South Dutch Church - Exchange Street, North Church - William Street, Middle Dutch Church - Nassau Street"--lettered on image. Citation: The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Picture Collection, The New York Public Library. "Public buildings in the City of New-York" The New York Public Library Digital Collections. 1830. http://digitalcollections.nypl.org/items/510d47e1-104f-a3d9-e040-e00a18064a99</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc024_003">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc024_003" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_003.jpg" title="loc024_003">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_003.jpg" alt="loc024_003" title="loc024_003" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Public buildings in the City of New-York</li>
+                                  <li class="card-text"><strong>Description:</strong> "Brick Meeting - Beekman Street, First Presbyterian Church - Wall Street, Reformed Presbyterian Church - Murray Street, South Dutch Church - Exchange Street, North Church - William Street, Middle Dutch Church - Nassau Street"--lettered on image. Citation: The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Picture Collection, The New York Public Library. "Public buildings in the City of New-York" The New York Public Library Digital Collections. 1830. http://digitalcollections.nypl.org/items/510d47e1-104f-a3d9-e040-e00a18064a99</li>
+                                  <li class="card-text"><strong>Creator:</strong> </li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1830</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://digitalcollections.nypl.org/items/510d47e1-104f-a3d9-e040-e00a18064a99">https://digitalcollections.nypl.org/items/510d47e1-104f-a3d9-e040-e00a18064a99</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_004.jpg" title="loc024_004">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_004.jpg" alt="loc024_004" title="loc024_004" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Foot Of Wall Street And Ferry-House, 1746.</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Art and Picture Collection, The New York Public Library. "Foot Of Wall Street And Ferry-House, 1746." The New York Public Library Digital Collections. 1882. http://digitalcollections.nypl.org/items/510d47e1-2bf7-a3d9-e040-e00a18064a99</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc024_004">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc024_004" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_004.jpg" title="loc024_004">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_004.jpg" alt="loc024_004" title="loc024_004" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Foot Of Wall Street And Ferry-House, 1746.</li>
+                                  <li class="card-text"><strong>Description:</strong> Art and Picture Collection, The New York Public Library. "Foot Of Wall Street And Ferry-House, 1746." The New York Public Library Digital Collections. 1882. http://digitalcollections.nypl.org/items/510d47e1-2bf7-a3d9-e040-e00a18064a99</li>
+                                  <li class="card-text"><strong>Creator:</strong> </li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1882</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://digitalcollections.nypl.org/items/510d47e1-2bf7-a3d9-e040-e00a18064a99">https://digitalcollections.nypl.org/items/510d47e1-2bf7-a3d9-e040-e00a18064a99</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_005.jpg" title="loc024_005">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_005.jpg" alt="loc024_005" title="loc024_005" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> View of Federal Hall and part of Broad Street, 1796.</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Art and Picture Collection, The New York Public Library. "View of Federal Hall and part of Broad Street, 1796." The New York Public Library Digital Collections. 1866. http://digitalcollections.nypl.org/items/510d47e1-2bf9-a3d9-e040-e00a18064a99</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc024_005">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc024_005" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_005.jpg" title="loc024_005">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_005.jpg" alt="loc024_005" title="loc024_005" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> View of Federal Hall and part of Broad Street, 1796.</li>
+                                  <li class="card-text"><strong>Description:</strong> Art and Picture Collection, The New York Public Library. "View of Federal Hall and part of Broad Street, 1796." The New York Public Library Digital Collections. 1866. http://digitalcollections.nypl.org/items/510d47e1-2bf9-a3d9-e040-e00a18064a99</li>
+                                  <li class="card-text"><strong>Creator:</strong> </li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1886</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://digitalcollections.nypl.org/items/510d47e1-2bf9-a3d9-e040-e00a18064a99">https://digitalcollections.nypl.org/items/510d47e1-2bf9-a3d9-e040-e00a18064a99</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_006.jpg" title="loc024_006">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_006.jpg" alt="loc024_006" title="loc024_006" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> View in New York, 1746 (Lower Market).</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> "Lith. By Geo. Hayward, 120 Water St., N.Y." "for D.T. Valentine's Manual, for 1858."--printed on border. Citation: Art and Picture Collection, The New York Public Library. "View in New York, 1746 (Lower Market)." The New York Public Library Digital Collections. 1858 - 1863. http://digitalcollections.nypl.org/items/510d47e1-2c04-a3d9-e040-e00a18064a99</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc024_006">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc024_006" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_006.jpg" title="loc024_006">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_006.jpg" alt="loc024_006" title="loc024_006" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> View in New York, 1746 (Lower Market).</li>
+                                  <li class="card-text"><strong>Description:</strong> "Lith. By Geo. Hayward, 120 Water St., N.Y." "for D.T. Valentine's Manual, for 1858."--printed on border. Citation: Art and Picture Collection, The New York Public Library. "View in New York, 1746 (Lower Market)." The New York Public Library Digital Collections. 1858 - 1863. http://digitalcollections.nypl.org/items/510d47e1-2c04-a3d9-e040-e00a18064a99</li>
+                                  <li class="card-text"><strong>Creator:</strong> </li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1858</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://digitalcollections.nypl.org/items/510d47e1-2c04-a3d9-e040-e00a18064a99">https://digitalcollections.nypl.org/items/510d47e1-2c04-a3d9-e040-e00a18064a99</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_007.jpg" title="loc024_007">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_007.jpg" alt="loc024_007" title="loc024_007" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> No. 120 William Street is the last relic of the old Dutch style of architecture of New Amsterdam.</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> "This was the first place fitted up for Methodist worship in N.Y." "Lith. G. Hayward 180 F(unintell.)" "D.T.Valentine's manual."--printed on border. Cit: The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Picture Collection, The New York Public Library. "No. 120 William Street is the last relic of the old Dutch style of architecture of New Amsterdam." The New York Public Library Digital Collections. 1856. http://digitalcollections.nypl.org/items/510d47e1-2c10-a3d9-e040-e00a18064a99</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc024_007">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc024_007" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_007.jpg" title="loc024_007">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_007.jpg" alt="loc024_007" title="loc024_007" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> No. 120 William Street is the last relic of the old Dutch style of architecture of New Amsterdam.</li>
+                                  <li class="card-text"><strong>Description:</strong> "This was the first place fitted up for Methodist worship in N.Y." "Lith. G. Hayward 180 F(unintell.)" "D.T.Valentine's manual."--printed on border. Cit: The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Picture Collection, The New York Public Library. "No. 120 William Street is the last relic of the old Dutch style of architecture of New Amsterdam." The New York Public Library Digital Collections. 1856. http://digitalcollections.nypl.org/items/510d47e1-2c10-a3d9-e040-e00a18064a99</li>
+                                  <li class="card-text"><strong>Creator:</strong> </li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1856</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://digitalcollections.nypl.org/items/510d47e1-2c10-a3d9-e040-e00a18064a99">https://digitalcollections.nypl.org/items/510d47e1-2c10-a3d9-e040-e00a18064a99</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_008.jpg" title="loc024_008">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_008.jpg" alt="loc024_008" title="loc024_008" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Old House cor. Broad & Water Sts. Built 1764.</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> "Lith. of Sarony, Major & Knapp, 449 Broadway, N.Y." "for D.T. Valentine's manual, 1861."--printed on border. Cit: Art and Picture Collection, The New York Public Library. "Old House cor. Broad & Water Sts. Built 1764." The New York Public Library Digital Collections. 1861. http://digitalcollections.nypl.org/items/510d47e1-2d52-a3d9-e040-e00a18064a99</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc024_008">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc024_008" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_008.jpg" title="loc024_008">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_008.jpg" alt="loc024_008" title="loc024_008" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Old House cor. Broad & Water Sts. Built 1764.</li>
+                                  <li class="card-text"><strong>Description:</strong> "Lith. of Sarony, Major & Knapp, 449 Broadway, N.Y." "for D.T. Valentine's manual, 1861."--printed on border. Cit: Art and Picture Collection, The New York Public Library. "Old House cor. Broad & Water Sts. Built 1764." The New York Public Library Digital Collections. 1861. http://digitalcollections.nypl.org/items/510d47e1-2d52-a3d9-e040-e00a18064a99</li>
+                                  <li class="card-text"><strong>Creator:</strong> </li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1861</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://digitalcollections.nypl.org/items/510d47e1-2d52-a3d9-e040-e00a18064a99">https://digitalcollections.nypl.org/items/510d47e1-2d52-a3d9-e040-e00a18064a99</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_009.jpg" title="loc024_009">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_009.jpg" alt="loc024_009" title="loc024_009" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> A plan of the city of New York from an actual survey, anno Domini, M[D]CC,LV</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Includes item in legend: "K" "Jews Synagogue." Scale ca. 1:3,300; foot 660 to one 8 of a mile. "To the Honourable James De Lancey ... this plan of the City of New York is humbly dedict. by your honours most obet. & humble servant G. Duyckinck." Shows ward boundaries. Indexed for points of interest. Wheat & Brun. Maps and Charts (1978 ed.) 380 LC Maps of North America, 1750-1789, 1101 Available also through the Library of Congress Web site as a raster image. Vault AACR2: 100; 440; 651/1; 651/2 Citation: Maerschalck, Francis W., -1776, and G Duyckinck. A plan of the city of New York from an actual survey, anno Domini, MDCC,LV. [New York? Printed, ingraved for, and sold by G. Duyckinck ?, 1755] Map. Retrieved from the Library of Congress, <www.loc.gov/item/73691802/>.Maerschalck, Francis W., -1776, and G Duyckinck. A plan of the city of New York from an actual survey, anno Domini, MDCC,LV. [New York? Printed, ingraved for, and sold by G. Duyckinck ?, 1755] Map. Retrieved from the Library of Congress, <www.loc.gov/item/73691802/>.</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc024_009">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc024_009" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_009.jpg" title="loc024_009">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_009.jpg" alt="loc024_009" title="loc024_009" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> A plan of the city of New York from an actual survey, anno Domini, M[D]CC,LV</li>
+                                  <li class="card-text"><strong>Description:</strong> Includes item in legend: "K" "Jews Synagogue." Scale ca. 1:3,300; foot 660 to one 8 of a mile. "To the Honourable James De Lancey ... this plan of the City of New York is humbly dedict. by your honours most obet. & humble servant G. Duyckinck." Shows ward boundaries. Indexed for points of interest. Wheat & Brun. Maps and Charts (1978 ed.) 380 LC Maps of North America, 1750-1789, 1101 Available also through the Library of Congress Web site as a raster image. Vault AACR2: 100; 440; 651/1; 651/2 Citation: Maerschalck, Francis W., -1776, and G Duyckinck. A plan of the city of New York from an actual survey, anno Domini, MDCC,LV. [New York? Printed, ingraved for, and sold by G. Duyckinck ?, 1755] Map. Retrieved from the Library of Congress, <www.loc.gov/item/73691802/>.Maerschalck, Francis W., -1776, and G Duyckinck. A plan of the city of New York from an actual survey, anno Domini, MDCC,LV. [New York? Printed, ingraved for, and sold by G. Duyckinck ?, 1755] Map. Retrieved from the Library of Congress, <www.loc.gov/item/73691802/>.</li>
+                                  <li class="card-text"><strong>Creator:</strong> Francis Maerschalck (d. 1776)</li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1755</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://lccn.loc.gov/73691802">https://lccn.loc.gov/73691802</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_010.png" title="loc024_010">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_010.png" alt="loc024_010" title="loc024_010" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> A plan of the city of New-York, reduced from actual survey</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Includes item in legend: "K" "Jews Synagogue." Print contains 23 lettered and 5 numbered references to churches and religious institutions. Citation: The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Print Collection, The New York Public Library. "A plan of the city of New-York, reduced from actual survey" The New York Public Library Digital Collections. 1763. http://digitalcollections.nypl.org/items/3949a160-c5ed-012f-fd0b-58d385a7bc34</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc024_010">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc024_010" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_010.png" title="loc024_010">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/24/loc024_010.png" alt="loc024_010" title="loc024_010" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> A plan of the city of New-York, reduced from actual survey</li>
+                                  <li class="card-text"><strong>Description:</strong> Includes item in legend: "K" "Jews Synagogue." Print contains 23 lettered and 5 numbered references to churches and religious institutions. Citation: The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Print Collection, The New York Public Library. "A plan of the city of New-York, reduced from actual survey" The New York Public Library Digital Collections. 1763. http://digitalcollections.nypl.org/items/3949a160-c5ed-012f-fd0b-58d385a7bc34</li>
+                                  <li class="card-text"><strong>Creator:</strong> </li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1763</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://digitalcollections.nypl.org/items/510d47d9-7ac7-a3d9-e040-e00a18064a99">https://digitalcollections.nypl.org/items/510d47d9-7ac7-a3d9-e040-e00a18064a99</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      </div>
+    </div>
+</div>
+
+<script>
+    var locArray = [];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    var bldLatLon = [];
+    bldLatLon.push(40.705016);
+    bldLatLon.push(-74.010199);
+    locArray.push(bldLatLon);
+    console.log(bldLatLon)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    var bldLatLon = [];
+    bldLatLon.push(40.774861);
+    bldLatLon.push(-73.977306);
+    locArray.push(bldLatLon);
+    console.log(bldLatLon)
+    
+    
+    
+
+    var bldLatLon = [];
+    bldLatLon.push(40.705016);
+    bldLatLon.push(-74.010199);
+    locArray.push(bldLatLon);
+    console.log(bldLatLon)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    console.log(locArray)
+
+    var map = L.map('mapid');
+    var bounds = new L.LatLngBounds(locArray);
+    map.fitBounds(bounds);
+    // .setView([51.505, -0.09], 13);
+    var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(map);
+
+        var markers = L.markerClusterGroup({showCoverageOnHover: false, zoomToBoundsOnClick: false, maxClusterRadius:4});
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(40.705016);
+    bldLatLon.push(-74.010199);
+    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/33\">Mill Street Synagogue, Shearith Israel I (1730)</a></strong>"));
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(40.774861);
+    bldLatLon.push(-73.977306);
+    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/103\">Shearith Israel (1897)</a></strong>"));
+    
+    
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(40.705016);
+    bldLatLon.push(-74.010199);
+    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/129\">Shearith Israel (II) (1818)</a></strong>"));
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    map.addLayer(markers);
+
+</script>
+  </div>
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
+    

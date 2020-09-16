@@ -252,7 +252,8 @@ const yellow = '#fad67d';
         .style('cursor', 'pointer')
         // .attr('opacity', '0.4')
         // .attr('stroke', function (d) { return colorBranch(d.lat); })
-        .attr('fill', '#f0ede5');
+        // .attr('fill', '#f0ede5');
+        .attr('fill', '#fff');
 
     const xBranch = svg.append('g')
         .selectAll('branchx')
@@ -262,7 +263,8 @@ const yellow = '#fad67d';
         })
         .attr('stroke-width', 10)
         .attr('class', 'trunk')
-        .attr('stroke', '#f0ede5')
+        // .attr('stroke', '#f0ede5')
+        .attr('stroke', '#fff')
         // .attr('opacity', '0.4')
         // .attr('stroke', function (d) { return colorBranch(d.lat); })
         .attr('fill', 'none');
@@ -310,7 +312,8 @@ const yellow = '#fad67d';
         .attr('stroke-width', 7)
         .attr('class', 'branch')
         // .attr('stroke', '#d6cfbb')
-        .attr('stroke', '#f0ede5')
+        // .attr('stroke', '#f0ede5')
+        .attr('stroke', '#fff')
         // .attr('opacity', '0.4')
         // .attr('stroke', function (d) { return colorBranch(d.lat); })
         .attr('fill', 'none');

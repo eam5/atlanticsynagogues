@@ -1,0 +1,2246 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Recife, Brazil - Atlantic Synagogues</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+<!-- leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/marker-cluster.css">
+<!-- leaflet script -->
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+  <script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet.markercluster-src.js"></script>
+  <!-- After Leaflet and Leaflet.markercluster scripts -->
+<script src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"></script>
+<!-- Beautify Icons -->
+<script src="https://kit.fontawesome.com/b399f411bc.js" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/leaflet-beautify-marker-icon.css">
+<script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet-beautify-marker-icon.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="https://eam5.github.io/atlanticsynagogues">Atlantic Synagogues</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav">
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/">Home</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/synagogue-map">Synagogue Map</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/contributions">Contributions</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/allbldgs_allfac">Facade Fractal Trees</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/scatter">Synagogue Timeline</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+            
+      </div>
+  </div>
+</nav>
+  <div id="main" class="container-lg">
+    <style>
+    .map {height: 300px;}
+</style>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-transparent" style="padding-inline-start:0;">
+      <li class="breadcrumb-item"><a href="https://eam5.github.io/atlanticsynagogues/site-index#location-tag">Locations</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Recife, Brazil</li>
+    </ol>
+</nav>
+
+<h1>Recife, Brazil</h1>
+
+<h2>Related Buildings:</h2>
+    <ul>
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/38">Kahal Kadosh Zur Israel Synagogue (1641)</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ul>
+
+<h2>Map</h2>
+
+<div class="map" id="mapid" width="100%"></div>
+
+<div class="album py-4">
+  <h2 class="mt-2" id="loc-gallery-tag">Image Gallery</h2>
+
+    <div class="container">
+      <div class="row">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_001.jpg" title="loc002_001">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_001.jpg" alt="loc002_001" title="loc002_001" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Rua do Bom Jesus</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Rua do Bom Jesus, circa 1880</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc002_001">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc002_001" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_001.jpg" title="loc002_001">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_001.jpg" alt="loc002_001" title="loc002_001" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Rua do Bom Jesus</li>
+                                  <li class="card-text"><strong>Description:</strong> Rua do Bom Jesus, circa 1880</li>
+                                  <li class="card-text"><strong>Creator:</strong> Gaensly, Guilherme</li>
+                                  <li class="card-text"><strong>Year Created:</strong> circa 1880</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="http://brasilianafotografica.bn.br/brasiliana/handle/bras/2494">http://brasilianafotografica.bn.br/brasiliana/handle/bras/2494</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_002.jpg" title="loc002_002">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_002.jpg" alt="loc002_002" title="loc002_002" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Rua dos Judeus, Recife</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Rua dos Judeus, c. 1855 - Recife, Pernambuco, Brasil</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc002_002">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc002_002" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_002.jpg" title="loc002_002">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_002.jpg" alt="loc002_002" title="loc002_002" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Rua dos Judeus, Recife</li>
+                                  <li class="card-text"><strong>Description:</strong> Rua dos Judeus, c. 1855 - Recife, Pernambuco, Brasil</li>
+                                  <li class="card-text"><strong>Creator:</strong> Stahl, Augusto</li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1855</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://commons.wikimedia.org/wiki/File:Rua_dos_Judeus,_Recife_(1855).jpg">https://commons.wikimedia.org/wiki/File:Rua_dos_Judeus,_Recife_(1855).jpg</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_003.jpg" title="loc002_003">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_003.jpg" alt="loc002_003" title="loc002_003" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Views of Olinda and Recife</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Marin D'Olinda de Pernambuco / T' Recif de Pernambuco; Legend for T 'Recif: A. The Church of the Holy Body; B. Crew Master's House; C. The Pier; D. Casa de Pólvora; E. Guard House; F. Battery; G. Cemetery; H. Houses in ruins (burned by Luso-Brazilians in 1630); I. Casa de Carpentier; K. House of Admiral Walbeeck</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc002_003">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc002_003" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_003.jpg" title="loc002_003">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_003.jpg" alt="loc002_003" title="loc002_003" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Views of Olinda and Recife</li>
+                                  <li class="card-text"><strong>Description:</strong> Marin D'Olinda de Pernambuco / T' Recif de Pernambuco; Legend for T 'Recif: A. The Church of the Holy Body; B. Crew Master's House; C. The Pier; D. Casa de Pólvora; E. Guard House; F. Battery; G. Cemetery; H. Houses in ruins (burned by Luso-Brazilians in 1630); I. Casa de Carpentier; K. House of Admiral Walbeeck</li>
+                                  <li class="card-text"><strong>Creator:</strong> Anoniem / Anonymous (engraver / etcher), B. Elsevier (publisher), I. Elsevier (publisher)</li>
+                                  <li class="card-text"><strong>Year Created:</strong> circa 1644 (1630?)</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://commons.wikimedia.org/wiki/File:AMH-6713-KB_Views_of_Olinda_and_Recife.jpg">https://commons.wikimedia.org/wiki/File:AMH-6713-KB_Views_of_Olinda_and_Recife.jpg</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_004.jpg" title="loc002_004">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_004.jpg" alt="loc002_004" title="loc002_004" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> "CARTE VANDE HAVEN VAN PHARNAMBOCQVE ... Anno 1639 "</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> "CARTE VANDE HAVEN VAN PHARNAMBOCQVE ... Anno 1639"; Atlas Manuscript of J. Vingboons, Archaeological, Historical and Geographic Institute Pernambucano, Recife 1639; From Breda: trans [1. Reefs; 2. Entrance to the Port (Well); 3. Isthmus; 4. Rio Beberibe; 5. Rio Capibaribe; 6. Brum Fort; 7. Castle of S. Jorge; 8. Recife; 8.1 Street of the Jews; 8.2. "Door of the Earth", bastions of the north entrance of Recife; 9. Bridge (1642); 10. Old Mauritius; 10.1 Market Square (Terreiro dos Coqueiros in Portuguese sources); 11. New Mauritius; 12. Fort of the Five Tips; 13. Vrijburg Palace; 14. Cemetery of the Jews; 15. Palace and Bridge of Good View]</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc002_004">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc002_004" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_004.jpg" title="loc002_004">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_004.jpg" alt="loc002_004" title="loc002_004" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> "CARTE VANDE HAVEN VAN PHARNAMBOCQVE ... Anno 1639 "</li>
+                                  <li class="card-text"><strong>Description:</strong> "CARTE VANDE HAVEN VAN PHARNAMBOCQVE ... Anno 1639"; Atlas Manuscript of J. Vingboons, Archaeological, Historical and Geographic Institute Pernambucano, Recife 1639; From Breda: trans [1. Reefs; 2. Entrance to the Port (Well); 3. Isthmus; 4. Rio Beberibe; 5. Rio Capibaribe; 6. Brum Fort; 7. Castle of S. Jorge; 8. Recife; 8.1 Street of the Jews; 8.2. "Door of the Earth", bastions of the north entrance of Recife; 9. Bridge (1642); 10. Old Mauritius; 10.1 Market Square (Terreiro dos Coqueiros in Portuguese sources); 11. New Mauritius; 12. Fort of the Five Tips; 13. Vrijburg Palace; 14. Cemetery of the Jews; 15. Palace and Bridge of Good View]</li>
+                                  <li class="card-text"><strong>Creator:</strong> J. Vingboons</li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1639</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://bairrodorecife.blogspot.com/2014/01/forte-sao-jorge-bastiao-da-resistencia.html">https://bairrodorecife.blogspot.com/2014/01/forte-sao-jorge-bastiao-da-resistencia.html</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_005.jpg" title="loc002_005">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_005.jpg" alt="loc002_005" title="loc002_005" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Sklavenmarkt</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> The Watercolor Slave Market by Zacharias Wagener. Collection of the Dresden Kupferstich-Kabinet Published in Zacharias Wagener's "Book of Animals", the image shows a slave market, which happened in the streets of the current Old Recife. Rua do Bom Jesus/ Rua dos Judeus</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc002_005">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc002_005" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_005.jpg" title="loc002_005">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_005.jpg" alt="loc002_005" title="loc002_005" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Sklavenmarkt</li>
+                                  <li class="card-text"><strong>Description:</strong> The Watercolor Slave Market by Zacharias Wagener. Collection of the Dresden Kupferstich-Kabinet Published in Zacharias Wagener's "Book of Animals", the image shows a slave market, which happened in the streets of the current Old Recife. Rua do Bom Jesus/ Rua dos Judeus</li>
+                                  <li class="card-text"><strong>Creator:</strong> Wagenaer, Zacharias</li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1637-1677</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://commons.wikimedia.org/wiki/File:Zacharias_Wagner_-_Mercado_de_escravos_no_Recife.jpg">https://commons.wikimedia.org/wiki/File:Zacharias_Wagner_-_Mercado_de_escravos_no_Recife.jpg</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_006.jpg" title="loc002_006">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_006.jpg" alt="loc002_006" title="loc002_006" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Recife, Brazil: a street with men in high hats and uniform pointing out with long sticks the slaves they wish to purchase. Aquatint by Edward Finden after Augustus Earle.</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Recife, Brazil: a street with men in high hats and uniform pointing out with long sticks the slaves they wish to purchase. Aquatint by Edward Finden after Augustus Earle. Gate & slave market at Pernambuco. Drawn by Augs. Earle. Engraved by Edwd. Finden.</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc002_006">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc002_006" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_006.jpg" title="loc002_006">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_006.jpg" alt="loc002_006" title="loc002_006" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Recife, Brazil: a street with men in high hats and uniform pointing out with long sticks the slaves they wish to purchase. Aquatint by Edward Finden after Augustus Earle.</li>
+                                  <li class="card-text"><strong>Description:</strong> Recife, Brazil: a street with men in high hats and uniform pointing out with long sticks the slaves they wish to purchase. Aquatint by Edward Finden after Augustus Earle. Gate & slave market at Pernambuco. Drawn by Augs. Earle. Engraved by Edwd. Finden.</li>
+                                  <li class="card-text"><strong>Creator:</strong> Finden, Edward</li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1821</li>
+                                  <li class="card-text"><strong>Original Source:</strong> London : Longman & Co : J. Murray, 5 April 1824.</li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://commons.wikimedia.org/wiki/File:A_street_in_Pernambuco_with_men_in_high_hats_and_uniform_poi_Wellcome_V0041261.jpg">https://commons.wikimedia.org/wiki/File:A_street_in_Pernambuco_with_men_in_high_hats_and_uniform_poi_Wellcome_V0041261.jpg</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_007.jpg" title="loc002_007">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_007.jpg" alt="loc002_007" title="loc002_007" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Rua da Cruz</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Blacks in their daily activities in the current Rua do Bom Jesus. Black sellers, shippers, etc.</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc002_007">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc002_007" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_007.jpg" title="loc002_007">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_007.jpg" alt="loc002_007" title="loc002_007" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Rua da Cruz</li>
+                                  <li class="card-text"><strong>Description:</strong> Blacks in their daily activities in the current Rua do Bom Jesus. Black sellers, shippers, etc.</li>
+                                  <li class="card-text"><strong>Creator:</strong> Schlappriz, Luis</li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1863-68</li>
+                                  <li class="card-text"><strong>Original Source:</strong> Recife, PE : Lith. F. H. Carls, [1863-68].</li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="http://acervo.bndigital.bn.br/sophia/index.asp?codigo_sophia=2849">http://acervo.bndigital.bn.br/sophia/index.asp?codigo_sophia=2849</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_008.png" title="loc002_008">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_008.png" alt="loc002_008" title="loc002_008" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Graphical representation of Recife</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Graphical representation of Recife made by José Luiz da M. Menezes, based on the Map of Cornelius Golijath (1648), indicating the street and original nucleus of Recife in 1630.</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc002_008">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc002_008" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_008.png" title="loc002_008">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_008.png" alt="loc002_008" title="loc002_008" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Graphical representation of Recife</li>
+                                  <li class="card-text"><strong>Description:</strong> Graphical representation of Recife made by José Luiz da M. Menezes, based on the Map of Cornelius Golijath (1648), indicating the street and original nucleus of Recife in 1630.</li>
+                                  <li class="card-text"><strong>Creator:</strong> José Luiz da M. Menezes</li>
+                                  <li class="card-text"><strong>Year Created:</strong> </li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://medium.com/@rathias/memory-and-architectural-preservation-of-the-first-synagogue-in-the-america-d00a46524a76">https://medium.com/@rathias/memory-and-architectural-preservation-of-the-first-synagogue-in-the-america-d00a46524a76</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> unknown</li>
+                                  <li class="card-text"><strong>Citation:</strong> Athias, Renato. 2017. “Memory​ and Architectural Preservation of the First Synagogue in the America.” https://medium.com/@rathias/memory-and-architectural-preservation-of-the-first-synagogue-in-the-america-d00a46524a76., pg. </li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_009.jpg" title="loc002_009">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_009.jpg" alt="loc002_009" title="loc002_009" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Map of Recife</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Caerte van de haven van Pharnambocque met de stadt Mouritius en het dorp Reciffe met bijleggende forten en alle gelegentheden van dien</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc002_009">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc002_009" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_009.jpg" title="loc002_009">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_009.jpg" alt="loc002_009" title="loc002_009" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Map of Recife</li>
+                                  <li class="card-text"><strong>Description:</strong> Caerte van de haven van Pharnambocque met de stadt Mouritius en het dorp Reciffe met bijleggende forten en alle gelegentheden van dien</li>
+                                  <li class="card-text"><strong>Creator:</strong> J. Vingboons</li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1665</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://commons.m.wikimedia.org/wiki/File:Recife-Map1665.jpg">https://commons.m.wikimedia.org/wiki/File:Recife-Map1665.jpg</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+    
+    
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+              
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_010.png" title="loc002_010">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_010.png" alt="loc002_010" title="loc002_010" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Prespectiva de Pernaobuco como se melhor olhado do mar della villa até a barretta</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> Prespectiva de Pernaobuco como se melhor olhado do mar della villa até a barretta, from the book "Relação das praças fortes e coisas de importância que sua magestade tem na costa do Brasil"; Drawing by Diogo de Campos Moreno (1609) - Arquivo Nacional Torre do Tombo, Lisbon, Portugal; Image processed by using Sauvola's and manual image thresholding.</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc002_010">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc002_010" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_010.png" title="loc002_010">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/2/loc002_010.png" alt="loc002_010" title="loc002_010" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Prespectiva de Pernaobuco como se melhor olhado do mar della villa até a barretta</li>
+                                  <li class="card-text"><strong>Description:</strong> Prespectiva de Pernaobuco como se melhor olhado do mar della villa até a barretta, from the book "Relação das praças fortes e coisas de importância que sua magestade tem na costa do Brasil"; Drawing by Diogo de Campos Moreno (1609) - Arquivo Nacional Torre do Tombo, Lisbon, Portugal; Image processed by using Sauvola's and manual image thresholding.</li>
+                                  <li class="card-text"><strong>Creator:</strong> Diogo de Campos Moreno</li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1609</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="https://www.reddit.com/r/papertowns/comments/cl35k2/recife_and_olinda_brazil_1609/">https://www.reddit.com/r/papertowns/comments/cl35k2/recife_and_olinda_brazil_1609/</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      </div>
+    </div>
+</div>
+
+<script>
+    var locArray = [];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    var bldLatLon = [];
+    bldLatLon.push(-8.06131);
+    bldLatLon.push(-34.87132);
+    locArray.push(bldLatLon);
+    console.log(bldLatLon)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    console.log(locArray)
+
+    var map = L.map('mapid');
+    var bounds = new L.LatLngBounds(locArray);
+    map.fitBounds(bounds);
+    // .setView([51.505, -0.09], 13);
+    var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(map);
+
+        var markers = L.markerClusterGroup({showCoverageOnHover: false, zoomToBoundsOnClick: false, maxClusterRadius:4});
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(-8.06131);
+    bldLatLon.push(-34.87132);
+    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/38\">Kahal Kadosh Zur Israel Synagogue (1641)</a></strong>"));
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    map.addLayer(markers);
+
+</script>
+  </div>
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
+    

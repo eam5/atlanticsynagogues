@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Orangjestad, St. Eustatius - Atlantic Synagogues</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+<!-- leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/marker-cluster.css">
+<!-- leaflet script -->
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+  <script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet.markercluster-src.js"></script>
+  <!-- After Leaflet and Leaflet.markercluster scripts -->
+<script src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"></script>
+<!-- Beautify Icons -->
+<script src="https://kit.fontawesome.com/b399f411bc.js" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/leaflet-beautify-marker-icon.css">
+<script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet-beautify-marker-icon.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="https://eam5.github.io/atlanticsynagogues">Atlantic Synagogues</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav">
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/">Home</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/synagogue-map">Synagogue Map</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/contributions">Contributions</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/allbldgs_allfac">Facade Fractal Trees</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/scatter">Synagogue Timeline</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+            
+      </div>
+  </div>
+</nav>
+  <div id="main" class="container-lg">
+    <style>
+    .map {height: 300px;}
+</style>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-transparent" style="padding-inline-start:0;">
+      <li class="breadcrumb-item"><a href="https://eam5.github.io/atlanticsynagogues/site-index#location-tag">Locations</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Orangjestad, St. Eustatius</li>
+    </ol>
+</nav>
+
+<h1>Orangjestad, St. Eustatius</h1>
+
+<h2>Related Buildings:</h2>
+    <ul>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/41">Honen Dalim Synagogue I (1739)</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/134">Honen Dalim Synagogue II (1773)</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ul>
+
+<h2>Map</h2>
+
+<div class="map" id="mapid" width="100%"></div>
+
+<div class="album py-4">
+  <h2 class="mt-2" id="loc-gallery-tag">Image Gallery</h2>
+
+    <div class="container">
+      <div class="row">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="col-md-3 py-2">
+          <div class="card mb-2 shadow-sm">
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/17/loc017_001.jpg" title="loc017_001">
+            <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/17/loc017_001.jpg" alt="loc017_001" title="loc017_001" class="bd-placeholder-img card-img-top image-fluid" />
+            </a>
+            <div class="card-body p-2 overflow-hidden" >
+                
+                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                    <li class="card-text"><strong>Title:</strong> Sint-Eustatius. St. Eustatius. Gezigt op het Fort Oranje, de krater, genomen van de pastorij (title on object)</li>
+                    <li class="card-text text-truncate"><strong>Description:</strong> View of the Fort Oranje in Oranjestad on St. Eustatius. In the far left the volcano The Quill (angling of the Dutch name De Kuil or De Kwil). Part of the sheet metal 'Gezigten from Neerland's West-Indien'.</li>
+                </ul>
+              
+            </div>
+            <div class="card-footer">
+                <a type="button" data-toggle="modal" data-target="#Modalloc017_001">
+                    Image Details
+                </a>
+              </div>
+              <div class="modal fade" id="Modalloc017_001" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Image Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <a href="https://eam5.github.io/atlanticsynagogues/assets/images/locations/17/loc017_001.jpg" title="loc017_001">
+                                    <img src="https://eam5.github.io/atlanticsynagogues/assets/images/locations/17/loc017_001.jpg" alt="loc017_001" title="loc017_001" width="100%" />
+                                </a>                        
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
+                                  <li class="card-text"><strong>Title:</strong> Sint-Eustatius. St. Eustatius. Gezigt op het Fort Oranje, de krater, genomen van de pastorij (title on object)</li>
+                                  <li class="card-text"><strong>Description:</strong> View of the Fort Oranje in Oranjestad on St. Eustatius. In the far left the volcano The Quill (angling of the Dutch name De Kuil or De Kwil). Part of the sheet metal 'Gezigten from Neerland's West-Indien'.</li>
+                                  <li class="card-text"><strong>Creator:</strong> print maker: jonkheer Jacob Eduard van Heemskerck van Beest (mentioned on object); intermediary draughtsman: Gerard Voorduin (mentioned on object); printer: Steendrukkerij de Industrie (mentioned on object); publisher: Frans Buffa en Zonen (mentioned on object)</li>
+                                  <li class="card-text"><strong>Year Created:</strong> 1860 - 1862</li>
+                                  <li class="card-text"><strong>Original Source:</strong> </li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="http://hdl.handle.net/10934/RM0001.COLLECT.516170">http://hdl.handle.net/10934/RM0001.COLLECT.516170</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> public_domain</li>
+                                  <li class="card-text"><strong>Citation:</strong></li>
+                              </ul>
+                          </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+          
+              
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      </div>
+    </div>
+</div>
+
+<script>
+    var locArray = [];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    var bldLatLon = [];
+    bldLatLon.push(17.482597);
+    bldLatLon.push(-62.981295);
+    locArray.push(bldLatLon);
+    console.log(bldLatLon)
+    
+    
+
+    var bldLatLon = [];
+    bldLatLon.push(17.482597);
+    bldLatLon.push(-62.981295);
+    locArray.push(bldLatLon);
+    console.log(bldLatLon)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    console.log(locArray)
+
+    var map = L.map('mapid');
+    var bounds = new L.LatLngBounds(locArray);
+    map.fitBounds(bounds);
+    // .setView([51.505, -0.09], 13);
+    var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(map);
+
+        var markers = L.markerClusterGroup({showCoverageOnHover: false, zoomToBoundsOnClick: false, maxClusterRadius:4});
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.482597);
+    bldLatLon.push(-62.981295);
+    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/41\">Honen Dalim Synagogue I (1739)</a></strong>"));
+    
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.482597);
+    bldLatLon.push(-62.981295);
+    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/134\">Honen Dalim Synagogue II (1773)</a></strong>"));
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    map.addLayer(markers);
+
+</script>
+  </div>
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
+    
