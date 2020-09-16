@@ -107,6 +107,9 @@
     display: none;
     /* vertical-align: baseline; */
 }
+#locate {
+    margin-bottom: 1rem;
+}
 </style>
 <div id='exhibit-container'>
     <h1>Contributions</h1>
@@ -117,10 +120,11 @@
     
     <div id="body">
         <div id="title"></div>
+        <div id="locate"></div>
         <div id="content"></div>
     </div>
     <div id="vis" class="svg-content"></div>
-    </div>
+</div>
 <script>
 var width = 1200,
     height = 800;
@@ -176,6 +180,7 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
             link.donor, 
             link.donor_type, 
             link.donor_id_loc,
+            link.donor_loc_name,
             link.RE_type,
             link.recipient_name,
         );
@@ -184,6 +189,7 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
             link.recipient_name,
             link.recipient_type,
             link.recipient_id_loc,
+            link.recipient_loc_name,
             link.recipient_type,
             link.recipient_name,
         );
@@ -217,6 +223,7 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
     for (var i = 0; i < 300; ++i) cola.tick();
     var clearBtn = d3.select('#clearBtn');
     const title = d3.select('#title');
+    const locate = d3.select('#locate');
     const content = d3.select('#content');
 
     var group = svg.selectAll('.group')
@@ -248,7 +255,7 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
         //     content.selectAll('.contr').text('');
         //     clearBtn.style('display', 'none');
         // });
-        
+
     const groupLabel = svg.selectAll('groupLabel')
         .data(groups).enter()
         .append('text')
@@ -258,12 +265,7 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
         .attr('width', function (d) { return d.bounds.width() })
         .attr('height', function(d) { return d.bounds.height() })
         .attr('fill', function (d) { return color(d.id); })
-        .text(function(d){
-        if(d.id==="NULL"){return ""}
-        else if (d.id==="8"){return "England"}
-        else{return d.id}
-        })
-        ;
+        .text(d=>{if (d.leaves[0].loc_name==="NULL" || d.leaves.length<3){return null;}else{return d.leaves[0].loc_name;}});
 
     const link = svg.selectAll('path')
         .data(links).enter()
@@ -303,6 +305,7 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
                 var recip = allRecipients.filter(l=>l.recipient_id===recipId);
                 var bldgcontr = _.flatten(recip.map(d=>d.contributions)).sort((a,b)=>a.contr_year - b.contr_year)
                 title.text(d.label);
+                locate.text(d.loc_name);
                 const contrTotal = recip[0].contr_num;
                 content.text("Contributions Received ("+contrTotal+"):");
                 var bldgcontent = content.selectAll('.bldgcontr')
@@ -316,6 +319,7 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
                 var donor = allDonors.filter(l=>l.donor===donorId);
                 var donations = _.flatten(donor.map(d=>d.contributions)).sort((a,b)=>a.contr_year - b.contr_year)
                 title.text(d.name);
+                locate.text(d.loc_name);
                 const contrTotal = donor[0].contr_num;
                 content.text("Contributions ("+contrTotal+"):");
                 var contr = content.selectAll('.contr')
@@ -359,12 +363,14 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
                     });    
                     link.style('stroke-opacity', o => (o.source === d || o.target === d ? 1 : 1));
                     title.text("");
+                    locate.text("");
                     content.text("");
                     content.selectAll('.contr').text('');
                     clearBtn.style('display', 'none');
                 });
         });
-      
+    node.append("title").text(d=>d.label + ", " + d.RE_type);
+    
     const nodeLabel = svg.selectAll('nodetext')
         .data(nodes)
         .enter().append('text')
@@ -440,12 +446,13 @@ d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/contributions.csv"
         }     
     }
 
-    function nodeByName(name, label, type, loc_id, RE_type, recipient_name) {
+    function nodeByName(name, label, type, loc_id, loc_name, RE_type, recipient_name) {
         return data[name] || (data[name] = {
             name: name, 
             label: label, 
             type:type, 
             group:loc_id, 
+            loc_name:loc_name,
             RE_type: RE_type,
             recipient_name: recipient_name
         });
