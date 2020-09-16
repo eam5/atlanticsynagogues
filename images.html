@@ -69,16 +69,20 @@ a:hover {color:#212529; text-decoration: underline;}
         <h2>Locations</h2>
     </div>
     <div class="d-flex flex-row flex-wrap justify-content-start container">            
-        {% for location in site.data.location_images %}
+        {% for location in site.data.locations %}
+        {% if location.cover_image != "/assets/images/locations/loc_image.jpg" %}
+        {% assign locpath = location.idlocation | prepend: "/locations/" | append: "#loc-gallery-tag" %}
+
             <div class="card mb-2 " style="max-width: 300px;">
                 <div class="row no-gutters">
                     <div class="col-md-4 d-flex">
-                        <a href="{{ location.location_name | datapage_url: 'locations' }}">
-                        <img src="{{ location.image_file | prepend: site.url }}" alt="{{ filename }}" title="{{ filename }}" class="cover card-img-top img-thumbnail"/>
+                        <!-- <li><a href="{{ locpath | prepend: site.url}}">{{location.location_name}}</a></li>     -->
+                        <a href="{{ locpath | prepend: site.url}}">
+                        <img src="{{ location.cover_image | prepend: site.url }}" alt="{{ filename }}" title="{{ filename }}" class="cover card-img-top img-thumbnail"/>
                     </a>
                     </div>
                     <div class="col-md-8">
-                        <a href="{{ location.location_name | datapage_url: 'locations' }}">
+                        <a href="{{ locpath | prepend: site.url}}">
                         <div class="card-body p-2">
                             <h6 class="card-title">{{location.location_name}}</h6>
                             <!-- <p><small>{% if building.city != null %}{{building.city}}{%endif%}{% if building.state != null %}, {{building.state}}{%endif%}{% if building.country != null %}, {{building.country}}{%endif%}</small></p> -->
@@ -87,6 +91,7 @@ a:hover {color:#212529; text-decoration: underline;}
                     </div>
                 </div>
             </div>
+        {% endif %}
         {% endfor %}
     </div>
 </div>
@@ -169,7 +174,7 @@ gradient.append("stop")
 gradient.append("stop")
    .attr('class', 'start')
    .attr("offset", "100%")
-   .attr("stop-color", "#fff")
+   .attr("stop-color", "#f4f1eb")
    .attr("stop-opacity", 1);
         
 const line = d3.line().curve(d3.curveBasis)

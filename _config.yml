@@ -50,8 +50,8 @@ page_gen:
     dir: 'building-images'
     title: 'building_name'
 
-  - data: 'location_images'
+  - data: 'locations'
     template: 'locations'
-    name: 'location_name'
+    name: 'idlocation'
     dir: 'locations'
     title: 'location_name'

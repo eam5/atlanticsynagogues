@@ -29,9 +29,9 @@ layout: leaflet-map
     </div>
     <div class="col-sm-3">
         <div class="card">
-            {% if page.image_file != null %}
-            <a href="{{ page.image_file | prepend: site.url }}" title="{{ page.image_file }}">
-                <img src="{{ page.image_file | prepend: site.url }}" alt="{{ page.image_file }}" title="{{ page.image_file }}" class="card-img-top image-fluid"/>
+            {% if page.cover_image != null %}
+            <a href="{{ page.cover_image | prepend: site.url }}" title="{{ page.cover_image }}">
+                <img src="{{ page.cover_image | prepend: site.url }}" alt="{{ page.cover_image }}" title="{{ page.cover_image }}" class="card-img-top image-fluid"/>
             </a> 
             {%endif%}
             <!-- <div class="card-body">
@@ -45,9 +45,9 @@ layout: leaflet-map
                 <a href="{{ pagepath | prepend: site.url }}"><li type="button" class="btn btn-light list-group-item px-1">Image Gallery</li></a>
                 {% endif %}
                 {% endfor %}
-                {% for location in site.data.location_images %}
+                {% for location in site.data.locations %}
                 {% if location.idlocation == page.idlocation %}
-                {% assign locpath = location.location_name | prepend: "/locations/" %}
+                {% assign locpath = location.idlocation | prepend: "/locations/" %}
                 <a href="{{ locpath | prepend: site.url}}"><li type="button" class="btn btn-light list-group-item px-1">{% if page.city != null %}{{page.city}}{%endif%}{% if page.state != null %}, {{page.state}}{%endif%}{% if page.country != null %}, {{page.country}}{%endif%}</li></a>
                 {% endif %}
                 {% endfor %}

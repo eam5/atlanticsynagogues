@@ -21,9 +21,8 @@ title: Site Index
         <div class="col-sm-5"> -->
             <h2 id="location-tag" class="pt-5">Locations</h2>
                 <ul>
-                    {% for location in site.data.location_images %}
-                    {% assign locpath = location.location_name | prepend: "/locations/" %}
-                    <li><a href="{{ locpath | prepend: site.url}}">{{location.location_name}}</a></li>
+                    {% for location in site.data.locations %}
+                    <li><a href="{{ location.idlocation | datapage_url: 'locations' }}">{{location.location_name}}</a></li>
                     {% endfor %}
                 </ul>
         <!-- </div>

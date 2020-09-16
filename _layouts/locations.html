@@ -4,10 +4,9 @@ layout: leaflet-map
 <style>
     .map {height: 300px;}
 </style>
-{% assign pagepath = "/images/" %}
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-transparent" style="padding-inline-start:0;">
-      <li class="breadcrumb-item"><a href="{{ site.url}}">Locations</a></li>
+      <li class="breadcrumb-item"><a href="{{ "/site-index#location-tag" | prepend: site.url}}">Locations</a></li>
       <li class="breadcrumb-item active" aria-current="page">{{page.location_name}}</li>
     </ol>
 </nav>
@@ -28,8 +27,9 @@ layout: leaflet-map
 
 <div class="map" id="mapid" width="100%"></div>
 
-<h2 class="mt-2">Image Gallery</h2>
-<div class="album py-4 bg-light">
+<div class="album py-4">
+  <h2 class="mt-2" id="loc-gallery-tag">Image Gallery</h2>
+
     <div class="container">
       <div class="row">
 
@@ -78,16 +78,16 @@ layout: leaflet-map
                             <div class="col-md-8">
                               <div class="card-body">
                                 <ul class="mb-1" style="list-style-type:none;padding-inline-start:0;">
-                                    <li class="card-text"><strong>Title:</strong> {{ image.title }}</li>
-                                    <li class="card-text"><strong>Description:</strong> {{ image.description }}</li>
-                                    <li class="card-text"><strong>Creator:</strong> {{ image.creator }}</li>
-                                    <li class="card-text"><strong>Year Created:</strong> {{ image.year }}</li>
-                                    <li class="card-text"><strong>Original Source:</strong> {{ image.source_orig }}</li>
-                                    <li class="card-text"><strong>Source URL:</strong> <a href="{{ image.source_url }}">{{ image.source_url }}</a></li>
-                                    <li class="card-text"><strong>Permissions:</strong> {{ image.permissions }}</li>
-                                    <li class="card-text"><strong>Citation:</strong> {{ image.idcitation }}, pg. {{ image.pg }}</li>
-                                </ul>
-                            </div>
+                                  <li class="card-text"><strong>Title:</strong> {{ image.title }}</li>
+                                  <li class="card-text"><strong>Description:</strong> {{ image.description }}</li>
+                                  <li class="card-text"><strong>Creator:</strong> {{ image.creator }}</li>
+                                  <li class="card-text"><strong>Year Created:</strong> {{ image.year }}</li>
+                                  <li class="card-text"><strong>Original Source:</strong> {{ image.source_orig }}</li>
+                                  <li class="card-text"><strong>Source URL:</strong> <a href="{{ image.source_url }}">{{ image.source_url }}</a></li>
+                                  <li class="card-text"><strong>Permissions:</strong> {{ image.permissions }}</li>
+                                  <li class="card-text"><strong>Citation:</strong>{% if image.citation != null %} {{ image.citation }}, pg. {{ image.pg }}{% endif %}</li>
+                              </ul>
+                          </div>
                             </div>
                           </div>
                         
