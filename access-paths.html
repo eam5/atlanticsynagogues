@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Synagogue Access Paths - Atlantic Synagogues</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+    <!-- d3 and others -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js'></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/gka/chroma.js/master/chroma.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="https://eam5.github.io/atlanticsynagogues">Atlantic Synagogues</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav">
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/">Home</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/synagogue-map">Synagogue Map</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/contributions">Contributions</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/access-paths">Access Paths</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/allbldgs_allfac">Facade Fractal Trees</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/scatter">Synagogue Timeline</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+            
+      </div>
+  </div>
+</nav>
+    <div id="main" class="container-fluid">
+      <script src="https://eam5.github.io/atlanticsynagogues/assets/js/cola.min.js"></script>
+<style>
+    body{
+        background-color: #f4f1eb;
+    }
+    .nodes, .node {
+      stroke: #fff;
+      stroke-width: 1.5px;
+    }
+    .link {
+      stroke: #fff;
+      stroke-width: 2px;
+    }
+
+    [id^=men-], [id^=women-]{
+      isolation: isolate;
+    }  
+    .nodeEsc path, .nodeWEsc path { mix-blend-mode: multiply; }
+</style>
+<body>
+    <h1>Synagogue Access</h1>
+    <h2>Paths to prayer space by gender</h2>
+    <div id="filter-buttons">
+        <form>
+            <label>Filter By:</label>
+            <div class="form-row">
+              <div class="col-sm">
+                <!-- <label for="selectRegion">Region:</label> -->
+                <select id="selectRegion" class="form-control"></select>
+              </div>
+              <div class="col-sm">
+                <!-- <label for="selectCongr">Congregation:</label> -->
+                <select id="selectCongr" class="form-control"></select>
+              </div>
+            </div>
+          </form>
+    </div>
+    <div id="color-buttons"><span>Color by: </span></div><br />
+    <div class="row">
+        <div class="col">
+          <h3 class="text-center">Men</h3>
+        </div>
+        <div class="col">
+          <h3 class="text-center">Women</h3>
+        </div>
+      </div>
+    <div id='vis'></div>
+</body>
+<script>
+    var DIV_WIDTH = 1040,
+        DIV_HEIGHT = 4500,
+        width = 520,
+        height = 200;
+    
+    const color = d3.scaleOrdinal()
+        .domain(['public','communal','circulation','prayer','arc'])
+        .range(['#3182bd','#fd8d3c', '#c7c7c7','#74c476','#17becf']);
+    var colorEsc = d3.scaleOrdinal(d3.schemeCategory20);
+    const colorPetal = d3.scaleOrdinal()
+        .domain(["","flat-headed","round-headed"])
+        .range(chroma.scale(['#cbafef','#f495cf','#ffb7bf']).colors(3));
+    const shape = d3.scaleOrdinal(d3.symbols);
+    let petalPaths = [
+    //    [
+    //      'M0 0',
+    //      'C25 42 40 55 0 100',
+    //      'C-25 55 -40 42 0 0'
+    //    ],
+    [
+      'M0 0',
+      'C50 25 50 75 0 100',
+      'C-50 75 -50 25 0 0'
+    ],
+        [
+            'M0 0',
+          'C50 50 50 100 0 100',
+          'C-50 100 -50 50 0 0'
+        ],
+    [
+      'M0 0',
+      'C50 40 50 70 20 100',
+      'L0 85',
+      'L-20 100',
+      'C-50 70 -50 40 0 0'
+    ]
+    ]
+    
+    var petalScale = d3.scaleOrdinal()
+        .domain(['flat-headed','round-headed',''])
+        .range(_.range(3));
+    
+    
+    let svg = d3.select("#vis").append("svg").attr('class', 'bldgvis')
+    .attr("preserveAspectRatio", "xMinYMax meet")
+    .attr("viewBox", `0 0 ${DIV_WIDTH} ${DIV_HEIGHT}`);
+        
+    var pattern = svg.append("defs").append("pattern")
+    .attr('id',"hash4_4").attr('width',"8").attr('height',"8").attr('patternUnits',"userSpaceOnUse").attr('patternTransform',"rotate(60)");
+    d3.select('#hash4_4').append('rect').attr('width','20').attr('height',"20").attr('transform',"translate(0,0)").attr('fill','#fff');
+    d3.select('#hash4_4').append("rect").attr('width',"6").attr('height',"8").attr('transform',"translate(0,0)").attr('fill','#74c476');
+        
+    svg.selectAll("defs").append("pattern").attr('id',"hash2_2").attr('width',"4").attr('height',"8").attr('patternUnits',"userSpaceOnUse").attr('patternTransform',"rotate(60)");
+    d3.select('#hash2_2').append('rect').attr('width','20').attr('height',"20").attr('transform',"translate(0,0)").attr('fill','#fff');
+    d3.select('#hash2_2').append("rect").attr('width',"2").attr('height',"8") .attr('transform',"translate(0,0)").attr('fill','#74c476');
+        
+    svg.selectAll("defs").append("pattern").attr('id',"hash3_3").attr('width',"8").attr('height',"8") .attr('patternUnits',"userSpaceOnUse").attr('patternTransform',"rotate(60)");
+    d3.select('#hash3_3').append('rect').attr('width','20').attr('height',"20").attr('transform',"translate(0,0)").attr('fill','#fff');
+    d3.select('#hash3_3').append("rect").attr('width',"4").attr('height',"8") .attr('transform',"translate(0,0)").attr('fill','#74c476');
+          
+    svg.selectAll("defs").append("pattern").attr('id',"hash1_1").attr('width',"4").attr('height',"8") .attr('patternUnits',"userSpaceOnUse").attr('patternTransform',"rotate(60)");
+    d3.select('#hash1_1').append('rect').attr('width','20').attr('height',"20").attr('transform',"translate(0,0)").attr('fill','#fff');
+    d3.select('#hash1_1').append("rect").attr('width',"1").attr('height',"8") .attr('transform',"translate(0,0)").attr('fill','#74c476');
+     
+    var colorScale = d3.scaleOrdinal()
+            .domain([200,0])
+            .range(chroma.scale(["#63cdda","#778beb","#076173", "#7E9ED6", "#786fa6", "#f7d794","#e77f67"]).colors(7));
+        
+    const colorScaleDepth = d3.scaleOrdinal().domain(['equal','greater','less']).range(['#ccebc5','#bc80bd','#80b1d3']);
+      
+    d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/access_paths_expanded_new.csv", function(error, data) {
+    d3.csv('https://eam5.github.io/atlanticsynagogues/assets/data/access_paths_esc_new.csv', function(dataEsc){
+    //console.log(data) 
+    //console.log(dataEsc) 
+    var allRegion = d3.map(data, d=>d.region).keys();   
+        allRegion.push('All Regions');
+        allRegion.sort((a,b)=>a.localeCompare(b));
+            console.log(allRegion)  
+        d3.select("#selectRegion")
+            .selectAll('myOptions')
+            .data(allRegion).enter()
+            .append('option')
+            .text(d=>d)
+            .attr("value", d=>d); 
+        
+    var allGroup = d3.map(data, d=>d.congregation_name).keys();   
+        allGroup.push('All Congregations');
+        allGroup.sort((a,b)=>a.localeCompare(b));
+            console.log(allGroup)  
+        d3.select("#selectCongr")
+            .selectAll('myOptions')
+            .data(allGroup).enter()
+            .append('option')
+            .text(d=>d)
+            .attr("value", d=>d); 
+        
+    const bldgEsc = _.chain(dataEsc)
+        .groupBy(d=>d.idbuildings)
+        .map(function(d){
+            return {
+                elements: d,
+                idbuildings:d[0].idbuildings,
+                building_name: d[0].building_name,
+                year: d[0].year_add
+            }
+        })
+        .sort((a,b)=>a.year-b.year)
+        .value();
+        
+        _.each(bldgEsc, function(bldg, key, allBldgs){
+    //        console.log(bldg)
+            bldg.compositions = _.chain(bldg.elements)
+                .groupBy(t=> t.composition)
+                .map(function(t){
+                    return {
+                        idbuildings: t[0].idbuildings,
+                        building_name: t[0].building_name,
+                        elements: t,
+                        comp_number: t[0].composition,
+                        element_count: t.length,
+                        year:t[0].year_add
+                    };
+                }).sort((a,b)=> a.comp_number.localeCompare(b.comp_number))
+                .value();
+            _.each(bldg.compositions, function(c,l){
+               _.each(c.elements, function(elem, k){
+                   if (elem.architectural_element==="door frame"){
+                       c.door_type = elem.AE_type
+                   }
+               })
+            })
+        })
+        console.log(bldgEsc)
+        
+    const bldgPaths = _.chain(data)
+        .groupBy(d=>d.idbuildings)
+        .map(function(d){
+            return {
+                bldgPaths: d,
+                idbuildings: d[0].idbuildings,
+                building_name: d[0].building_name,
+                year: d[0].year,
+                region: d[0].region,
+                idcongregation: d[0].idcongregation,
+                congregation_name: d[0].congregation_name,
+                rite: d[0].rite,
+                footprint: d[0].footprint_type,
+                purpose_built: d[0].purpose_built
+            }
+        })
+        .sort((a,b) => a.year - b.year)
+        .value();
+        
+        const depth = d => o => {
+            o.depth = d;
+            (o.children || []).forEach(depth(d + 1));
+        };
+      
+        
+        _.each(bldgPaths, function(bldg, key){
+            bldg.sortedPaths = _.chain(bldg.bldgPaths)
+                .groupBy(d=>d.access_type)
+                .map(function(d){
+                    return {
+                        paths: d,
+                        type: d[0].access_type
+                    };
+                })
+                .sort((a, b) => a.type.localeCompare(b.type))
+                .value();
+            _.each(bldg.sortedPaths, function(p, i){
+    //            console.log(p.paths)
+                if (p.type==="men"){
+                    bldg.pathsM = getNestedChildren(p.paths, "")
+                    bldg.uniqNodesM = _.uniqBy(p.paths, 'id_path')
+                }
+                if (p.type==="women"){
+                    bldg.pathsW = getNestedChildren(p.paths, "")
+                    bldg.uniqNodesW = _.uniqBy(p.paths, 'id_path')
+                }
+            })
+            bldg.pathsM.forEach(depth(0));
+            bldg.pathsW.forEach(depth(0));
+             
+            bldg.graphM = {"nodes" : [], "links" : [], "constraints" : [
+                {"type":"alignment","axis":"x","offsets":[]},
+                {"type":"alignment","axis":"y", "left":0,"offsets":[]}
+            ] };
+        
+            bldg.graphW = {"nodes" : [], "links" : [], "constraints" : [
+                {"type":"alignment","axis":"x", "left":0,"offsets":[]},
+                {"type":"alignment","axis":"y","offsets":[]}
+            ]};
+             
+            _.each(bldg.uniqNodesM, function(d,k){
+                const depthMaxM = d3.max(bldg.uniqNodesM.map(d=>d.depth));
+                const depthMaxM2 = d3.max(bldg.uniqNodesM.filter(d=>d.node_desc != "arc").map(d=>d.depth));
+    //            console.log(depthMaxM)
+                bldg.maxDepthM = depthMaxM2;
+                bldg.graphM.nodes.push({ "name": d.id_path, "depth": d.depth, "type":d.node_desc, "esc":d.esc, "screen_type":d.screen_type, "width": 10, "height":10, "v.x": 0, "v.y": 0 });
+                bldg.graphM.constraints[0].offsets.push({"node":d.id_path, "offset":d.depth*35});
+    
+                const current = bldg.uniqNodesM.filter(l=>l.depth===d.depth).sort((a,b) => a.id_path - b.id_path);
+    //            console.log(current)
+                if (current.length===1){
+                    bldg.graphM.constraints[1].offsets.push({"node": d.id_path, "offset":0})
+                } 
+                if (current.length===2){
+                    _.each(current, function(m,n){
+                        if (n===0){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":-35})
+                        }
+                        if (n===1){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":35})
+                        }
+                    })
+                }
+                if (current.length===3){
+                    _.each(current, function(m,n){
+                        if (n===0){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":-35})
+                        }
+                        if (n===2){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":0})
+                        }
+                        if (n===1){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":35})
+                        }
+                    })
+                }
+                if (current.length===4){
+                    _.each(current, function(m,n){
+                        if (n===0){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":-70})
+                        }
+                        if (n===1){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":-35})
+                        }
+                        if (n===2){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":0})
+                        }
+                        if (n===3){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":35})
+                        }
+                    })
+                }
+                if (current.length===5){
+                    _.each(current, function(m,n){
+                        if (n===0){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":-70})
+                        }
+                        if (n===1){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":-35})
+                        }
+                        if (n===2){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":0})
+                        }
+                        if (n===3){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":35})
+                        }
+                        if (n===4){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":70})
+                        }
+                    })
+                }
+            })
+            _.each(bldg.uniqNodesW, function(d,k){
+                const depthMaxW = d3.max(bldg.uniqNodesW.map(d=>d.depth));
+    //            console.log(depthMaxW)
+                bldg.maxDepthW = depthMaxW;
+                bldg.graphW.nodes.push({ "name": d.id_path, "depth": d.depth, "type":d.node_desc, "esc":d.esc, "screen_type":d.screen_type, "width": 10, "height":10, "v.x": 0, "v.y": 0 });
+                bldg.graphW.constraints[0].offsets.push({"node":d.id_path, "offset":d.depth*35});
+    
+                const current = bldg.uniqNodesW.filter(l=>l.depth===d.depth);
+                if (current.length===1){
+                    bldg.graphW.constraints[1].offsets.push({"node": d.id_path, "offset":0})
+                } 
+                if (current.length===2){
+                    _.each(current, function(m,n){
+                        if (n===0){
+                            bldg.graphW.constraints[1].offsets.push({"node": m.id_path, "offset":-35})
+                        }
+                        if (n===1){
+                            bldg.graphW.constraints[1].offsets.push({"node": m.id_path, "offset":35})
+                        }
+                    })
+                }
+            })
+             
+            _.each(bldg.sortedPaths[0].paths, function(elem, i){
+                if (elem.id_parent != ""){
+                    bldg.graphM.links.push({ "source": parseInt(elem.id_parent),
+                                   "target": parseInt(elem.id_path)});
+                } 
+            })
+            _.each(bldg.sortedPaths[1].paths, function(elem, i){
+                if (elem.id_parent != ""){
+                    bldg.graphW.links.push({ "source": parseInt(elem.id_parent),
+                                   "target": parseInt(elem.id_path)});
+                } 
+            })
+            
+            _.each(bldgEsc, function(e,k){
+                if (e.idbuildings===bldg.idbuildings && e.year===bldg.year){
+                    bldg.compositions = e.compositions
+                }
+                _.each(e.compositions, function(j,k){
+                    _.each(bldg.graphM.nodes, function(a,b){
+                        if (j.comp_number===a.esc){
+                            a.comp=j
+                        }
+                    })
+                    _.each(bldg.graphW.nodes, function(a,b){
+                        if (j.comp_number===a.esc){
+                            a.comp=j
+                        }
+                    })
+                })
+            })
+             
+         });
+        _.each(bldgPaths, function(bldg, key){
+            if (bldg.maxDepthM === bldg.maxDepthW){
+                bldg.depthCompare = "equal"
+            }
+            if (bldg.maxDepthM > bldg.maxDepthW){
+                bldg.depthCompare = "greater"
+            }
+            if (bldg.maxDepthM < bldg.maxDepthW){
+                bldg.depthCompare = "less"
+            }
+        });
+        
+    function buildPaths(data){
+        const bldgPaths = _.chain(data)
+            .groupBy(d=>d.idbuildings)
+            .map(function(d){
+                return {
+                    bldgPaths: d,
+                    idbuildings: d[0].idbuildings,
+                    building_name: d[0].building_name,
+                    year: d[0].year,
+                    region: d[0].region,
+                    idcongregation: d[0].idcongregation,
+                    congregation_name: d[0].congregation_name,
+                    rite: d[0].rite,
+                    footprint: d[0].footprint_type,
+                    purpose_built: d[0].purpose_built
+                }
+            })
+            .sort((a,b) => a.year - b.year)
+            .value();
+        
+            const depth = d => o => {
+            o.depth = d;
+            (o.children || []).forEach(depth(d + 1));
+        };
+        
+        _.each(bldgPaths, function(bldg, key){
+            bldg.sortedPaths = _.chain(bldg.bldgPaths)
+                .groupBy(d=>d.access_type)
+                .map(function(d){
+                    return {
+                        paths: d,
+                        type: d[0].access_type
+                    };
+                })
+                .sort((a, b) => a.type.localeCompare(b.type))
+                .value();
+            _.each(bldg.sortedPaths, function(p, i){
+                if (p.type==="men"){
+                    bldg.pathsM = getNestedChildren(p.paths, "")
+                    bldg.uniqNodesM = _.uniqBy(p.paths, 'id_path')
+                }
+                if (p.type==="women"){
+                    bldg.pathsW = getNestedChildren(p.paths, "")
+                    bldg.uniqNodesW = _.uniqBy(p.paths, 'id_path')
+                }
+            })
+            bldg.pathsM.forEach(depth(0));
+            bldg.pathsW.forEach(depth(0));
+             
+            bldg.graphM = {"nodes" : [], "links" : [], "constraints" : [
+                {"type":"alignment","axis":"x","offsets":[]},
+                {"type":"alignment","axis":"y", "left":0,"offsets":[]}
+            ] };
+        
+            bldg.graphW = {"nodes" : [], "links" : [], "constraints" : [
+                {"type":"alignment","axis":"x", "left":0,"offsets":[]},
+                {"type":"alignment","axis":"y","offsets":[]}
+            ]};
+             
+            _.each(bldg.uniqNodesM, function(d,k){
+                const depthMaxM = d3.max(bldg.uniqNodesM.map(d=>d.depth));
+                const depthMaxM2 = d3.max(bldg.uniqNodesM.filter(d=>d.node_desc != "arc").map(d=>d.depth));
+    //            console.log(depthMaxM)
+                bldg.maxDepthM = depthMaxM2;
+                bldg.graphM.nodes.push({ "name": d.id_path, "depth": d.depth, "type":d.node_desc, "esc":d.esc, "screen_type":d.screen_type, "width": 10, "height":10, "v.x": 0, "v.y": 0 });
+                bldg.graphM.constraints[0].offsets.push({"node":d.id_path, "offset":d.depth*35});
+    
+                const current = bldg.uniqNodesM.filter(l=>l.depth===d.depth).sort((a,b) => a.id_path - b.id_path);
+    //            console.log(current)
+                if (current.length===1){
+                    bldg.graphM.constraints[1].offsets.push({"node": d.id_path, "offset":0})
+                } 
+                if (current.length===2){
+                    _.each(current, function(m,n){
+                        if (n===0){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":-35})
+                        }
+                        if (n===1){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":35})
+                        }
+                    })
+                }
+                if (current.length===3){
+                    _.each(current, function(m,n){
+                        if (n===0){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":-35})
+                        }
+                        if (n===2){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":0})
+                        }
+                        if (n===1){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":35})
+                        }
+                    })
+                }
+                if (current.length===4){
+                    _.each(current, function(m,n){
+                        if (n===0){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":-70})
+                        }
+                        if (n===1){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":-35})
+                        }
+                        if (n===2){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":0})
+                        }
+                        if (n===3){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":35})
+                        }
+                    })
+                }
+                if (current.length===5){
+                    _.each(current, function(m,n){
+                        if (n===0){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":-70})
+                        }
+                        if (n===1){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":-35})
+                        }
+                        if (n===2){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":0})
+                        }
+                        if (n===3){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":35})
+                        }
+                        if (n===4){
+                            bldg.graphM.constraints[1].offsets.push({"node": m.id_path, "offset":70})
+                        }
+                    })
+                }
+            })
+            _.each(bldg.uniqNodesW, function(d,k){
+                const depthMaxW = d3.max(bldg.uniqNodesW.map(d=>d.depth));
+    //            console.log(depthMaxW)
+                bldg.maxDepthW = depthMaxW;
+                bldg.graphW.nodes.push({ "name": d.id_path, "depth": d.depth, "type":d.node_desc, "esc":d.esc, "screen_type":d.screen_type, "width": 10, "height":10, "v.x": 0, "v.y": 0 });
+                bldg.graphW.constraints[0].offsets.push({"node":d.id_path, "offset":d.depth*35});
+    
+                const current = bldg.uniqNodesW.filter(l=>l.depth===d.depth);
+                if (current.length===1){
+                    bldg.graphW.constraints[1].offsets.push({"node": d.id_path, "offset":0})
+                } 
+                if (current.length===2){
+                    _.each(current, function(m,n){
+                        if (n===0){
+                            bldg.graphW.constraints[1].offsets.push({"node": m.id_path, "offset":-35})
+                        }
+                        if (n===1){
+                            bldg.graphW.constraints[1].offsets.push({"node": m.id_path, "offset":35})
+                        }
+                    })
+                }
+            })
+             
+            _.each(bldg.sortedPaths[0].paths, function(elem, i){
+                if (elem.id_parent != ""){
+                    bldg.graphM.links.push({ "source": parseInt(elem.id_parent),
+                                   "target": parseInt(elem.id_path)});
+                } 
+            })
+            _.each(bldg.sortedPaths[1].paths, function(elem, i){
+                if (elem.id_parent != ""){
+                    bldg.graphW.links.push({ "source": parseInt(elem.id_parent),
+                                   "target": parseInt(elem.id_path)});
+                } 
+            })
+            
+            _.each(bldgEsc, function(e,k){
+                if (e.idbuildings===bldg.idbuildings && e.year===bldg.year){
+                    bldg.compositions = e.compositions
+                }
+                _.each(e.compositions, function(j,k){
+                    _.each(bldg.graphM.nodes, function(a,b){
+                        if (j.comp_number===a.esc){
+                            a.comp=j
+                        }
+                    })
+                    _.each(bldg.graphW.nodes, function(a,b){
+                        if (j.comp_number===a.esc){
+                            a.comp=j
+                        }
+                    })
+                })
+            })
+             
+         });
+        _.each(bldgPaths, function(bldg, key){
+            if (bldg.maxDepthM === bldg.maxDepthW){
+                bldg.depthCompare = "equal"
+            }
+            if (bldg.maxDepthM > bldg.maxDepthW){
+                bldg.depthCompare = "greater"
+            }
+            if (bldg.maxDepthM < bldg.maxDepthW){
+                bldg.depthCompare = "less"
+            }
+        });
+        
+        console.log(bldgPaths)
+        
+        _.each(bldgPaths, function(bldg,n,bldgPaths){
+            
+            var bldgs = svg.append('g')
+                .attr('id', d=> 'id' + bldg.idbuildings)
+                .attr('y', d=>(n * height))
+                .attr('transform', d=>'translate(10,' + (n * height) + ')');
+            
+            const bldgRect = bldgs.append('rect')
+                .attr('id', d=> 'rectId' + bldg.idbuildings )
+                .attr('class', 'bldgRect')
+                .attr('x',0).attr('y',0)
+                .attr('width',width*2).attr('height',height)
+                .attr("fill", function(d) {
+                    return colorScaleDepth(bldg.depthCompare);
+                })
+                .attr('opacity', '0.2');
+            
+            const bldgLabel = bldgs.append('text')
+                .attr('y', 10)
+                .attr('x', 0)
+                .attr('font-size', 14)
+                .attr('font-weight',600)
+                .attr('dy', '.35em')
+                .text(d=>bldg.building_name);
+             const bldgYear = bldgs.append('text')
+                .attr('y', 30)
+                .attr('x', 0)
+                .attr('font-size', 14)
+                // .attr('font-weight',600)
+                .attr('dy', '.35em')
+                .text(d=>bldg.year);
+            
+            const maxDepthM = bldgs.append('text')
+                .attr('y', 150)
+                .attr('x', 0)
+                .attr('font-size', 14)
+                // .attr('font-weight',600)
+                .attr('dy', '.35em')
+                .text(d=>'max depth: '+ bldg.maxDepthM);
+    
+            //draw men
+            var forceM = cola.d3adaptor(d3)
+                .avoidOverlaps(true)
+    //            .linkDistance(30)
+            .jaccardLinkLengths(30, 0.7)
+                .size([width, height]);
+    
+            const svgM = bldgs
+                .append('svg')
+                .attr('id', d=>'men-'+ bldg.idbuildings)
+                .attr("width", width)
+                .attr("height", height);
+    
+            forceM
+                .nodes(bldgPaths[n].graphM.nodes)
+                .links(bldgPaths[n].graphM.links)
+                .constraints(bldgPaths[n].graphM.constraints)
+                .start(10,15,20);
+    
+            var link = svgM.selectAll(".link")
+                .data(bldgPaths[n].graphM.links)
+                .enter().append("line")
+                .attr("class", "link");
+    
+            var guideline = svgM.selectAll(".guideline")
+                .data(bldg.graphM.constraints.filter(function (c) { return c.type === 'alignment' }))
+                .enter().append("line")
+                .attr("class", "guideline")
+                .attr("stroke-dasharray", "10,10");
+            
+            var node = svgM.selectAll(".node")
+                .data(bldg.graphM.nodes.filter(d=>d.esc==""))
+                .enter().append("path")
+                .attr("d", d3.symbol()
+                    .size(d=>200) 
+                    .type(function(d) {
+                        if (d.type==="public" || d.type==="communal") {return d3.symbolSquare}
+                        else if (d.type==="arc") {return d3.symbolDiamond}
+                        else {return d3.symbolCircle}
+                    }))
+                .attr("class", "node")
+                .style("fill", function(d){
+                    if (d.type==="threshold"){return colorPetal(d.type)}
+                    else {return color(d.type)}
+                }
+                      );
+    
+            var nodeEsc = svgM.selectAll("g .nodeEsc")
+                .data(bldg.graphM.nodes.filter(d=>d.esc!==""))
+                .enter()
+                .append('g')
+                .attr("class", "nodeEsc")
+                .attr('transform', function(d) {
+                      var cx = d.x;
+                      var cy = d.y;
+                      return 'translate(' + [cx, cy] +
+                        ')scale(.25)rotate(135)';
+                }) 
+                .style("fill", d=>colorPetal(d.comp.door_type))
+                .attr('stroke', '#fff')
+                .attr('stroke-width', '6px');
+            
+            nodeEsc.selectAll('path .nodeEsc')
+                .data(
+                function(d){
+                    let numPetals = d.comp.element_count;
+                    let path = petalPaths[petalScale(d.comp.door_type)];
+                    return _.times(numPetals, function(i){
+                        return {
+                        angle: (360/numPetals) *i,
+                        path: path
+                        }
+                    });
+                }
+            )
+                .enter().append('path')
+                .attr('class', 'petal')
+                .attr('d', function(d) {return d.path.join(' ')})
+                .attr('transform', function(d) {
+                    return 'rotate(' + [d.angle] + ')';
+                });
+    
+            node.append("title")
+                .text(d=>d.type);
+    
+            forceM.on("tick", function () {
+                link.attr("x1", function (d) { return d.source.x; })
+                    .attr("y1", function (d) { return d.source.y; })
+                    .attr("x2", function (d) { return d.target.x; })
+                    .attr("y2", function (d) { return d.target.y; });
+    
+                guideline
+                    .attr("x1", function (d) { return getAlignmentBounds(bldg.graphM.nodes, d).x; })
+                    .attr("y1", function (d) {
+                        return d.bounds.y;
+                    })
+                    .attr("x2", function (d) { return d.bounds.X; })
+                    .attr("y2", function (d) {
+                        return d.bounds.Y;
+                    });
+                
+                node.attr("x", d=>d.x)
+                    .attr("y", d=>d.y);
+                node.attr("transform", transform);
+    
+            });
+    
+            //draw women's access 
+            var forceW = cola.d3adaptor(d3)
+            .avoidOverlaps(true)
+    //        .linkDistance(30)
+            .jaccardLinkLengths(30, 0.7)
+            .size([width, height]);
+    
+            const svgW = bldgs
+                .append('svg')
+                .attr('id', d=>'women-'+bldg.idbuildings)
+                .attr("width", width)
+                .attr("height", height)
+                .attr('x', d=>width)
+                .attr('transform', d=>'translate(' + width + ',0)');
+    
+            if (bldgPaths[n].sortedPaths[1].paths[0].year != bldg.year){
+                 const bldgYearW = svgW.append('text')
+                    .attr('y', 30)
+                    .attr('x', 0)
+                    .attr('font-size', 14)
+                    // .attr('font-weight',600)
+                    .attr('dy', '.35em')
+                    .text(d=>bldgPaths[n].sortedPaths[1].paths[0].year);
+            }
+            
+            const maxDepthW = svgW.append('text')
+                .attr('y', 150)
+                .attr('x', 0)
+                .attr('font-size', 14)
+                // .attr('font-weight',600)
+                .attr('dy', '.35em')
+                .text(d=>'max depth: '+ bldg.maxDepthW);
+    
+    
+            forceW
+                .nodes(bldgPaths[n].graphW.nodes)
+                .links(bldgPaths[n].graphW.links)
+                .constraints(bldgPaths[n].graphW.constraints)
+                .start(10,15,20);
+    
+            var linkW = svgW.selectAll(".link")
+                .data(bldgPaths[n].graphW.links)
+                .enter().append("line")
+                .attr("class", "link");
+    
+            var guidelineW = svgW.selectAll(".guideline")
+                .data(bldgPaths[n].graphW.constraints.filter(function (c) { return c.type === 'alignment' }))
+                .enter().append("line")
+                .attr("class", "guideline")
+                .attr("stroke-dasharray", "10,10");
+    
+            var nodeW = svgW.selectAll(".node")
+                .data(bldgPaths[n].graphW.nodes.filter(d=>d.esc==""))
+                .enter().append("path")
+                .attr("d", d3.symbol()
+                    .size(d=>200) 
+                    .type(function(d) {
+                        if (d.type==="public" || d.type==="communal") {return d3.symbolSquare}
+                        else if (d.type==="arc") {return d3.symbolDiamond}
+                        else {return d3.symbolCircle}
+                    }))
+                .attr("class", "node")
+                .style("fill", function(d){
+                    if (d.type==="threshold"){return colorPetal(d.type)}
+                    else if (d.type==="prayer"){
+                        if(d.screen_type==="seated height"){
+                        return color(d.type)
+                    }
+                    if (d.screen_type==="standing height"){
+                        return "url(#hash3_3)"
+                    }
+                    if (d.screen_type==="full height"){
+                        return "url(#hash2_2)"
+                    }
+                    if (d.screen_type==="wall with screen"){
+                        return "url(#hash1_1)"
+                    }
+                    if (d.screen_type==="unknown"){
+                       return "url(#hash4_4)"
+                    }
+                    }
+                    else {return color(d.type)}
+                });
+    
+            var nodeWEsc = svgW.selectAll("g .nodeWEsc")
+                .data(bldg.graphW.nodes.filter(d=>d.esc!==""))
+                .enter()
+                .append('g')
+                .attr("class", "nodeWEsc")
+                .attr('transform', function(d) {
+                      var cx = d.x;
+                      var cy = d.y;
+                      return 'translate(' + [cx, cy] +
+                        ')scale(.25)rotate(135)';
+                }) 
+                .style("fill", d=>colorPetal(d.comp.door_type))
+                .attr('stroke', '#fff')
+                .attr('stroke-width', '6px');
+            
+            nodeWEsc.selectAll('path .nodeWEsc')
+                .data(function(d){
+                    let numPetals = d.comp.element_count;
+                    let path = petalPaths[petalScale(d.comp.door_type)];
+                    return _.times(numPetals, function(i){
+                        return {
+                        angle: (360/numPetals) *i,
+                        path: path
+                        }
+                    });
+                })
+                .enter().append('path')
+                .attr('class', 'petal')
+                .attr('d', function(d) {return d.path.join(' ')})
+                .attr('transform', function(d) {
+                    return 'rotate(' + [d.angle] + ')';
+                });
+    
+            nodeW.append("title")
+                .text(d=>d.type);
+    
+            forceW.on("tick", function () {
+                linkW.attr("x1", function (d) { return d.source.x; })
+                    .attr("y1", function (d) { return d.source.y; })
+                    .attr("x2", function (d) { return d.target.x; })
+                    .attr("y2", function (d) { return d.target.y; });
+    
+                guidelineW
+                    .attr("x1", function (d) { return getAlignmentBounds(bldgPaths[n].graphW.nodes, d).x; })
+                    .attr("y1", function (d) {
+                        return d.bounds.y;
+                    })
+                    .attr("x2", function (d) { return d.bounds.X; })
+                    .attr("y2", function (d) {
+                        return d.bounds.Y;
+                    });
+    
+                nodeW.attr("x", d=>d.x)
+                    .attr("y", d=>d.y);
+                nodeW.attr("transform", transform);
+            });
+            
+          
+    
+        })
+        
+    }
+    
+    function updateRegion(selectedGroup) {
+        d3.selectAll('g').remove();
+        var selectedArray = data.filter(d=> d.region==selectedGroup);
+        console.log(selectedArray.length)
+        var dataFilter = data.filter(function(d){
+            if (selectedArray.length > 0){
+                return d.region==selectedGroup;
+            }
+            else { return d}
+        });
+        buildPaths(dataFilter)
+    }
+        
+         d3.select("#selectRegion").on("change", function(d) {
+            var selectedOption = d3.select(this).property("value");
+            updateRegion(selectedOption)
+        })
+    
+    function update(selectedGroup) {
+        d3.selectAll('g').remove();
+        var selectedArray = data.filter(d=> d.congregation_name==selectedGroup);
+        console.log(selectedArray.length)
+        var dataFilter = data.filter(function(d){
+            if (selectedArray.length > 0){
+                return d.congregation_name==selectedGroup;
+            }
+            else { return d}
+        });
+        buildPaths(dataFilter)
+    }
+        
+        d3.select("#selectCongr").on("change", function(d) {
+            var selectedOption = d3.select(this).property("value");
+            update(selectedOption)
+        })
+        
+        const build = updateRegion(data.filter(d=>d))
+        
+        const colorButtons = d3.select('#color-buttons');
+       
+        const colorDepth = colorButtons.append('button').attr('class','btn btn-link')
+            .text('depth')
+            .on('click', function(d){
+                _.each(bldgPaths,function(l,k){
+                    var rectId = `#rectId${l.idbuildings}`;
+                  d3.selectAll(rectId)
+                    .attr("fill", d=>colorScaleDepth(l.depthCompare));
+                })
+            });
+        const colorRegion = colorButtons.append('button').attr('class','btn btn-link')
+            .text('region')
+            .on('click', function(d){
+                _.each(bldgPaths,function(l,k){
+                    var rectId = `#rectId${l.idbuildings}`;
+                  d3.selectAll(rectId)
+                    .attr("fill", d=>colorScale(l.region));
+                })
+            });
+        const colorFootprint = colorButtons.append('button').attr('class','btn btn-link')
+            .text('footprint')
+            .on('click', function(d){
+                _.each(bldgPaths,function(l,k){
+                    var rectId = `#rectId${l.idbuildings}`;
+                  d3.selectAll(rectId)
+                    .attr("fill", d=>colorScale(l.footprint));
+                })
+            });
+        const colorRite = colorButtons.append('button').attr('class','btn btn-link')
+            .text('rite')
+            .on('click', function(d){
+                _.each(bldgPaths,function(l,k){
+                    var rectId = `#rectId${l.idbuildings}`;
+                  d3.selectAll(rectId)
+                    .attr("fill", d=>colorScale(l.rite));
+                })
+            });
+        const colorPurBuilt = colorButtons.append('button').attr('class','btn btn-link')
+            .text('purpose built')
+            .on('click', function(d){
+                _.each(bldgPaths,function(l,k){
+                    var rectId = `#rectId${l.idbuildings}`;
+                  d3.selectAll(rectId)
+                    .attr("fill", d=>colorScale(l.purpose_built));
+                })
+            });
+        
+        function getNestedChildren(arr, parent) {
+            var out = []
+            for(var i in arr) {
+                if(arr[i].id_parent == parent) {
+                    var children = getNestedChildren(arr, arr[i].id_path)
+    
+                    if(children.length) {
+                        arr[i].children = children
+                    }
+                    out.push(arr[i])
+                }
+            }
+            return out
+        }
+        
+        function transform(d) {
+          return "translate(" + d.x + "," + d.y + ")";
+        }
+        
+        function getAlignmentBounds(vs, c) {
+            var os = c.offsets;
+            if (c.axis === 'x') {
+                var x = vs[os[0].node].x;
+                c.bounds = new cola.Rectangle(x, x,
+                    Math.min.apply(Math, os.map(function (o) { return vs[o.node].bounds.y - 20; })),
+                    Math.max.apply(Math, os.map(function (o) { return vs[o.node].bounds.Y + 20; })));
+            } else {
+                var y = vs[os[0].node].y;
+                c.bounds = new cola.Rectangle(
+                    Math.min.apply(Math, os.map(function (o) { return vs[o.node].bounds.x - 20; })),
+                    Math.max.apply(Math, os.map(function (o) { return vs[o.node].bounds.X + 20; })),
+                    y, y);
+            }
+            return c.bounds;
+        }
+    
+    });
+    });
+</script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
