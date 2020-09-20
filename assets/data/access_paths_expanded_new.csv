@@ -1,0 +1,415 @@
+idbuildings,building_name,purpose_built,off_street,footprint_type,idcongregation,congregation_name,rite,id_path,id_parent,access_type,node_desc,esc,screen_type,year,city,state,country,region,lat,lon
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,0,,men,public,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,1,0,men,threshold,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,2,1,men,communal,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,3,2,men,threshold,e0a,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,4,3,men,circulation,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,5,4,men,prayer,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,6,5,men,prayer,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,7,5,men,prayer,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,8,5,men,prayer,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,8,6,men,prayer,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,8,7,men,prayer,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,9,8,men,arc,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,0,,women,public,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,1,0,women,threshold,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,2,1,women,communal,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,3,2,women,threshold,e0a,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,4,3,women,circulation,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,5,4,women,circulation,,,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,6,5,women,prayer,,seated height,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,7,6,women,prayer,,seated height,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+0,Bevis Marks Synagogue,TRUE,TRUE,rectangular basilica,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,8,6,women,prayer,,seated height,1701,London,NULL,England,Western Europe,51.514473,-0.078938
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,0,,men,public,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,1,0,men,threshold,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,2,1,men,communal,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,3,2,men,threshold,e4a,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,4,3,men,circulation,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,5,4,men,prayer,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,6,5,men,prayer,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,7,5,men,prayer,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,8,5,men,prayer,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,8,6,men,prayer,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,8,7,men,prayer,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,9,8,men,arc,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,0,,women,public,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,1,0,women,threshold,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,2,1,women,communal,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,3,2,women,circulation,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,4,2,women,circulation,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,5,3,women,circulation,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,5,4,women,circulation,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,6,5,women,threshold,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,7,6,women,circulation,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,8,6,women,circulation,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,9,7,women,threshold,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,10,8,women,threshold,,,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,11,9,women,prayer,,standing height,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+4,"Esnoga, Talmud Torah II",TRUE,TRUE,rectangular basilica,4,Talmud Torah,sephardic,12,10,women,prayer,,standing height,1675,Amsterdam,NULL,Netherlands,Western Europe,52.36753,4.905336
+17,Berakha ve Shalom Synagogue,TRUE,TRUE,rectangular basilica,13,Berakha ve Shalom,sephardic,0,,men,public,,,1685,Jodensavanne,NULL,Suriname,South America,5.429176,-54.984273
+17,Berakha ve Shalom Synagogue,TRUE,TRUE,rectangular basilica,13,Berakha ve Shalom,sephardic,1,0,men,threshold,e17a,,1685,Jodensavanne,NULL,Suriname,South America,5.429176,-54.984273
+17,Berakha ve Shalom Synagogue,TRUE,TRUE,rectangular basilica,13,Berakha ve Shalom,sephardic,2,0,men,threshold,e17a,,1685,Jodensavanne,NULL,Suriname,South America,5.429176,-54.984273
+17,Berakha ve Shalom Synagogue,TRUE,TRUE,rectangular basilica,13,Berakha ve Shalom,sephardic,3,1,men,prayer,,,1685,Jodensavanne,NULL,Suriname,South America,5.429176,-54.984273
+17,Berakha ve Shalom Synagogue,TRUE,TRUE,rectangular basilica,13,Berakha ve Shalom,sephardic,4,2,men,prayer,,,1685,Jodensavanne,NULL,Suriname,South America,5.429176,-54.984273
+17,Berakha ve Shalom Synagogue,TRUE,TRUE,rectangular basilica,13,Berakha ve Shalom,sephardic,5,3,men,prayer,,,1685,Jodensavanne,NULL,Suriname,South America,5.429176,-54.984273
+17,Berakha ve Shalom Synagogue,TRUE,TRUE,rectangular basilica,13,Berakha ve Shalom,sephardic,5,4,men,prayer,,,1685,Jodensavanne,NULL,Suriname,South America,5.429176,-54.984273
+17,Berakha ve Shalom Synagogue,TRUE,TRUE,rectangular basilica,13,Berakha ve Shalom,sephardic,6,5,men,arc,,,1685,Jodensavanne,NULL,Suriname,South America,5.429176,-54.984273
+17,Berakha ve Shalom Synagogue,TRUE,TRUE,rectangular basilica,13,Berakha ve Shalom,sephardic,0,,women,public,,,1685,Jodensavanne,NULL,Suriname,South America,5.429176,-54.984273
+17,Berakha ve Shalom Synagogue,TRUE,TRUE,rectangular basilica,13,Berakha ve Shalom,sephardic,1,0,women,threshold,e17b,,1685,Jodensavanne,NULL,Suriname,South America,5.429176,-54.984273
+17,Berakha ve Shalom Synagogue,TRUE,TRUE,rectangular basilica,13,Berakha ve Shalom,sephardic,2,1,women,circulation,,,1685,Jodensavanne,NULL,Suriname,South America,5.429176,-54.984273
+17,Berakha ve Shalom Synagogue,TRUE,TRUE,rectangular basilica,13,Berakha ve Shalom,sephardic,3,2,women,prayer,,unknown,1685,Jodensavanne,NULL,Suriname,South America,5.429176,-54.984273
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,0,,men,public,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,1,0,men,threshold,e34a,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,2,1,men,prayer,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,3,2,men,prayer,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,4,2,men,prayer,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,5,2,men,prayer,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,5,3,men,prayer,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,5,4,men,prayer,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,6,5,men,arc,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,0,,women,public,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,1,0,women,threshold,e34b,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,2,1,women,circulation,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,3,2,women,circulation,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,4,3,women,circulation,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,5,4,women,threshold,,,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,6,5,women,prayer,,seated height,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,7,6,women,prayer,,seated height,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+34,Touro Synagogue,TRUE,TRUE,modified square basilica,24,Jeshuat Israel,sephardic,8,7,women,prayer,,seated height,1763,Newport,Rhode Island,United States,North America,41.489444,-71.311944
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,0,,men,public,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,1,0,men,threshold,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,2,1,men,communal,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,3,2,men,threshold,e43a,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,4,3,men,prayer,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,5,3,men,prayer,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,6,3,men,prayer,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,6,5,men,prayer,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,6,4,men,prayer,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,7,6,men,arc,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,0,,women,public,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,1,0,women,threshold,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,2,1,women,communal,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,3,2,women,circulation,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,4,3,women,circulation,,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,5,4,women,threshold,e43b,,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+43,Mikve Israel Synagogue (IV),TRUE,TRUE,rectangular basilica,9,Mikve Israel,sephardic,6,5,women,prayer,,standing height,1732,Willemstad,NULL,Curacao,Caribbean,12.10511,-68.932573
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,0,,men,public,,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,1,0,men,threshold,e36a,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,2,0,men,threshold,e36a,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,3,0,men,threshold,e36b,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,4,1,men,prayer,,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,5,2,men,prayer,,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,6,3,men,prayer,,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,6,4,men,prayer,,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,6,5,men,prayer,,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,7,6,men,prayer,,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,7,4,men,prayer,,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,7,5,men,prayer,,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,8,7,men,arc,,,1735,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,0,,women,public,,,1813,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,1,0,women,threshold,,,1813,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,2,0,women,threshold,,,1813,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,3,1,women,circulation,,,1813,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,4,2,women,circulation,,,1813,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,5,3,women,prayer,,seated height,1813,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,5,4,women,prayer,,seated height,1813,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,6,5,women,prayer,,seated height,1813,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+36,Tzedek ve-Shalom Synagogue,TRUE,TRUE,rectangular basilica,20,Zedek ve Shalom,sephardic,7,5,women,prayer,,seated height,1813,Paramaribo,NULL,Suriname,South America,5.828858,-55.156256
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,0,,men,public,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,1,0,men,threshold,e38a,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,2,1,men,circulation,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,3,2,men,circulation,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,4,3,men,circulation,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,5,4,men,circulation,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,6,5,men,threshold,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,7,6,men,prayer,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,8,6,men,prayer,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,9,6,men,prayer,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,9,7,men,prayer,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,9,8,men,prayer,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,10,9,men,arc,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,0,,women,public,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,1,0,women,threshold,e38a,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,2,1,women,circulation,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,3,2,women,circulation,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,4,3,women,circulation,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,5,4,women,circulation,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,6,5,women,circulation,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,7,6,women,threshold,,,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+38,Kahal Kadosh Zur Israel Synagogue,TRUE,FALSE,repurposed tenement w/ upstairs prayer hall,5,Zur Israel,sephardic,8,7,women,prayer,,full height,1641,Recife,Pernambuco,Brazil,South America,-8.06131,-34.87132
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,0,,men,public,,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,1,0,men,threshold,e1a,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,2,1,men,circulation,,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,3,2,men,circulation,,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,4,3,men,circulation,,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,5,4,men,threshold,,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,6,5,men,prayer,,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,7,6,men,arc,,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,0,,women,public,,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,1,0,women,threshold,e1a,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,2,1,women,circulation,,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,3,2,women,circulation,,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,4,3,women,circulation,,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,5,4,women,threshold,,,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+1,Creechurch Lane Synagogue,FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,6,5,women,prayer,,wall with screen,1657,London,NULL,England,Western Europe,51.513685,-0.079298
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,0,,men,public,,,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,1,0,men,threshold,e33a,,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,2,1,men,prayer,,,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,3,2,men,prayer,,,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,4,3,men,prayer,,,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,5,2,men,prayer,,,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,5,3,men,prayer,,,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,5,4,men,prayer,,,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,6,5,men,arc,,,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,0,,women,public,,,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,1,0,women,threshold,e33a,,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,2,1,women,circulation,,,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,3,2,women,prayer,,unknown,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,4,3,women,prayer,,unknown,1730,New York,New York,United States,North America,40.705016,-74.010199
+33,"Mill Street Synagogue, Shearith Israel I",TRUE,TRUE,rectangular basilica,19,Shearith Israel,sephardic,5,3,women,prayer,,unknown,1730,New York,New York,United States,North America,40.705016,-74.010199
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,0,,men,public,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,1,0,men,threshold,e2a,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,2,1,men,circulation,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,3,2,men,circulation,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,4,3,men,circulation,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,5,4,men,threshold,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,6,5,men,prayer,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,7,6,men,prayer,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,8,6,men,prayer,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,8,7,men,prayer,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,8,9,men,prayer,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,9,6,men,prayer,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,10,6,men,circulation,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,11,10,men,prayer,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,12,8,men,arc,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,0,,women,public,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,1,0,women,threshold,e2b,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,2,1,women,circulation,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,3,2,women,circulation,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,4,3,women,circulation,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,5,4,women,circulation,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,6,5,women,circulation,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,7,6,women,circulation,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,8,7,women,threshold,e2c,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,9,8,women,prayer,,unknown,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,10,9,women,threshold,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,11,10,women,circulation,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,12,11,women,threshold,,,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+2,Creechurch Lane Synagogue [1675],FALSE,FALSE,repurposed tenement w/ upstairs prayer hall,14,Kahal Kadosh Sha'ar Hashamayim,sephardic,13,12,women,prayer,,unknown,1675,London,NULL,England,Western Europe,51.513685,-0.079298
+22,"Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,0,,men,public,,,1722,London,NULL,England,Western Europe,51.514313,-0.077881
+22,"Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,1,0,men,threshold,e22a,,1722,London,NULL,England,Western Europe,51.514313,-0.077881
+22,"Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,2,1,men,prayer,,,1722,London,NULL,England,Western Europe,51.514313,-0.077881
+22,"Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,3,2,men,arc,,,1722,London,NULL,England,Western Europe,51.514313,-0.077881
+22,"Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,0,,women,public,,,1722,London,NULL,England,Western Europe,51.514313,-0.077881
+22,"Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,1,0,women,threshold,e22a,,1722,London,NULL,England,Western Europe,51.514313,-0.077881
+22,"Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,2,1,women,prayer,,unknown,1722,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,0,,men,public,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,1,0,men,threshold,e133a,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,2,1,men,circulation,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,3,2,men,prayer,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,4,2,men,prayer,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,5,2,men,prayer,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,5,3,men,prayer,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,5,4,men,prayer,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,6,3,men,prayer,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,6,5,men,prayer,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,6,4,men,prayer,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,7,6,men,arc,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,0,,women,public,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,1,0,women,threshold,e133b,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,2,1,women,circulation,,,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,3,2,women,prayer,,standing height,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,4,2,women,prayer,,standing height,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+133,"Great Synagogue (Duke's Place, enlargement)",FALSE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,5,4,women,prayer,,standing height,1766,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,0,,men,public,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,1,0,men,threshold,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,2,0,men,threshold,e31e,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,3,0,men,threshold,e31b,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,4,0,men,threshold,e31a,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,5,1,men,circulation,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,6,5,men,threshold,e31d,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,7,5,men,threshold,e31c,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,8,2,men,circulation,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,9,3,men,circulation,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,10,4,men,circulation,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,11,6,men,circulation,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,12,11,men,threshold,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,13,8,men,threshold,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,14,9,men,threshold,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,15,10,men,threshold,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,16,14,men,prayer,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,16,15,men,prayer,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,17,12,men,prayer,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,17,13,men,prayer,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,18,7,men,circulation,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,19,16,men,prayer,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,19,17,men,prayer,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,19,18,men,prayer,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,20,19,men,arc,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,0,,women,public,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,1,0,women,threshold,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,2,1,women,circulation,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,3,2,women,threshold,e31d,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,4,3,women,circulation,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,5,4,women,threshold,,,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,6,5,women,prayer,,standing height,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,7,6,women,prayer,,standing height,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+31,"Great Synagogue (third, near Duke's Place)",TRUE,,rectangular basilica,43,Congregation of the Great Synagogue,ashkenazi,8,7,women,prayer,,standing height,1790,London,NULL,England,Western Europe,51.514313,-0.077881
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,0,,men,public,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,1,0,men,threshold,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,2,1,men,communal,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,3,2,men,threshold,e137b,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,4,2,men,threshold,e137b,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,5,3,men,circulation,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,6,4,men,circulation,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,7,5,men,threshold,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,8,6,men,threshold,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,9,8,men,prayer,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,9,7,men,prayer,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,10,9,men,arc,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,0,,women,public,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,1,0,women,threshold,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,2,1,women,communal,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,3,2,women,threshold,e137c,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,4,3,women,circulation,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,5,4,women,circulation,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,6,5,women,threshold,,,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+137,Neveh Shalom,FALSE,TRUE,repurposed tenement w/ upstairs prayer hall,2,Neveh Shalom,sephardic,7,6,women,prayer,,unknown,1612,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,0,,men,public,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,1,0,men,threshold,e6a,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,2,1,men,circulation,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,3,2,men,prayer,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,4,2,men,prayer,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,5,2,men,prayer,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,5,3,men,prayer,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,5,4,men,prayer,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,6,3,men,circulation,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,7,4,men,circulation,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,8,6,men,prayer,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,9,7,men,prayer,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,10,5,men,arc,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,0,,women,public,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,1,0,women,threshold,e6b,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,2,0,women,threshold,e6b,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,3,1,women,circulation,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,4,2,women,circulation,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,5,3,women,threshold,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,6,4,women,threshold,,,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,7,5,women,prayer,,full height,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+6,"Talmud Torah, Portuguese Synagogue I",FALSE,FALSE,rectangular basilica,4,Talmud Torah,sephardic,8,6,women,prayer,,full height,1639,Amsterdam,NULL,Netherlands,Western Europe,52.368346,4.902987
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,0,,men,public,,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,1,0,men,threshold,e7a,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,2,1,men,prayer,,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,3,2,men,prayer,,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,4,2,men,prayer,,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,5,2,men,prayer,,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,5,3,men,prayer,,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,5,4,men,arc,,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,6,5,men,arc,,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,0,,women,public,,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,1,0,women,threshold,,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,2,1,women,circulation,,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,3,2,women,threshold,,,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,4,3,women,prayer,,standing height,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,5,4,women,prayer,,standing height,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+7,Grote Sjoel (Great Synagogue),TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,6,5,women,prayer,,standing height,1671,Amsterdam,NULL,Netherlands,Western Europe,52.367274,4.903893
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,0,,men,public,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,1,0,men,threshold,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,2,1,men,circulation,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,3,2,men,circulation,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,4,3,men,threshold,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,5,4,men,prayer,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,6,5,men,prayer,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,7,5,men,prayer,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,8,5,men,prayer,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,8,7,men,prayer,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,8,6,men,prayer,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,9,6,men,circulation,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,10,9,men,prayer,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,11,10,men,circulation,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,12,11,men,prayer,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,13,11,men,prayer,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,14,8,men,arc,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+9,Obbene Shul Synagogue,TRUE,,rectangular basilica,46,High German Congregation,ashkenazi,0,,women,public,,,1686,Amsterdam,NULL,Netherlands,Western Europe,52.367139,4.903745
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,0,,men,public,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,1,0,men,threshold,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,2,0,men,threshold,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,3,1,men,prayer,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,4,2,men,prayer,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,5,3,men,circulation,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,6,4,men,circulation,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,7,3,men,prayer,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,7,4,men,prayer,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,8,5,men,prayer,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,9,6,men,prayer,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,10,7,men,arc,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+142,Dritt Sjoel,TRUE,FALSE,rectangular basilica,46,High German Congregation,ashkenazi,0,,women,public,,,1778,Amsterdam,NULL,Netherlands,Western Europe,52.367259,4.903681
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,0,,men,public,,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,1,0,men,threshold,e134a,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,2,1,men,prayer,,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,3,2,men,prayer,,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,4,2,men,prayer,,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,5,2,men,prayer,,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,5,3,men,prayer,,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,5,4,men,prayer,,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,6,5,men,arc,,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,0,,women,public,,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,1,0,women,circulation,,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,2,1,women,circulation,,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,3,2,women,threshold,e134b,,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,4,3,women,prayer,,unknown,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,5,4,women,prayer,,unknown,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+134,Honen Dalim Synagogue II,TRUE,,rectangular basilica,21,Honen Dalim,sephardic,6,4,women,prayer,,unknown,1773,Orangjestad,NULL,St. Eustatius,Caribbean,17.482597,-62.981295
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,0,,men,public,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,1,0,men,threshold,e11a,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,2,1,men,prayer,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,3,2,men,prayer,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,4,3,men,prayer,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,5,2,men,prayer,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,5,3,men,prayer,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,5,4,men,prayer,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,6,5,men,arc,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,0,,women,public,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,1,0,women,threshold,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,2,1,women,circulation,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,3,2,women,threshold,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,4,2,women,threshold,,,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,5,3,women,prayer,,unknown,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+11,Nieuwe Ashkenazic Synagogue,TRUE,FALSE,modified square basilica,46,High German Congregation,ashkenazi,6,4,women,prayer,,unknown,1752,Amsterdam,NULL,Netherlands,Western Europe,52.367077,4.904008
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,0,,men,public,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,1,0,men,threshold,e14a,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,2,1,men,circulation,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,3,2,men,threshold,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,4,3,men,prayer,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,5,4,men,prayer,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,6,4,men,prayer,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,7,4,men,prayer,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,7,5,men,prayer,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,7,6,men,prayer,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,8,7,men,arc,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,0,,women,public,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,1,0,women,threshold,e14a,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,2,1,women,circulation,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,3,2,women,circulation,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,4,2,women,circulation,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,5,3,women,threshold,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,6,4,women,threshold,,,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,7,5,women,prayer,,seated height,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+14,Beth Elohim Synagogue,TRUE,,rectangular basilica with appendage,27,Beth Elohim,sephardic,8,6,women,prayer,,seated height,1794,Charleston,South Carolina,United States,North America,32.7823,-79.932732
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,0,,men,public,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,1,0,men,threshold,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,2,0,men,threshold,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,3,0,men,threshold,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,4,1,men,prayer,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,5,2,men,prayer,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,6,3,men,prayer,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,6,4,men,prayer,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,6,5,men,prayer,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,7,6,men,arc,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,0,,women,public,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,1,0,women,threshold,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,2,0,women,threshold,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,3,1,women,circulation,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,4,2,women,circulation,,,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,5,3,women,prayer,,unknown,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
+100,Neve Shalom,TRUE,TRUE,rectangular basilica,18,Neve Shalom,ashkenazi,6,4,women,prayer,,unknown,1837,Paramaribo,NULL,Suriname,South America,5.828455,-55.15924
