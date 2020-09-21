@@ -39,7 +39,11 @@ title: Synagogue Access Paths
             </div>
           </form>
     </div>
-    <div id="color-buttons"><span>Color by: </span></div><br />
+    <div id="color-buttons"><span>Color by: </span></div>
+    <div class="row">
+        <div class="col"><span>Space Types: </span><svg id="legend"></svg></div>
+        <div class="col"><span>Screened Spaces: </span><svg id="screens"></svg></div>
+    </div><br />
     <div class="row">
         <div class="col">
           <h3 class="text-center">Men</h3>
@@ -60,9 +64,9 @@ title: Synagogue Access Paths
         .domain(['public','communal','circulation','prayer','arc'])
         .range(['#3182bd','#fd8d3c', '#c7c7c7','#74c476','#17becf']);
     var colorEsc = d3.scaleOrdinal(d3.schemeCategory20);
-    const colorPetal = d3.scaleOrdinal()
-        .domain(["","flat-headed","round-headed"])
-        .range(chroma.scale(['#cbafef','#f495cf','#ffb7bf']).colors(3));
+    const colorPetal = d3.scaleOrdinal().range(['#cbafef']);
+        // .domain(["","flat-headed","round-headed"])
+        // .range(chroma.scale(['#cbafef','#f495cf','#ffb7bf']).colors(3));
     const shape = d3.scaleOrdinal(d3.symbols);
     let petalPaths = [
     //    [
@@ -198,7 +202,10 @@ title: Synagogue Access Paths
                 congregation_name: d[0].congregation_name,
                 rite: d[0].rite,
                 footprint: d[0].footprint_type,
-                purpose_built: d[0].purpose_built
+                purpose_built: d[0].purpose_built,
+                city: d[0].city,
+                state: d[0].state,
+                country: d[0].country
             }
         })
         .sort((a,b) => a.year - b.year)
@@ -398,7 +405,10 @@ title: Synagogue Access Paths
                     congregation_name: d[0].congregation_name,
                     rite: d[0].rite,
                     footprint: d[0].footprint_type,
-                    purpose_built: d[0].purpose_built
+                    purpose_built: d[0].purpose_built,
+                    city: d[0].city,
+                    state: d[0].state,
+                    country: d[0].country
                 }
             })
             .sort((a,b) => a.year - b.year)
@@ -597,7 +607,7 @@ title: Synagogue Access Paths
                 .attr('x',0).attr('y',0)
                 .attr('width',width*2).attr('height',height)
                 .attr("fill", function(d) {
-                    return colorScaleDepth(bldg.depthCompare);
+                    return colorScale(bldg.footprint);
                 })
                 .attr('opacity', '0.2');
             
@@ -608,8 +618,17 @@ title: Synagogue Access Paths
                 .attr('font-weight',600)
                 .attr('dy', '.35em')
                 .text(d=>bldg.building_name);
-             const bldgYear = bldgs.append('text')
+            const bldgLoc = bldgs.append('text')
                 .attr('y', 30)
+                .attr('x', 0)
+                .attr('font-size', 14)
+                .attr('dy', '.35em')
+                .text(function(d){
+                    if (bldg.country === "United States"){return bldg.city + ', ' + bldg.state + ', ' + bldg.country}
+                    else {return bldg.city + ', ' + bldg.country}
+                });
+             const bldgYear = bldgs.append('text')
+                .attr('y', 50)
                 .attr('x', 0)
                 .attr('font-size', 14)
                 // .attr('font-weight',600)
@@ -915,6 +934,72 @@ title: Synagogue Access Paths
         })
         
         const build = updateRegion(data.filter(d=>d))
+
+        const legend = d3.select('#legend')
+            .attr('width', 500)
+            .attr('height', 75);
+        const legendNode =  legend.selectAll('path .node')
+            .data(['Public', 'Communal', 'Threshold', 'Circulation', 'Prayer', 'Arc']).enter().append('path')
+            .attr('x', (d,i)=>(i*60)+60)
+            .attr('y', 25)
+            .attr('transform', (d,i)=>"translate(" + ((i*60)+60) + "," + 25 + ")")
+            .attr("d", d3.symbol()
+                    .size(d=>200) 
+                    .type(function(d) {
+                        if (d==="Public" || d==="Communal") {return d3.symbolSquare}
+                        else if (d==="Arc") {return d3.symbolDiamond}
+                        else {return d3.symbolCircle}
+                    }))
+            .attr("class", "node")
+            .style("fill", function(d){
+                if (d==="Threshold"){return colorPetal(d)}
+                else {return color(d)}
+            });
+        const legendNodeLabel = legend.selectAll('text .label')
+        .data(['Public', 'Communal', 'Threshold', 'Circulation', 'Prayer', 'Arc'])
+        .enter().append('text').attr('class', 'label')
+            .attr('transform', (d,i)=>"translate(" + ((i*60)+60) + "," + 25 + ")")
+            .attr('y', 25)
+            .attr('dy', '.35em')
+            .attr('text-anchor', 'middle')
+            .style('font-size', '0.7rem')
+            .text(d=>d);
+        const screen = d3.select('#screens')
+            .attr('width', 500)
+            .attr('height', 75);
+        const screenNode =  screen.selectAll('path .node')
+            .data(['Standing Height', 'Full Height', 'Wall with Screen', 'Unknown']).enter()
+            .append('path')
+            .attr('x', (d,i)=>(i*80)+60)
+            .attr('y', 25)
+            .attr('transform', (d,i)=>"translate(" + ((i*80)+60) + "," + 25 + ")")
+            .attr("d", d3.symbol()
+                    .size(d=>200) 
+                    .type(function(d) {return d3.symbolCircle}))
+            .attr("class", "node")
+            .style("fill", function(d){
+                if (d==="Standing Height"){
+                    return "url(#hash3_3)"
+                }
+                if (d==="Full Height"){
+                    return "url(#hash2_2)"
+                }
+                if (d==="Wall with Screen"){
+                    return "url(#hash1_1)"
+                }
+                if (d==="Unknown"){
+                    return "url(#hash4_4)"
+                }
+            });
+        const screenNodeLabel = screen.selectAll('text .label')
+            .data(['Standing Height', 'Full Height', 'Wall with Screen', 'Unknown'])
+            .enter().append('text').attr('class', 'label')
+            .attr('transform', (d,i)=>"translate(" + ((i*80)+60) + "," + 25 + ")")
+            .attr('y', 25)
+            .attr('dy', '.35em')
+            .attr('text-anchor', 'middle')
+            .style('font-size', '0.7rem')
+            .text(d=>d);
         
         const colorButtons = d3.select('#color-buttons');
        
