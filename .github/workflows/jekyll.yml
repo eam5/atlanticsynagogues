@@ -3,6 +3,8 @@ on: [push]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
@@ -23,6 +25,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          SSH: false
+          SSH: true
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: _site # The folder the action should deploy.
