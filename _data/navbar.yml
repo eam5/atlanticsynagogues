@@ -1,21 +1,25 @@
 #_data/navbar.yml
-- name: Home
-  link: /
+# - name: Home
+#   url: /
 - name: Synagogues
-  link: /index-tree
+  url: /index-tree
 - name: Images
-  link: /images
-- name: Synagogue Map
-  link: /synagogue-map
-- name: Rabbi Locations
-  link: /rabbi-map
-- name: Contributions
-  link: /contributions
-- name: Access Paths
-  link: /access-paths
-- name: Facade Fractal Trees
-  link: /allbldgs_allfac
-- name: Synagogue Timeline
-  link: /scatter
+  url: /images
+- name: Maps
+  sublinks:
+  - name: Synagogue Map
+    url: /synagogue-map
+  - name: Rabbi Locations
+    url: /rabbi-map
+- name: Data Visualizations
+  sublinks:
+  - name: Contributions
+    url: /contributions
+  - name: Access Paths
+    url: /access-paths
+  - name: Facade Fractal Trees
+    url: /allbldgs_allfac
+  - name: Synagogue Timeline
+    url: /scatter
 - name: Site Index
-  link: /site-index
+  url: /site-index
