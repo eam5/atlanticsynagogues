@@ -1,0 +1,87 @@
+idlocation,city,country,idruling_powers,name,year_start,year_end,lat,longitude,notes
+1,Amsterdam,Netherlands,8,"Dutch Republic",1581,1795,52.3702157,4.895167899999933,
+41,"The Hague",Netherlands,8,"Dutch Republic",1584,1806,52.3702157,4.895167899999933,"1584 place of assembly got States of Holland"
+8,London,England,1,"Commonwealth of England",1649,1660,51.5073509,-0.12775829999998223,
+8,London,England,2,"The Restoration",1660,1688,51.5073509,-0.12775829999998223,
+8,London,England,3,"William and Mary",1689,1702,51.5073509,-0.12775829999998223,
+8,London,England,4,"Kingdoms of England and Scotland",1702,1707,51.5073509,-0.12775829999998223,
+8,London,England,5,"Great Britain",1707,1801,51.5073509,-0.12775829999998223,"1 May 1707 to 1 January 1801"
+8,London,England,6,"United Kingdom",1801,2021,51.5073509,-0.12775829999998223,
+8,London,England,7,"English Empire",927,1649,51.5073509,-0.12775829999998223,
+30,Montreal,Canada,10,France,1642,1760,45.5016889,-73.56725599999999,"Rough years of French Colony"
+30,Montreal,Canada,6,"United Kingdom",1760,1775,45.5016889,-73.56725599999999,"British rule"
+30,Montreal,Canada,15,"United States",1775,1776,45.5016889,-73.56725599999999,"American Occupation"
+30,Montreal,Canada,6,"United Kingdom",1776,1867,45.5016889,-73.56725599999999,"Province of Canada, joined Dominion of Canada 1867"
+25,Newport,"United States",7,"English Empire",1636,1707,41.4901024,-71.31282850000002,"Rhode Island and Providence Plantations"
+25,Newport,"United States",5,"Great Britain",1707,1776,41.4901024,-71.31282850000002,"Rhode Island and Providence Plantations"
+25,Newport,"United States",6,"United Kingdom",1776,1779,41.4901024,-71.31282850000002,"British occupied Newport"
+25,Newport,"United States",10,France,1779,1781,41.4901024,-71.31282850000002,"French base in US, Rochambeau left 1781"
+25,Newport,"United States",15,"United States",1790,2021,41.4901024,-71.31282850000002,"US State"
+24,"New York","United States",2,"The Restoration",1664,1783,40.7127753,-74.0059728,
+24,"New York","United States",8,"Dutch Republic",1624,1664,40.7127753,-74.0059728,"New Amsterdam"
+24,"New York","United States",15,"United States",1783,2021,40.7127753,-74.0059728,NULL
+26,Philadelphia,"United States",2,"The Restoration",1681,1776,39.9525839,-75.16522150000003,"Province of Pennsylvania"
+26,Philadelphia,"United States",15,"United States",1776,2021,39.9525839,-75.16522150000003,NULL
+28,Richmond,"United States",6,"United Kingdom",1742,1782,37.5407246,-77.4360481,NULL
+28,Richmond,"United States",15,"United States",1782,2021,37.5407246,-77.4360481,NULL
+21,Gibraltar,"United Kingdom",4,"Kingdoms of England and Scotland",1704,2021,36.14075099999999,-5.353585000000066,"Officially ceded to Great Britain in 1713, Treaty of Utrecht"
+23,Charleston,"United States",2,"The Restoration",1680,1782,32.7764749,-79.93105120000001,NULL
+23,Charleston,"United States",15,"United States",1782,2021,32.7764749,-79.93105120000001,NULL
+27,Savannah,"United States",6,"United Kingdom",1733,1782,32.0835407,-81.09983419999998,NULL
+27,Savannah,"United States",15,"United States",1782,2021,32.0835407,-81.09983419999998,NULL
+20,"Charlotte Amalie","St. Thomas",12,"Danish West India Company",1671,1754,18.3419004,-64.93070069999999,"Danish West India Co"
+20,"Charlotte Amalie","St. Thomas",13,"Danish Empire",1754,1801,18.3419004,-64.93070069999999,"Danish Crown"
+20,"Charlotte Amalie","St. Thomas",6,"United Kingdom",1801,1802,18.3419004,-64.93070069999999,"British Occupation"
+20,"Charlotte Amalie","St. Thomas",13,"Danish Empire",1802,1807,18.3419004,-64.93070069999999,NULL
+20,"Charlotte Amalie","St. Thomas",6,"United Kingdom",1807,1815,18.3419004,-64.93070069999999,"British Occupation"
+20,"Charlotte Amalie","St. Thomas",13,"Danish Empire",1815,1917,18.3419004,-64.93070069999999,"Purchased by US in 1917"
+45,Jamaica,Jamaica,7,"English Empire",1655,1958,18.18,-77.4,
+45,Jamaica,Jamaica,11,Spain,1509,1655,18.18,-77.4,
+18,Philipsburg,"St. Maarten",11,Spain,1633,1648,18.0295839,-63.047137099999986,NULL
+18,Philipsburg,"St. Maarten",8,"Dutch Republic",1631,1633,18.0295839,-63.047137099999986,NULL
+18,Philipsburg,"St. Maarten",8,"Dutch Republic",1648,2021,18.0295839,-63.047137099999986,"Split Island w French, border changed freq. during 17th-18th c"
+15,"Spanish Town",Jamaica,7,"English Empire",1655,1958,18.18,-77.4,
+14,Kingston,Jamaica,7,"English Empire",1655,1958,18.18,-77.4,
+7,"Port Royal",Jamaica,7,"English Empire",1655,1958,18.18,-77.4,
+31,Christiansted,"St. Croix",12,"Danish West India Company",1733,1754,17.744077,-64.704155,"Danish purchased St. Croix from French West India Company"
+31,Christiansted,"St. Croix",13,"Danish Empire",1754,1801,17.744077,-64.704155,"King Frederick took direct control of Saint Croix from the company"
+31,Christiansted,"St. Croix",6,"United Kingdom",1801,1802,17.744077,-64.704155,
+31,Christiansted,"St. Croix",13,"Danish Empire",1802,1807,17.744077,-64.704155,
+31,Christiansted,"St. Croix",6,"United Kingdom",1807,1815,17.744077,-64.704155,
+31,Christiansted,"St. Croix",13,"Danish Empire",1815,1916,17.744077,-64.704155,"Sold to US"
+17,Orangjestad,"St. Eustatius",9,"Dutch West India Company",1636,1678,17.4867485,-62.976497800000004,
+17,Orangjestad,"St. Eustatius",8,"Dutch Republic",1816,1954,17.4867485,-62.976497800000004,"Became member of Netherlands Antilles, dissolution in 2010"
+17,Orangjestad,"St. Eustatius",6,"United Kingdom",1781,1781,17.4867485,-62.976497800000004,"Occupied by British Admiral George B. Rodney"
+17,Orangjestad,"St. Eustatius",10,France,1781,1784,17.4867485,-62.976497800000004,
+17,Orangjestad,"St. Eustatius",8,"Dutch Republic",1784,1795,17.4867485,-62.976497800000004,
+17,Orangjestad,"St. Eustatius",10,France,1795,1816,17.4867485,-62.976497800000004,"Taken by French in 1795, follwed by series of occupations between French and English before return to Dutch in 186"
+17,Orangjestad,"St. Eustatius",8,"Dutch Republic",1678,1742,17.4867485,-62.976497800000004,
+17,Orangjestad,"St. Eustatius",10,France,1742,1742,17.4867485,-62.976497800000004,"French invasion: 1742 War of Austrian Succession, French threat to islanders, many fled w slaves to Curacao, including Jews- who emptied synagogue of content- various objects, ornaments, furnishings, lamps, sconces, candlestickes, candlesnuffer,. Two scrolls with mantles bands silver and wooden rimmonim, shofar, three silver pointers, spice box, sveral silk covereings of tebah, even holy ark w all drapes. Representatives Philip Benjamin and Sarah de la Morra left with Mikve Israel for safe keeping"
+17,Orangjestad,"St. Eustatius",8,"Dutch Republic",1742,1780,17.4867485,-62.976497800000004,
+16,Charlestown,Nevis,7,"English Empire",1628,1653,17.1374798,-62.623663299999976,
+16,Charlestown,Nevis,1,"Commonwealth of England",1653,1660,17.1374798,-62.623663299999976,"mid 17th c. during civil war, England unable to provide adequate support to colonies in Car. But they thrived during period of disorder- England unable to enforce Naviagtion Acts of 1651, meaning Dutch continued to dominate trade w islands. Dutch Islands, incl. Curacao and St. Eustatius major smuggling ports during period. National boundaries blurred for sake of profit"
+16,Charlestown,Nevis,2,"The Restoration",1660,1688,17.1374798,-62.623663299999976,
+16,Charlestown,Nevis,3,"William and Mary",1689,1702,17.1374798,-62.623663299999976,
+16,Charlestown,Nevis,4,"Kingdoms of England and Scotland",1702,1707,17.1374798,-62.623663299999976,
+16,Charlestown,Nevis,5,"Great Britain",1707,1801,17.1374798,-62.623663299999976,
+16,Charlestown,Nevis,6,"United Kingdom",1801,2021,17.1374798,-62.623663299999976,
+5,Speightstown,Barbados,7,"English Empire",1627,1966,13.17,-59.5525,
+44,Barbados,Barbados,7,"English Empire",1627,1966,13.17,-59.5525,
+4,Bridgetown,Barbados,7,"English Empire",1627,1966,13.17,-59.5525,
+6,Willemstad,Curacao,9,"Dutch West India Company",1634,1791,12.1047416,-68.9326698,"WIC bankrupy in 1791"
+6,Willemstad,Curacao,11,Spain,1499,1634,12.1047416,-68.9326698,"Spanish colony conquered by dutch"
+6,Willemstad,Curacao,8,"Dutch Republic",1791,2010,12.1047416,-68.9326698,"Given autonomous status"
+22,Tucacas,Venezuala,8,"Dutch Republic",1693,1720,10.797778,-68.3175,"Around 1693, Dutch founded Tucacas, port on norther venezuelan coast opposite Curacao, bacame base for raiding Spanish s. America and trading contraband; Novemebr 1720 Spanish raided settlement to eliminate Dutch encroachment, but found it already destoryed- Dutch had abandoned it"
+22,Tucacas,Venezuala,11,Spain,1720,1820,10.797778,-68.3175,"Raided by Spanish, Jews no longer present, no longer relavent to study, end date est"
+19,Cayenne,"French Guyana",10,France,1664,1676,4.922420000000001,-52.313453100000004,"reclaimed from dutch"
+19,Cayenne,"French Guyana",8,"Dutch Republic",1676,1677,4.922420000000001,-52.313453100000004,"Brief dutch occupation"
+19,Cayenne,"French Guyana",10,France,1677,2021,4.922420000000001,-52.313453100000004,NULL
+19,Cayenne,"French Guyana",9,"Dutch West India Company",1659,1664,4.922420000000001,-52.313453100000004,"Dutch colonies led by Langendyck and David Cohen Nassy"
+42,Suriname,Suriname,1,"Commonwealth of England",1651,1667,4,-56,"first established by the English in 1651 on the initiative of the Royalist governor of Barbados, Francis, fifth Lord Willoughby of Parham "
+42,Suriname,Suriname,8,"Dutch Republic",1667,1683,4,-56,"Zeeland sold to Dutch W India Co"
+42,Suriname,Suriname,9,"Dutch West India Company",1683,1799,4,-56,NULL
+42,Suriname,Suriname,6,"United Kingdom",1799,1816,4,-56,"Reclaimed by Bristish"
+42,Suriname,Suriname,8,"Dutch Republic",1816,1954,4,-56,NULL
+2,Recife,Brazil,8,"Dutch Republic",1630,1654,-8.054074,-34.8708494,"Dutch occupied Pernambuco, Brazil"
+2,Recife,Brazil,14,Portugal,1654,1817,-8.054074,-34.8708494,Pernambuco
+2,Recife,Brazil,14,Portugal,1534,1630,-8.054074,-34.8708494,Pernambuco
