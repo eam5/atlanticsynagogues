@@ -13,6 +13,8 @@
     url: /rabbi-map
 - name: Data Visualizations
   sublinks:
+  - name: Ruling Colonial Powers
+    url: /ruling-powers
   - name: Contributions
     url: /contributions
   - name: Access Paths
