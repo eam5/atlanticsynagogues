@@ -105,20 +105,20 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-4.csv", function(data) {
       if (d.idruling_powers == 15) {return "#fdcfe7"}
       else {return "#69b3a2"}})
       .attr("stroke-width", "12px")
-    .style('cursor', 'pointer')
-    .on('mouseover.tooltip', function(d) {
-            div.transition()    
-                .duration(100)    
-                .style("opacity", 0.95);    
-            div.html( d.name +"</br>"+ d.year_start +"-"+ d.year_end )  
-                .style("left", (d3.event.pageX + 12) + "px")   
-                .style("top", (d3.event.pageY - 28) + "px");  
-            })          
-    .on('mouseout.tooltip', function(d) {   
-        div.transition()    
-            .duration(100)    
-            .style("opacity", 0); 
-    });
+    .style('cursor', 'pointer');
+    // .on('mouseover.tooltip', function(d) {
+    //         div.transition()    
+    //             .duration(100)    
+    //             .style("opacity", 0.95);    
+    //         div.html( d.name +"</br>"+ d.year_start +"-"+ d.year_end )  
+    //             .style("left", (d3.event.pageX + 12) + "px")   
+    //             .style("top", (d3.event.pageY - 28) + "px");  
+    //         })          
+    // .on('mouseout.tooltip', function(d) {   
+    //     div.transition()    
+    //         .duration(100)    
+    //         .style("opacity", 0); 
+    // });
 
  svg.selectAll("mycircle")
     .data(cong)
