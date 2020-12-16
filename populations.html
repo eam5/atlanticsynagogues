@@ -1,0 +1,335 @@
+---
+layout: data-vis
+title: Populations
+---
+<style>
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    max-width: 250px;
+    padding: 7px;
+    font: 12px 'Roboto', sans-serif;
+    background: #fff;
+    border: 1px;
+    border-radius: 12px;
+    line-height: 16px;
+    pointer-events: none;
+    box-shadow: 8px 8px 12px -10px;
+    }
+    .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        vertical-align: top;
+        overflow: visible;
+        margin: 1rem 0 4rem ;
+    }
+    .svg-content {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+</style>
+<body>
+    <div class="d-flex align-items-baseline">
+        <h1>Jewish Populations in the Atlantic (1600-1860)</h1>
+      </div>
+<div class="d-flex flex-wrap align-items-baseline justify-content-between my-2">
+    <div id='axis-buttons'></div>
+</div>
+<div id="container" class="svg-container"></div></body>
+<script>
+var margin = {top: 40, right: 30, bottom: 30, left: 170},
+    width = 1200 - margin.left - margin.right,
+    height = 850 - margin.top - margin.bottom;
+    
+let div = d3.select('body')
+        .append('div') 
+        .attr('class', 'tooltip')
+        .style('opacity', 0);
+    
+const color = d3.scaleOrdinal()
+        .range(chroma.scale(['#0000b3','#0030ff', '#00deff','#b800c6', '#96ffea', '#c4fda0','#ffc200','#ff005e','#ec229f']).colors(17));
+
+var svg = d3.select("div#container")
+    .append("svg")
+    .attr("preserveAspectRatio", "xMinYMin")
+    .attr("viewBox", "0 0 1200 850")
+    .classed("svg-content", true)
+    .append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")");
+
+d3.csv("{{site.url}}/assets/data/populations_12_15_20.csv", function(num){
+d3.csv("{{site.url}}/assets/data/synagogues-powers-1.csv", function(bldg){
+d3.csv("{{site.url}}/assets/data/congregations-powers-1.csv", function(cong){
+d3.csv("{{site.url}}/assets/data/ruling-powers-pop.csv", function(data) {
+
+
+    const pop = num.filter(d=>d.calc_total != "0")
+        .sort(function(a, b) {
+        return parseFloat(b.lat) - parseFloat(a.lat)})
+        .filter(d=>d.year<=1861);
+    console.log(pop)
+ 
+    const x = d3.scaleTime()
+        .domain([new Date(1600, 0, 1), new Date(1860, 0, 1)])
+        .range([0, width]);
+    svg.append("g")
+        .attr('id', 'xAxisDate')
+        .attr("color", "#333")
+        .style('font-size', '0.9rem')
+        .call(d3.axisBottom(x).tickSize(height).tickFormat(d3.timeFormat("%Y")))
+        .call(g => g.select(".domain").attr("display", "none"))
+        .call(g => g.selectAll(".tick").selectAll("line").attr("stroke", "#D8D8D8").style("stroke-dasharray", "5 5"))
+        .call(g => g.selectAll(".tick").selectAll("text").attr("transform", "translate(0," + (-height-20) + ")"));
+
+    var y = d3.scaleBand()
+        .range([ 0, height ])
+        .domain(pop.map(function(d) { return d.city + ", " + d.country; }))
+        .padding(1);
+    svg.append("g")
+        .attr("color", "#333")
+            .style('font-size', '0.75rem')
+        .call(d3.axisLeft(y))
+        .call(g => g.select(".domain").attr("display", "none"))
+        .call(g => g.selectAll(".tick").selectAll("line").attr("stroke", "#D8D8D8").style("stroke-dasharray", "5 5").attr("x2", width))
+    
+  svg.selectAll("myline")
+    .data(data)
+    .enter()
+    .append("line")
+    .attr("id", "powers")
+      .attr("x1", function(d) { return x(new Date(d.year_start,0,1)); })
+      .attr("x2", function(d) { return x(new Date(d.year_end,0,1)); })
+      .attr("y1", function(d) { return y(d.city + ", " + d.country); })
+      .attr("y2", function(d) { return y(d.city + ", " + d.country); })
+      .attr("stroke", function(d){
+      if (d.idruling_powers <= 7) {return "#aaecdb";}
+      if (d.idruling_powers == 8 || d.idruling_powers == 9) {return "#e9c5f7"}
+      if (d.idruling_powers == 10 ) {return "#fff0c7"}
+      if (d.idruling_powers == 11 ) {return "#a3d3ff"}
+      if (d.idruling_powers == 12 || d.idruling_powers == 13) {return "#ffdcd0"}
+      if (d.idruling_powers == 14 ) {return "#c6cdff"}
+      if (d.idruling_powers == 15) {return "#fdcfe7"}
+      else {return "#69b3a2"}})
+      .attr("stroke-width", "12px")
+//    .style('cursor', 'pointer')
+//    .on('mouseover.tooltip', function(d) {
+//            div.transition()    
+//                .duration(100)    
+//                .style("opacity", 0.95);    
+//            div.html( d.name +"</br>"+ d.year_start +"-"+ d.year_end )  
+//                .style("left", (d3.event.pageX + 12) + "px")   
+//                .style("top", (d3.event.pageY - 28) + "px");  
+//            })          
+//    .on('mouseout.tooltip', function(d) {   
+//        div.transition()    
+//            .duration(100)    
+//            .style("opacity", 0); 
+//    })
+        .attr("opacity", 0);
+    
+    svg.selectAll("myline")
+        .data([{year_start:1600, year_end:1900}])
+        .enter()
+        .append("line")
+        .attr("x1", function(d) { return x(new Date(d.year_start,0,1)); })
+        .attr("x2", function(d) { return x(new Date(d.year_end,0,1)); })
+        .attr("y1", function(d) { return y(d.city + ", " + d.country); })
+        .attr("y2", function(d) { return y(d.city + ", " + d.country); })
+        .attr("stroke", "#f4f1eb")
+        .attr("stroke-width", "15px");
+
+
+    
+    svg.selectAll("mycircle")
+        .data(pop)
+        .enter()
+        .append("circle")
+        .attr("cx", function(d) { return x(new Date(d.year,0,1)); })
+        .attr("cy", function(d) { return y(d.city + ", " + d.country); })
+        .attr('r', d=>Math.sqrt(parseFloat(d.calc_total)))
+        .attr("stroke", "#fff")
+        .attr("stroke-width", 1)
+        .style("fill", function(d){ return color(d.country)})
+        .style('cursor', 'pointer')
+        .on('mouseover.tooltip', function(d) {
+                div.transition()    
+                    .duration(100)    
+                    .style("opacity", 0.95);    
+                div .html( d.city +"</br>"+ d.year +"</br>Est. Jewish Population:</br>"+ d.calc_total  )  
+                    .style("left", (d3.event.pageX + 12) + "px")   
+                    .style("top", (d3.event.pageY - 28) + "px");  
+                })          
+        .on('mouseout.tooltip', function(d) {   
+            div.transition()    
+                .duration(100)    
+                .style("opacity", 0); 
+        })
+        .attr("opacity", 0.4);
+    
+      svg.selectAll("mycircle")
+        .data(bldg.map(function(d){
+            if (d.country==="Jamaica"){
+                return {
+                year_opened: d.year_opened,
+                country: d.country,
+                building_name: d.building_name,
+                year_opened_acc: d.year_opened_acc,
+                city:"Jamaica",
+                bldg_city: d.city
+                }
+            } else if (d.country==="Barbados"){
+                return {
+                year_opened: d.year_opened,
+                country: d.country,
+                building_name: d.building_name,
+                year_opened_acc: d.year_opened_acc,
+                city:"Barbados",
+                bldg_city: d.city
+                }
+            } else {
+                return {
+                year_opened: d.year_opened,
+                country: d.country,
+                building_name: d.building_name,
+                year_opened_acc: d.year_opened_acc,
+                city: d.city,
+                bldg_city: d.city
+                }
+            }
+        }))
+        .enter()
+        .append("rect").attr("id", "synagogues")
+        .attr("x", function(d) { return x(new Date(d.year_opened,0,1))-5; })
+        .attr("y", function(d) { return y(d.city + ", " + d.country); })
+        .attr("width", 10)
+        .attr("height", 10)
+        .attr("stroke", "#fff")
+        .attr("stroke-width", 1)
+        .style("fill", "#ff6a66")
+        .attr("title", d=>d.city)
+        .style('cursor', 'pointer')
+        .on('mouseover.tooltip', function(d) {
+                div.transition()    
+                    .duration(100)    
+                    .style("opacity", 0.95);    
+                div .html( d.building_name +"</br>"+ d.bldg_city +"</br>Opened "+ d.year_opened +" (year "+d.year_opened_acc+")")  
+                    .style("left", (d3.event.pageX + 12) + "px")   
+                    .style("top", (d3.event.pageY - 28) + "px");  
+                })          
+        .on('mouseout.tooltip', function(d) { 
+            div.transition()    
+                .duration(100)    
+                .style("opacity", 0); 
+        })
+        .attr("opacity", 0);
+    
+    svg.selectAll("myline")
+        .data(cong.map(function(d){
+            if (d.country==="Jamaica"){
+                return {
+                year_est: d.year_est,
+                country: d.country,
+                congregation_name: d.congregation_name,
+                rite: d.rite,
+                city:"Jamaica",
+                cong_city: d.city
+                }
+            } else if (d.country==="Barbados"){
+                return {
+                year_est: d.year_est,
+                country: d.country,
+                congregation_name: d.congregation_name,
+                rite: d.rite,
+                city:"Barbados",
+                cong_city: d.city
+                }
+            } else {
+                return {
+                year_est: d.year_est,
+                country: d.country,
+                congregation_name: d.congregation_name,
+                rite: d.rite,
+                city: d.city,
+                cong_city: d.city
+                }
+            }
+        }))
+        .enter()
+        .append("line")
+        .attr("id", "congregations")
+        .attr("x1", function(d) { return x(new Date(d.year_est,0,1)); })
+        .attr("x2", function(d) { return x(new Date(d.year_est,0,1)); })
+        .attr("y1", function(d) { return y(d.city + ", " + d.country)-5; })
+        .attr("y2", function(d) { return y(d.city + ", " + d.country)+5; })
+        .attr("stroke-width", 3.5)
+        .style("stroke", function(d){
+            if (d.rite=="sephardic"){return "#00608c"}
+            else {return "#d65ca2"}
+        })
+        .style('cursor', 'pointer')
+        .on('mouseover.tooltip', function(d) {
+                div.transition()    
+                    .duration(100)    
+                    .style("opacity", 0.95);    
+                div .html( d.congregation_name +"</br>"+ d.cong_city + ", "+ d.country+"</br>Est."+ d.year_est )  
+                    .style("left", (d3.event.pageX + 12) + "px")   
+                    .style("top", (d3.event.pageY - 28) + "px");  
+                })          
+        .on('mouseout.tooltip', function(d) {   
+            div.transition()    
+                .duration(100)    
+                .style("opacity", 0); 
+        })
+        .attr("opacity", 0);
+
+    
+    const synagogues = d3.select('#axis-buttons')
+        .append('button')
+        .attr('class','btn btn-light btn-sm')
+        .style('margin-right', '8px')
+        .text('Show Synagogues')
+        .on("click", function(){
+            var active   = synagogues.active ? false : true,
+              newOpacity = active ? 0.5 : 0;
+            d3.selectAll("#synagogues").style("opacity", newOpacity);
+            synagogues.active = active;
+            d3.select(this).text(function(){if (synagogues.active = active){return "Hide Synagogues"}else {return "Show Synagogues"}})
+        });
+    
+    const congregations = d3.select('#axis-buttons')
+        .append('button')
+        .attr('class','btn btn-light btn-sm')
+        .style('margin-right', '8px')
+        .text('Show Congregations')
+        .on("click", function(){
+            var active   = congregations.active ? false : true,
+              newOpacity = active ? 1 : 0;
+            d3.selectAll("#congregations").style("opacity", newOpacity);
+            congregations.active = active;
+            d3.select(this).text(function(){if (congregations.active = active){return "Hide Congregations"}else {return "Show Congregations"}})
+            
+        });
+    
+    const powers = d3.select('#axis-buttons')
+        .append('button')
+        .attr('class','btn btn-light btn-sm')
+        .style('margin-right', '8px')
+        .text('Show Colonial Powers')
+        .on("click", function(){
+            var active   = powers.active ? false : true,
+              newOpacity = active ? 0.6 : 0;
+            d3.selectAll("#powers").style("opacity", newOpacity);
+            powers.active = active;
+            d3.select(this).text(function(){if (powers.active = active){return "Hide Colonial Powers"}else {return "Show Colonial Powers"}})
+            
+        });
+    
+
+
+})
+}) })
+        });
+</script>
