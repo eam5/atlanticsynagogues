@@ -1,0 +1,88 @@
+idlocation,city,state,country,year,calc_total,total_jews,seph,ashk,fam_jewish,fam_seph,fam_ashk,total_pop,white_pop,free_black_jews,enslaved_jews,enslaved_total,plantations_jews,plantations_total,notes,region,lat,longitude,idcitation,cit_pgs
+1,Amsterdam,NULL,Netherlands,1610,350,,350,,,,,,,,,,,,,Western Europe,52.3702157,4.8951679,85,19
+1,Amsterdam,NULL,Netherlands,1620,1000,,1000,,,,,,,,,,,,,Western Europe,52.3702157,4.8951679,"Israel, economic contri",513
+1,Amsterdam,NULL,Netherlands,1622,0,,,,,,,105000,,,,,,,,Western Europe,52.3702157,4.8951679,"Israel, The Dutch Republic",380
+1,Amsterdam,NULL,Netherlands,1630,900,,900,,,,,,,,,,,,,Western Europe,52.3702157,4.8951679,85,19
+58,Brazil,Pernambuco,Brazil,1645,1450,1450,,,,,,,2900,,,,,,jewish pop comparable to Amsterdam same time,South America,-8.333333,-37.8,8,108
+58,Brazil,Pernambuco,Brazil,1645,0,,,,,,,,,,,,10,166,,South America,-8.333333,-37.8,19,98
+2,Recife,Pernambuco,Brazil,1649,350,350,,,,,,,,,,,,,,South America,-8.054074,-34.8708494,Klloster 2006,136
+1,Amsterdam,NULL,Netherlands,1650,1400,,1400,,,,,,,,,,,,,Western Europe,52.3702157,4.8951679,85,19
+2,Recife,Pernambuco,Brazil,1654,600,600,,,,,,,,,,,,,,South America,-8.054074,-34.8708494,9,28
+24,New York,New York,United States,1654,24,24,,,,,,800,,,,,,,,North America,40.7127753,-74.0059728,23,467
+1,Amsterdam,NULL,Netherlands,1658,3000,,3000,,,,,,,,,,,,,Western Europe,52.3702157,4.8951679,"Israel, economic contri",505
+6,Willemstad,NULL,Curacao,1659,70,70,,,,,,,,,,,,,group that joined Isaac Da Costa in founding 6 community,Caribbean,12.1047416,-68.9326698,22,46
+24,New York,New York,United States,1664,0,,,,,,,1500,,,,,,,,North America,40.7127753,-74.0059728,23,32
+42,Suriname,NULL,Suriname,1665,20,20,,,,,,,2000,,,,,,"pre-1666, 20-30 jews",South America,5,-56,19,99
+1,Amsterdam,NULL,Netherlands,1675,2500,,2500,,,,,,,,,,,,,Western Europe,52.3702157,4.8951679,85,19
+44,Barbados,NULL,Barbados,1675,200,200,,,,,,,,,,,,,1675-80,Caribbean,13.17,-59.5525,16,11
+16,Charlestown,NULL,Nevis,1678,20,20,,,,,,,,,,,,,,Caribbean,17.1374798,-62.6236633,4,168
+17,Orangjestad,NULL,St. Eustatius,1678,0,,,,,,,1000,,,,,,,https://www.statiagovernment.com/about-st.-eustatius/history,Caribbean,17.4867485,-62.9764978,,
+44,Barbados,NULL,Barbados,1679,300,300,,,,,,,,,,,,,,Caribbean,13.17,-59.5525,,
+44,Barbados,NULL,Barbados,1683,0,,,,,,,66170,19568,,,46602,,,,Caribbean,13.17,-59.5525,9,160
+8,London,NULL,England,1684,414,414,,,,,,,,,,,,,,Western Europe,51.5073509,-0.1277583,41,20
+10,Jodensavanne,NULL,Suriname,1684,232,232,,,,55,,,,,995,,,,"poll tax, 105 white men, 58 white women, 995 slaves, 69 white children",South America,5.417798,-54.964218,20,26
+1,Amsterdam,NULL,Netherlands,1690,8400,8400,,,,,,,,,,,,,accounted for 8% Netherlands overseas trade,Western Europe,52.3702157,4.8951679,8,118
+10,Jodensavanne,NULL,Suriname,1690,575,575,,,,92,10,,,,,,,,"according to Nassy (later author), 92 families, not counting 10-12 German Jews married into Portuguese com, 50 bachelors, alowing 5 per family, total about 560-575 persons",South America,5.417798,-54.964218,20,26
+42,Suriname,NULL,Suriname,1690,0,,,,,,,,800,,,4500,,,"late 17th c, total enslaved 4000-5000",South America,5,-56,20,28
+10,Jodensavanne,NULL,Suriname,1694,0,,,,,,,,,,9000,,40,,,South America,5.417798,-54.964218,19,102
+42,Suriname,NULL,Suriname,1694,500,,500,,,,,,,,9000,,40,,sugar plantations,South America,5,-56,"Israel, economic contri",532
+24,New York,New York,United States,1695,0,,,,20,,,,,,,,,,number of those who contributed to synagogue construction,North America,40.7127753,-74.0059728,23,252
+8,London,NULL,England,1700,1000,1000,,,,,,,,,,,,,,Western Europe,51.5073509,-0.1277583,8,116
+10,Jodensavanne,NULL,Suriname,1700,575,575,,,,,,,,,1300,,40,,end of 17th,South America,5.417798,-54.964218,4,
+6,Willemstad,NULL,Curacao,1702,0,,,,,101,,,,,,,,,,Caribbean,12.1047416,-68.9326698,16,12
+6,Willemstad,NULL,Curacao,1702,280,,280,,,126,,,,,,,,,"number of familes from 101 familes taxpayers, another 25 whose modest earings non-taxable",Caribbean,12.1047416,-68.9326698,22,93
+17,Orangjestad,NULL,St. Eustatius,1722,21,21,,,,4,,1204,,,16,,,,,Caribbean,17.4867485,-62.9764978,10,2
+17,Orangjestad,NULL,St. Eustatius,1722,21,21,,,,,,1204,,,,,,,,Caribbean,17.4867485,-62.9764978,22,519
+16,Charlestown,NULL,Nevis,1725,100,100,,,,,,,,,,,,,,Caribbean,17.1374798,-62.6236633,4,168
+24,New York,New York,United States,1728,61,61,,,,,,,,,,,,,,North America,40.7127753,-74.0059728,23,252
+42,Suriname,NULL,Suriname,1730,0,,,,,,,,,,,,115,400,,South America,5,-56,"Israel, economic contri",532
+42,Suriname,NULL,Suriname,1737,0,,,,,,,,,,,,115,401,,South America,5,-56,19,102
+31,Christiansted,NULL,St. Croix,1742,0,,,,,,,,,,,1906,,242,https://en.wikipedia.org/wiki/Saint_Croix,Caribbean,17.744077,-64.704155,,
+6,Willemstad,NULL,Curacao,1745,1350,,,,,270,,,,,,,,,,Caribbean,12.1047416,-68.9326698,22,180
+10,Jodensavanne,NULL,Suriname,1750,2000,2000,,,,,,,,,,,115,400,over 2000 total jews,South America,5.417798,-54.964218,4,
+42,Suriname,NULL,Suriname,1750,2000,2000,,,,,,,,,,,,,,South America,5,-56,8,122
+42,Suriname,NULL,Suriname,1750,800,,,800,,,,,,,,,,,Ashkenazi 40% of jewish pop (caluclated from total jewish population 2000,South America,5,-56,19,105
+31,Christiansted,NULL,St. Croix,1754,0,,,,,,,,,,,7566,,,https://en.wikipedia.org/wiki/Saint_Croix,Caribbean,17.744077,-64.704155,,
+44,Barbados,NULL,Barbados,1755,800,800,,,,,,,,,,,,,,Caribbean,13.17,-59.5525,,
+6,Willemstad,NULL,Curacao,1768,1200,,,,,240,,,,,,,,,,Caribbean,12.1047416,-68.9326698,22,172
+24,New York,New York,United States,1773,100,,,,30-40,,,,,,,,,,,North America,40.7127753,-74.0059728,23,252
+25,Newport,Rhode Island,United States,1774,100,,,,35,,,9000,,,,,,,,North America,41.4901024,-71.3128285,,
+8,London,NULL,England,1776,0,,,,,,,650000,,,,,,,,Western Europe,51.5073509,-0.1277583,8,47
+26,Philadelphia,Pennsylvania,United States,1776,0,,,,,,,25000,,,,,,,,North America,39.9525839,-75.1652215,8,47
+11,Paramaribo,NULL,Suriname,1780,1300,1300,,,,,,,,100,,,,,,South America,5.8520355,-55.2038278,15,104
+17,Orangjestad,NULL,St. Eustatius,1780,400,,400,,,,,,,,,,,,,Caribbean,17.4867485,-62.9764978,"Israel, economic contri",534
+25,Newport,Rhode Island,United States,1783,0,,,,,,,4000,,,,,,,,North America,41.4901024,-71.3128285,,
+6,Willemstad,NULL,Curacao,1785,1200,1200,,,,,,8500,3100,,,,,,,Caribbean,12.1047416,-68.9326698,22,277
+11,Paramaribo,NULL,Suriname,1788,2090,1045,615,430,,,,,2000,,,,,,David Nassy,South America,5.8520355,-55.2038278,20,28
+6,Willemstad,NULL,Curacao,1789,0,,,,,,,4692,,,,,,,,Caribbean,12.1047416,-68.9326698,,
+17,Orangjestad,NULL,St. Eustatius,1790,157,157,,,,,,,,,,,,,157 registered,Caribbean,17.4867485,-62.9764978,10,14
+17,Orangjestad,NULL,St. Eustatius,1790,0,,,,,,,8124,,,,,,,https://www.statiagovernment.com/about-st.-eustatius/history,Caribbean,17.4867485,-62.9764978,,
+10,Jodensavanne,NULL,Suriname,1791,200,200,,,,,,,,,,,,,,South America,5.417798,-54.964218,19,106
+10,Jodensavanne,NULL,Suriname,1791,1050,,620,430,,,,,,,,,,,,South America,5.417798,-54.964218,20,27
+11,Paramaribo,NULL,Suriname,1791,2100,1050,620,430,,,,13000,3350,,,,,,,South America,5.8520355,-55.2038278,19,106
+11,Paramaribo,NULL,Suriname,1791,280,,250,30,,,,,,,,,,,,South America,5.8520355,-55.2038278,20,27
+42,Suriname,NULL,Suriname,1791,2660,1330,870,460,,,,,,,,,,,,South America,5,-56,20,27
+24,New York,New York,United States,1794,360,,,,72,,,,,,,,,,,North America,40.7127753,-74.0059728,23,252
+1,Amsterdam,NULL,Netherlands,1800,5000,,5000,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Western Europe,52.3702157,4.8951679,,
+6,Willemstad,NULL,Curacao,1800,1000,,1000,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Caribbean,12.1047416,-68.9326698,,
+8,London,NULL,England,1800,2000,,2000,,,,,,,,,,,,Bevis Marks specificially. https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Western Europe,51.5073509,-0.1277583,,
+20,Charlotte Amalie,NULL,St. Thomas,1800,200,,200,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Caribbean,18.3419004,-64.9307007,,
+33,Venice,NULL,Italy,1800,1000,,1000,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Southern Europe,45.4930475,12.4177003,,
+40,Hamburg,NULL,Germany,1800,6500,,200,6300,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Western Europe,53.551085,9.993682,,
+42,Suriname,NULL,Suriname,1800,1000,,1000,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,South America,5,-56,,
+44,Barbados,NULL,Barbados,1800,80,80,,,,,,,,,,,,,fewer than 100,Caribbean,13.17,-59.5525,4,105
+45,Jamaica,NULL,Jamaica,1800,1000,,1000,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Caribbean,18.18,-77.4,,
+52,Bordeaux,NULL,France,1800,1770,,1422,348,,327,,,,,,,,,Jewish Virtual Library,Western Europe,44.84,-0.58,,
+53,Livorno,NULL,Italy,1800,4000,,4000,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Western Europe,43.55,10.316667,,
+24,New York,New York,United States,1812,450,450,,,60,,,96000,,,,,,,400-500 total jews,North America,40.7127753,-74.0059728,23,472
+17,Orangjestad,NULL,St. Eustatius,1816,0,,,,,,,2668,,,,,,,https://www.statiagovernment.com/about-st.-eustatius/history,Caribbean,17.4867485,-62.9764978,,
+17,Orangjestad,NULL,St. Eustatius,1818,5,5,,,,,,,,,,,,,restored to Netherlands until 1816. Census in 1818,Caribbean,17.4867485,-62.9764978,10,15
+18,Philipsburg,NULL,St. Maarten,1818,1,1,,,,,,,,,,,,,restored to Netherlands until 1816. Census in 1818,Caribbean,18.0295839,-63.0471371,10,15
+11,Paramaribo,NULL,Suriname,1830,1200,1200,,,,,,,,,,,,,,South America,5.8520355,-55.2038278,20,27
+24,New York,New York,United States,1830,1150,1150,,,,,,,,,,,,,,North America,40.7127753,-74.0059728,20,27
+42,Suriname,NULL,Suriname,1845,2581,1363,485,733,,,,,,,,,,,145 listed as 'Israelites',South America,5,-56,20,27
+17,Orangjestad,NULL,St. Eustatius,1846,1,1,,,,,,,,,,,,,"died that year, last remaining",Caribbean,17.4867485,-62.9764978,10,15
+31,Christiansted,NULL,St. Croix,1850,372,372,,,,,,,,,,,,,4,Caribbean,17.744077,-64.704155,233,
+10,Jodensavanne,NULL,Suriname,1900,100,,,,,20,,,,,,,,,end of 18th c,South America,5.417798,-54.964218,15,100
+53,Livorno,NULL,Italy,1601,114,,114,,,,,,,,,,,,,Western Europe,43.55,10.316667,,
+53,Livorno,NULL,Italy,1689,3000,,3000,,,,,,,,,,,,,Western Europe,43.55,10.316667,,
