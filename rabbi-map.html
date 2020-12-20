@@ -4,36 +4,40 @@ title: Rabbi Map
 ---
 <style>
     
-    #mapid { height: 480px; width: 100%;}
+    #mapid, #mapid2 { height: 480px; width: 100%;}
 
-    /* #vis {
-        width:740px;
-        height:480px;
-        margin-top:1rem;
-    } */
-    circle {
-        opacity: 0.4;
-        cursor: pointer;
-        pointer-events: auto !important;
+    .circle-icon {
+         width: 14px;
+        height: 14px;
+     opacity: 0.4;
     }
-    .links {
-        cursor: pointer;
-        pointer-events: auto !important;
+    .circle-icon > div {
+            margin-right: 2px;
+/*            margin-left: -2px;*/
+            margin-top: -11px;
+            transform-origin: center center;
+            font: 22px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+        }
+ .arrow-icon {
+        width: 14px;
+        height: 14px;
+     opacity: 0.4;
     }
-    .tweet {
-        padding: 0.5em 0.5em;
-    }
-    
-    .date, .years {
-        font-size: 0.9em;
-    }
+
+        .arrow-icon > div {
+            margin-right: 2px;
+/*            margin-left: -2px;*/
+            margin-top: -4px;
+            transform-origin: center center;
+            font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+        }
     
 </style>
     <div class="d-flex flex-wrap align-items-baseline">
         <h1>Atlantic Synagogues: Rabbis</h1>
-        <button id="allYears" class='btn btn-link'>(show all)</button>    
+        <!-- <button id="allYears" class='btn btn-link'>(show all)</button>     -->
     </div>
-<div class="d-flex flex-wrap align-items-baseline justify-content-between my-2">
+<!-- <div class="d-flex flex-wrap align-items-baseline justify-content-between my-2">
     <button id="button1" type="button" class="btn btn-light btn-sm">1600-1650</button>
     <button id="button2" type="button" class="btn btn-light btn-sm">1650-1700</button>
     <button id="button3" type="button" class="btn btn-light btn-sm">1700-1750</button>
@@ -43,440 +47,451 @@ title: Rabbi Map
     <button id="buttonCuracao" type="button" class="btn btn-light btn-sm">Curacao</button>
     <button id="buttonNY" type="button" class="btn btn-light btn-sm">New York</button>
     <button id="buttonNewport" type="button" class="btn btn-light btn-sm">Newport, RI</button>
-</div>
+</div> -->
 <div id="vis" class="d-flex flex-wrap">
     <div id="mapid"></div>
-    <div class="flex-shrink-1 my-2">
+    <!-- <div class="flex-shrink-1 my-2">
         <div id="title"></div>
         <div id="travel"></div>
         <div id="rabbis"></div>
-    </div>
+    </div> -->
 </div> 
+<!-- <div>
+    <h2>All Rabbis</h2>
+    <div id="mapid2"></div>
+</div> -->
 <script>
-var travel = d3.select("#travel");
-var rabbis = d3.select("#rabbis");
-
-var springs = L.featureGroup(); //Same as L.layerGroup() but with more options.
-
 var cartoUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
 var cartoAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
 
-var carto = L.tileLayer(cartoUrl, {subdomains: 'abcd', maxZoom: 18, attribution: cartoAttrib})
+var carto = L.tileLayer(cartoUrl, {subdomains: 'abcd', maxZoom: 18, attribution: cartoAttrib});
     
-var map = L
-    .map('mapid', {
-        center: [28.079555, -26.940793],
-        zoom: 3,
-        layers: [carto, springs]
-    });
+var data1650 = L.layerGroup();
+var data1700 = L.layerGroup();
+var data1750 = L.layerGroup();
+var data1800 = L.layerGroup();
+var layer1 = L.layerGroup();
+var amstSource = L.layerGroup();
+var londonSource = L.layerGroup();
+var curacaoSource = L.layerGroup();
+var nySource = L.layerGroup();
+// var caribTarget = L.layerGroup();
+var travel = L.layerGroup();
+var carigal = L.layerGroup();
+var sasportas = L.layerGroup();
+var pardo = L.layerGroup();
+var touro = L.layerGroup();
+var layer2 = L.layerGroup();
     
-    
-function addLayer2(data, layer){
-    L.svg({clickable:true}).addTo(layer);
-const overlay = d3.select(map.getPanes().overlayPane)
-const svg = overlay.select('svg').attr("pointer-events", "auto").append('g')
+var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
 
-var titleMinYr = d3.min(data.map(d=>d.minYear));
-        var titleMaxYr = d3.max(data.map(d=>d.maxYear));
-        console.log(titleMinYr)
-var title = d3.select("#title");
-title.append("h3").text("Rabbis " + titleMinYr +"-" + titleMaxYr);
+var map = L.map('mapid', {
+    center: [28.079555, -15.940793],
+    zoom: 3,
+    layers: [carto, data1650]
+});
 
-var defs = d3.select("#mapid")
-  .select("svg").append("svg:defs")
-.append("svg:marker")
-    .attr("id", "triangle")
-    .attr("refX", 6)
-    .attr("refY", 6)
-    .attr("markerWidth", 30)
-    .attr("markerHeight", 30)
-    .attr("markerUnits","userSpaceOnUse")
-    .attr("orient", "auto")
-    .append("path")
-    .attr("d", "M 0 0 12 6 0 12 3 6");
+// var map2 = L.map('mapid2', {
+//     center: [28.079555, -15.940793],
+//     zoom: 3,
+//     layers: [osm, layer2]
+// });
+
+var baseLayers = {
+//    "OpenStreetMap": osm,
+    "Carto Positron": carto
+};
     
-    const links = svg.selectAll('path')
-        .data(data)
-        .enter().append('path')
-        .attr('class', 'links')
-        .attr('d', function(d){
-            var sourcePt = map.latLngToLayerPoint([d.sourceX, d.sourceY])
-            var targetPt = map.latLngToLayerPoint([d.targetX, d.targetY])
-            var dx = targetPt.x - sourcePt.x,
-            dy = targetPt.y - sourcePt.y,
-            dr = Math.sqrt(dx * dx + dy * dy);
-            return "M" + sourcePt.x + "," + sourcePt.y + "A" + dr + "," + dr + " 0 0,1 " + targetPt.x + "," + targetPt.y;
-        })
-        .attr("marker-end", function(d){
-            if (d.source_location===d.target_location){return "none"}
-            else {return "url(#triangle)"}
-        })
-        .attr('fill', 'none')
-    .attr("stroke", function(d){ if(d.rabbis[0].idpeople=="25"){return "blue"} else {return "#17202A"}})
-        .attr('stroke-width', d=>d.amount*2)
-        .attr("opacity", 0.6)
-    .on('click', function(d) {
-        var location = this;
-        d3.selectAll(".links").transition().style('opacity', function () {
-            return (this === location) ? 1.0 : 0.6;
-        });
-        
-        
-        var titleLoc = d.sourceTarget;
-        var number = d.amount;
-        
-        travel.text(titleLoc + " (" + number +")");
-        
-        var rabbiData = rabbis.selectAll(".tweet")
-            .data(d.rabbis);
-        rabbiData.enter().append('div')
-            .attr("class", "tweet");
-        rabbiData.exit().remove();
-        
-        rabbiData.selectAll('div').remove();
-        
-        rabbiData.append("div")
-            .text(d=>d.name);
-         rabbiData.append("div")
-            .attr("class", "years")
-            .text(d=> d.congregation_name + " (" + d.year_start + "-" + d.year_end +")")
-        rabbiData.append("div")
-            .attr("class", "date")
-            .text(d=> "Arrived in " + d.target_location +": " + d.year_start);
-    });
+var overlays = {
+    "1600-1650": data1650,
+    "1650-1700": data1700,
+    "1700-1750": data1750,
+    "1750-1800": data1800,
+    "1800s": layer1,
+    "Amsterdam": amstSource,
+    "London": londonSource,
+    "Curacao": curacaoSource,
+    "New York": nySource,
+    // "Caribbean": caribTarget,
+    "Traveling Rabbis": travel,
+    "Rabbi Carigal": carigal,
+    "Rabbi Sasportas": sasportas,
+    "Pardo Family": pardo,
+    "Rabbi Isaac Touro": touro
+};
+
+// var overlays2 = [];
     
-
-}
-
-d3.csv("{{site.url}}/assets/data/rabbi_locations_network.csv", function(data) {
-    _.each(data, function(link, i, data){
-        link.sourceTarget = link.source_location + "  to " + link.target_location
+d3.csv('{{site.url}}/assets/data/rabbi_locations-1.csv', function(data){
+// console.log(data)
+    
+_.each(data, function(link, i, data){
+     link.route = link.source_location + "  to " + link.target_location
         link.start = parseFloat(link.year_start)
         link.end = parseFloat(link.year_end)
-    } )
-    
-    const allYears = _.chain(data)
-     .filter(t=>t.sourceX != "")
-     .groupBy(t=>t.sourceTarget)
-     .map(function(t){
-         return {
-             sourceTarget: t[0].sourceTarget,
-             source_location: t[0].source_location,
-             sourceX: parseFloat(t[0].sourceX),
-             sourceY: parseFloat(t[0].sourceY),
-             target_location: t[0].target_location,
-             targetX: parseFloat(t[0].targetX),
-             targetY: parseFloat(t[0].targetY),
-             amount: t.length,
-             rabbis: t,
-             minYear: d3.min(t.map(d=>d.start)),
-             maxYear: d3.max(t.map(d=>d.start))
-         }
-     })
-     .sort(function(a, b) {
-        return a.sourceTarget.localeCompare(b.sourceTarget);
-    })
-    .value();
-    
-     const data1650 = _.chain(data)
-     .filter(t=>t.sourceX != "")
-     .filter(d=>(d.year_start < 1650 && d.year_start!=""))
-     .groupBy(t=>t.sourceTarget)
-     .map(function(t){
-         return {
-             sourceTarget: t[0].sourceTarget,
-             source_location: t[0].source_location,
-             sourceX: parseFloat(t[0].sourceX),
-             sourceY: parseFloat(t[0].sourceY),
-             target_location: t[0].target_location,
-             targetX: parseFloat(t[0].targetX),
-             targetY: parseFloat(t[0].targetY),
-             amount: t.length,
-             rabbis: t,
-             minYear: d3.min(t.map(d=>d.start)),
-             maxYear: d3.max(t.map(d=>d.start))
-         }
-     })
-     .sort(function(a, b) {
-        return a.sourceTarget.localeCompare(b.sourceTarget);
-    })
-    .value();
-    
-    const data1700 = _.chain(data)
-     .filter(t=>t.sourceX != "")
-     .filter(d=>(d.year_start >= 1650 && d.year_start <1700 && d.year_start!=""))
-     .groupBy(t=>t.sourceTarget)
-     .map(function(t){
-         return {
-             sourceTarget: t[0].sourceTarget,
-             source_location: t[0].source_location,
-             sourceX: parseFloat(t[0].sourceX),
-             sourceY: parseFloat(t[0].sourceY),
-             target_location: t[0].target_location,
-             targetX: parseFloat(t[0].targetX),
-             targetY: parseFloat(t[0].targetY),
-             amount: t.length,
-             rabbis: t,
-             minYear: d3.min(t.map(d=>d.start)),
-             maxYear: d3.max(t.map(d=>d.start))
-         }
-     })
-     .sort(function(a, b) {
-        return a.sourceTarget.localeCompare(b.sourceTarget);
-    })
-    .value();
-    
-    const data1750 = _.chain(data)
-     .filter(t=>t.sourceX != "")
-     .filter(d=>(d.year_start >= 1700 && d.year_start <1750 && d.year_start!=""))
-     .groupBy(t=>t.sourceTarget)
-     .map(function(t){
-         return {
-             sourceTarget: t[0].sourceTarget,
-             source_location: t[0].source_location,
-             sourceX: parseFloat(t[0].sourceX),
-             sourceY: parseFloat(t[0].sourceY),
-             target_location: t[0].target_location,
-             targetX: parseFloat(t[0].targetX),
-             targetY: parseFloat(t[0].targetY),
-             amount: t.length,
-             rabbis: t,
-             minYear: d3.min(t.map(d=>d.start)),
-             maxYear: d3.max(t.map(d=>d.start))
-         }
-     })
-     .sort(function(a, b) {
-        return a.sourceTarget.localeCompare(b.sourceTarget);
-    })
-    .value();
-    
-    const data1800 = _.chain(data)
-     .filter(t=>t.sourceX != "")
-     .filter(d=>(d.year_start >= 1750 && d.year_start <1800 && d.year_start!=""))
-     .groupBy(t=>t.sourceTarget)
-     .map(function(t){
-         return {
-             sourceTarget: t[0].sourceTarget,
-             source_location: t[0].source_location,
-             sourceX: parseFloat(t[0].sourceX),
-             sourceY: parseFloat(t[0].sourceY),
-             target_location: t[0].target_location,
-             targetX: parseFloat(t[0].targetX),
-             targetY: parseFloat(t[0].targetY),
-             amount: t.length,
-             rabbis: t,
-             minYear: d3.min(t.map(d=>d.start)),
-             maxYear: d3.max(t.map(d=>d.start))
-         }
-     })
-     .sort(function(a, b) {
-        return a.sourceTarget.localeCompare(b.sourceTarget);
-    })
-    .value();
-    
-    const dataAmstSource = _.chain(data)
-     .filter(t=>t.sourceX != "")
-     .filter(d=>d.source_location=="Amsterdam, Netherlands")
-     .groupBy(t=>t.sourceTarget)
-     .map(function(t){
-         return {
-             sourceTarget: t[0].sourceTarget,
-             source_location: t[0].source_location,
-             sourceX: parseFloat(t[0].sourceX),
-             sourceY: parseFloat(t[0].sourceY),
-             target_location: t[0].target_location,
-             targetX: parseFloat(t[0].targetX),
-             targetY: parseFloat(t[0].targetY),
-             amount: t.length,
-             rabbis: t,
-             minYear: d3.min(t.map(d=>d.start)),
-             maxYear: d3.max(t.map(d=>d.start))
-         }
-     })
-     .sort(function(a, b) {
-        return a.sourceTarget.localeCompare(b.sourceTarget);
-    })
-    .value();
-    
-     const dataLondon = _.chain(data)
-     .filter(t=>t.sourceX != "")
-     .filter(d=>d.target_location=="London, England" || d.source_location=="London, England")
-     .groupBy(t=>t.sourceTarget)
-     .map(function(t){
-         return {
-             sourceTarget: t[0].sourceTarget,
-             source_location: t[0].source_location,
-             sourceX: parseFloat(t[0].sourceX),
-             sourceY: parseFloat(t[0].sourceY),
-             target_location: t[0].target_location,
-             targetX: parseFloat(t[0].targetX),
-             targetY: parseFloat(t[0].targetY),
-             amount: t.length,
-             rabbis: t,
-             minYear: d3.min(t.map(d=>d.start)),
-             maxYear: d3.max(t.map(d=>d.start))
-         }
-     })
-    .value();
-    
-    const dataCuracaoSource = _.chain(data)
-     .filter(t=>t.sourceX != "")
-     .filter(d=>d.source_location=="Willemstad, Curacao")
-     .groupBy(t=>t.sourceTarget)
-     .map(function(t){
-         return {
-             sourceTarget: t[0].sourceTarget,
-             source_location: t[0].source_location,
-             sourceX: parseFloat(t[0].sourceX),
-             sourceY: parseFloat(t[0].sourceY),
-             target_location: t[0].target_location,
-             targetX: parseFloat(t[0].targetX),
-             targetY: parseFloat(t[0].targetY),
-             amount: t.length,
-             rabbis: t,
-             minYear: d3.min(t.map(d=>d.start)),
-             maxYear: d3.max(t.map(d=>d.start))
-         }
-     })
-    .value();
-    
-    const dataNYTarget = _.chain(data)
-     .filter(t=>t.sourceX != "")
-     .filter(d=>d.target_location=="New York, United States" || d.source_location=="New York, United States")
-     .groupBy(t=>t.sourceTarget)
-     .map(function(t){
-         return {
-             sourceTarget: t[0].sourceTarget,
-             source_location: t[0].source_location,
-             sourceX: parseFloat(t[0].sourceX),
-             sourceY: parseFloat(t[0].sourceY),
-             target_location: t[0].target_location,
-             targetX: parseFloat(t[0].targetX),
-             targetY: parseFloat(t[0].targetY),
-             amount: t.length,
-             rabbis: t,
-             minYear: d3.min(t.map(d=>d.start)),
-             maxYear: d3.max(t.map(d=>d.start))
-         }
-     })
-    .value();
-    
-     const dataNewportTarget = _.chain(data)
-     .filter(t=>t.sourceX != "")
-     .filter(d=>d.target_location=="Newport, United States" || d.idpeople=="25")
-     .groupBy(t=>t.sourceTarget)
-     .map(function(t){
-         return {
-             sourceTarget: t[0].sourceTarget,
-             source_location: t[0].source_location,
-             sourceX: parseFloat(t[0].sourceX),
-             sourceY: parseFloat(t[0].sourceY),
-             target_location: t[0].target_location,
-             targetX: parseFloat(t[0].targetX),
-             targetY: parseFloat(t[0].targetY),
-             amount: t.length,
-             rabbis: t,
-             minYear: d3.min(t.map(d=>d.start)),
-             maxYear: d3.max(t.map(d=>d.start))
-         }
-     })
-     .sort(function(a, b) {
-        return a.sourceTarget.localeCompare(b.sourceTarget);
-    })
-    .value();
-    
-    addLayer2(data1650, springs);
+})
 
-    d3.select('#allYears').on('click', function(d){
-            d3.select(map.getPanes().overlayPane).select("svg").remove();
-            d3.select("#title h3").remove();
-             d3.selectAll("#travel").text("");
-             d3.selectAll(".tweet").remove();
-             addLayer2(allYears, springs);
-        });
-    d3.select('#button1').on('click', function(d){
-            d3.select(map.getPanes().overlayPane).select("svg").remove();
-            d3.select("#title h3").remove();
-             d3.selectAll("#travel").text("");
-             d3.selectAll(".tweet").remove();
-             addLayer2(data1650, springs);
-        });
-    d3.select('#button2').on('click', function(d){
-            d3.select(map.getPanes().overlayPane).select("svg").remove();
-            d3.select("#title h3").remove();
-             d3.selectAll("#travel").text("");
-             d3.selectAll(".tweet").remove();
-             addLayer2(data1700, springs);
-        });
-    d3.select('#button3').on('click', function(d){
-            d3.select(map.getPanes().overlayPane).select("svg").remove();
-            d3.select("#title h3").remove();
-             d3.selectAll("#travel").text("");
-             d3.selectAll(".tweet").remove();
-             addLayer2(data1750, springs);
-        });
-    d3.select('#button4').on('click', function(d){
-            d3.select(map.getPanes().overlayPane).select("svg").remove();
-            d3.select("#title h3").remove();
-             d3.selectAll("#travel").text("");
-             d3.selectAll(".tweet").remove();
-             addLayer2(data1800, springs);
-        });
-    d3.select('#buttonAmst').on('click', function(d){
-            d3.select(map.getPanes().overlayPane).select("svg").remove();
-            d3.select("#title h3").remove();
-             d3.selectAll("#travel").text("");
-             d3.selectAll(".tweet").remove();
-             addLayer2(dataAmstSource, springs);
-        });
-    d3.select('#buttonLondon').on('click', function(d){
-            d3.select(map.getPanes().overlayPane).select("svg").remove();
-            d3.select("#title h3").remove();
-             d3.selectAll("#travel").text("");
-             d3.selectAll(".tweet").remove();
-             addLayer2(dataLondon, springs);
-        });
-    d3.select('#buttonCuracao').on('click', function(d){
-            d3.select(map.getPanes().overlayPane).select("svg").remove();
-            d3.select("#title h3").remove();
-             d3.selectAll("#travel").text("");
-             d3.selectAll(".tweet").remove();
-             addLayer2(dataCuracaoSource, springs);
-        });
-    d3.select('#buttonNY').on('click', function(d){
-            d3.select(map.getPanes().overlayPane).select("svg").remove();
-            d3.select("#title h3").remove();
-             d3.selectAll("#travel").text("");
-             d3.selectAll(".tweet").remove();
-             addLayer2(dataNYTarget, springs);
-        });
-    d3.select('#buttonNewport').on('click', function(d){
-             d3.select(map.getPanes().overlayPane).select("svg").remove();
-            d3.select("#title h3").remove();
-             d3.selectAll("#travel").text("");
-             d3.selectAll(".tweet").remove();
-             addLayer2(dataNewportTarget, springs);
-        });
-    
-   
-});
-    
+var rabbisDiv = d3.select("#rabbis");
+var rData = _.chain(data)
+                .sort(function (a, b) {
+                return a.year_start - b.year_start;
+                })
+                .groupBy(t=>t.name)
+                .map(function(d,i){
+                    return {
+                        name: d[0].name,
+                        tag: d[0].name.substr(0,2),
+                        locations: d,
+                        minYear: d3.min(d.map(function(c){if(Number.isNaN(c.start)){return c.end} else {return c.start;}})),
+                        maxYear: d3.max(d.map(function(c){if(Number.isNaN(c.start)){return c.end} else {return c.start;}}))
+                    }
+                })
+                .sort(function (a, b) {
+                return a.minYear - b.minYear;
+                })
+                .value();
 
-function update() {
-    d3.selectAll(".links")
-        .attr("d", function(d){
-            var sourcePt = map.latLngToLayerPoint([d.sourceX, d.sourceY])
-            var targetPt = map.latLngToLayerPoint([d.targetX, d.targetY])
-            var dx = targetPt.x - sourcePt.x,
-            dy = targetPt.y - sourcePt.y,
-            dr = Math.sqrt(dx * dx + dy * dy);
-            return "M" + sourcePt.x + "," + sourcePt.y + "A" + dr + "," + dr + " 0 0,1 " + targetPt.x + "," + targetPt.y;
-        });
+console.log(rData)
+
+// _.each(rData, function(r,d){
+//     var over = r.name +": "+ r.name.substr(0,3)
+//     overlays2.push(over)
+
+//     // var rabbiData = rabbisDiv.selectAll(".rabbi")
+//     //         .data(rData).enter().append('div')
+//     //         .attr("class", "rabbi").append("div").attr("id", r.tag)
+//     //         .text(t=>t.name).on('click', t=>console.log(t));
+//     // _.each(r.locations, function(loc,h){
+//     //     console.log(loc)
+//     //     // var rabbiLoc = d3.selectAll("rabbi"+d)
+//     //     // .data(loc).enter().append('div')
+//     //     //     .attr("class", "name").append("div")
+//     //     //     .text(d=>d.congregation_name).on('click', d=>console.log(d));
+//     // })
+
+// })
+// console.log(overlays2)
+        // rabbiData.append("div")
+        //     .attr("class", "years")
+        //     .text(d=> d.locations.congregation_name + " (" + d.year_start + "-" + d.year_end +")")
+        // rabbiData.append("div")
+        //     .attr("class", "date")
+        //     .text(d=> "Arrived in " + d.target_location +": " + d.year_start);
+
+         
+
+var mapdata = _.chain(data).filter(d=> d.sourceX!=="").groupBy(t=>t.route)
+     .map(function(t){
+         return {
+             route: t[0].route,
+             source_location: t[0].source_location,
+             sourceX: parseFloat(t[0].sourceX),
+             sourceY: parseFloat(t[0].sourceY),
+             target_location: t[0].target_location,
+             targetX: parseFloat(t[0].targetX),
+             targetY: parseFloat(t[0].targetY),
+             amtTotal: t.length,
+             rabbis: t,
+             minYear: d3.min(t.map(d=>d.start)),
+             maxYear: d3.max(t.map(d=>d.start))
+         }
+     }).value();
+console.log(mapdata)
+
+_.each(mapdata, function(l, i, mapdata){
+    l.rabbi1650 =[];
+    l.content1650=[];
+    l.rabbi1700 =[];
+    l.content1700=[];
+    l.rabbi1750 =[];
+    l.content1750=[];
+    l.rabbi1800 =[];
+    l.content1800=[];
+    l.rabbi1850 =[];
+    l.content1850=[];
+    l.contentAll=[];
+
+_.each(l.rabbis, function(link, k){
+    link.content = link.name + "</br> " + link.congregation_name +" (" + link.year_start + "-" + link.year_end +")</br>Arrived in " + link.target_location +": " + link.year_start + "</br></br>";
+    l.contentAll.push(link.content);
+    if (link.start<1650 && link.year_start!=""){
+        l.rabbi1650.push(link);
+        l.rabbi1650.amt = l.rabbi1650.length;
+        l.content1650.push(link.content)
+    }
+    if (link.start>=1650 && link.start<1700 && link.year_start!=""){
+        l.rabbi1700.push(link);
+        l.rabbi1700.amt = l.rabbi1700.length;
+        l.content1700.push(link.content)
+    }
+    if (link.start>=1700 && link.start<1750 && link.year_start!=""){
+        l.rabbi1750.push(link);
+        l.rabbi1750.amt = l.rabbi1750.length;
+        l.content1750.push(link.content)
+    }
+    if (link.start>=1750 && link.start<1800 && link.year_start!=""){
+        l.rabbi1800.push(link);
+        l.rabbi1800.amt = l.rabbi1800.length;
+        l.content1800.push(link.content)
+    }
+    if (link.start>=1800 && link.year_start!=""){
+        l.rabbi1850.push(link);
+        l.rabbi1850.amt = l.rabbi1850.length;
+        l.content1850.push(link.content)
+    }
+
+    
+    var latlngs = [];
+
+    var latlng1 = [parseFloat(link.sourceX), parseFloat(link.sourceY)],
+    latlng2 = [parseFloat(link.targetX), parseFloat(link.targetY)];
+
+    var offsetX = latlng2[1] - latlng1[1],
+    offsetY = latlng2[0] - latlng1[0];
+
+    var r = Math.sqrt(Math.pow(offsetX, 2) + Math.pow(offsetY, 2)),
+    theta = Math.atan2(offsetY, offsetX);
+
+    var thetaOffset = (3.14 / 10);
+
+    var r2 = (r / 2) / (Math.cos(thetaOffset)),
+    theta2 = theta + thetaOffset;
+
+    var midpointX = (r2 * Math.cos(theta2)) + latlng1[1],
+    midpointY = (r2 * Math.sin(theta2)) + latlng1[0];
+
+    var midpointLatLng = [midpointY, midpointX];
+
+    latlngs.push(latlng1, midpointLatLng, latlng2);
+        
+    if (link.start<1650 && link.year_start!=""){
+    L.curve(
+        [ 'M', latlng1, 'Q', midpointLatLng, latlng2 ], 
+        {color: '#42caff', fill: false, weight: l.rabbi1650.amt*2, opacity:0.6})
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.content1650, function(k,n){ return k}) )
+        .on('click', d=>console.log(l.rabbi1650)).addTo(data1650);
+        
+        L.featureGroup(getArrows([latlng1,latlng2], '#42caff', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.content1650, function(k,n){ return k}) )
+        .addTo(data1650);
+    
+    }
+    if (link.start>=1650 && link.start<1700 && link.year_start!=""){
+        L.curve([ 'M', latlng1, 'Q', midpointLatLng, latlng2 ], 
+        {color: '#319dc9', fill: false, weight: l.rabbi1700.amt*2, opacity:0.6})
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.content1700, function(k,n){ return k}) )
+        .on('click', d=>console.log(l.rabbi1700)).addTo(data1700);
+
+        L.featureGroup(getArrows([latlng1,latlng2], '#319dc9', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.content1700, function(k,n){ return k}) )
+        .addTo(data1700);
+    }
+    if (link.start>=1700 && link.start<1750 && link.year_start!=""){
+        L.curve( [ 'M', latlng1, 'Q', midpointLatLng, latlng2 ],
+        {color: '#207295', fill: false, weight: l.rabbi1750.amt*2, opacity:0.6})
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.content1750, function(k,n){ return k}) )
+        .addTo(data1750).on('click', d=>console.log(l.rabbi1750));
+
+        L.featureGroup(getArrows([latlng1,latlng2], '#207295', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.content1750, function(k,n){ return k}) )
+        .addTo(data1750);
+    }
+    if (link.start>=1750 && link.start<1800 && link.year_start!="" && link.idpeople!="25" && link.idpeople!="55" && link.idpeople!="58" && link.idpeople!="56" && link.idpeople!="57" && link.idpeople!="59"){
+        L.curve( [ 'M', latlng1, 'Q', midpointLatLng, latlng2 ], 
+        {color: '#0e4a64', fill: false, weight: l.rabbi1800.amt*2, opacity:0.6})
+        .on('click', d=>console.log(l.rabbi1800))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.content1800, function(k,n){ return k}) )
+        .addTo(data1800);
+        
+        L.featureGroup(getArrows([latlng1,latlng2], '#0e4a64', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.content1800, function(k,n){ return k}) )
+        .addTo(data1800);
+    }
+    if (link.start>=1800 && link.year_start!=""){
+        L.curve( [ 'M', latlng1, 'Q', midpointLatLng, latlng2 ], 
+        {color: '#002536', fill: false, weight: l.rabbi1850.amt*2, opacity:0.6})
+        .on('click', d=>console.log(l.rabbi1850))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.content1850, function(k,n){ return k}) )
+        .addTo(layer1);
+
+        L.featureGroup(getArrows([latlng1,latlng2], '#002536', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.content1850, function(k,n){ return k}) )
+        .addTo(layer1);
+    }
+    if (link.source_location=="Amsterdam, Netherlands" && link.idpeople!="25"){
+        L.curve( [ 'M', latlng1, 'Q', midpointLatLng, latlng2 ], 
+        {color: 'black', fill: false, weight: l.rabbis.length*2, opacity:0.4})
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
+        .addTo(amstSource)
+        .on('click', d=>console.log(l.rabbis));
+        L.featureGroup(getArrows([latlng1,latlng2], 'black', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
+        .addTo(amstSource);
+    }
+    if (link.source_location=="London, England" && link.idpeople!="25"){
+        L.curve(
+        [
+            'M', latlng1,
+            'Q', midpointLatLng,
+            latlng2
+        ], {color: 'black', fill: false, weight: l.rabbis.length*2, opacity:0.4})
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
+        .addTo(londonSource).on('click', d=>console.log(l.rabbis));
+        L.featureGroup(getArrows([latlng1,latlng2], 'black', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
+        .addTo(londonSource);
+    }
+    if (link.source_location=="Willemstad, Curacao" && link.idpeople!="25"){
+        L.curve(
+        [
+            'M', latlng1,
+            'Q', midpointLatLng,
+            latlng2
+        ], {color: 'black', fill: false, weight: l.rabbis.length*2, opacity:0.4})
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
+        .addTo(curacaoSource).on('click', d=>console.log(l.rabbis));
+        L.featureGroup(getArrows([latlng1,latlng2], 'black', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
+        .addTo(curacaoSource);
+    }
+    if (link.source_location=="New York, United States" && link.year_start!="" && link.idpeople!="25" && link.idpeople!="55" && link.idpeople!="58" && link.idpeople!="56" && link.idpeople!="57" && link.idpeople!="59"){
+        L.curve(
+        [
+            'M', latlng1,
+            'Q', midpointLatLng,
+            latlng2
+        ], {color: 'black', fill: false, weight: l.rabbis.length*2, opacity:0.4})
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
+        .addTo(nySource).on('click', d=>console.log(l.rabbis));
+        L.featureGroup(getArrows([latlng1,latlng2], 'black', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
+        .addTo(nySource).on('click', d=>console.log(l.rabbis));
+    }
+    // if ((link.target_region=="Caribbean" || link.target_location.includes("Suriname")) && link.idpeople!="25"){
+    //     L.curve( [ 'M', latlng1, 'Q', midpointLatLng, latlng2
+    //     ], {color: 'black', fill: false, weight: l.rabbis.length*2, opacity:0.4})
+    //     .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
+    //     .addTo(caribTarget).on('click', d=>console.log(l.rabbis));
+    //     L.featureGroup(getArrows([latlng1,latlng2], 'black', 1,map))
+    //     .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
+    //     .addTo(caribTarget);
+    // }
+    if (link.idpeople=="25" || link.idpeople=="55" || link.idpeople=="58" || link.idpeople=="56" || link.idpeople=="57" || link.idpeople=="59"){
+        L.curve(
+        [
+            'M', latlng1,
+            'Q', midpointLatLng,
+            latlng2
+        ], {color: 'black', fill: false, weight: l.rabbis.length*2, opacity:0.4})
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
+        .addTo(travel)
+        .on('click', d=>console.log(l.rabbis));
+        L.featureGroup(getArrows([latlng1,latlng2], 'black', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
+        .addTo(travel);
+    }
+    if (link.idpeople=="25"){
+        L.curve(
+        [
+            'M', latlng1,
+            'Q', midpointLatLng,
+            latlng2
+        ], {color: 'blue', fill: false, weight: 2, opacity:0.4})
+        .bindPopup('<strong>'+l.route + '</strong></br>' + link.content )
+        .addTo(carigal).on('click', d=>console.log(link));
+        L.featureGroup(getArrows([latlng1,latlng2], 'blue', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + link.content )
+        .addTo(carigal);
+    }
+    if (link.idpeople=="52"){
+        L.curve(
+        [
+            'M', latlng1,
+            'Q', midpointLatLng,
+            latlng2
+        ], {color: 'black', fill: false, weight: 2, opacity:0.4})
+        .bindPopup('<strong>'+l.route + '</strong></br>' + link.content )
+        .addTo(sasportas).on('click', d=>console.log(link));
+        L.featureGroup(getArrows([latlng1,latlng2], 'black', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + link.content )
+        .addTo(sasportas);
+    }
+    if (link.name.includes("Pardo")){
+        L.curve(
+        ['M', latlng1, 'Q', midpointLatLng, latlng2 ], 
+        {color: 'black', fill: false, weight:2, opacity:0.4})
+        .bindPopup('<strong>'+l.route + '</strong></br>' + link.content )
+        .addTo(pardo).on('click', d=>console.log(link));
+        L.featureGroup(getArrows([latlng1,latlng2], 'black', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + link.content )
+        .addTo(pardo);
+    }
+    if (link.idpeople=="139"){
+        L.curve( [ 'M', latlng1, 'Q', midpointLatLng, latlng2 ], 
+        {color: 'black', fill: false, weight: 2, opacity:0.4})
+        .bindPopup('<strong>'+l.route + '</strong></br>' + link.content )
+        .addTo(touro).on('click', d=>console.log(link));
+        L.featureGroup(getArrows([latlng1,latlng2], 'black', 1,map))
+        .bindPopup('<strong>'+l.route + '</strong></br>' + link.content )
+        .addTo(touro);
+    }
+
+
+    })
+
+})  
+
+    
+L.control.layers(baseLayers, overlays, {hideSingleBase:true,collapsed:false}).addTo(map);
+    
+    
+// add arrows: https://stackoverflow.com/a/58686215 
+function getArrows(arrLatlngs, color, arrowCount, mapObj) {
+
+    if (typeof arrLatlngs === undefined || arrLatlngs == null ||    
+(!arrLatlngs.length) || arrLatlngs.length < 2)          
+    return [];
+
+    if (typeof arrowCount === 'undefined' || arrowCount == null)
+        arrowCount = 1;
+
+    if (typeof color === 'undefined' || color == null)
+        color = '';
+    else
+        color = 'color:' + color;
+
+    if(arrLatlngs[0].every(function(element, index) {
+    return element === arrLatlngs[1][index]; 
+})){
+        var result = [];
+    for (var i = 1; i < arrLatlngs.length; i++) {
+        var icon = L.divIcon({ className: 'circle-icon', bgPos: [5, 5], html: '<div style="' + color + ';transform: rotate(' + getAngle(arrLatlngs[i - 1], arrLatlngs[i], -1).toString() + 'deg)">●</div>' });
+        for (var c = 1; c <= arrowCount; c++) {
+            result.push(L.marker(arrLatlngs[1], { icon: icon }));
+        }
+    }
+    return result;
+    } else {
+    var result = [];
+    for (var i = 1; i < arrLatlngs.length; i++) {
+        var icon = L.divIcon({ className: 'arrow-icon', bgPos: [5, 5], html: '<div style="' + color + ';transform: rotate(' + getAngle(arrLatlngs[i - 1], arrLatlngs[i], -1).toString() + 'deg)">▶</div>' });
+        for (var c = 1; c <= arrowCount; c++) {
+            result.push(L.marker(arrLatlngs[1], { icon: icon }));
+        }
+    }
+    return result;
+        }
 }
 
-map.on("moveend", update)
+function getAngle(latLng1, latlng2, coef) {
+    var dy = latlng2[0] - latLng1[0];
+    var dx = Math.cos(Math.PI / 360 * latLng1[0]) * (latlng2[1] - latLng1[1]);
+    var ang = ((Math.atan2(dy, dx) / Math.PI) * 360* coef);
+    return (ang).toFixed(2);
+}
 
-function refreshPage(){
-    window.location.reload();
-} 
+    
+});
 </script>
