@@ -4,7 +4,7 @@ layout: default
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-transparent" style="padding-inline-start:0;">
         {% assign pagepath = page.idbuildings | prepend: "/buildings/"%}
-      <li class="breadcrumb-item"><a href="{{ pagepath | prepend: site.url}}">Building Page</a></li>
+      <li class="breadcrumb-item"><a href="{{ pagepath | prepend: site.url}}">{{page.building_name}}</a></li>
       <li class="breadcrumb-item active" aria-current="page">Image Gallery</li>
     </ol>
 </nav>

@@ -5,7 +5,11 @@
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">    
+    <!-- <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url }}"> -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js'></script>
+
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.url }}">
 <!-- leaflet css -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -17,6 +21,8 @@
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
   <script src="{{ "/assets/js/leaflet.markercluster-src.js" | prepend: site.url}}"></script>
+  <script src="https://elfalem.github.io/Leaflet.curve/src/leaflet.curve.js"></script>
+
   <!-- After Leaflet and Leaflet.markercluster scripts -->
 <script src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"></script>
 <!-- Beautify Icons -->

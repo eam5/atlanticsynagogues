@@ -1,0 +1,324 @@
+---
+layout: leaflet-map
+title: Migrations
+---
+<style>
+    #mapid { height: 480px; width: 100%;}
+
+    .circle-icon {
+        width: 14px;
+        height: 14px;
+        opacity: 0.4;
+    }
+    .circle-icon > div {
+        margin-right: 2px;
+        /*            margin-left: -2px;*/
+        margin-top: -11px;
+        transform-origin: center center;
+        font: 22px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+    }
+    .arrow-icon {
+        width: 14px;
+        height: 14px;
+        opacity: 0.4;
+    }
+
+    .arrow-icon > div {
+        margin-right: 2px;
+        /*            margin-left: -2px;*/
+        margin-top: -4px;
+        transform-origin: center center;
+        font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+    }
+</style>
+    <div class="d-flex flex-wrap align-items-baseline">
+        <h1>Atlantic Migrations</h1>
+    </div>
+<div id="vis" class="d-flex flex-wrap">
+    <div id="mapid"></div>
+</div> 
+<script>
+    var locArray = [];
+    {% for building in site.data.buildings %}
+    
+    var bldLatLon = [];
+    bldLatLon.push({{building.lat}});
+    bldLatLon.push({{building.lon}});
+    locArray.push(bldLatLon);
+    // console.log(bldLatLon)
+    {% endfor %}
+
+    var cartoUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
+    var cartoAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    
+    var carto = L.tileLayer(cartoUrl, {subdomains: 'abcd', maxZoom: 18, attribution: cartoAttrib});
+    
+    var markers = L.markerClusterGroup.layerSupport({showCoverageOnHover: true, maxClusterRadius:28, zoomToBoundsOnClick: false});
+
+    var group1 = L.layerGroup(),
+        group2 = L.layerGroup();
+    var data1 = L.layerGroup();
+    var data2 = L.layerGroup();
+    var data3 = L.layerGroup();
+    var data4 = L.layerGroup();
+    var data5 = L.layerGroup();
+        
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+    
+    var map = L.map('mapid', {
+        center: [28.079555, -15.940793],
+        zoom: 3,
+        layers: [carto, data1]
+    });
+    
+    var baseLayers = {
+    //    "OpenStreetMap": osm,
+        "Carto Positron": carto
+    };
+        
+    var overlays = {
+        "Mid 16th to Late 16th C.": data1,
+        "Late 16th to Early 17th C.": data2,
+        "Early 17th to Mid 17th C.": data3,
+        "Mid 17th C.": data4,
+        "Mid 17th to Late 17th C.": data5,
+        "Sephardic": group1,
+        "Ashkenazi": group2
+    };
+
+    {% for building in site.data.buildings %}
+    {% assign pagepath = building.idbuildings | prepend: "/buildings/"%}
+    {% for congregation in building.congregations %}
+    {% assign rite = congregation.rite | capitalize %}
+    {% assign year = building.year_opened | plus: 0 %}
+    // console.log({{building.year_opened}});
+    var bldLatLon = [];
+    bldLatLon.push({{building.lat}});
+    bldLatLon.push({{building.lon}});
+    // markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a></strong>"));
+    {% if year <= 1625 %}
+    var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+
+    marker.addTo(data2)
+    {% endif %}
+    {% if year >= 1600 and year <= 1650 %}
+    var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+
+    marker.addTo(data3)
+    {% endif %}
+    {% if year >= 1640 and year <= 1660 %}
+    var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+
+    marker.addTo(data4)
+    {% endif %}
+    {% if year >= 1640 and year <= 1700 %}
+    var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+
+    marker.addTo(data5)
+    {% endif %}
+    {% if congregation.rite == "sephardic" %}
+    var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+
+    marker.addTo(group1)
+    {% endif %}
+    {% if congregation.rite == "ashkenazi" %}
+    var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+
+    marker.addTo(group2)
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+    // map.addLayer(markers);
+    markers.addTo(map);
+    markers.checkIn([group1, group2]);
+   
+        
+    d3.csv('{{site.url}}/assets/data/migrations-1.csv', function(data){
+    console.log(data)
+        
+    _.each(data, function(link, i, data){
+         link.route = link.source_location + "  to " + link.target_location
+    })
+    
+    _.each(data, function(link, i, data){
+        
+        var latlngs = [];
+    
+        var latlng1 = [parseFloat(link.sourceX), parseFloat(link.sourceY)],
+          latlng2 = [parseFloat(link.targetX), parseFloat(link.targetY)];
+    
+        var offsetX = latlng2[1] - latlng1[1],
+          offsetY = latlng2[0] - latlng1[0];
+    
+        var r = Math.sqrt(Math.pow(offsetX, 2) + Math.pow(offsetY, 2)),
+          theta = Math.atan2(offsetY, offsetX);
+    
+        var thetaOffset = (3.14 / 10);
+    
+        var r2 = (r / 2) / (Math.cos(thetaOffset)),
+          theta2 = theta + thetaOffset;
+    
+        var midpointX = (r2 * Math.cos(theta2)) + latlng1[1],
+          midpointY = (r2 * Math.sin(theta2)) + latlng1[0];
+    
+        var midpointLatLng = [midpointY, midpointX];
+    
+        latlngs.push(latlng1, midpointLatLng, latlng2);
+    
+        if (link.migration_period=="1"){
+            L.curve([ 'M', latlng1, 'Q', midpointLatLng, latlng2 ], 
+                {color: '#42caff', fill: false, weight: 2, opacity:0.6})
+                .bindPopup('<strong>'+link.route + '</strong></br>' )
+                .on('click', d=>console.log(link)).addTo(data1);
+    
+                L.featureGroup(getArrows([latlng1,latlng2], '#42caff', 1,map))
+                .bindPopup('<strong>'+link.route + '</strong></br>' )
+                .addTo(data1);
+    
+        }
+        if (link.migration_period=="2"){
+            L.curve(
+              [
+                'M', latlng1,
+                'Q', midpointLatLng,
+                latlng2
+              ], {color: '#319dc9', fill: false, weight: 2, opacity:0.6}).addTo(data2).on('click', d=>console.log(link));
+            L.featureGroup(getArrows([latlng1,latlng2], '#319dc9', 1,map)).addTo(data2);
+        }
+        if (link.migration_period=="3"){
+            L.curve(
+              [
+                'M', latlng1,
+                'Q', midpointLatLng,
+                latlng2
+              ], {color: '#207295', fill: false, weight: 2, opacity:0.6}).addTo(data3).on('click', d=>console.log(link));
+          L.featureGroup(getArrows([latlng1,latlng2], '#207295', 1,map)).addTo(data3);
+        }
+        if (link.migration_period=="4"){
+            L.curve(
+              [
+                'M', latlng1,
+                'Q', midpointLatLng,
+                latlng2
+              ], {color: '#0e4a64', fill: false, weight: 2, opacity:0.6}).on('click', d=>console.log(link)).addTo(data4);
+        L.featureGroup(getArrows([latlng1,latlng2], '#0e4a64', 1,map)).addTo(data4);
+        }
+        if (link.migration_period=="5"){
+            L.curve(
+              [
+                'M', latlng1,
+                'Q', midpointLatLng,
+                latlng2
+              ], {color: '#002536', fill: false, weight: 2, opacity:0.6}).addTo(data5).on('click', d=>console.log(link));
+            L.featureGroup(getArrows([latlng1,latlng2], '#002536', 1,map)).addTo(data5);
+    
+        }
+    
+        })  
+    
+    
+        L.control.layers(baseLayers, overlays, {hideSingleBase:true,collapsed:false}).addTo(map);
+    
+        function getArrows(arrLatlngs, color, arrowCount, mapObj) {
+    
+            if (typeof arrLatlngs === undefined || arrLatlngs == null ||    
+        (!arrLatlngs.length) || arrLatlngs.length < 2)          
+            return [];
+    
+            if (typeof arrowCount === 'undefined' || arrowCount == null)
+                arrowCount = 1;
+    
+            if (typeof color === 'undefined' || color == null)
+                color = '';
+            else
+                color = 'color:' + color;
+    
+            if(arrLatlngs[0].every(function(element, index) {
+            return element === arrLatlngs[1][index]; 
+        })){
+                var result = [];
+            for (var i = 1; i < arrLatlngs.length; i++) {
+                var icon = L.divIcon({ className: 'circle-icon', bgPos: [5, 5], html: '<div style="' + color + ';transform: rotate(' + getAngle(arrLatlngs[i - 1], arrLatlngs[i], -1).toString() + 'deg)">●</div>' });
+                for (var c = 1; c <= arrowCount; c++) {
+                    result.push(L.marker(arrLatlngs[1], { icon: icon }));
+                }
+            }
+            return result;
+            } else {
+            var result = [];
+            for (var i = 1; i < arrLatlngs.length; i++) {
+                var icon = L.divIcon({ className: 'arrow-icon', bgPos: [5, 5], html: '<div style="' + color + ';transform: rotate(' + getAngle(arrLatlngs[i - 1], arrLatlngs[i], -1).toString() + 'deg)">▶</div>' });
+                for (var c = 1; c <= arrowCount; c++) {
+                    result.push(L.marker(arrLatlngs[1], { icon: icon }));
+                }
+            }
+            return result;
+                }
+        }
+    
+        function getAngle(latLng1, latlng2, coef) {
+            var dy = latlng2[0] - latLng1[0];
+            var dx = Math.cos(Math.PI / 360 * latLng1[0]) * (latlng2[1] - latLng1[1]);
+            var ang = ((Math.atan2(dy, dx) / Math.PI) * 360* coef);
+            return (ang).toFixed(2);
+        }
+    
+    
+    });
+</script>
