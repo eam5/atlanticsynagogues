@@ -92,7 +92,7 @@ title: Migrations
     {% assign pagepath = building.idbuildings | prepend: "/buildings/"%}
     {% for congregation in building.congregations %}
     {% assign rite = congregation.rite | capitalize %}
-    {% assign year = building.year_opened | plus: 0 %}
+    {% assign year = building.data_yr_open %}
     // console.log({{building.year_opened}});
     var bldLatLon = [];
     bldLatLon.push({{building.lat}});
@@ -189,7 +189,7 @@ title: Migrations
     markers.checkIn([group1, group2]);
    
         
-    d3.csv('{{site.url}}/assets/data/migrations-1.csv', function(data){
+    d3.csv('{{site.url}}/assets/data/migrations-2.csv', function(data){
     console.log(data)
         
     _.each(data, function(link, i, data){

@@ -2,7 +2,7 @@
 layout: default
 title: Site Index
 ---
-<h1><a href="#syn-tag">Synagogues</a> - <a href="#location-tag">Locations</a></h1>
+<h1><a href="#syn-tag">Synagogues</a> - <a href="#cong-tag">Congregations</a> - <a href="#location-tag">Locations</a></h1>
 <!-- <div class="container-lg">
     <div class="row">
         <div class="col-sm-7"> -->
@@ -12,8 +12,15 @@ title: Site Index
                     <li><a href="{{ building.idbuildings | datapage_url: 'buildings' }}">
                         {{building.building_name}} ({{building.year_opened}}), 
                         {% if building.city != null %}{{building.city}}{%endif%}{% if building.state != null %}, {{building.state}}{%endif%}{% if building.country != null %}, {{building.country}}{%endif%}
-
-
+                    </a></li>
+                    {% endfor %}
+                </ul>
+            <h2 id="cong-tag" class="pt-5">Congregations</h2>
+                <ul>
+                    {% for congregation in site.data.congregations %}
+                    <li><a href="{{ congregation.idcongregation | datapage_url: 'congregation' }}">
+                        {{congregation.congregation_name}} {% if congregation.translation != null %}({{congregation.translation}}){%endif%} ({{congregation.year_est}}), 
+                        {% if congregation.city != null %}{{congregation.city}}{%endif%}{% if congregation.state != null %}, {{congregation.state}}{%endif%}{% if congregation.country != null %}, {{congregation.country}}{%endif%}
                     </a></li>
                     {% endfor %}
                 </ul>

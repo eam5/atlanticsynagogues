@@ -19,7 +19,7 @@ layout: leaflet-map
             {% assign cong_sort = page.congregations | sort:"yr_start" %}
             {% for congregation in cong_sort %}
             {% assign rite = congregation.rite | capitalize %}
-            {% assign congname = congregation.idcongregation | prepend: "/congregations/" %}
+            {% assign congname = congregation.idcongregation | prepend: "/congregation/" %}
             <li><a href="{{ congname | prepend: site.url }}">{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}}) ({{rite}})</a></li>
             {% endfor %}
         </ul>

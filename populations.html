@@ -60,7 +60,7 @@ var svg = d3.select("div#container")
     .append("g")
     .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("{{site.url}}/assets/data/populations_12_15_20.csv", function(num){
+d3.csv("{{site.url}}/assets/data/populations_locations_12_21_20.csv", function(num){
 d3.csv("{{site.url}}/assets/data/synagogues-powers-1.csv", function(bldg){
 d3.csv("{{site.url}}/assets/data/congregations-powers-1.csv", function(cong){
 d3.csv("{{site.url}}/assets/data/ruling-powers-pop.csv", function(data) {
@@ -151,14 +151,14 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-pop.csv", function(data) {
         .attr("cy", function(d) { return y(d.city + ", " + d.country); })
         .attr('r', d=>Math.sqrt(parseFloat(d.calc_total)))
         .attr("stroke", "#fff")
-        .attr("stroke-width", 1)
+        .attr("stroke-width", 1.5)
         .style("fill", function(d){ return color(d.country)})
         .style('cursor', 'pointer')
         .on('mouseover.tooltip', function(d) {
                 div.transition()    
                     .duration(100)    
                     .style("opacity", 0.95);    
-                div .html( d.city +"</br>"+ d.year +"</br>Est. Jewish Population:</br>"+ d.calc_total  )  
+                div .html( d.city +"</br>"+ d.year +"</br>Est. Jewish Population:</br>"+ d.calc_total +"</br>(" + d.cit_short +")"  )  
                     .style("left", (d3.event.pageX + 12) + "px")   
                     .style("top", (d3.event.pageY - 28) + "px");  
                 })          
@@ -171,16 +171,17 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-pop.csv", function(data) {
     
       svg.selectAll("mycircle")
         .data(bldg.map(function(d){
-            if (d.country==="Jamaica"){
-                return {
-                year_opened: d.year_opened,
-                country: d.country,
-                building_name: d.building_name,
-                year_opened_acc: d.year_opened_acc,
-                city:"Jamaica",
-                bldg_city: d.city
-                }
-            } else if (d.country==="Barbados"){
+            // if (d.country==="Jamaica"){
+            //     return {
+            //     year_opened: d.year_opened,
+            //     country: d.country,
+            //     building_name: d.building_name,
+            //     year_opened_acc: d.year_opened_acc,
+            //     city:"Jamaica",
+            //     bldg_city: d.city
+            //     }
+            // } else 
+            if (d.country==="Barbados"){
                 return {
                 year_opened: d.year_opened,
                 country: d.country,
@@ -228,16 +229,17 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-pop.csv", function(data) {
     
     svg.selectAll("myline")
         .data(cong.map(function(d){
-            if (d.country==="Jamaica"){
-                return {
-                year_est: d.year_est,
-                country: d.country,
-                congregation_name: d.congregation_name,
-                rite: d.rite,
-                city:"Jamaica",
-                cong_city: d.city
-                }
-            } else if (d.country==="Barbados"){
+            // if (d.country==="Jamaica"){
+            //     return {
+            //     year_est: d.year_est,
+            //     country: d.country,
+            //     congregation_name: d.congregation_name,
+            //     rite: d.rite,
+            //     city:"Jamaica",
+            //     cong_city: d.city
+            //     }
+            // } else 
+            if (d.country==="Barbados"){
                 return {
                 year_est: d.year_est,
                 country: d.country,

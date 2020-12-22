@@ -43,6 +43,12 @@ page_gen:
     name: 'idbuildings'
     dir: 'buildings'
     title: 'building_name'
+  
+  - data: 'congregations'
+    template: 'congregation'
+    name: 'idcongregation'
+    dir: 'congregation'
+    title: 'congregation_name'
     
   - data: 'building_images'
     template: 'image-gallery'

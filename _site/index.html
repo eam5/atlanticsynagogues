@@ -180,7 +180,7 @@ _.each( data, function(bldg, i){
             // console.log(elem.TS_number)
             _.each(elem.TS_elements, function(l,m){
                 if (l.architectural_element == "footprint"){
-                    console.log(l.AE_type)
+                    // console.log(l.AE_type)
                     bldg.footprint_type = l.AE_type
                 }
                 if (l.architectural_element == "parapet"){
@@ -213,7 +213,7 @@ _.each( data, function(bldg, i){
     
 })
 // data.sort((a, b) => a.nameIndex.localeCompare(b.nameIndex))
-console.log(data)
+// console.log(data)
 
 const allLon = data.map(d=>d.lon).sort();
 // console.log(allLon)
@@ -289,7 +289,7 @@ const y = d3.scaleBand()
 const allYearNames = data.map(d=> d.year_opened + d.building_name.substring(0,3) + d.idbuildings);
 allYearNames.push('1600a1','1650a1','1750a1','1800a1','1850a1');
 allYearNames.sort((a, b) => a.localeCompare(b));
-console.log(allYearNames)
+// console.log(allYearNames)
 
 const yDate = d3.scaleBand()
 	.domain(allYearNames)
@@ -376,10 +376,10 @@ const bldghill = building.append('svg:path')
     .attr('cursor', 'pointer')
     .on('click', function(d){
         let current = d.country;
-            console.log(current)
+            // console.log(current)
         building.selectAll('path')
             .attr('fill-opacity', function(o) {
-                console.log(o.country)
+                // console.log(o.country)
                 if (o.country === current){
                     return 1;
                 } else return 0.2;
@@ -387,7 +387,7 @@ const bldghill = building.append('svg:path')
             });
         building.selectAll('text')
             .attr('fill-opacity', function(o) {
-                console.log(o.country)
+                // console.log(o.country)
                 if (o.country === current){
                     return 1;
                 } else return 0.3;
@@ -395,7 +395,7 @@ const bldghill = building.append('svg:path')
             });
         building.selectAll('rect')
             .attr('fill-opacity', function(o) {
-                console.log(o.country)
+                // console.log(o.country)
                 if (o.country === current){
                     return 1;
                 } else return 0.3;

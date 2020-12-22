@@ -15,7 +15,7 @@ layout: leaflet-map
 
 <h2>Related Buildings:</h2>
     <ul>
-        {% assign bldgs_sort = site.data.buildings | sort:"year_opened" %}
+        {% assign bldgs_sort = site.data.buildings | sort:"data_yr_open" %}
         {% for building in bldgs_sort %}
         {% if building.idlocation == page.idlocation %}
         {% assign bldgnamelink = building.idbuildings | prepend: "/buildings/" %}
