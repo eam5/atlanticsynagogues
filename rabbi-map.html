@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js'></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/gka/chroma.js/master/chroma.min.js"></script> 
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -18,7 +19,7 @@
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
    <script src="https://elfalem.github.io/Leaflet.curve/src/leaflet.curve.js"></script>
- 
+   <script src="https://eam5.github.io/atlanticsynagogues/assets/js/rabbis.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -72,6 +73,8 @@
               
               <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/populations">Atlantic Jewish Populations</a>
               
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/rabbi-timeline">Rabbi Timeline</a>
+              
               <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/contributions">Contributions</a>
               
               <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/access-paths">Access Paths</a>
@@ -110,8 +113,23 @@
 </nav>
   <div id="main" class="container-lg">
     <style>
-    
-    #mapid, #mapid2 { height: 480px; width: 100%;}
+      .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        /* padding-bottom: 100%; */
+        vertical-align: top;
+        overflow: visible;
+        margin: 1rem 0 4rem ;
+    }
+    .svg-content {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #mapid{ height: 480px; width: 100%;}
 
     .circle-icon {
          width: 14px;
@@ -138,7 +156,20 @@
             transform-origin: center center;
             font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
         }
-    
+        div.tooltip {
+    position: absolute;
+    text-align: center;
+/*    max-width: 250px;*/
+    width: 100px;
+    padding: 7px;
+    font: 12px 'Roboto', sans-serif;
+    background: #fff;
+    border: 1px;
+    border-radius: 12px;
+    line-height: 16px;
+    pointer-events: none;
+    box-shadow: 8px 8px 12px -10px;
+    }
 </style>
     <div class="d-flex flex-wrap align-items-baseline">
         <h1>Atlantic Synagogues: Rabbis</h1>
@@ -163,10 +194,11 @@
         <div id="rabbis"></div>
     </div> -->
 </div> 
-<!-- <div>
-    <h2>All Rabbis</h2>
-    <div id="mapid2"></div>
-</div> -->
+<!-- <div> -->
+    <!-- <h2>Timeline</h2>
+    <div id="container1" class="svg-container"></div>
+    <div id="container2" class="svg-container"></div> -->
+<!-- </div> -->
 <script>
 var cartoUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
 var cartoAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
@@ -231,7 +263,7 @@ var overlays = {
 
 // var overlays2 = [];
     
-d3.csv('https://eam5.github.io/atlanticsynagogues/assets/data/rabbi_locations-1.csv', function(data){
+d3.csv('https://eam5.github.io/atlanticsynagogues/assets/data/rabbi_locations_12_23_20.csv', function(data){
 // console.log(data)
     
 _.each(data, function(link, i, data){
@@ -427,7 +459,7 @@ _.each(l.rabbis, function(link, k){
         .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.content1850, function(k,n){ return k}) )
         .addTo(layer1);
     }
-    if (link.source_location=="Amsterdam, Netherlands" && link.idpeople!="25"){
+    if (link.source_location=="Amsterdam, Netherlands" && link.idpeople!="25" && link.idpeople!="55" && link.idpeople!="58" && link.idpeople!="56" && link.idpeople!="57" && link.idpeople!="59"){
         L.curve( [ 'M', latlng1, 'Q', midpointLatLng, latlng2 ], 
         {color: 'black', fill: false, weight: l.rabbis.length*2, opacity:0.4})
         .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
@@ -437,7 +469,7 @@ _.each(l.rabbis, function(link, k){
         .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
         .addTo(amstSource);
     }
-    if (link.source_location=="London, England" && link.idpeople!="25"){
+    if (link.source_location=="London, England" && link.idpeople!="25" && link.idpeople!="55" && link.idpeople!="58" && link.idpeople!="56" && link.idpeople!="57" && link.idpeople!="59"){
         L.curve(
         [
             'M', latlng1,
@@ -450,7 +482,7 @@ _.each(l.rabbis, function(link, k){
         .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
         .addTo(londonSource);
     }
-    if (link.source_location=="Willemstad, Curacao" && link.idpeople!="25"){
+    if (link.source_location=="Willemstad, Curacao" && link.idpeople!="25" && link.idpeople!="55" && link.idpeople!="58" && link.idpeople!="56" && link.idpeople!="57" && link.idpeople!="59"){
         L.curve(
         [
             'M', latlng1,
@@ -602,6 +634,9 @@ function getAngle(latLng1, latlng2, coef) {
     
 });
 </script>
+<!-- <script>
+    // let draw = rabbis('https://eam5.github.io/atlanticsynagogues/assets/data/rabbi_locations_12_23_20.csv','#container1', '#container2');
+</script> -->
   </div>
     
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
