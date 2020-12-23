@@ -3,8 +3,23 @@ layout: rabbi-map
 title: Rabbi Map
 ---
 <style>
-    
-    #mapid, #mapid2 { height: 480px; width: 100%;}
+      .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        /* padding-bottom: 100%; */
+        vertical-align: top;
+        overflow: visible;
+        margin: 1rem 0 4rem ;
+    }
+    .svg-content {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #mapid{ height: 480px; width: 100%;}
 
     .circle-icon {
          width: 14px;
@@ -31,7 +46,20 @@ title: Rabbi Map
             transform-origin: center center;
             font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
         }
-    
+        div.tooltip {
+    position: absolute;
+    text-align: center;
+/*    max-width: 250px;*/
+    width: 100px;
+    padding: 7px;
+    font: 12px 'Roboto', sans-serif;
+    background: #fff;
+    border: 1px;
+    border-radius: 12px;
+    line-height: 16px;
+    pointer-events: none;
+    box-shadow: 8px 8px 12px -10px;
+    }
 </style>
     <div class="d-flex flex-wrap align-items-baseline">
         <h1>Atlantic Synagogues: Rabbis</h1>
@@ -56,10 +84,11 @@ title: Rabbi Map
         <div id="rabbis"></div>
     </div> -->
 </div> 
-<!-- <div>
-    <h2>All Rabbis</h2>
-    <div id="mapid2"></div>
-</div> -->
+<!-- <div> -->
+    <!-- <h2>Timeline</h2>
+    <div id="container1" class="svg-container"></div>
+    <div id="container2" class="svg-container"></div> -->
+<!-- </div> -->
 <script>
 var cartoUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
 var cartoAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
@@ -124,7 +153,7 @@ var overlays = {
 
 // var overlays2 = [];
     
-d3.csv('{{site.url}}/assets/data/rabbi_locations-1.csv', function(data){
+d3.csv('{{site.url}}/assets/data/rabbi_locations_12_23_20.csv', function(data){
 // console.log(data)
     
 _.each(data, function(link, i, data){
@@ -320,7 +349,7 @@ _.each(l.rabbis, function(link, k){
         .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.content1850, function(k,n){ return k}) )
         .addTo(layer1);
     }
-    if (link.source_location=="Amsterdam, Netherlands" && link.idpeople!="25"){
+    if (link.source_location=="Amsterdam, Netherlands" && link.idpeople!="25" && link.idpeople!="55" && link.idpeople!="58" && link.idpeople!="56" && link.idpeople!="57" && link.idpeople!="59"){
         L.curve( [ 'M', latlng1, 'Q', midpointLatLng, latlng2 ], 
         {color: 'black', fill: false, weight: l.rabbis.length*2, opacity:0.4})
         .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
@@ -330,7 +359,7 @@ _.each(l.rabbis, function(link, k){
         .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
         .addTo(amstSource);
     }
-    if (link.source_location=="London, England" && link.idpeople!="25"){
+    if (link.source_location=="London, England" && link.idpeople!="25" && link.idpeople!="55" && link.idpeople!="58" && link.idpeople!="56" && link.idpeople!="57" && link.idpeople!="59"){
         L.curve(
         [
             'M', latlng1,
@@ -343,7 +372,7 @@ _.each(l.rabbis, function(link, k){
         .bindPopup('<strong>'+l.route + '</strong></br>' + _.each(l.contentAll, function(k,p){ return k}) )
         .addTo(londonSource);
     }
-    if (link.source_location=="Willemstad, Curacao" && link.idpeople!="25"){
+    if (link.source_location=="Willemstad, Curacao" && link.idpeople!="25" && link.idpeople!="55" && link.idpeople!="58" && link.idpeople!="56" && link.idpeople!="57" && link.idpeople!="59"){
         L.curve(
         [
             'M', latlng1,
@@ -495,3 +524,6 @@ function getAngle(latLng1, latlng2, coef) {
     
 });
 </script>
+<!-- <script>
+    // let draw = rabbis('{{site.url}}/assets/data/rabbi_locations_12_23_20.csv','#container1', '#container2');
+</script> -->
