@@ -3,11 +3,10 @@ layout: data-vis
 title: Rabbi Timeline
 ---
 <style>
-      .svg-container {
+    .svg-container {
         display: inline-block;
         position: relative;
         width: 100%;
-        /* padding-bottom: 100%; */
         vertical-align: top;
         overflow: visible;
         margin: 1rem 0 4rem ;
@@ -20,75 +19,99 @@ title: Rabbi Timeline
         left: 0; */
     }
 
-div.tooltip {
-    position: absolute;
-    text-align: center;
-/*    max-width: 250px;*/
-    width: 130px;
-    padding: 7px;
-    font: 12px 'Roboto', sans-serif;
-    background: #fff;
-    border: 1px;
-    border-radius: 12px;
-    line-height: 16px;
-    pointer-events: none;
-    box-shadow: 8px 8px 12px -10px;
+    div.tooltip {
+        position: absolute;
+        text-align: center;
+        width: 130px;
+        padding: 7px;
+        font: 12px 'Roboto', sans-serif;
+        background: #fff;
+        border: 1px;
+        border-radius: 12px;
+        line-height: 16px;
+        pointer-events: none;
+        box-shadow: 8px 8px 12px -10px;
+        }
+    #clearBtn {
+        display: none;
     }
 </style>
 <body>
     <div class="d-flex flex-wrap align-items-baseline">
         <h1>Congregation Timeline: Rabbis</h1>
     </div>
-<div id="my_dataviz" class="svg-container"></div>
+    <div class="d-flex align-items-baseline">
+        <span id='title' class="title"></span>
+        <button id="clearBtn" class='btn btn-link'>(show all)</button>    
+    </div>
+    <div id="my_dataviz" class="svg-container"></div>
 </body>
 <script>
-var margin = {top: 40, right: 0, bottom: 30, left: 120},
-    width = 1200 - margin.left - margin.right,
-    height = 50 - margin.top - margin.bottom;
-    
-let div = d3.select('body')
+    var margin = {top: 40, right: 0, bottom: 30, left: 120},
+        width = 1200 - margin.left - margin.right,
+        height = 50 - margin.top - margin.bottom;
+        
+    let div = d3.select('body')
         .append('div') 
         .attr('class', 'tooltip')
         .style('opacity', 0);
+    var title = d3.select('#title');
+    var clearBtn = d3.select('#clearBtn');
 
-
-var svgM = d3.select("#my_dataviz")
-  .append("svg")
-  .attr("preserveAspectRatio", "xMinYMin")
-  .attr("viewBox", "0 0 1200 10")
-  .classed("svg-content", true)
-    // .attr("width", width + margin.left + margin.right)
-    // .attr("height", 10 + margin.top + margin.bottom)
-  .append("g")
-  .attr("transform", "translate(" + margin.left + ",0)");
-
-    // .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    var svgM = d3.select("#my_dataviz")
+        .append("svg")
+        .attr("preserveAspectRatio", "xMinYMin")
+        .attr("viewBox", "0 0 1200 10")
+        .classed("svg-content", true)
+        // .attr("width", width + margin.left + margin.right)
+        // .attr("height", 10 + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + ",0)");
 
 d3.csv("{{site.url}}/assets/data/rabbi_locations_12_23_20.csv", function(data) {
-console.log(data)    
-
-let congregations = _.chain(data)
-    .filter(d=>d.idcongregation!="")
-    .groupBy(d=>d.idcongregation)
-    .map(d=>{
-        return {
-            idcongregation: d[0].idcongregation,
-            congregation_name: d[0].congregation_name,
-            year_est: d[0].year_est,
-            location: d[0].target_location,
-            loc_lat: parseFloat(d[0].targetX),
-            loc_lon: parseFloat(d[0].targetY),
-            rabbis: d,
-            amt: d.length
-        }
+// console.log(data)  
+    let people = _.chain(data)
+        .filter(d=>d.idcongregation!="")
+        .groupBy(d=>d.idpeople)
+        .map(d=>{
+            return {
+                idpeople: d[0].idpeople,
+                name: d[0].name,
+                congregations: d,
+                amt: d.length
+            }
+        })
+        .sort(function(a,b){return b.loc_lat - a.loc_lat})
+        .value();
+    console.log(people)
+    _.each(data, function(d,i){
+        _.each(people, function(p,k){
+            if (d.idpeople===p.idpeople){
+                d.amt = p.amt
+            }
+        })
     })
-    .sort(function(a,b){return b.loc_lat - a.loc_lat})
-    .value();
-console.log(congregations)
 
-let rabbiData = data.filter(d=>d.idcongregation!="")
-console.log(rabbiData.filter(d=>d.year_start==""))
-let names = _.uniq(rabbiData.map(d=>d.name))
+    let congregations = _.chain(data)
+        .filter(d=>d.idcongregation!="")
+        .groupBy(d=>d.idcongregation)
+        .map(d=>{
+            return {
+                idcongregation: d[0].idcongregation,
+                congregation_name: d[0].congregation_name,
+                year_est: d[0].year_est,
+                location: d[0].target_location,
+                loc_lat: parseFloat(d[0].targetX),
+                loc_lon: parseFloat(d[0].targetY),
+                rabbis: d,
+                amt: d.length
+            }
+        })
+        .sort(function(a,b){return b.loc_lat - a.loc_lat})
+        .value();
+    console.log(congregations)
+
+    let names = _.uniq(people.filter(d=>d.amt>=2).map(d=>d.idpeople))
     console.log(names.length)
 
     let color = d3.scaleOrdinal()
@@ -108,21 +131,22 @@ let names = _.uniq(rabbiData.map(d=>d.name))
         .call(g => g.selectAll(".tick").selectAll("text").attr("transform", "translate(0," + (-height-20) + ")"));
     
 _.each(congregations, function(c, i, congregations){
-    let heightB = c.rabbis.length *8;
+
+    let heightB = c.rabbis.length *10;
         
     var svg = d3.select("#my_dataviz")
-  .append("svg")
-  .attr("preserveAspectRatio", "xMinYMin")
-  .attr("viewBox", "0 0 1200 " + heightB )
-  .classed("svg-content", true)
-    // .attr("width", width + margin.left + margin.right)
-    // .attr("height", heightB)
-    .style("background-color", function(l){
-        if ((i % 2) == 0){return "#F8F8F8"}
-        else {return "none"}
-    })
-  .append("g")
-    .attr("transform", "translate(" + margin.left + ",0)");
+        .append("svg")
+        .attr("preserveAspectRatio", "xMinYMin")
+        .attr("viewBox", "0 0 1200 " + heightB )
+        .classed("svg-content", true)
+        // .attr("width", width + margin.left + margin.right)
+        // .attr("height", heightB)
+        .style("background-color", function(l){
+            if ((i % 2) == 0){return "#F8F8F8"}
+            else {return "none"}
+        })
+        .append("g")
+        .attr("transform", "translate(" + margin.left + ",0)");
     
     const x = d3.scaleTime()
         .domain([new Date(1597, 0, 1), new Date(1845, 0, 1)])
@@ -136,110 +160,192 @@ _.each(congregations, function(c, i, congregations){
         .call(g => g.selectAll(".tick").selectAll("line").attr("stroke", "#D8D8D8").style("stroke-dasharray", "5 5"))
         .call(g => g.selectAll(".tick").selectAll("text").attr("display", "none"));
 
-  var y = d3.scaleBand()
-    .range([ heightB, 0 ])
-    .domain(c.rabbis.sort(function(a,b){return parseFloat(b.year_start) - parseFloat(a.year_start)}).map(d=>d.name))
-    .padding(1);
-  svg.append("g")
-    .call(d3.axisLeft(y))
-    .call(g => g.select(".domain").attr("display", "none"))
-    .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
-    .call(g => g.selectAll(".tick").selectAll("text").attr("display", "none"));
+    const y = d3.scaleBand()
+        .range([ heightB, 0 ])
+        .domain(c.rabbis.sort(function(a,b){return parseFloat(b.year_start) - parseFloat(a.year_start)}).map(d=>d.name))
+        .padding(1);
+    svg.append("g")
+        .call(d3.axisLeft(y))
+        .call(g => g.select(".domain").attr("display", "none"))
+        .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
+        .call(g => g.selectAll(".tick").selectAll("text").attr("display", "none"));
 
     var hillGradients = svg.append("defs").selectAll("linearGradient")
-    .data(c.rabbis)
-    .enter().append("linearGradient")
-    .attr("id", function(d){ return "gradient-" + d.idpeople; })
-   .attr("x1", "0%")
-    .attr("x2", "100%")
-    .attr("y1", "100%")
-    .attr("y2", "100%");
+        .data(c.rabbis)
+        .enter().append("linearGradient")
+        .attr("id", function(d){ return "gradient-" + d.idpeople; })
+        .attr("x1", "0%")
+        .attr("x2", "100%")
+        .attr("y1", "100%")
+        .attr("y2", "100%");
 
-hillGradients.append("stop")
-    .attr('class', 'start')
-    .attr("offset", "0%")
-    .attr("stop-color", function(d) {
-        return color(d.name);
-    })
-    .attr("stop-opacity", 1);
-hillGradients.append("stop")
-    .attr('class', 'end')
-    .attr("offset", "60%")
-    .attr('stop-color','#f4f1eb')
-    .attr("stop-opacity", 0);
+        hillGradients.append("stop")
+            .attr('class', 'start')
+            .attr("offset", "0%")
+            .attr("stop-color", function(d) {
+                if (d.amt<2){return "#B8B8B8"}
+                else {return color(d.idpeople)};
+            })
+            .attr("stop-opacity", 1);
+        hillGradients.append("stop")
+            .attr('class', 'end')
+            .attr("offset", "60%")
+            .attr('stop-color','#f4f1eb')
+            .attr("stop-opacity", 0);
     
     var rabbiGradients = svg.append("defs").selectAll("linearGradient")
-    .data(c.rabbis)
-    .enter().append("linearGradient")
-    //Create a unique id per "hill"
-    .attr("id", function(d){ return "gradientB-" + d.idpeople; })
-   .attr("x1", "100%")
-    .attr("x2", "0%")
-    .attr("y1", "100%")
-    .attr("y2", "100%");
+        .data(c.rabbis)
+        .enter().append("linearGradient")
+        .attr("id", function(d){ return "gradientB-" + d.idpeople; })
+        .attr("x1", "100%")
+        .attr("x2", "0%")
+        .attr("y1", "100%")
+        .attr("y2", "100%");
 
-rabbiGradients.append("stop")
-    .attr('class', 'start')
-    .attr("offset", "0%")
-    .attr("stop-color", function(d) {
-        return color(d.name);
-    })
-    .attr("stop-opacity", 1);
-rabbiGradients.append("stop")
-    .attr('class', 'end')
-    .attr("offset", "60%")
-    .attr('stop-color','#f4f1eb')
-    .attr("stop-opacity", 0);
-    
+        rabbiGradients.append("stop")
+            .attr('class', 'start')
+            .attr("offset", "0%")
+            .attr("stop-color", function(d) {
+                if (d.amt<2){return "#B8B8B8"}
+                else {return color(d.idpeople)};
+            })
+            .attr("stop-opacity", 1);
+        rabbiGradients.append("stop")
+            .attr('class', 'end')
+            .attr("offset", "60%")
+            .attr('stop-color','#f4f1eb')
+            .attr("stop-opacity", 0);
 
-  svg.selectAll("myline")
-    .data(c.rabbis)
-    .enter()
-    .append("rect")
-      .attr("class", "rabbi")
-    .attr("x", function(d) { 
-      if(d.year_start=="" && d.year_end !="") {return x(new Date(d.year_end,0,1)) }
-        else {return x(new Date(d.year_start,0,1)) }
-      })
-      .attr("y", function(d) { return y(d.name)-6; })
-    .attr("width", function(d) { 
-        if(d.year_start == d.year_end) {return 6 }
-      if(d.year_start!="" && d.year_end =="") {return 100 }
-      if(d.year_start=="" && d.year_end !="") {return 100 }
-        else {return x(new Date(d.year_end,0,1)) - x(new Date(d.year_start,0,1)) }
-      })
-    .attr("height", 8)
-    .style('cursor', 'pointer')
-    .on('mouseover.tooltip', function(d) {
+    svg.selectAll("myline")
+        .data(c.rabbis.filter(d=>d.title!="Emissary"))
+        .enter()
+        .append("rect")
+        .attr("class", "rabbi")
+        .attr("x", function(d) { 
+            if(d.year_start=="" && d.year_end !="") {return x(new Date(d.year_end,0,1)) }
+            else {return x(new Date(d.year_start,0,1)) }
+        })
+        .attr("y", function(d) { return y(d.name)-8; })
+        .attr("width", function(d) { 
+            if(d.year_start == d.year_end) {return 6 }
+            if(d.year_start!="" && d.year_end =="") {return 100 }
+            if(d.year_start=="" && d.year_end !="") {return 100 }
+            else {return x(new Date(d.year_end,0,1)) - x(new Date(d.year_start,0,1)) }
+        })
+        .attr("height", 8)
+        .attr("stroke", "#fff")
+        .attr("stroke-width", 1)
+        .style('cursor', 'pointer')
+        .on('mouseover.tooltip', function(d) {
             div.transition()    
                 .duration(100)    
                 .style("opacity", 0.95);    
             div.html( d.name +"</br>"+ d.congregation_name +"</br>" + d.title +"</br>" + d.year_start +"-"+ d.year_end +"</br>(" + d.cit_short + ")" )  
                 .style("left", (d3.event.pageX + 12) + "px")   
                 .style("top", (d3.event.pageY - 28) + "px");  
-            })          
-    .on('mouseout.tooltip', function(d) {   
-        div.transition()    
-            .duration(100)    
-            .style("opacity", 0); 
-    });
+        })          
+        .on('mouseout.tooltip', function(d) {   
+            div.transition()    
+                .duration(100)    
+                .style("opacity", 0); 
+        })
+        .on('click',function(d){
+            let current = d.idpeople
+            let cong = d.idcongregation
+
+            d3.selectAll('.rabbi')
+            .attr('fill-opacity', function(o) {
+                    if (o.idpeople === current){
+                        return 1;
+                    } else return 0.2;
+                });
+            d3.selectAll('.congregations')
+            .attr('opacity', function(o) {
+                    if (o.idcongregation === cong){
+                        return 1;
+                    } else return 0.1;
+                });
+
+            title.text('Rabbi: ' + d.name);
+            clearBtn.style('display', 'block').on('click', function(b){
+                d3.selectAll('.rabbi').attr('fill-opacity', 1);
+                d3.selectAll('.congregations').attr('opacity', 1);
+                title.text('');
+                clearBtn.style('display', 'none');
+            });
+        });
+
     d3.selectAll(".rabbi")
-    .attr("fill", function(d) {
-         if(d.year_start!="" && d.year_end =="") {return "url(#gradient-" + d.idpeople + ")";}
-        if(d.year_start=="" && d.year_end !="") {return "url(#gradientB-" + d.idpeople + ")";}
-        else {return color(d.name)}
-    });
+        .attr("fill", function(d) {
+            if(d.year_start!="" && d.year_end =="") {return "url(#gradient-" + d.idpeople + ")";}
+            if(d.year_start=="" && d.year_end !="") {return "url(#gradientB-" + d.idpeople + ")";}
+            if (d.amt<2){return "#B8B8B8"}
+            else {return color(d.idpeople)}
+        });
+
+    svg.selectAll("emissary")
+        .data(c.rabbis.filter(d=>d.title=="Emissary"))
+        .enter().append("circle").attr("class", "rabbi")
+        .attr("cx", function(d) { 
+            if(d.year_start=="" && d.year_end !="") {return x(new Date(d.year_end,0,1)) }
+            else {return x(new Date(d.year_start,0,1)) }
+        })
+        .attr("cy", function(d) { return y(d.name); })
+        .attr("r", "6")
+        .attr("stroke", "#fff")
+        .attr("stroke-width", 1)
+        .style("fill", d=>{
+            if (d.amt<2){return "#B8B8B8"}
+            else {return color(d.idpeople)}
+        })
+        .style('cursor', 'pointer')
+        .on('mouseover.tooltip', function(d) {
+            div.transition()    
+                .duration(100)    
+                .style("opacity", 0.95);    
+            div.html( d.name +"</br>"+ d.congregation_name +"</br>" + d.title +"</br>" + d.year_start +"-"+ d.year_end +"</br>(" + d.cit_short + ")" )  
+                .style("left", (d3.event.pageX + 12) + "px")   
+                .style("top", (d3.event.pageY - 28) + "px");  
+        })          
+        .on('mouseout.tooltip', function(d) {   
+            div.transition()    
+                .duration(100)    
+                .style("opacity", 0); 
+        })
+        .on('click',function(d){
+            let current = d.idpeople
+            let cong = d.idcongregation
+            d3.selectAll('.rabbi')
+            .attr('fill-opacity', function(o) {
+                    if (o.idpeople === current){
+                        return 1;
+                    } else return 0.2;
+                });
+            d3.selectAll('.congregations')
+            .attr('opacity', function(o) {
+                    if (o.idcongregation === cong){
+                        return 1;
+                    } else return 0.1;
+                });
+
+            title.text('Rabbi: ' + d.name);
+            clearBtn.style('display', 'block').on('click', function(b){
+                d3.selectAll('.rabbi').attr('fill-opacity', 1);
+                d3.selectAll('.congregations').attr('opacity', 1);
+                title.text('');
+                clearBtn.style('display', 'none');
+            });
+        });
     
     svg.selectAll("myCircle")
-    .data(c.rabbis)
-      .enter()
-        .append("line")
-        .attr("id", "congregations")
+        .data(c.rabbis)
+        .enter().append("line")
+        .attr("class", "congregations")
         .attr("x1", function(d) { return x(new Date(d.year_est,0,1)); })
         .attr("x2", function(d) { return x(new Date(d.year_est,0,1)); })
-        .attr("y1", function(d) { return y(d.name)-5; })
-        .attr("y2", function(d) { return y(d.name)+5; })
-        .attr("stroke-width", 4)
+        .attr("y1", function(d) { return y(d.name)-10; })
+        .attr("y2", function(d) { return y(d.name)+10; })
+        .attr("stroke-width", 5)
         .style("stroke", function(d){
             if (d.rite=="sephardic"){return "#00608c"}
             else {return "#d65ca2"}
@@ -257,34 +363,53 @@ rabbiGradients.append("stop")
             div.transition()    
                 .duration(100)    
                 .style("opacity", 0); 
+        })
+        .on('click', function(d) {
+            window.open('{{site.url}}/congregation/'+ d.idcongregation, '_new');
         });
     
-       var yLabels = d3.scaleBand()
+    var yLabels = d3.scaleBand()
         .range([ heightB, 0 ])
         .domain(c.rabbis.map(d=> d.congregation_name))
         .padding(1);
-      svg.append("g")
-    .attr("color", "#333")
+    svg.append("g").attr('class', 'label')
+        .attr("color", "#333")
         .style('font-size', '0.7rem')
         .call(d3.axisLeft(yLabels))
         .call(g => g.select(".domain").attr("display", "none"))
-.call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
-    .call(g => g.selectAll(".tick").selectAll("text").attr("cursor", "pointer").on('mouseover.tooltip', function(n) {
+        .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
+        .call(g => g.selectAll(".tick").selectAll("text").attr("cursor", "pointer").on('mouseover.tooltip', function(n) {
             div.data(c.rabbis).enter();
-                div.transition()    
-                    .duration(100)    
-                    .style("opacity", 0.95);    
-                div .html( d=>d.congregation_name +"</br>"+ d.target_location + "</br>Est."+ d.year_est )  
-                    .style("left", (d3.event.pageX + 12) + "px")   
-                    .style("top", (d3.event.pageY - 28) + "px");  
-                })          
-        .on('mouseout.tooltip', function(d) {   
             div.transition()    
                 .duration(100)    
+                .style("opacity", 0.95);    
+            div .html( d=>d.congregation_name +"</br>"+ d.target_location + "</br>Est."+ d.year_est )  
+                .style("left", (d3.event.pageX + 12) + "px")   
+                .style("top", (d3.event.pageY - 28) + "px");  
+            })          
+            .on('mouseout.tooltip', function(d) {   
+                div.transition()    
+                .duration(100)    
                 .style("opacity", 0); 
-        }));
-})
+            })
+        );
+    var yLabels2 = d3.scaleBand()
+        .range([ heightB, 0 ])
+        .domain(c.rabbis.filter(d=>d.target_location!="Amsterdam, Netherlands").map(d=>d.target_location))
+        .padding(1);
+    svg.append("g")
+        .attr('class', 'label-loc')
+        .attr("color", "#333")
+        .style('font-size', '0.7rem')
+        .attr("transform", "translate(" + margin.left/3 + ",0)")
+        .call(d3.axisLeft(yLabels2))
+        .call(g => g.select(".domain").attr("display", "none"))
+        .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
+        .call(g => g.selectAll(".tick").selectAll("text"));
+    d3.selectAll('.label-loc').attr('text-anchor', 'start');
 
-})
 
+});
+
+});
 </script>
