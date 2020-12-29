@@ -9,16 +9,22 @@
   sublinks:
   - name: Synagogue Map
     url: /synagogue-map
+  - name: Migrations
+    url: /migrations
   - name: Rabbi Locations
     url: /rabbi-map
-- name: Data Visualizations
+- name: Timelines
   sublinks:
   - name: Ruling Colonial Powers
     url: /ruling-powers
   - name: Atlantic Jewish Populations
     url: /populations
-  - name: Rabbi Timeline
+  - name: Rabbis
     url: /rabbi-timeline
+  - name: Congregations & Synagogues
+    url: /congregation-timeline
+- name: Data Visualizations
+  sublinks:
   - name: Contributions
     url: /contributions
   - name: Access Paths
