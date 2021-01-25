@@ -38,25 +38,25 @@ title: Migrations
     <div id="mapid"></div>
 </div> 
 <script>
-    var locArray = [];
-    {% for building in site.data.buildings %}
+    // var locArray = [];
+    // {% for building in site.data.buildings %}
     
-    var bldLatLon = [];
-    bldLatLon.push({{building.lat}});
-    bldLatLon.push({{building.lon}});
-    locArray.push(bldLatLon);
-    // console.log(bldLatLon)
-    {% endfor %}
+    // var bldLatLon = [];
+    // bldLatLon.push({{building.lat}});
+    // bldLatLon.push({{building.lon}});
+    // locArray.push(bldLatLon);
+    // // console.log(bldLatLon)
+    // {% endfor %}
 
     var cartoUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
     var cartoAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
     
     var carto = L.tileLayer(cartoUrl, {subdomains: 'abcd', maxZoom: 18, attribution: cartoAttrib});
     
-    var markers = L.markerClusterGroup.layerSupport({showCoverageOnHover: true, maxClusterRadius:28, zoomToBoundsOnClick: false});
+    // var markers = L.markerClusterGroup.layerSupport({showCoverageOnHover: true, maxClusterRadius:28, zoomToBoundsOnClick: false});
 
-    var group1 = L.layerGroup(),
-        group2 = L.layerGroup();
+    // var group1 = L.layerGroup(),
+    //     group2 = L.layerGroup();
     var data1 = L.layerGroup();
     var data2 = L.layerGroup();
     var data3 = L.layerGroup();
@@ -91,153 +91,153 @@ title: Migrations
         "Late 17th to Early 18th C.": data6,
         "Early 18th to Mid 18th C.": data7,
         "Mid 18th to Late 18th C.": data8,
-        "Sephardic": group1,
-        "Ashkenazi": group2
+        // "Sephardic": group1,
+        // "Ashkenazi": group2
     };
 
-    {% for building in site.data.buildings %}
-    {% assign pagepath = building.idbuildings | prepend: "/buildings/"%}
-    {% for synagogue in building.objects %}
-    {% assign rite = synagogue.rite | capitalize %}
-    {% assign year = synagogue.yr_start %}
-    {% assign year_end = synagogue.yr_end %}
-    // console.log({{building.year_opened}});
-    var bldLatLon = [];
-    bldLatLon.push({{building.lat}});
-    bldLatLon.push({{building.lon}});
-    // markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a></strong>"));
-    {% if year <= 1625 %}
-    var markerOptions = {
-          icon: 'star-of-david',
-          iconShape: 'marker',
-          borderColor: '#00ABDC',
-          textColor: '#00ABDC'
-        };
-    var marker = L.marker(bldLatLon, {
-          icon: L.BeautifyIcon.icon(markerOptions),
-          draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
+    // {% for building in site.data.buildings %}
+    // {% assign pagepath = building.idbuildings | prepend: "/buildings/"%}
+    // {% for synagogue in building.objects %}
+    // {% assign rite = synagogue.rite | capitalize %}
+    // {% assign year = synagogue.yr_start %}
+    // {% assign year_end = synagogue.yr_end %}
+    // // console.log({{building.year_opened}});
+    // var bldLatLon = [];
+    // bldLatLon.push({{building.lat}});
+    // bldLatLon.push({{building.lon}});
+    // // markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a></strong>"));
+    // {% if year <= 1625 %}
+    // var markerOptions = {
+    //       icon: 'star-of-david',
+    //       iconShape: 'marker',
+    //       borderColor: '#00ABDC',
+    //       textColor: '#00ABDC'
+    //     };
+    // var marker = L.marker(bldLatLon, {
+    //       icon: L.BeautifyIcon.icon(markerOptions),
+    //       draggable: false
+    //     }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
-    marker.addTo(data2)
-    {% endif %}
-    {% if year >= 1600 and year <= 1650 %}
-    var markerOptions = {
-          icon: 'star-of-david',
-          iconShape: 'marker',
-          borderColor: '#00ABDC',
-          textColor: '#00ABDC'
-        };
-    var marker = L.marker(bldLatLon, {
-          icon: L.BeautifyIcon.icon(markerOptions),
-          draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
+    // marker.addTo(data2)
+    // {% endif %}
+    // {% if year >= 1600 and year <= 1650 %}
+    // var markerOptions = {
+    //       icon: 'star-of-david',
+    //       iconShape: 'marker',
+    //       borderColor: '#00ABDC',
+    //       textColor: '#00ABDC'
+    //     };
+    // var marker = L.marker(bldLatLon, {
+    //       icon: L.BeautifyIcon.icon(markerOptions),
+    //       draggable: false
+    //     }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
-    marker.addTo(data3)
-    {% endif %}
-    {% if year >= 1640 and year <= 1660 %}
-    var markerOptions = {
-          icon: 'star-of-david',
-          iconShape: 'marker',
-          borderColor: '#00ABDC',
-          textColor: '#00ABDC'
-        };
-    var marker = L.marker(bldLatLon, {
-          icon: L.BeautifyIcon.icon(markerOptions),
-          draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
+    // marker.addTo(data3)
+    // {% endif %}
+    // {% if year >= 1640 and year <= 1660 %}
+    // var markerOptions = {
+    //       icon: 'star-of-david',
+    //       iconShape: 'marker',
+    //       borderColor: '#00ABDC',
+    //       textColor: '#00ABDC'
+    //     };
+    // var marker = L.marker(bldLatLon, {
+    //       icon: L.BeautifyIcon.icon(markerOptions),
+    //       draggable: false
+    //     }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
-    marker.addTo(data4)
-    {% endif %}
-    {% if year >= 1640 and year <= 1700 %}
-    var markerOptions = {
-          icon: 'star-of-david',
-          iconShape: 'marker',
-          borderColor: '#00ABDC',
-          textColor: '#00ABDC'
-        };
-    var marker = L.marker(bldLatLon, {
-          icon: L.BeautifyIcon.icon(markerOptions),
-          draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
+    // marker.addTo(data4)
+    // {% endif %}
+    // {% if year >= 1640 and year <= 1700 %}
+    // var markerOptions = {
+    //       icon: 'star-of-david',
+    //       iconShape: 'marker',
+    //       borderColor: '#00ABDC',
+    //       textColor: '#00ABDC'
+    //     };
+    // var marker = L.marker(bldLatLon, {
+    //       icon: L.BeautifyIcon.icon(markerOptions),
+    //       draggable: false
+    //     }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
-    marker.addTo(data5)
-    {% endif %}
-    {% if year >= 1680 and year <= 1730 %}
-    var markerOptions = {
-          icon: 'star-of-david',
-          iconShape: 'marker',
-          borderColor: '#00ABDC',
-          textColor: '#00ABDC'
-        };
-    var marker = L.marker(bldLatLon, {
-          icon: L.BeautifyIcon.icon(markerOptions),
-          draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
+    // marker.addTo(data5)
+    // {% endif %}
+    // {% if year >= 1680 and year <= 1730 %}
+    // var markerOptions = {
+    //       icon: 'star-of-david',
+    //       iconShape: 'marker',
+    //       borderColor: '#00ABDC',
+    //       textColor: '#00ABDC'
+    //     };
+    // var marker = L.marker(bldLatLon, {
+    //       icon: L.BeautifyIcon.icon(markerOptions),
+    //       draggable: false
+    //     }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
-    marker.addTo(data6)
-    {% endif %}
-    {% if year >= 1700 and year <= 1750 %}
-    var markerOptions = {
-          icon: 'star-of-david',
-          iconShape: 'marker',
-          borderColor: '#00ABDC',
-          textColor: '#00ABDC'
-        };
-    var marker = L.marker(bldLatLon, {
-          icon: L.BeautifyIcon.icon(markerOptions),
-          draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
+    // marker.addTo(data6)
+    // {% endif %}
+    // {% if year >= 1700 and year <= 1750 %}
+    // var markerOptions = {
+    //       icon: 'star-of-david',
+    //       iconShape: 'marker',
+    //       borderColor: '#00ABDC',
+    //       textColor: '#00ABDC'
+    //     };
+    // var marker = L.marker(bldLatLon, {
+    //       icon: L.BeautifyIcon.icon(markerOptions),
+    //       draggable: false
+    //     }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
-    marker.addTo(data7)
-    {% endif %}
-    {% if year >= 1740 and year <= 1800 %}
-    var markerOptions = {
-          icon: 'star-of-david',
-          iconShape: 'marker',
-          borderColor: '#00ABDC',
-          textColor: '#00ABDC'
-        };
-    var marker = L.marker(bldLatLon, {
-          icon: L.BeautifyIcon.icon(markerOptions),
-          draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
+    // marker.addTo(data7)
+    // {% endif %}
+    // {% if year >= 1740 and year <= 1800 %}
+    // var markerOptions = {
+    //       icon: 'star-of-david',
+    //       iconShape: 'marker',
+    //       borderColor: '#00ABDC',
+    //       textColor: '#00ABDC'
+    //     };
+    // var marker = L.marker(bldLatLon, {
+    //       icon: L.BeautifyIcon.icon(markerOptions),
+    //       draggable: false
+    //     }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
-    marker.addTo(data8)
-    {% endif %}
+    // marker.addTo(data8)
+    // {% endif %}
 
-    {% if synagogue.rite == "sephardic" %}
-    var markerOptions = {
-          icon: 'star-of-david',
-          iconShape: 'marker',
-          borderColor: '#00ABDC',
-          textColor: '#00ABDC'
-        };
-    var marker = L.marker(bldLatLon, {
-          icon: L.BeautifyIcon.icon(markerOptions),
-          draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
+    // {% if synagogue.rite == "sephardic" %}
+    // var markerOptions = {
+    //       icon: 'star-of-david',
+    //       iconShape: 'marker',
+    //       borderColor: '#00ABDC',
+    //       textColor: '#00ABDC'
+    //     };
+    // var marker = L.marker(bldLatLon, {
+    //       icon: L.BeautifyIcon.icon(markerOptions),
+    //       draggable: false
+    //     }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
-    marker.addTo(group1)
-    {% endif %}
-    {% if synagogue.rite == "ashkenazi" %}
-    var markerOptions = {
-          icon: 'star-of-david',
-          iconShape: 'marker',
-          borderColor: '#b3334f',
-          textColor: '#b3334f'
-        };
-    var marker = L.marker(bldLatLon, {
-          icon: L.BeautifyIcon.icon(markerOptions),
-          draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
+    // marker.addTo(group1)
+    // {% endif %}
+    // {% if synagogue.rite == "ashkenazi" %}
+    // var markerOptions = {
+    //       icon: 'star-of-david',
+    //       iconShape: 'marker',
+    //       borderColor: '#b3334f',
+    //       textColor: '#b3334f'
+    //     };
+    // var marker = L.marker(bldLatLon, {
+    //       icon: L.BeautifyIcon.icon(markerOptions),
+    //       draggable: false
+    //     }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
-    marker.addTo(group2)
-    {% endif %}
-    {% endfor %}
-    {% endfor %}
-    // map.addLayer(markers);
-    markers.addTo(map);
-    markers.checkIn([group1, group2]);
+    // marker.addTo(group2)
+    // {% endif %}
+    // {% endfor %}
+    // {% endfor %}
+    // // map.addLayer(markers);
+    // markers.addTo(map);
+    // markers.checkIn([group1, group2]);
    
         
     d3.csv('{{site.url}}/assets/data/migrations_12_30_20.csv', function(data){

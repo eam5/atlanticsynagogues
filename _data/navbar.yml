@@ -8,7 +8,7 @@
 - name: Maps
   sublinks:
   - name: Synagogue Map
-    url: /synagogue-map
+    url: /map
   - name: Migrations
     url: /migrations
   - name: Rabbi Locations
