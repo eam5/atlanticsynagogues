@@ -63,7 +63,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               
-              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/synagogue-map">Synagogue Map</a>
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/map">Synagogue Map</a>
               
               <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/migrations">Migrations</a>
               
@@ -578,13 +578,6 @@
     
     
     var bldLatLon = [];
-    bldLatLon.push(17.975076);
-    bldLatLon.push(-76.790106);
-    locArray.push(bldLatLon);
-    // console.log(bldLatLon)
-    
-    
-    var bldLatLon = [];
     bldLatLon.push(17.968479);
     bldLatLon.push(-76.79201);
     locArray.push(bldLatLon);
@@ -594,13 +587,6 @@
     var bldLatLon = [];
     bldLatLon.push(17.968479);
     bldLatLon.push(-76.79201);
-    locArray.push(bldLatLon);
-    // console.log(bldLatLon)
-    
-    
-    var bldLatLon = [];
-    bldLatLon.push(40.774861);
-    bldLatLon.push(-73.977306);
     locArray.push(bldLatLon);
     // console.log(bldLatLon)
     
@@ -657,13 +643,6 @@
     var bldLatLon = [];
     bldLatLon.push(52.368577);
     bldLatLon.push(4.902246);
-    locArray.push(bldLatLon);
-    // console.log(bldLatLon)
-    
-    
-    var bldLatLon = [];
-    bldLatLon.push(12.104168);
-    bldLatLon.push(-68.932747);
     locArray.push(bldLatLon);
     // console.log(bldLatLon)
     
@@ -2052,7 +2031,7 @@
     var bldLatLon = [];
     bldLatLon.push(52.367077);
     bldLatLon.push(4.904008);
-    // markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/11\">Nieuwe Ashkenazic Synagogue (1752)</a></strong>"));
+    // markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/11\">Nieuwe Synagoge (1752)</a></strong>"));
     
     
     var markerOptions = {
@@ -2064,7 +2043,7 @@
     var marker = L.marker(bldLatLon, {
           icon: L.BeautifyIcon.icon(markerOptions),
           draggable: false
-        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/11\">Nieuwe Ashkenazic Synagogue (1752)</a><br />Ashkenazi<br />High German Congregation (1752-1943)</strong>");
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/11\">Nieuwe Synagoge (1752)</a><br />Ashkenazi<br />High German Congregation (1752-1943)</strong>");
 
     marker.addTo(group2)
     
@@ -2298,18 +2277,6 @@
     
     
     
-    // console.log();
-    var bldLatLon = [];
-    bldLatLon.push(17.975076);
-    bldLatLon.push(-76.790106);
-    // markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/104\">Shaare Shalom (1913)</a></strong>"));
-    
-    
-    
-    
-    
-    
-    
     // console.log(ashkenazi);
     var bldLatLon = [];
     bldLatLon.push(17.968479);
@@ -2362,9 +2329,9 @@
     
     // console.log(sephardic);
     var bldLatLon = [];
-    bldLatLon.push(40.774861);
-    bldLatLon.push(-73.977306);
-    // markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/103\">Shearith Israel (1897)</a></strong>"));
+    bldLatLon.push(45.50634);
+    bldLatLon.push(-73.556519);
+    // markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/121\">Shearith Israel (1777)</a></strong>"));
     
     var markerOptions = {
           icon: 'star-of-david',
@@ -2375,35 +2342,10 @@
     var marker = L.marker(bldLatLon, {
           icon: L.BeautifyIcon.icon(markerOptions),
           draggable: false
-        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/103\">Shearith Israel (1897)</a><br />Sephardic<br />Shearith Israel (1897-)</strong>");
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/121\">Shearith Israel (1777)</a><br />Sephardic<br />Shearith Israel (1777-1824)</strong>");
 
     marker.addTo(group1)
     
-    
-    
-    
-    
-    
-    
-    // console.log(ashkenazi);
-    var bldLatLon = [];
-    bldLatLon.push(45.50634);
-    bldLatLon.push(-73.556519);
-    // markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/121\">Shearith Israel (1777)</a></strong>"));
-    
-    
-    var markerOptions = {
-          icon: 'star-of-david',
-          iconShape: 'marker',
-          borderColor: '#b3334f',
-          textColor: '#b3334f'
-        };
-    var marker = L.marker(bldLatLon, {
-          icon: L.BeautifyIcon.icon(markerOptions),
-          draggable: false
-        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/121\">Shearith Israel (1777)</a><br />Ashkenazi<br />Shearith Israel (1777-1824)</strong>");
-
-    marker.addTo(group2)
     
     
     
@@ -2550,7 +2492,7 @@
     var marker = L.marker(bldLatLon, {
           icon: L.BeautifyIcon.icon(markerOptions),
           draggable: false
-        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/123\">Synagogue St. Maarten (1783)</a><br />Sephardic<br />Congregation St. Maarten (1783-1828)</strong>");
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/123\">Synagogue St. Maarten (1783)</a><br />Sephardic<br />Congregation St. Maarten (1783-1800)</strong>");
 
     marker.addTo(group1)
     
@@ -2578,18 +2520,6 @@
         }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/6\">Talmud Torah, Portuguese Synagogue I (1639)</a><br />Sephardic<br />Talmud Torah (1639-1931)</strong>");
 
     marker.addTo(group1)
-    
-    
-    
-    
-    
-    
-    
-    // console.log();
-    var bldLatLon = [];
-    bldLatLon.push(12.104168);
-    bldLatLon.push(-68.932747);
-    // markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/102\">Temple Emanuel (1867)</a></strong>"));
     
     
     
@@ -2766,22 +2696,13 @@
     
     
     
-    // console.log(catholic);
-    var bldLatLon = [];
-    bldLatLon.push(-8.06131);
-    bldLatLon.push(-34.87132);
-    // markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/38\">Zur Israel Synagogue (1641)</a></strong>"));
-    
-    
-    
-    
     // map.addLayer(markers);
     markers.addTo(map);
     markers.checkIn([group1, group2]);
     var control = L.control.layers(null, null, { collapsed: true })
 
-control.addOverlay(group1, 'Sephardi');
-control.addOverlay(group2, 'Ashkenazi');
+control.addOverlay(group1, 'Sephardic Synagogues');
+control.addOverlay(group2, 'Ashkenazic Synagogues');
 control.addTo(map);
 group1.addTo(map);
 group2.addTo(map);

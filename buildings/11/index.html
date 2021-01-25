@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>Nieuwe Ashkenazic Synagogue - Atlantic Synagogues</title>
+    <title>Nieuwe Synagoge - Atlantic Synagogues</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">    
     <!-- <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css"> -->
@@ -63,7 +63,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               
-              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/synagogue-map">Synagogue Map</a>
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/map">Synagogue Map</a>
               
               <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/migrations">Migrations</a>
               
@@ -143,7 +143,7 @@
 </style>
 <div class="row">
     <div class="col-sm-9">
-        <h1>Nieuwe Ashkenazic Synagogue</h1>
+        <h1>Nieuwe Synagoge</h1>
         <p>Amsterdam, Netherlands</p>
         <!-- <p>Building ID: 11</p> -->
         <p>Year Built: </p>
@@ -318,18 +318,9 @@
             
             
             
-            
-            
-            
-            
-            
-            
         </ul>
         <h4>Shares congregation with:</h4>
         <ul>
-            
-            
-            
             
             
             
@@ -566,18 +557,6 @@
             
             
             <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/142">Dritt Sjoel (1778)</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
             
             
@@ -1026,18 +1005,6 @@
             
             
             
-         
-            
-            
-            
-         
-            
-            
-            
-         
-            
-            
-            
            
         </ul>
     
@@ -1233,7 +1200,7 @@
                     
                     
                     
-                    <div class="map" id="nieuwe-ashkenazic-synagogue" width="100%"></div>
+                    <div class="map" id="nieuwe-synagoge" width="100%"></div>
                 </li>
                 <a href="https://eam5.github.io/atlanticsynagogues/synagogue-map"><li type="button" class="btn btn-light list-group-item px-1">Synagogue Map</li></a>
             </ul>
@@ -1243,12 +1210,12 @@
 <script>
     
     
-    var nieuweashkenazicsynagogue= L.map('nieuwe-ashkenazic-synagogue').setView([52.367077, 4.904008], 13);
+    var nieuwesynagoge= L.map('nieuwe-synagoge').setView([52.367077, 4.904008], 13);
     var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-    L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(nieuweashkenazicsynagogue);
-    var marker = L.marker([52.367077, 4.904008]).addTo(nieuweashkenazicsynagogue);
-    marker.bindPopup("<strong>Nieuwe Ashkenazic Synagogue</strong>");
+    L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(nieuwesynagoge);
+    var marker = L.marker([52.367077, 4.904008]).addTo(nieuwesynagoge);
+    marker.bindPopup("<strong>Nieuwe Synagoge</strong>");
 </script>
 
 

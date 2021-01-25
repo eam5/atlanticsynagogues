@@ -1,0 +1,5080 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Map - Atlantic Synagogues</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">    
+    <!-- <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css"> -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js'></script>
+
+    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+<!-- leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/marker-cluster.css">
+<!-- leaflet script -->
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+  <script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet.markercluster-src.js"></script>
+  <script src="https://elfalem.github.io/Leaflet.curve/src/leaflet.curve.js"></script>
+
+  <!-- After Leaflet and Leaflet.markercluster scripts -->
+<script src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"></script>
+<!-- Beautify Icons -->
+<script src="https://kit.fontawesome.com/b399f411bc.js" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/leaflet-beautify-marker-icon.css">
+<script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet-beautify-marker-icon.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="https://eam5.github.io/atlanticsynagogues">Atlantic Synagogues</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+         
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Maps
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/map">Synagogue Map</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/migrations">Migrations</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/rabbi-map">Rabbi Locations</a>
+              
+            </div>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Timelines
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/ruling-powers">Ruling Colonial Powers</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/populations">Atlantic Jewish Populations</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/congregation-timeline">Congregations & Synagogues</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/rabbi-timeline">Rabbis</a>
+              
+            </div>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Data Visualizations
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/contributions">Contributions</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/access-paths">Access Paths</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/allbldgs_allfac">Facade Fractal Trees</a>
+              
+            </div>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+          </li>
+          
+          
+         
+
+          <!-- 
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues">Maps</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues">Timelines</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues">Data Visualizations</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+            
+           -->
+        </ul>
+  </div>
+</nav>
+  <div id="main" class="container-lg">
+    <style>
+    #mapid {height: 500px;width: 100%;}
+    .overlay-title {font-weight: bold; font-style: italic;}
+</style>
+<div class="d-flex align-items-baseline">
+    <h1>Atlantic Synagogues</h1>
+    <button id="clearBtn" class='btn btn-link' onClick="refreshPage()">(reset map)</button>    
+</div>
+<div id="mapid"></div>
+<script>
+    var locArray = [];
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(36.14319);
+    bldLatLon.push(-5.3537);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(18.342754);
+    bldLatLon.push(-64.932636);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(18.342754);
+    bldLatLon.push(-64.932636);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(18.342754);
+    bldLatLon.push(-64.932636);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(5.429176);
+    bldLatLon.push(-54.984273);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(32.7823);
+    bldLatLon.push(-79.932732);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(32.7823);
+    bldLatLon.push(-79.932732);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.368577);
+    bldLatLon.push(4.902246);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.36859);
+    bldLatLon.push(4.900492);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.082586);
+    bldLatLon.push(4.316414);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(37.537307);
+    bldLatLon.push(-77.429486);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(51.514473);
+    bldLatLon.push(-0.078938);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(51.513685);
+    bldLatLon.push(-0.079298);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(51.513685);
+    bldLatLon.push(-0.079298);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(5.826006);
+    bldLatLon.push(-55.162124);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.367259);
+    bldLatLon.push(4.903681);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.367259);
+    bldLatLon.push(4.903681);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.36753);
+    bldLatLon.push(4.905336);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(36.14237);
+    bldLatLon.push(-5.35405);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(12.104742);
+    bldLatLon.push(-68.93267);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(51.514313);
+    bldLatLon.push(-0.077881);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(51.514313);
+    bldLatLon.push(-0.077881);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(51.514313);
+    bldLatLon.push(-0.077881);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(51.514313);
+    bldLatLon.push(-0.077881);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.367274);
+    bldLatLon.push(4.903893);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.367887);
+    bldLatLon.push(4.901825);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.08439);
+    bldLatLon.push(4.315817);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.074668);
+    bldLatLon.push(4.318481);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.482597);
+    bldLatLon.push(-62.981295);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.482597);
+    bldLatLon.push(-62.981295);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(-8.054074);
+    bldLatLon.push(-34.870849);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(32.083541);
+    bldLatLon.push(-81.099834);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(12.104742);
+    bldLatLon.push(-68.93267);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(12.104826);
+    bldLatLon.push(-68.933468);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(12.10511);
+    bldLatLon.push(-68.932573);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(39.953073);
+    bldLatLon.push(-75.14504);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.996759);
+    bldLatLon.push(-76.957072);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(40.705016);
+    bldLatLon.push(-74.010199);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(36.13912);
+    bldLatLon.push(-5.35461);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(5.828455);
+    bldLatLon.push(-55.15924);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(12.107819);
+    bldLatLon.push(-68.935972);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(12.107819);
+    bldLatLon.push(-68.935972);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(12.107819);
+    bldLatLon.push(-68.935972);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.938222);
+    bldLatLon.push(-76.841573);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.938222);
+    bldLatLon.push(-76.841573);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.368346);
+    bldLatLon.push(4.902987);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(5.828455);
+    bldLatLon.push(-55.15924);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.99698);
+    bldLatLon.push(-76.952828);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(51.51315);
+    bldLatLon.push(-0.079438);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(13.099444);
+    bldLatLon.push(-59.615278);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(13.099444);
+    bldLatLon.push(-59.615278);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.367077);
+    bldLatLon.push(4.904008);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.367139);
+    bldLatLon.push(4.903745);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(39.963847);
+    bldLatLon.push(-75.160589);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(10.797778);
+    bldLatLon.push(-68.3175);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(13.252314);
+    bldLatLon.push(-59.639803);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(18.017874);
+    bldLatLon.push(-76.809904);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.966629);
+    bldLatLon.push(-76.795324);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(36.14243);
+    bldLatLon.push(-5.35267);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(36.14243);
+    bldLatLon.push(-5.35267);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(36.14243);
+    bldLatLon.push(-5.35267);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.968479);
+    bldLatLon.push(-76.79201);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.968479);
+    bldLatLon.push(-76.79201);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(45.50634);
+    bldLatLon.push(-73.556519);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(40.705016);
+    bldLatLon.push(-74.010199);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(5.411667);
+    bldLatLon.push(-54.978056);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(4.919691);
+    bldLatLon.push(-52.328965);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.137629);
+    bldLatLon.push(-62.627575);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(17.744036);
+    bldLatLon.push(-64.714997);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(18.022557);
+    bldLatLon.push(-63.04208);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.368577);
+    bldLatLon.push(4.902246);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(51.511911);
+    bldLatLon.push(-0.078746);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(51.511911);
+    bldLatLon.push(-0.078746);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(41.489444);
+    bldLatLon.push(-71.311944);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(5.828858);
+    bldLatLon.push(-55.156256);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.370217);
+    bldLatLon.push(4.90533);
+    locArray.push(bldLatLon);
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(-8.06131);
+    bldLatLon.push(-34.87132);
+    locArray.push(bldLatLon);
+    
+    
+    var bounds = new L.LatLngBounds(locArray);
+    
+    var cartoUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
+    var cartoAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    var carto = L.tileLayer(cartoUrl, {subdomains: 'abcd', maxZoom: 18, attribution: cartoAttrib});
+
+    var data1 = L.layerGroup();
+    var data2 = L.layerGroup();
+    var data3 = L.layerGroup();
+    var data4 = L.layerGroup();
+    var data5 = L.layerGroup();
+    var data6 = L.layerGroup();
+    var data7 = L.layerGroup();
+    var data8 = L.layerGroup();
+
+    var map = L.map('mapid', {
+        // center: [28.079555, -15.940793],
+        // zoom: 3,
+        layers: [carto, data2]
+    });
+    map.fitBounds(bounds);
+
+    var markers = L.markerClusterGroup.layerSupport({
+        showCoverageOnHover: false, 
+        maxClusterRadius:6});
+
+    var baseLayers = {
+        "Carto Positron": carto
+    };
+        
+    var overlays = {
+        // "Mid 16th to Late 16th C.": data1,
+        "1600-1630": data2,
+        "1631-1660": data3,
+        "1661-1700": data4,
+        "1701-1730": data5,
+        "1731-1750": data6,
+        "1751-1800": data7,
+        "1801-1841": data8,
+    };
+
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(36.14319);
+    bldLatLon.push(-5.3537);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/131\">Abudarham (1821)</a><br />Gibraltar, United Kingdom<br /><br />Congregation: Abudarham (1821-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(18.342754);
+    bldLatLon.push(-64.932636);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/98\">Beraka ve Shalom ve Gemilut Hasadim (1833)</a><br />Charlotte Amalie, St. Thomas<br /><br />Congregation: Beraka ve Shalom ve Gemilut Hasadim (1833-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(18.342754);
+    bldLatLon.push(-64.932636);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/126\">Beraka ve Shalom ve Gemilut Hasadim (I) (1796)</a><br />Charlotte Amalie, St. Thomas<br /><br />Congregation: Beraka ve Shalom ve Gemilut Hasadim (1796-1804)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/126\">Beraka ve Shalom ve Gemilut Hasadim (I) (1796)</a><br />Charlotte Amalie, St. Thomas<br /><br />Congregation: Beraka ve Shalom ve Gemilut Hasadim (1796-1804)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(18.342754);
+    bldLatLon.push(-64.932636);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/128\">Beraka ve Shalom ve Gemilut Hasadim (II) (1813)</a><br />Charlotte Amalie, St. Thomas<br /><br />Congregation: Beraka ve Shalom ve Gemilut Hasadim (1813-1831)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(5.429176);
+    bldLatLon.push(-54.984273);
+   
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/17\">Berakha ve Shalom Synagogue (1685)</a><br />Jodensavanne, Suriname<br /><br />Congregation: Berakha ve Shalom (1685-1832)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/17\">Berakha ve Shalom Synagogue (1685)</a><br />Jodensavanne, Suriname<br /><br />Congregation: Berakha ve Shalom (1685-1832)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/17\">Berakha ve Shalom Synagogue (1685)</a><br />Jodensavanne, Suriname<br /><br />Congregation: Berakha ve Shalom (1685-1832)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/17\">Berakha ve Shalom Synagogue (1685)</a><br />Jodensavanne, Suriname<br /><br />Congregation: Berakha ve Shalom (1685-1832)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/17\">Berakha ve Shalom Synagogue (1685)</a><br />Jodensavanne, Suriname<br /><br />Congregation: Berakha ve Shalom (1685-1832)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(32.7823);
+    bldLatLon.push(-79.932732);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/101\">Beth Elohim (1841)</a><br />Charleston, United States<br /><br />Congregation: Beth Elohim (1841-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(32.7823);
+    bldLatLon.push(-79.932732);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/14\">Beth Elohim Synagogue (1794)</a><br />Charleston, United States<br /><br />Congregation: Beth Elohim (1794-1838)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/14\">Beth Elohim Synagogue (1794)</a><br />Charleston, United States<br /><br />Congregation: Beth Elohim (1794-1838)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(52.368577);
+    bldLatLon.push(4.902246);
+   
+    
+    
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/138\">Beth Israel (1618)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Beth Israel (1618-1639)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data2)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/138\">Beth Israel (1618)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Beth Israel (1618-1639)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data3)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(52.36859);
+    bldLatLon.push(4.900492);
+   
+    
+    
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/136\">Beth Jacob (1614)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Beth Jacob (1614-1639)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data2)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/136\">Beth Jacob (1614)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Beth Jacob (1614-1639)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data3)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(52.082586);
+    bldLatLon.push(4.316414);
+   
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/144\">Beth Jacob (1692)</a><br />The Hague, Netherlands<br /><br />Congregation: Beth Jacob (1692-1743)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/144\">Beth Jacob (1692)</a><br />The Hague, Netherlands<br /><br />Congregation: Beth Jacob (1692-1743)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/144\">Beth Jacob (1692)</a><br />The Hague, Netherlands<br /><br />Congregation: Beth Jacob (1692-1743)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(37.537307);
+    bldLatLon.push(-77.429486);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/132\">Beth Shalome (1822)</a><br />Richmond, United States<br /><br />Congregation: Beth Shalome (1822-1878)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(51.514473);
+    bldLatLon.push(-0.078938);
+   
+    
+    
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/0\">Bevis Marks Synagogue (1701)</a><br />London, England<br /><br />Congregation: Kahal Kadosh Sha'ar Hashamayim (1701-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/0\">Bevis Marks Synagogue (1701)</a><br />London, England<br /><br />Congregation: Kahal Kadosh Sha'ar Hashamayim (1701-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/0\">Bevis Marks Synagogue (1701)</a><br />London, England<br /><br />Congregation: Kahal Kadosh Sha'ar Hashamayim (1701-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/0\">Bevis Marks Synagogue (1701)</a><br />London, England<br /><br />Congregation: Kahal Kadosh Sha'ar Hashamayim (1701-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(51.513685);
+    bldLatLon.push(-0.079298);
+   
+    
+    
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/1\">Creechurch Lane Synagogue (1657)</a><br />London, England<br /><br />Congregation: Kahal Kadosh Sha'ar Hashamayim (1657-1675)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data3)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/1\">Creechurch Lane Synagogue (1657)</a><br />London, England<br /><br />Congregation: Kahal Kadosh Sha'ar Hashamayim (1657-1675)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(51.513685);
+    bldLatLon.push(-0.079298);
+   
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/2\">Creechurch Lane Synagogue [1675] (1675)</a><br />London, England<br /><br />Congregation: Kahal Kadosh Sha'ar Hashamayim (1675-1701)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/2\">Creechurch Lane Synagogue [1675] (1675)</a><br />London, England<br /><br />Congregation: Kahal Kadosh Sha'ar Hashamayim (1675-1701)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(5.826006);
+    bldLatLon.push(-55.162124);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/122\">Darkhe Yesharim (1779)</a><br />Paramaribo, Suriname<br /><br />Congregation: Darkhe Yesharim (1779-1800)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(52.367259);
+    bldLatLon.push(4.903681);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/10\">Dritt Shul (1700)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1700-1777)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/10\">Dritt Shul (1700)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1700-1777)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/10\">Dritt Shul (1700)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1700-1777)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/10\">Dritt Shul (1700)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1700-1777)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(52.367259);
+    bldLatLon.push(4.903681);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/142\">Dritt Sjoel (1778)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1777-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/142\">Dritt Sjoel (1778)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1777-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(52.36753);
+    bldLatLon.push(4.905336);
+   
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/4\">Esnoga, Talmud Torah II (1675)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Talmud Torah (1675-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/4\">Esnoga, Talmud Torah II (1675)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Talmud Torah (1675-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/4\">Esnoga, Talmud Torah II (1675)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Talmud Torah (1675-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/4\">Esnoga, Talmud Torah II (1675)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Talmud Torah (1675-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/4\">Esnoga, Talmud Torah II (1675)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Talmud Torah (1675-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(36.14237);
+    bldLatLon.push(-5.35405);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/124\">Etz Chaim (1783)</a><br />Gibraltar, United Kingdom<br /><br />Congregation: Etz Chaim (1783-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/124\">Etz Chaim (1783)</a><br />Gibraltar, United Kingdom<br /><br />Congregation: Etz Chaim (1783-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(12.104742);
+    bldLatLon.push(-68.93267);
+   
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/16\">First Synagogue Curacao, Mikve Israel I (1674)</a><br />Willemstad, Curacao<br /><br />Congregation: Mikve Israel (1674-1692)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(51.514313);
+    bldLatLon.push(-0.077881);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/133\">Great Synagogue (Duke's Place, enlargement) (1766)</a><br />London, England<br /><br />Congregation: Congregation of the Great Synagogue (1766-1790)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(51.514313);
+    bldLatLon.push(-0.077881);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/21\">Great Synagogue (first, near Duke's Place) (1692)</a><br />London, England<br /><br />Congregation: Congregation of the Great Synagogue (1692-1722)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/21\">Great Synagogue (first, near Duke's Place) (1692)</a><br />London, England<br /><br />Congregation: Congregation of the Great Synagogue (1692-1722)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   
+   
+   
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(51.514313);
+    bldLatLon.push(-0.077881);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/31\">Great Synagogue (third, near Duke's Place) (1790)</a><br />London, England<br /><br />Congregation: Congregation of the Great Synagogue (1790-1941)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/31\">Great Synagogue (third, near Duke's Place) (1790)</a><br />London, England<br /><br />Congregation: Congregation of the Great Synagogue (1790-1941)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(51.514313);
+    bldLatLon.push(-0.077881);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/22\">Great Synagogue [Moses Hart's Shul] (second, near Duke's Place) (1722)</a><br />London, England<br /><br />Congregation: Congregation of the Great Synagogue (1722-1766)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/22\">Great Synagogue [Moses Hart's Shul] (second, near Duke's Place) (1722)</a><br />London, England<br /><br />Congregation: Congregation of the Great Synagogue (1722-1766)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/22\">Great Synagogue [Moses Hart's Shul] (second, near Duke's Place) (1722)</a><br />London, England<br /><br />Congregation: Congregation of the Great Synagogue (1722-1766)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(52.367274);
+    bldLatLon.push(4.903893);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/7\">Grote Sjoel (Great Synagogue) (1671)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1671-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/7\">Grote Sjoel (Great Synagogue) (1671)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1671-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/7\">Grote Sjoel (Great Synagogue) (1671)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1671-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/7\">Grote Sjoel (Great Synagogue) (1671)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1671-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/7\">Grote Sjoel (Great Synagogue) (1671)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1671-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(52.367887);
+    bldLatLon.push(4.901825);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/146\">High German synagogue (1648)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1648-1671)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data3)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/146\">High German synagogue (1648)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1648-1671)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(52.08439);
+    bldLatLon.push(4.315817);
+   
+    
+    
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/135\">Honen Dal  (1726)</a><br />The Hague, Netherlands<br /><br />Congregation: Honen Dal (1726-1943)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/135\">Honen Dal  (1726)</a><br />The Hague, Netherlands<br /><br />Congregation: Honen Dal (1726-1943)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/135\">Honen Dal  (1726)</a><br />The Hague, Netherlands<br /><br />Congregation: Honen Dal (1726-1943)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/135\">Honen Dal  (1726)</a><br />The Hague, Netherlands<br /><br />Congregation: Honen Dal (1726-1943)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(52.074668);
+    bldLatLon.push(4.318481);
+   
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/145\">Honen Dal I (1698)</a><br />The Hague, Netherlands<br /><br />Congregation: Honen Dal (1698-1726)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/145\">Honen Dal I (1698)</a><br />The Hague, Netherlands<br /><br />Congregation: Honen Dal (1698-1726)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(17.482597);
+    bldLatLon.push(-62.981295);
+   
+    
+    
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/41\">Honen Dalim Synagogue I (1739)</a><br />Orangjestad, St. Eustatius<br /><br />Congregation: Honen Dalim (1739-1772)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/41\">Honen Dalim Synagogue I (1739)</a><br />Orangjestad, St. Eustatius<br /><br />Congregation: Honen Dalim (1739-1772)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(17.482597);
+    bldLatLon.push(-62.981295);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/134\">Honen Dalim Synagogue II (1773)</a><br />Orangjestad, St. Eustatius<br /><br />Congregation: Honen Dalim (1772-1800)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(-8.054074);
+    bldLatLon.push(-34.870849);
+   
+    
+    
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/109\">Magen Abraham (1648)</a><br />Mauricia, Brazil<br /><br />Congregation: Zur Israel (1648-1653)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data3)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(32.083541);
+    bldLatLon.push(-81.099834);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/130\">Mickve Israel (1820)</a><br />Savannah, United States<br /><br />Congregation: Mickve Israel (1820-1829)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(12.104742);
+    bldLatLon.push(-68.93267);
+   
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/113\">Mikve Israel II (1692)</a><br />Willemstad, Curacao<br /><br />Congregation: Mikve Israel (1692-1703)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/113\">Mikve Israel II (1692)</a><br />Willemstad, Curacao<br /><br />Congregation: Mikve Israel (1692-1703)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(12.104826);
+    bldLatLon.push(-68.933468);
+   
+    
+    
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/114\">Mikve Israel III (1703)</a><br />Willemstad, Curacao<br /><br />Congregation: Mikve Israel (1703-1730)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(12.10511);
+    bldLatLon.push(-68.932573);
+   
+    
+    
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/43\">Mikve Israel Synagogue (IV) (1732)</a><br />Willemstad, Curacao<br /><br />Congregation: Mikve Israel (1732-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/43\">Mikve Israel Synagogue (IV) (1732)</a><br />Willemstad, Curacao<br /><br />Congregation: Mikve Israel (1732-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/43\">Mikve Israel Synagogue (IV) (1732)</a><br />Willemstad, Curacao<br /><br />Congregation: Mikve Israel (1732-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(39.953073);
+    bldLatLon.push(-75.14504);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/125\">Mikveh Israel (1782)</a><br />Philadelphia, United States<br /><br />Congregation: Mikveh Israel (1782-1825)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/125\">Mikveh Israel (1782)</a><br />Philadelphia, United States<br /><br />Congregation: Mikveh Israel (1782-1825)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(17.996759);
+    bldLatLon.push(-76.957072);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/40\">Mikveh Yisrael Synagogue (1796)</a><br />Spanish Town, Jamaica<br /><br />Congregation: Mikveh Yisrael (1796-1860)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/40\">Mikveh Yisrael Synagogue (1796)</a><br />Spanish Town, Jamaica<br /><br />Congregation: Mikveh Yisrael (1796-1860)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(40.705016);
+    bldLatLon.push(-74.010199);
+   
+    
+    
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/33\">Mill Street Synagogue, Shearith Israel I (1730)</a><br />New York, United States<br /><br />Congregation: Shearith Israel (1730-1818)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/33\">Mill Street Synagogue, Shearith Israel I (1730)</a><br />New York, United States<br /><br />Congregation: Shearith Israel (1730-1818)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/33\">Mill Street Synagogue, Shearith Israel I (1730)</a><br />New York, United States<br /><br />Congregation: Shearith Israel (1730-1818)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/33\">Mill Street Synagogue, Shearith Israel I (1730)</a><br />New York, United States<br /><br />Congregation: Shearith Israel (1730-1818)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(36.13912);
+    bldLatLon.push(-5.35461);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/127\">Nefusot Yehuda, Flemish Synagogue (1799)</a><br />Gibraltar, United Kingdom<br /><br />Congregation: Nefusot Yehuda (1799-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/127\">Nefusot Yehuda, Flemish Synagogue (1799)</a><br />Gibraltar, United Kingdom<br /><br />Congregation: Nefusot Yehuda (1799-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(5.828455);
+    bldLatLon.push(-55.15924);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/100\">Neve Shalom (1837)</a><br />Paramaribo, Suriname<br /><br />Congregation: Neve Shalom (1835-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(12.107819);
+    bldLatLon.push(-68.935972);
+   
+    
+    
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/117\">Neve Shalom (1746)</a><br />Willemstad, Curacao<br /><br />Congregation: Mikve Israel (1746-1818)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/117\">Neve Shalom (1746)</a><br />Willemstad, Curacao<br /><br />Congregation: Mikve Israel (1746-1818)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/117\">Neve Shalom (1746)</a><br />Willemstad, Curacao<br /><br />Congregation: Mikve Israel (1746-1818)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(12.107819);
+    bldLatLon.push(-68.935972);
+   
+    
+    
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/117\">Neve Shalom (1746)</a><br />Willemstad, Curacao<br /><br />Congregation: Neve Shalom (1746-1818)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/117\">Neve Shalom (1746)</a><br />Willemstad, Curacao<br /><br />Congregation: Neve Shalom (1746-1818)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/117\">Neve Shalom (1746)</a><br />Willemstad, Curacao<br /><br />Congregation: Neve Shalom (1746-1818)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(12.107819);
+    bldLatLon.push(-68.935972);
+   
+    
+    
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/139\">Neve Shalom I (1732)</a><br />Willemstad, Curacao<br /><br />Congregation: Neve Shalom (1732-1734)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(12.107819);
+    bldLatLon.push(-68.935972);
+   
+    
+    
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/140\">Neve Shalom II (1734)</a><br />Willemstad, Curacao<br /><br />Congregation: Neve Shalom (1734-1746)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(17.938222);
+    bldLatLon.push(-76.841573);
+   
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/111\">Neve Zedek I (c. 1684 )</a><br />Port Royal, Jamaica<br /><br />Congregation: Kahal Kadosh Neve Zedek (1684-1692)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(17.938222);
+    bldLatLon.push(-76.841573);
+   
+    
+    
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/112\">Neve Zedek II (c. 1719)</a><br />Port Royal, Jamaica<br /><br />Congregation: Kahal Kadosh Neve Zedek (1719-1815)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/112\">Neve Zedek II (c. 1719)</a><br />Port Royal, Jamaica<br /><br />Congregation: Kahal Kadosh Neve Zedek (1719-1815)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/112\">Neve Zedek II (c. 1719)</a><br />Port Royal, Jamaica<br /><br />Congregation: Kahal Kadosh Neve Zedek (1719-1815)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/112\">Neve Zedek II (c. 1719)</a><br />Port Royal, Jamaica<br /><br />Congregation: Kahal Kadosh Neve Zedek (1719-1815)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(52.368346);
+    bldLatLon.push(4.902987);
+   
+    
+    
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/137\">Neveh Shalom (1612)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Neveh Shalom (1612-1639)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data2)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/137\">Neveh Shalom (1612)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Neveh Shalom (1612-1639)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data3)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(5.828455);
+    bldLatLon.push(-55.15924);
+   
+    
+    
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/35\">Neveh Shalom Synagogue (1719)</a><br />Paramaribo, Suriname<br /><br />Congregation: Berakha ve Shalom (1719-1735)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/35\">Neveh Shalom Synagogue (1719)</a><br />Paramaribo, Suriname<br /><br />Congregation: Berakha ve Shalom (1719-1735)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(5.828455);
+    bldLatLon.push(-55.15924);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/35\">Neveh Shalom Synagogue (1719)</a><br />Paramaribo, Suriname<br /><br />Congregation: Neve Shalom (1735-1835)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/35\">Neveh Shalom Synagogue (1719)</a><br />Paramaribo, Suriname<br /><br />Congregation: Neve Shalom (1735-1835)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/35\">Neveh Shalom Synagogue (1719)</a><br />Paramaribo, Suriname<br /><br />Congregation: Neve Shalom (1735-1835)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(17.99698);
+    bldLatLon.push(-76.952828);
+   
+    
+    
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/39\">Neveh Shalom Synagogue (1704)</a><br />Spanish Town, Jamaica<br /><br />Congregation: Kahal Kadosh Neve Shalom (1704-1900)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/39\">Neveh Shalom Synagogue (1704)</a><br />Spanish Town, Jamaica<br /><br />Congregation: Kahal Kadosh Neve Shalom (1704-1900)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/39\">Neveh Shalom Synagogue (1704)</a><br />Spanish Town, Jamaica<br /><br />Congregation: Kahal Kadosh Neve Shalom (1704-1900)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/39\">Neveh Shalom Synagogue (1704)</a><br />Spanish Town, Jamaica<br /><br />Congregation: Kahal Kadosh Neve Shalom (1704-1900)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(51.51315);
+    bldLatLon.push(-0.079438);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/29\">New Synagogue [Bricklayer's Hall] (1761)</a><br />London, England<br /><br />Congregation: Congregation of the New Synagogue (1761-1837)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/29\">New Synagogue [Bricklayer's Hall] (1761)</a><br />London, England<br /><br />Congregation: Congregation of the New Synagogue (1761-1837)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(13.099444);
+    bldLatLon.push(-59.615278);
+   
+    
+    
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/13\">Nidhe Israel (1654)</a><br />Bridgetown, Barbados<br /><br />Congregation: Nidhe Israel (1654-1831)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data3)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/13\">Nidhe Israel (1654)</a><br />Bridgetown, Barbados<br /><br />Congregation: Nidhe Israel (1654-1831)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/13\">Nidhe Israel (1654)</a><br />Bridgetown, Barbados<br /><br />Congregation: Nidhe Israel (1654-1831)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/13\">Nidhe Israel (1654)</a><br />Bridgetown, Barbados<br /><br />Congregation: Nidhe Israel (1654-1831)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/13\">Nidhe Israel (1654)</a><br />Bridgetown, Barbados<br /><br />Congregation: Nidhe Israel (1654-1831)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/13\">Nidhe Israel (1654)</a><br />Bridgetown, Barbados<br /><br />Congregation: Nidhe Israel (1654-1831)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(13.099444);
+    bldLatLon.push(-59.615278);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/97\">Nidhe Israel (1833)</a><br />Bridgetown, Barbados<br /><br />Congregation: Nidhe Israel (1833-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(52.367077);
+    bldLatLon.push(4.904008);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/11\">Nieuwe Synagoge (1752)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1752-1943)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/11\">Nieuwe Synagoge (1752)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1752-1943)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(52.367139);
+    bldLatLon.push(4.903745);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/9\">Obbene Shul Synagogue (1686)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1686-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/9\">Obbene Shul Synagogue (1686)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1686-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/9\">Obbene Shul Synagogue (1686)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1686-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/9\">Obbene Shul Synagogue (1686)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1686-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/9\">Obbene Shul Synagogue (1686)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1686-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(39.963847);
+    bldLatLon.push(-75.160589);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/37\">Rodeph Shalom (1795)</a><br />Philadelphia, United States<br /><br />Congregation: Rodeph Shalom (1795-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/37\">Rodeph Shalom (1795)</a><br />Philadelphia, United States<br /><br />Congregation: Rodeph Shalom (1795-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(10.797778);
+    bldLatLon.push(-68.3175);
+   
+    
+    
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/116\">Santa Irmandad (1710s)</a><br />Tucacas, Venezuala<br /><br />Congregation: Santa Irmandad (1710-1720)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(13.252314);
+    bldLatLon.push(-59.639803);
+   
+    
+    
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/105\">Semah David Synogogue (1660s-70s)</a><br />Speightstown, Barbados<br /><br />Congregation: Semah David (1660-1739)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data3)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/105\">Semah David Synogogue (1660s-70s)</a><br />Speightstown, Barbados<br /><br />Congregation: Semah David (1660-1739)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/105\">Semah David Synogogue (1660s-70s)</a><br />Speightstown, Barbados<br /><br />Congregation: Semah David (1660-1739)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/105\">Semah David Synogogue (1660s-70s)</a><br />Speightstown, Barbados<br /><br />Congregation: Semah David (1660-1739)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(18.017874);
+    bldLatLon.push(-76.809904);
+   
+    
+    
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/115\">Shaar Ha Shamaim I (c. 1704)</a><br />Kingston, Jamaica<br /><br />Congregation: Kahal Kadosh Shaar Ha Shamaim (1704-1744)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/115\">Shaar Ha Shamaim I (c. 1704)</a><br />Kingston, Jamaica<br /><br />Congregation: Kahal Kadosh Shaar Ha Shamaim (1704-1744)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(17.966629);
+    bldLatLon.push(-76.795324);
+   
+    
+    
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/19\">Shaar Ha Shamaim Synagogue (II) (1744)</a><br />Kingston, Jamaica<br /><br />Congregation: Kahal Kadosh Shaar Ha Shamaim (1744-1882)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/19\">Shaar Ha Shamaim Synagogue (II) (1744)</a><br />Kingston, Jamaica<br /><br />Congregation: Kahal Kadosh Shaar Ha Shamaim (1744-1882)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/19\">Shaar Ha Shamaim Synagogue (II) (1744)</a><br />Kingston, Jamaica<br /><br />Congregation: Kahal Kadosh Shaar Ha Shamaim (1744-1882)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(36.14243);
+    bldLatLon.push(-5.35267);
+   
+    
+    
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/118\">Shaar Hashamayim I (1749)</a><br />Gibraltar, United Kingdom<br /><br />Congregation: Shaar Hashamayim (1749-1766)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/118\">Shaar Hashamayim I (1749)</a><br />Gibraltar, United Kingdom<br /><br />Congregation: Shaar Hashamayim (1749-1766)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(36.14243);
+    bldLatLon.push(-5.35267);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/119\">Shaar Hashamayim II (1768)</a><br />Gibraltar, United Kingdom<br /><br />Congregation: Shaar Hashamayim (1768-1781)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(36.14243);
+    bldLatLon.push(-5.35267);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/120\">Shaar Hashamayim III, Great Synagogue of Gibraltar (1783)</a><br />Gibraltar, United Kingdom<br /><br />Congregation: Shaar Hashamayim (1783-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/120\">Shaar Hashamayim III, Great Synagogue of Gibraltar (1783)</a><br />Gibraltar, United Kingdom<br /><br />Congregation: Shaar Hashamayim (1783-)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(17.968479);
+    bldLatLon.push(-76.79201);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/20\">Shaare Yosher (1789)</a><br />Kingston, Jamaica<br /><br />Congregation: Kahal Kodosh Shaangare Yosher (1789-1837)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/20\">Shaare Yosher (1789)</a><br />Kingston, Jamaica<br /><br />Congregation: Kahal Kodosh Shaangare Yosher (1789-1837)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(17.968479);
+    bldLatLon.push(-76.79201);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/143\">Shaare Yosher (II) (1837)</a><br />Kingston, Jamaica<br /><br />Congregation: Kahal Kodosh Shaangare Yosher (1837-1882)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(45.50634);
+    bldLatLon.push(-73.556519);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/121\">Shearith Israel (1777)</a><br />Montreal, Canada<br /><br />Congregation: Shearith Israel (1777-1824)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/121\">Shearith Israel (1777)</a><br />Montreal, Canada<br /><br />Congregation: Shearith Israel (1777-1824)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(40.705016);
+    bldLatLon.push(-74.010199);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/129\">Shearith Israel (II) (1818)</a><br />New York, United States<br /><br />Congregation: Shearith Israel (1818-1833)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(5.411667);
+    bldLatLon.push(-54.978056);
+   
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/42\">Synagogue Cassipora (1671)</a><br />Cassipora, Suriname<br /><br />Congregation: Congregation Cassipora (1671-1685)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(4.919691);
+    bldLatLon.push(-52.328965);
+   
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/110\">Synagogue Cayenne (1661)</a><br />Cayenne, French Guyana<br /><br />Congregation: Congregation Cayenne (1661-1667)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(17.137629);
+    bldLatLon.push(-62.627575);
+   
+    
+    
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/107\">Synagogue Nevis (1684)</a><br />Charlestown, Nevis<br /><br />Congregation: Congregation Nevis (1684-1772)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/107\">Synagogue Nevis (1684)</a><br />Charlestown, Nevis<br /><br />Congregation: Congregation Nevis (1684-1772)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/107\">Synagogue Nevis (1684)</a><br />Charlestown, Nevis<br /><br />Congregation: Congregation Nevis (1684-1772)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/107\">Synagogue Nevis (1684)</a><br />Charlestown, Nevis<br /><br />Congregation: Congregation Nevis (1684-1772)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(17.744036);
+    bldLatLon.push(-64.714997);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/108\">Synagogue St. Croix (1764)</a><br />Christiansted, St. Croix<br /><br />Congregation: Congregation St. Croix (1764-1765)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(18.022557);
+    bldLatLon.push(-63.04208);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/123\">Synagogue St. Maarten (1783)</a><br />Philipsburg, St. Maarten<br /><br />Congregation: Congregation St. Maarten (1783-1800)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(52.368577);
+    bldLatLon.push(4.902246);
+   
+    
+    
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/6\">Talmud Torah, Portuguese Synagogue I (1639)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Talmud Torah (1639-1931)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data3)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/6\">Talmud Torah, Portuguese Synagogue I (1639)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Talmud Torah (1639-1931)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data4)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/6\">Talmud Torah, Portuguese Synagogue I (1639)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Talmud Torah (1639-1931)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/6\">Talmud Torah, Portuguese Synagogue I (1639)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Talmud Torah (1639-1931)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/6\">Talmud Torah, Portuguese Synagogue I (1639)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Talmud Torah (1639-1931)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/6\">Talmud Torah, Portuguese Synagogue I (1639)</a><br />Amsterdam, Netherlands<br /><br />Congregation: Talmud Torah (1639-1931)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(51.511911);
+    bldLatLon.push(-0.078746);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/141\">The Hambro Synagogue [Moses Marcus' Shul] (1707)</a><br />London, England<br /><br />Congregation: Congregation of the Hambro Synagogue (1707-1725)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   
+   
+   
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(51.511911);
+    bldLatLon.push(-0.078746);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/23\">The Hambro Synagogue [Wolf Prager's Shul] (1725)</a><br />London, England<br /><br />Congregation: Congregation of the Hambro Synagogue (1725-1893)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data5)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/23\">The Hambro Synagogue [Wolf Prager's Shul] (1725)</a><br />London, England<br /><br />Congregation: Congregation of the Hambro Synagogue (1725-1893)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/23\">The Hambro Synagogue [Wolf Prager's Shul] (1725)</a><br />London, England<br /><br />Congregation: Congregation of the Hambro Synagogue (1725-1893)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/23\">The Hambro Synagogue [Wolf Prager's Shul] (1725)</a><br />London, England<br /><br />Congregation: Congregation of the Hambro Synagogue (1725-1893)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(41.489444);
+    bldLatLon.push(-71.311944);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/34\">Touro Synagogue (1763)</a><br />Newport, United States<br /><br />Congregation: Jeshuat Israel (1763-1822)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/34\">Touro Synagogue (1763)</a><br />Newport, United States<br /><br />Congregation: Jeshuat Israel (1763-1822)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(41.489444);
+    bldLatLon.push(-71.311944);
+   
+    
+    
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(5.828858);
+    bldLatLon.push(-55.156256);
+   
+    
+    
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/36\">Tzedek ve-Shalom Synagogue (1735)</a><br />Paramaribo, Suriname<br /><br />Congregation: Zedek ve Shalom (1735-1999)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data6)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/36\">Tzedek ve-Shalom Synagogue (1735)</a><br />Paramaribo, Suriname<br /><br />Congregation: Zedek ve Shalom (1735-1999)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/36\">Tzedek ve-Shalom Synagogue (1735)</a><br />Paramaribo, Suriname<br /><br />Congregation: Zedek ve Shalom (1735-1999)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+    
+    
+    
+    // console.log(ashkenazi);
+    var bldLatLon = [];
+    bldLatLon.push(52.370217);
+    bldLatLon.push(4.90533);
+   
+    
+
+    // Ashkenazi synagogues
+    
+    
+   
+   
+   
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/12\">Uilenburgerstraat synagoge (1766)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1766-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data7)
+   
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#b3334f',
+          textColor: '#b3334f'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/12\">Uilenburgerstraat synagoge (1766)</a><br />Amsterdam, Netherlands<br /><br />Congregation: High German Congregation (1766-)<br />Ashkenazi<br /></strong>");
+
+    marker.addTo(data8)
+   
+    
+
+    
+    
+    
+    
+    
+    // console.log(sephardic);
+    var bldLatLon = [];
+    bldLatLon.push(-8.06131);
+    bldLatLon.push(-34.87132);
+   
+    
+    
+   
+   
+   var markerOptions = {
+          icon: 'star-of-david',
+          iconShape: 'marker',
+          borderColor: '#00ABDC',
+          textColor: '#00ABDC'
+        };
+    var marker = L.marker(bldLatLon, {
+          icon: L.BeautifyIcon.icon(markerOptions),
+          draggable: false
+        }).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/38\">Zur Israel Synagogue (1641)</a><br />Recife, Brazil<br /><br />Congregation: Zur Israel (1640-1654)<br />Sephardic<br /></strong>");
+
+    marker.addTo(data3)
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+
+    // Ashkenazi synagogues
+    
+
+    
+    
+  
+markers.addTo(map);
+markers.checkIn([data1, data2, data3, data4, data5, data6, data7, data8]);
+
+L.control.layers(baseLayers, overlays, {hideSingleBase:true,collapsed:false}).addTo(map);
+data2.addTo(map)
+
+d3.selectAll("div.leaflet-control-layers-overlays").insert('label', 'label').text("Synagogues Extant:").attr('class', 'overlay-title');
+
+function refreshPage(){
+    window.location.reload();
+} 
+</script>
+  </div>
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
+    
