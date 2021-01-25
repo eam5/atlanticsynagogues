@@ -1,0 +1,113 @@
+idlocation,city,state,country,year,calc_total,total,total_jews,seph_num,seph,ashk_num,ashk,fam_jewish,fam_seph,fam_ashk,total_pop,white_pop,free_black_jews,enslaved_jews,enslaved_total,plantations_jews,plantations_total,notes,region,lat,longitude,cit_short,cit_pgs
+44,Barbados,NULL,Barbados,1675,200,200,200,0,,0,,,,,,,,,,,,1675-80,Caribbean,13.17,-59.5525,"Böhm, 1988",11
+44,Barbados,NULL,Barbados,1679,300,300,300,0,,0,,,,,,,,,,,,,Caribbean,13.17,-59.5525,NULL,
+44,Barbados,NULL,Barbados,1680,260,260,260,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Caribbean,13.17,-59.5525,"Faber, 1998",46
+44,Barbados,NULL,Barbados,1683,0,0,,0,,0,,,,,66170,19568,,,46602,,,,Caribbean,13.17,-59.5525,"Terrell, 2005",160
+44,Barbados,NULL,Barbados,1715,230,230,230,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Caribbean,13.17,-59.5525,"Faber, 1998",91
+4,Bridgetown,NULL,Barbados,1729,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,402,46362,NULL,NULL,NULL,Caribbean,13.0968511,-59.6144819,"Faber, 1998",101
+44,Barbados,NULL,Barbados,1755,800,800,800,0,,0,,,,,,,,,,,,,Caribbean,13.17,-59.5525,NULL,
+44,Barbados,NULL,Barbados,1790,60,60,60,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Caribbean,13.17,-59.5525,"Faber, 1998",91
+44,Barbados,NULL,Barbados,1800,80,80,80,0,,0,,,,,,,,,,,,fewer than 100,Caribbean,13.17,-59.5525,"Gallery, 2016",105
+58,Brazil,Pernambuco,Brazil,1645,1450,1450,1450,0,,0,,,,,,2900,,,,,,jewish pop comparable to Amsterdam same time,South America,-8.333333,-37.8,"Stiefel, 2014",108
+58,Brazil,Pernambuco,Brazil,1645,0,0,,0,,0,,,,,,,,,,10,166,,South America,-8.333333,-37.8,"Kaplan, 2010",98
+2,Recife,Pernambuco,Brazil,1649,350,350,350,0,,0,,,,,,,,,,,,,South America,-8.054074,-34.8708494,NULL,136
+2,Recife,Pernambuco,Brazil,1654,600,600,600,0,,0,,,,,,,,,,,,,South America,-8.054074,-34.8708494,"Terrell, 2005",28
+6,Willemstad,NULL,Curacao,1659,70,70,70,0,,0,,,,,,,,,,,,group that joined Isaac Da Costa in founding 6 community,Caribbean,12.1047416,-68.9326698,"Emmanuel and Emmanuel, 1970",46
+6,Willemstad,NULL,Curacao,1700,500,500,500,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"Mirvis, 2015",Caribbean,12.1047416,-68.9326698,NULL,NULL
+6,Willemstad,NULL,Curacao,1702,0,0,,0,,0,,,101,,,,,,,,,,Caribbean,12.1047416,-68.9326698,"Böhm, 1988",12
+6,Willemstad,NULL,Curacao,1702,280,0,,280,280,0,,,126,,,,,,,,,"number of familes from 101 familes taxpayers, another 25 whose modest earings non-taxable",Caribbean,12.1047416,-68.9326698,"Emmanuel and Emmanuel, 1970",93
+6,Willemstad,NULL,Curacao,1729,0,0,half white population,0,,0,,,,,,,,,,,,,Caribbean,12.1047416,-68.9326698,NULL,
+6,Willemstad,NULL,Curacao,1745,0,0,,0,,0,,,270,,,,,,,,,,Caribbean,12.1047416,-68.9326698,"Emmanuel and Emmanuel, 1970",180
+6,Willemstad,NULL,Curacao,1768,0,0,,0,,0,,,240,,,,,,,,,,Caribbean,12.1047416,-68.9326698,"Emmanuel and Emmanuel, 1970",172
+6,Willemstad,NULL,Curacao,1785,1200,1200,1200,0,,0,,,,,8500,3100,,,,,,,Caribbean,12.1047416,-68.9326698,"Emmanuel and Emmanuel, 1970",277
+6,Willemstad,NULL,Curacao,1789,0,0,,0,,0,,,,,4692,,,,,,,,Caribbean,12.1047416,-68.9326698,NULL,
+6,Willemstad,NULL,Curacao,1800,1000,0,,1000,1000,0,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Caribbean,12.1047416,-68.9326698,NULL,
+8,London,NULL,England,1663,220,220,220,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Western Europe,51.5073509,-0.1277583,"Faber, 1998",11
+8,London,NULL,England,1684,414,414,414,0,,0,,,,,,,,,,,,,Western Europe,51.5073509,-0.1277583,"Barnett, 1940",20
+8,London,NULL,England,1700,1000,1000,1000,0,,0,,,,,,,,,,,,,Western Europe,51.5073509,-0.1277583,"Stiefel, 2014",116
+8,London,NULL,England,1776,0,0,,0,,0,,,,,650000,,,,,,,,Western Europe,51.5073509,-0.1277583,"Stiefel, 2014",47
+8,London,NULL,England,1800,2000,0,,2000,2000,0,,,,,,,,,,,,Bevis Marks specificially. https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Western Europe,51.5073509,-0.1277583,NULL,
+52,Bordeaux,NULL,France,1800,1500,0,,1500,1500,0,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Western Europe,44.84,-0.58,NULL,
+40,Hamburg,NULL,Germany,1800,200,0,,200,200,0,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Western Europe,53.551085,9.993682,NULL,
+53,Livorno,NULL,Italy,1601,114,114,114,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Western Europe,43.55,10.316667,NULL,NULL
+53,Livorno,NULL,Italy,1689,3000,3000,3000,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Western Europe,43.55,10.316667,NULL,NULL
+53,Livorno,NULL,Italy,1800,4000,0,,4000,4000,0,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Western Europe,43.55,10.316667,NULL,
+33,Venice,NULL,Italy,1800,1000,0,,1000,1000,0,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Southern Europe,45.4930475,12.4177003,NULL,
+45,Jamaica,NULL,Jamaica,1663,6,6,6,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Six settlers from London,Caribbean,17.93,-77.4,"Faber, 1998",48
+45,Jamaica,NULL,Jamaica,1672,29,29,29,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"Colony's governor reported 19 Jews, 13 settlers, others servants",Caribbean,17.93,-77.4,"Faber, 1998",49
+7,Port Royal,NULL,Jamaica,1680,75,75,75,NULL,NULL,NULL,NULL,20,NULL,NULL,2883,2069,NULL,48,814,NULL,NULL,NULL,Caribbean,17.9367669,-76.8411038,"Faber, 1998",53
+7,Port Royal,NULL,Jamaica,1740,29,29,29,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Caribbean,17.9367669,-76.8411038,"Faber, 1998",58
+14,Kingston,NULL,Jamaica,1745,188,188,188,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Caribbean,18.0178743,-76.8099041,"Faber, 1998",58
+14,Kingston,NULL,Jamaica,1769,197,197,197,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Caribbean,18.0178743,-76.8099041,"Faber, 1998",58
+45,Jamaica,NULL,Jamaica,1770,580,580,580,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,rough sum of towns near that year,Caribbean,17.93,-77.4,"Faber, 1998",NULL
+15,Spanish Town,NULL,Jamaica,1770,300,300,300,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Caribbean,18.0193171,-76.9758274,"Faber, 1998",58
+7,Port Royal,NULL,Jamaica,1772,76,76,76,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Caribbean,17.9367669,-76.8411038,"Faber, 1998",58
+14,Kingston,NULL,Jamaica,1795,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,908,5907,NULL,NULL,NULL,Caribbean,18.0178743,-76.8099041,"Faber, 1998",107
+45,Jamaica,NULL,Jamaica,1800,1000,0,,1000,1000,0,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Caribbean,17.93,-77.4,NULL,
+1,Amsterdam,NULL,Netherlands,1610,350,0,,350,350,0,,,,,,,,,,,,,Western Europe,52.3702157,4.8951679,"Cohen Paraira and Smith, 2013",19
+1,Amsterdam,NULL,Netherlands,1620,1000,0,,1000,1000,0,,,,,,,,,,,,,Western Europe,52.3702157,4.8951679,NULL,513
+1,Amsterdam,NULL,Netherlands,1622,0,0,,0,,0,,,,,105000,,,,,,,,Western Europe,52.3702157,4.8951679,NULL,380
+1,Amsterdam,NULL,Netherlands,1630,900,0,,900,900,0,,,,,,,,,,,,,Western Europe,52.3702157,4.8951679,"Cohen Paraira and Smith, 2013",19
+1,Amsterdam,NULL,Netherlands,1650,1400,0,,1400,1400,0,,,,,,,,,,,,,Western Europe,52.3702157,4.8951679,"Cohen Paraira and Smith, 2013",19
+1,Amsterdam,NULL,Netherlands,1658,3000,0,,3000,3000,0,,,,,,,,,,,,,Western Europe,52.3702157,4.8951679,NULL,505
+1,Amsterdam,NULL,Netherlands,1675,2500,0,,2500,2500,0,,,,,,,,,,,,,Western Europe,52.3702157,4.8951679,"Cohen Paraira and Smith, 2013",19
+1,Amsterdam,NULL,Netherlands,1690,8400,8400,8400,0,,0,,,,,,,,,,,,accounted for 8% Netherlands overseas trade,Western Europe,52.3702157,4.8951679,"Stiefel, 2014",118
+1,Amsterdam,NULL,Netherlands,1800,5000,0,,5000,5000,0,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Western Europe,52.3702157,4.8951679,NULL,
+16,Charlestown,NULL,Nevis,1678,8,8,8,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,3600,NULL,0,3849,NULL,NULL,NULL,Caribbean,17.1374798,-62.6236633,"Faber, 1998",56
+16,Charlestown,NULL,Nevis,1678,20,20,20,0,,0,,,,,,,,,,,,,Caribbean,17.1374798,-62.6236633,"Gallery, 2016",168
+16,Charlestown,NULL,Nevis,1708,17,17,17,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1104,NULL,46,3676,NULL,NULL,NULL,Caribbean,17.1374798,-62.6236633,"Faber, 1998",101
+16,Charlestown,NULL,Nevis,1724,75,75,75,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,Caribbean,17.1374798,-62.6236633,"Faber, 1998",101
+16,Charlestown,NULL,Nevis,1725,100,100,100,0,,0,,,,,,,,,,,,,Caribbean,17.1374798,-62.6236633,"Gallery, 2016",168
+16,Charlestown,NULL,Nevis,1768,1,1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"Last known Jew on Nevis in 1768, no records of Jews following hurricane in 1772",Caribbean,17.1374798,-62.6236633,"Faber, 1998",102
+31,Christiansted,NULL,St. Croix,1742,0,0,,0,,0,,,,,,,,,1906,,242,https://en.wikipedia.org/wiki/Saint_Croix,Caribbean,17.744077,-64.704155,NULL,
+31,Christiansted,NULL,St. Croix,1754,0,0,,0,,0,,,,,,,,,7566,,,https://en.wikipedia.org/wiki/Saint_Croix,Caribbean,17.744077,-64.704155,NULL,
+31,Christiansted,NULL,St. Croix,1850,372,372,372,0,,0,,,,,,,,,,,,4,Caribbean,17.744077,-64.704155,NULL,
+17,Orangjestad,NULL,St. Eustatius,1678,0,0,,0,,0,,,,,1000,,,,,,,https://www.statiagovernment.com/about-st.-eustatius/history,Caribbean,17.4867485,-62.9764978,NULL,
+17,Orangjestad,NULL,St. Eustatius,1722,21,21,21,0,,0,,,4,,1204,,,16,,,,,Caribbean,17.4867485,-62.9764978,"Hartog, 1976",2
+17,Orangjestad,NULL,St. Eustatius,1722,21,21,21,0,,0,,,,,1204,,,,,,,,Caribbean,17.4867485,-62.9764978,"Emmanuel and Emmanuel, 1970",519
+17,Orangjestad,NULL,St. Eustatius,1780,400,0,,400,400,0,,,,,,,,,,,,,Caribbean,17.4867485,-62.9764978,NULL,534
+17,Orangjestad,NULL,St. Eustatius,1781,101,101,101 men,0,,0,,,,,,,,,,,,,Caribbean,17.4867485,-62.9764978,"Hartog, 1976",11
+17,Orangjestad,NULL,St. Eustatius,1790,157,157,157,0,,0,,,,,,,,,,,,157 registered,Caribbean,17.4867485,-62.9764978,"Hartog, 1976",14
+17,Orangjestad,NULL,St. Eustatius,1790,0,0,,0,,0,,,,,8124,,,,,,,https://www.statiagovernment.com/about-st.-eustatius/history,Caribbean,17.4867485,-62.9764978,NULL,
+17,Orangjestad,NULL,St. Eustatius,1816,0,0,,0,,0,,,,,2668,,,,,,,https://www.statiagovernment.com/about-st.-eustatius/history,Caribbean,17.4867485,-62.9764978,NULL,
+17,Orangjestad,NULL,St. Eustatius,1818,5,5,5,0,,0,,,,,,,,,,,,restored to Netherlands until 1816. Census in 1818,Caribbean,17.4867485,-62.9764978,"Hartog, 1976",15
+17,Orangjestad,NULL,St. Eustatius,1846,1,1,1,0,,0,,,,,,,,,,,,"died that year, last remaining",Caribbean,17.4867485,-62.9764978,"Hartog, 1976",15
+18,Philipsburg,NULL,St. Maarten,1818,1,1,1,0,,0,,,,,,,,,,,,restored to Netherlands until 1816. Census in 1818,Caribbean,18.0295839,-63.0471371,"Hartog, 1976",15
+20,Charlotte Amalie,NULL,St. Thomas,1800,200,0,,200,200,0,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,Caribbean,18.3419004,-64.9307007,NULL,
+42,Suriname,NULL,Suriname,1665,20,20,20,0,,0,,,,,,2000,,,,,,"pre-1666, 20-30 jews",South America,5,-56,"Kaplan, 2010",99
+10,Jodensavanne,NULL,Suriname,1684,232,232,232,0,,0,,,55,,,,,995,,,,"poll tax, 105 white men, 58 white women, 995 slaves, 69 white children",South America,5.417798,-54.964218,"Vink, 2010",26
+42,Suriname,NULL,Suriname,1690,0,0,,0,,0,,,,,,800,,,4500,,,"late 17th c, total enslaved 4000-5000",South America,5,-56,"Vink, 2010",28
+10,Jodensavanne,NULL,Suriname,1690,575,575,575,0,,0,,,92,10,,,,,,,,"according to Nassy (later author), 92 families, not counting 10-12 German Jews married into Portuguese com, 50 bachelors, alowing 5 per family, total about 560-575 persons",South America,5.417798,-54.964218,"Vink, 2010",26
+42,Suriname,NULL,Suriname,1694,500,0,,500,500,0,,,,,,,,9000,,40,,sugar plantations,South America,5,-56,NULL,532
+10,Jodensavanne,NULL,Suriname,1694,51,1,1/3 of white population,50,50 unmarried,0,,,92,12,,,,,,,,,South America,5.417798,-54.964218,"Kaplan, 2010",102
+10,Jodensavanne,NULL,Suriname,1694,0,0,,0,,0,,,,,,,,9000,,40,,,South America,5.417798,-54.964218,"Kaplan, 2010",102
+42,Suriname,NULL,Suriname,1700,13,0,,0,,13,13% of jewish pop,,,,,,,,,,,,South America,5,-56,"Kaplan, 2010",105
+10,Jodensavanne,NULL,Suriname,1700,575,575,575,0,,0,,,,,,,,1300,,40,,end of 17th,South America,5.417798,-54.964218,"Gallery, 2016",
+42,Suriname,NULL,Suriname,1730,0,0,,0,,0,,,,,,,,,,115,400,,South America,5,-56,NULL,532
+42,Suriname,NULL,Suriname,1737,0,0,,0,,0,,,,,,,,,,115,401,,South America,5,-56,"Kaplan, 2010",102
+42,Suriname,NULL,Suriname,1750,2000,2000,2000,0,,0,,,,,,,,,,,,,South America,5,-56,"Stiefel, 2014",122
+42,Suriname,NULL,Suriname,1750,800,0,,0,,800,800,,,,,,,,,,,Ashkenazi 40% of jewish pop (caluclated from total jewish population 2000,South America,5,-56,"Kaplan, 2010",105
+10,Jodensavanne,NULL,Suriname,1750,2000,2000,2000,0,,0,,,,,,,,,,115,400,over 2000 total jews,South America,5.417798,-54.964218,"Gallery, 2016",
+11,Paramaribo,NULL,Suriname,1780,1300,1300,1300,0,,0,,,,,,,100,,,,,,South America,5.8520355,-55.2038278,"Böhm, 1979",104
+11,Paramaribo,NULL,Suriname,1788,1045,,1045,615,615,430,430,,,,,2000,,,,,,David Nassy,South America,5.8520355,-55.2038278,"Vink, 2010",28
+42,Suriname,NULL,Suriname,1791,1330,,1330,870,870,460,460,,,,,,,,,,,,South America,5,-56,"Vink, 2010",27
+10,Jodensavanne,NULL,Suriname,1791,1050,0,,620,620,430,430,,,,,,,,,,,,South America,5.417798,-54.964218,"Vink, 2010",27
+10,Jodensavanne,NULL,Suriname,1791,200,200,200,0,,0,,,,,,,,,,,,,South America,5.417798,-54.964218,"Kaplan, 2010",106
+11,Paramaribo,NULL,Suriname,1791,1050,,1050,620,620,430,430,,,,13000,3350,,,,,,,South America,5.8520355,-55.2038278,"Kaplan, 2010",106
+11,Paramaribo,NULL,Suriname,1791,280,0,,250,250,30,30,,,,,,,,,,,,South America,5.8520355,-55.2038278,"Vink, 2010",27
+42,Suriname,NULL,Suriname,1800,1000,0,,1000,1000,0,,,,,,,,,,,,https://shalommorris.com/2019/07/01/bemidbar-making-census-of-the-sp/,South America,5,-56,NULL,
+11,Paramaribo,NULL,Suriname,1830,1200,1200,1200,0,,0,,,,,,,,,,,,,South America,5.8520355,-55.2038278,"Vink, 2010",27
+42,Suriname,NULL,Suriname,1845,1218,,1363,485,485,733,733,,,,,,,,,,,145 listed as 'Israelites',South America,5,-56,"Vink, 2010",27
+10,Jodensavanne,NULL,Suriname,1900,0,0,,0,,0,,,20,,,,,,,,,end of 18th c,South America,5.417798,-54.964218,"Böhm, 1979",100
+24,New York,New York,United States,1654,23,23,23,0,,0,,,,,,,,,,,,,North America,40.7127753,-74.0059728,"de Sola Pool, 1955",3
+24,New York,New York,United States,1654,24,24,24,0,,0,,,,,800,,,,,,,,North America,40.7127753,-74.0059728,"de Sola Pool, 1955",467
+24,New York,New York,United States,1664,0,0,,0,,0,,,,,1500,,,,,,,,North America,40.7127753,-74.0059728,"de Sola Pool, 1955",32
+24,New York,New York,United States,1695,0,0,,0,,0,,20,,,,,,,,,,number of those who contributed to synagogue construction,North America,40.7127753,-74.0059728,"de Sola Pool, 1955",252
+24,New York,New York,United States,1728,61,61,61,0,,0,,,,,,,,,,,,,North America,40.7127753,-74.0059728,"de Sola Pool, 1955",252
+24,New York,New York,United States,1773,0,0,,0,,0,,30-40,,,,,,,,,,,North America,40.7127753,-74.0059728,"de Sola Pool, 1955",252
+25,Newport,Rhode Island,United States,1774,0,0,,0,,0,,,,,9000,,,,,,,,North America,41.4901024,-71.3128285,NULL,
+26,Philadelphia,Pennsylvania,United States,1776,0,0,,0,,0,,,,,25000,,,,,,,,North America,39.9525839,-75.1652215,"Stiefel, 2014",47
+25,Newport,Rhode Island,United States,1783,0,0,,0,,0,,,,,4000,,,,,,,,North America,41.4901024,-71.3128285,NULL,
+24,New York,New York,United States,1794,0,0,,0,,0,,72,,,,,,,,,,,North America,40.7127753,-74.0059728,"de Sola Pool, 1955",252
+24,New York,New York,United States,1812,450,450,450,0,,0,,60,,,96000,,,,,,,400-500 total jews,North America,40.7127753,-74.0059728,"de Sola Pool, 1955",472
+24,New York,New York,United States,1830,1150,1150,1150,0,,0,,,,,,,,,,,,,North America,40.7127753,-74.0059728,"Vink, 2010",27

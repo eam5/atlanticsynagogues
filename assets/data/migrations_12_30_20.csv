@@ -1,0 +1,108 @@
+source_id,source_location,source_region,sourceX,sourceY,target_id,target_location,targetX,targetY,migration_period,years,notes
+49,Portugal,"Western Europe",38.725267,-9.150019,53,"Livorno, Italy",43.55,10.316667,1,mid16-late-16,
+49,Portugal,"Western Europe",38.725267,-9.150019,51,"Antwerp, Belgium",51.217778,4.400278,1,mid16-late-16,
+49,Portugal,"Western Europe",38.725267,-9.150019,33,"Venice, Italy",45.4930475,12.417700299999979,1,mid16-late-16,
+49,Portugal,"Western Europe",38.725267,-9.150019,2,"Recife, Brazil",-8.054074,-34.8708494,1,mid16-late-16,
+49,Portugal,"Western Europe",38.725267,-9.150019,38,"Salonica, Greece",40.6400629,22.944419100000005,1,mid16-late-16,
+50,Spain,"Western Europe",40.433333,-3.7,53,"Livorno, Italy",43.55,10.316667,1,mid16-late-16,
+50,Spain,"Western Europe",40.433333,-3.7,51,"Antwerp, Belgium",51.217778,4.400278,1,mid16-late-16,
+50,Spain,"Western Europe",40.433333,-3.7,33,"Venice, Italy",45.4930475,12.417700299999979,1,mid16-late-16,
+50,Spain,"Western Europe",40.433333,-3.7,2,"Recife, Brazil",-8.054074,-34.8708494,1,mid16-late-16,
+50,Spain,"Western Europe",40.433333,-3.7,38,"Salonica, Greece",40.6400629,22.944419100000005,1,mid16-late-16,
+51,"Antwerp, Belgium","Western Europe",51.217778,4.400278,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,2,"late 16th-early17th",
+52,"Bordeaux, France","Western Europe",44.84," -0.58",1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,2,"late 16th-early17th",
+53,"Livorno, Italy","Western Europe",43.55,10.316667,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,2,"late 16th-early17th",
+49,Portugal,"Western Europe",38.725267,-9.150019,40,"Hamburg, Germany",53.551085,9.993682,2,"late 16th-early17th",
+49,Portugal,"Western Europe",38.725267,-9.150019,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,2,"late 16th-early17th",
+49,Portugal,"Western Europe",38.725267,-9.150019,2,"Recife, Brazil",-8.054074,-34.8708494,2,"late 16th-early17th",
+2,"Recife, Brazil","South America",-8.054074,-34.8708494,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,2,"late 16th-early17th",
+38,"Salonica, Greece","Southern Europe",40.6400629,22.944419100000005,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,2,"late 16th-early17th",
+50,Spain,"Western Europe",40.433333,-3.7,40,"Hamburg, Germany",53.551085,9.993682,2,"late 16th-early17th",
+50,Spain,"Western Europe",40.433333,-3.7,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,2,"late 16th-early17th",
+50,Spain,"Western Europe",40.433333,-3.7,2,"Recife, Brazil",-8.054074,-34.8708494,2,"late 16th-early17th",
+33,"Venice, Italy","Southern Europe",45.4930475,12.417700299999979,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,2,"late 16th-early17th",
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,2,"Recife, Brazil",-8.054074,-34.8708494,3,early17th-mid17th,
+49,Portugal,"Western Europe",38.725267,-9.150019,8,"London, England",51.5073509,-0.12775829999998223,3,early17th-mid17th,
+50,Spain,"Western Europe",40.433333,-3.7,8,"London, England",51.5073509,-0.12775829999998223,3,early17th-mid17th,
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,8,"London, England",51.5073509,-0.12775829999998223,4,mid17th,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,6,"Willemstad, Curacao",12.1047416,-68.9326698,4,mid17th,
+52,"Bordeaux, France","Western Europe",44.84," -0.58",8,"London, England",51.5073509,-0.12775829999998223,4,mid17th,NULL
+19,"Cayenne, French Guyana","South America",4.922420000000001,-52.313453100000004,42,Suriname,5,-56,4,NULL,NULL
+40,"Hamburg, Germany","Western Europe",53.551085,9.993682,8,"London, England",51.5073509,-0.12775829999998223,4,mid17th,NULL
+53,"Livorno, Italy","Western Europe",43.55,10.316667,19,"Cayenne, French Guyana",4.922420000000001,-52.313453100000004,4,mid17th,
+53,"Livorno, Italy","Western Europe",43.55,10.316667,59,"Essequibo, Dutch Guiana",7.03333,-58.45,4,mid17th,
+37,Poland,"Western Europe",52.2296756,21.012228700000037,40,"Hamburg, Germany",53.551085,9.993682,4,mid17th,"used warsaw"
+37,Poland,"Western Europe",52.2296756,21.012228700000037,8,"London, England",51.5073509,-0.12775829999998223,4,mid17th,NULL
+37,Poland,"Western Europe",52.2296756,21.012228700000037,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,4,mid17th,"used warsaw"
+49,Portugal,"Western Europe",38.725267,-9.150019,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,4,mid17th,
+49,Portugal,"Western Europe",38.725267,-9.150019,40,"Hamburg, Germany",53.551085,9.993682,4,mid17th,
+49,Portugal,"Western Europe",38.725267,-9.150019,8,"London, England",51.5073509,-0.12775829999998223,4,mid17th,NULL
+2,"Recife, Brazil","South America",-8.054074,-34.8708494,24,"New York, United States",40.7127753,-74.0059728,4,mid17th,
+2,"Recife, Brazil","South America",-8.054074,-34.8708494,4,"Bridgetown, Barbados",13.0968511,-59.61448189999999,4,mid17th,
+2,"Recife, Brazil","South America",-8.054074,-34.8708494,53,"Livorno, Italy",43.55,10.316667,4,mid17th,
+2,"Recife, Brazil","South America",-8.054074,-34.8708494,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,4,mid17th,
+2,"Recife, Brazil","South America",-8.054074,-34.8708494,19,"Cayenne, French Guyana",4.922420000000001,-52.313453100000004,4,mid17th,
+50,Spain,"Western Europe",40.433333,-3.7,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,4,mid17th,
+50,Spain,"Western Europe",40.433333,-3.7,8,"London, England",51.5073509,-0.12775829999998223,4,mid17th,NULL
+50,Spain,"Western Europe",40.433333,-3.7,40,"Hamburg, Germany",53.551085,9.993682,4,mid17th,
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,11,"Paramaribo, Suriname",5.852035499999999,-55.2038278,5,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,10,"Jodensavanne, Suriname",5.417798,-54.96421800000002,5,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,7,"Port Royal, Jamaica",17.93676689999999,-76.84110379999998,5,mid17th-late17th,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,24,"New York, United States",40.7127753,-74.0059728,5,mid17th-late17th,
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,7,"Port Royal, Jamaica",17.93676689999999,-76.84110379999998,5,mid17th-late17th,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,8,"London, England",51.5073509,-0.12775829999998223,5,mid17th-late17th,
+44,Barbados,Caribbean,13.17,-59.5525,8,"London, England",51.5073509,-0.12775829999998223,5,mid17th-late17th,NULL
+44,Barbados,Caribbean,13.17,-59.5525,16,"Charlestown, Nevis",17.1374798,-62.623663299999976,5,mid17th-late17th,NULL
+60,"Bayonne, France","Western Europe",43.49,-1.48,7,"Port Royal, Jamaica",17.93676689999999,-76.84110379999998,5,mid17th-late17th,NULL
+52,"Bordeaux, France","Western Europe",44.84," -0.58",8,"London, England",51.5073509,-0.12775829999998223,5,mid17th-late17th,
+9,"Cassipora, Suriname","South America",5.3972081,-54.944664999999986,10,"Jodensavanne, Suriname",5.417798,-54.96421800000002,5,NULL,NULL
+19,"Cayenne, French Guyana","South America",4.922420000000001,-52.313453100000004,59,"Essequibo, Dutch Guiana",7.03333,-58.45,5,mid17th-late17th,
+19,"Cayenne, French Guyana","South America",4.922420000000001,-52.313453100000004,7,"Port Royal, Jamaica",17.93676689999999,-76.84110379999998,5,mid17th-late17th,NULL
+59,"Essequibo, Dutch Guiana","South America",7.03333,-58.45,9,"Cassipora, Suriname",5.3972081,-54.944664999999986,5,mid17th-late17th,
+40,"Hamburg, Germany","Western Europe",53.551085,9.993682,8,"London, England",51.5073509,-0.12775829999998223,5,mid17th-late17th,
+45,Jamaica,Caribbean,18.18,-77.4,8,"London, England",51.5073509,-0.12775829999998223,5,mid17th-late17th,NULL
+8,"London, England","Western Europe",51.5073509,-0.12775829999998223,7,"Port Royal, Jamaica",17.93676689999999,-76.84110379999998,5,mid17th-late17th,NULL
+8,"London, England","Western Europe",51.5073509,-0.12775829999998223,44,Barbados,13.17,-59.5525,5,NULL,NULL
+37,Poland,"Western Europe",52.2296756,21.012228700000037,8,"London, England",51.5073509,-0.12775829999998223,5,mid17th-late17th,
+7,"Port Royal, Jamaica",Caribbean,17.93676689999999,-76.84110379999998,14,"Kingston, Jamaica",18.0178743,-76.80990409999998,5,mid17th-late17th,NULL
+7,"Port Royal, Jamaica",Caribbean,17.93676689999999,-76.84110379999998,15,"Spanish Town, Jamaica",18.0193171,-76.97582740000001,5,mid17th-late17th,NULL
+6,"Willemstad, Curacao",Caribbean,12.1047416,-68.9326698,17,"Orangjestad, St. Eustatius",17.4867485,-62.976497800000004,5,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,17,"Orangjestad, St. Eustatius",17.4867485,-62.976497800000004,6,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,24,"New York, United States",40.7127753,-74.0059728,6,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,11,"Paramaribo, Suriname",5.852035499999999,-55.2038278,6,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,10,"Jodensavanne, Suriname",5.417798,-54.96421800000002,6,NULL,NULL
+44,Barbados,Caribbean,13.17,-59.5525,16,"Charlestown, Nevis",17.1374798,-62.623663299999976,6,NULL,NULL
+44,Barbados,Caribbean,13.17,-59.5525,25,"Newport, United States",41.4901024,-71.31282850000002,6,NULL,NULL
+8,"London, England","Western Europe",51.5073509,-0.12775829999998223,24,"New York, United States",40.7127753,-74.0059728,6,NULL,NULL
+6,"Willemstad, Curacao",Caribbean,12.1047416,-68.9326698,25,"Newport, United States",41.4901024,-71.31282850000002,6,NULL,NULL
+6,"Willemstad, Curacao",Caribbean,12.1047416,-68.9326698,22,"Tucacas, Venezuala",10.797778,-68.3175,6,NULL,NULL
+6,"Willemstad, Curacao",Caribbean,12.1047416,-68.9326698,17,"Orangjestad, St. Eustatius",17.4867485,-62.976497800000004,6,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,17,"Orangjestad, St. Eustatius",17.4867485,-62.976497800000004,7,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,6,"Willemstad, Curacao",12.1047416,-68.9326698,7,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,24,"New York, United States",40.7127753,-74.0059728,7,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,11,"Paramaribo, Suriname",5.852035499999999,-55.2038278,7,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,10,"Jodensavanne, Suriname",5.417798,-54.96421800000002,7,NULL,NULL
+44,Barbados,Caribbean,13.17,-59.5525,24,"New York, United States",40.7127753,-74.0059728,7,NULL,NULL
+8,"London, England","Western Europe",51.5073509,-0.12775829999998223,24,"New York, United States",40.7127753,-74.0059728,7,NULL,NULL
+17,"Orangjestad, St. Eustatius",Caribbean,17.4867485,-62.976497800000004,6,"Willemstad, Curacao",12.1047416,-68.9326698,7,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,42,Suriname,5,-56,8,NULL,NULL
+1,"Amsterdam, Netherlands","Western Europe",52.3702157,4.895167899999933,17,"Orangjestad, St. Eustatius",17.4867485,-62.976497800000004,8,NULL,NULL
+44,Barbados,Caribbean,13.17,-59.5525,23,"Charleston, United States",32.7764749,-79.93105120000001,8,NULL,NULL
+44,Barbados,Caribbean,13.17,-59.5525,25,"Newport, United States",41.4901024,-71.31282850000002,8,NULL,NULL
+44,Barbados,Caribbean,13.17,-59.5525,24,"New York, United States",40.7127753,-74.0059728,8,NULL,NULL
+23,"Charleston, United States","North America",32.7764749,-79.93105120000001,24,"New York, United States",40.7127753,-74.0059728,8,NULL,NULL
+45,Jamaica,Caribbean,18.18,-77.4,24,"New York, United States",40.7127753,-74.0059728,8,NULL,NULL
+8,"London, England","Western Europe",51.5073509,-0.12775829999998223,30,"Montreal, Canada",45.5016889,-73.56725599999999,8,NULL,NULL
+24,"New York, United States","North America",40.7127753,-74.0059728,45,Jamaica,18.18,-77.4,8,NULL,NULL
+24,"New York, United States","North America",40.7127753,-74.0059728,25,"Newport, United States",41.4901024,-71.31282850000002,8,NULL,NULL
+24,"New York, United States","North America",40.7127753,-74.0059728,26,"Philadelphia, United States",39.9525839,-75.16522150000003,8,NULL,NULL
+25,"Newport, United States","North America",41.4901024,-71.31282850000002,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,8,NULL,NULL
+25,"Newport, United States","North America",41.4901024,-71.31282850000002,24,"New York, United States",40.7127753,-74.0059728,8,NULL,NULL
+17,"Orangjestad, St. Eustatius",Caribbean,17.4867485,-62.976497800000004,20,"Charlotte Amalie, St. Thomas",18.3419004,-64.93070069999999,8,NULL,NULL
+17,"Orangjestad, St. Eustatius",Caribbean,17.4867485,-62.976497800000004,18,"Philipsburg, St. Maarten",18.0295839,-63.047137099999986,8,NULL,NULL
+42,Suriname,"South America",5,-56,39,"Boston, United States",42.361145,-71.057083,8,NULL,NULL
+42,Suriname,"South America",5,-56,1,"Amsterdam, Netherlands",52.3702157,4.895167899999933,8,NULL,NULL
+42,Suriname,"South America",5,-56,17,"Orangjestad, St. Eustatius",17.4867485,-62.976497800000004,8,NULL,NULL
+42,Suriname,"South America",5,-56,25,"Newport, United States",41.4901024,-71.31282850000002,8,NULL,NULL
+6,"Willemstad, Curacao",Caribbean,12.1047416,-68.9326698,25,"Newport, United States",41.4901024,-71.31282850000002,8,NULL,NULL
+6,"Willemstad, Curacao",Caribbean,12.1047416,-68.9326698,24,"New York, United States",40.7127753,-74.0059728,8,NULL,NULL

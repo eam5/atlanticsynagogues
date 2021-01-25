@@ -97,9 +97,10 @@ title: Migrations
 
     {% for building in site.data.buildings %}
     {% assign pagepath = building.idbuildings | prepend: "/buildings/"%}
-    {% for congregation in building.congregations %}
-    {% assign rite = congregation.rite | capitalize %}
-    {% assign year = building.data_yr_open %}
+    {% for synagogue in building.objects %}
+    {% assign rite = synagogue.rite | capitalize %}
+    {% assign year = synagogue.yr_start %}
+    {% assign year_end = synagogue.yr_end %}
     // console.log({{building.year_opened}});
     var bldLatLon = [];
     bldLatLon.push({{building.lat}});
@@ -115,7 +116,7 @@ title: Migrations
     var marker = L.marker(bldLatLon, {
           icon: L.BeautifyIcon.icon(markerOptions),
           draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
     marker.addTo(data2)
     {% endif %}
@@ -129,7 +130,7 @@ title: Migrations
     var marker = L.marker(bldLatLon, {
           icon: L.BeautifyIcon.icon(markerOptions),
           draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
     marker.addTo(data3)
     {% endif %}
@@ -143,7 +144,7 @@ title: Migrations
     var marker = L.marker(bldLatLon, {
           icon: L.BeautifyIcon.icon(markerOptions),
           draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
     marker.addTo(data4)
     {% endif %}
@@ -157,7 +158,7 @@ title: Migrations
     var marker = L.marker(bldLatLon, {
           icon: L.BeautifyIcon.icon(markerOptions),
           draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
     marker.addTo(data5)
     {% endif %}
@@ -171,7 +172,7 @@ title: Migrations
     var marker = L.marker(bldLatLon, {
           icon: L.BeautifyIcon.icon(markerOptions),
           draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
     marker.addTo(data6)
     {% endif %}
@@ -185,7 +186,7 @@ title: Migrations
     var marker = L.marker(bldLatLon, {
           icon: L.BeautifyIcon.icon(markerOptions),
           draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
     marker.addTo(data7)
     {% endif %}
@@ -199,12 +200,12 @@ title: Migrations
     var marker = L.marker(bldLatLon, {
           icon: L.BeautifyIcon.icon(markerOptions),
           draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
     marker.addTo(data8)
     {% endif %}
 
-    {% if congregation.rite == "sephardic" %}
+    {% if synagogue.rite == "sephardic" %}
     var markerOptions = {
           icon: 'star-of-david',
           iconShape: 'marker',
@@ -214,11 +215,11 @@ title: Migrations
     var marker = L.marker(bldLatLon, {
           icon: L.BeautifyIcon.icon(markerOptions),
           draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
     marker.addTo(group1)
     {% endif %}
-    {% if congregation.rite == "ashkenazi" %}
+    {% if synagogue.rite == "ashkenazi" %}
     var markerOptions = {
           icon: 'star-of-david',
           iconShape: 'marker',
@@ -228,7 +229,7 @@ title: Migrations
     var marker = L.marker(bldLatLon, {
           icon: L.BeautifyIcon.icon(markerOptions),
           draggable: false
-        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}})</strong>");
+        }).bindPopup("<strong><a href=\"{{ pagepath | prepend:site.url }}\">{{ building.building_name }} ({{building.year_opened}})</a><br />{{rite}}<br />{{synagogue.congregation_name}} ({{synagogue.yr_start}}-{{synagogue.yr_end}})</strong>");
 
     marker.addTo(group2)
     {% endif %}
@@ -239,7 +240,7 @@ title: Migrations
     markers.checkIn([group1, group2]);
    
         
-    d3.csv('{{site.url}}/assets/data/migrations-3.csv', function(data){
+    d3.csv('{{site.url}}/assets/data/migrations_12_30_20.csv', function(data){
     console.log(data)
         
     _.each(data, function(link, i, data){

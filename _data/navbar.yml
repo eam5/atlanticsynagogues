@@ -19,10 +19,10 @@
     url: /ruling-powers
   - name: Atlantic Jewish Populations
     url: /populations
-  - name: Rabbis
-    url: /rabbi-timeline
   - name: Congregations & Synagogues
     url: /congregation-timeline
+  - name: Rabbis
+    url: /rabbi-timeline
 - name: Data Visualizations
   sublinks:
   - name: Contributions
@@ -31,7 +31,7 @@
     url: /access-paths
   - name: Facade Fractal Trees
     url: /allbldgs_allfac
-  - name: Synagogue Timeline
-    url: /scatter
+  # - name: Synagogue Timeline
+  #   url: /scatter
 - name: Site Index
   url: /site-index

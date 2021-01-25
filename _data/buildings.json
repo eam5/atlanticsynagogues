@@ -4902,7 +4902,7 @@
         "idcongregation": 34,
         "congregation_name": "Congregation St. Maarten",
         "yr_start": 1783,
-        "yr_end": 0,
+        "yr_end": 1828,
         "rite": "sephardic",
         "satellite_of": null,
         "image_file": null,
@@ -4915,7 +4915,7 @@
         "idcongregation": 34,
         "congregation_name": "Congregation St. Maarten",
         "yr_start": 1783,
-        "yr_end": 0,
+        "yr_end": 1828,
         "satellite_of": null,
         "rite": "sephardic"
       }
@@ -5498,7 +5498,7 @@
         "idcongregation": 29,
         "congregation_name": "Oratory of St. Philip Neri",
         "yr_start": 1679,
-        "yr_end": 0,
+        "yr_end": 1900,
         "rite": "catholic",
         "satellite_of": null,
         "image_file": "/assets/images/38/038_003.png",
@@ -5549,7 +5549,7 @@
         "idcongregation": 29,
         "congregation_name": "Oratory of St. Philip Neri",
         "yr_start": 1679,
-        "yr_end": 0,
+        "yr_end": 1900,
         "satellite_of": null,
         "rite": "catholic"
       }

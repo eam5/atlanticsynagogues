@@ -22,7 +22,7 @@ div.tooltip {
         width: 100%;
         vertical-align: top;
         overflow: visible;
-        margin: 1rem 0 4rem ;
+        margin: 1rem 0 1rem ;
     }
     .svg-content {
         display: inline-block;
@@ -35,10 +35,16 @@ div.tooltip {
     <div class="d-flex align-items-baseline">
         <h1>Jewish Populations in the Atlantic (1600-1860)</h1>
       </div>
-<div class="d-flex flex-wrap align-items-baseline justify-content-between my-2">
+<div class="d-flex flex-wrap align-items-center justify-content-between my-2">
     <div id='axis-buttons'></div>
+    <!-- <svg width='500' height='100' id='vis-legend'></svg> -->
 </div>
-<div id="container" class="svg-container"></div></body>
+<div id="legend" class="svg-container">
+    <svg viewBox="0 0 1200 100" id='vis-legend' preserveAspectRatio="xMinYMin"></svg>
+</div>
+<div id="container" class="svg-container">
+</div>
+</body>
 <script>
 var margin = {top: 40, right: 30, bottom: 30, left: 170},
     width = 1200 - margin.left - margin.right,
@@ -50,7 +56,8 @@ let div = d3.select('body')
         .style('opacity', 0);
     
 const color = d3.scaleOrdinal()
-        .range(chroma.scale(['#0000b3','#0030ff', '#00deff','#b800c6', '#96ffea', '#c4fda0','#ffc200','#ff005e','#ec229f']).colors(17));
+        .range(['#00429d', '#2b57a7', '#426cb0', '#5681b9', '#6997c2', '#7daeca', '#93c4d2', '#abdad9', '#caefdf', '#ffe2ca', '#ffc4b4', '#ffa59e', '#f98689', '#ed6976', '#dd4c65', '#ca2f55', '#b11346', '#93003a']);
+        // .range(chroma.scale(['#0000b3','#0030ff', '#00deff','#b800c6', '#96ffea', '#c4fda0','#ffc200','#ff005e','#ec229f']).colors(17));
 
 var svg = d3.select("div#container")
     .append("svg")
@@ -60,7 +67,7 @@ var svg = d3.select("div#container")
     .append("g")
     .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("{{site.url}}/assets/data/populations_locations_12_21_20.csv", function(num){
+d3.csv("{{site.url}}/assets/data/populations_1_25_21.csv", function(num){
 d3.csv("{{site.url}}/assets/data/synagogues-powers-1.csv", function(bldg){
 d3.csv("{{site.url}}/assets/data/congregations-powers-1.csv", function(cong){
 d3.csv("{{site.url}}/assets/data/ruling-powers-pop.csv", function(data) {
@@ -71,18 +78,34 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-pop.csv", function(data) {
         return parseFloat(b.lat) - parseFloat(a.lat)})
         .filter(d=>d.year<=1861);
     console.log(pop)
+    const popMax = d3.max(pop.map(d=>parseFloat(d.calc_total)))
+    console.log(popMax)
+    const popMin = d3.min(pop.map(d=>parseFloat(d.calc_total)))
+    console.log(popMin)
+    
+    const popScale = d3.scaleLinear()
+        .domain([Math.sqrt(popMin),Math.sqrt(popMax)])
+        .range([5,100])
  
     const x = d3.scaleTime()
         .domain([new Date(1600, 0, 1), new Date(1860, 0, 1)])
         .range([0, width]);
     svg.append("g")
         .attr('id', 'xAxisDate')
+
         .attr("color", "#333")
         .style('font-size', '0.9rem')
         .call(d3.axisBottom(x).tickSize(height).tickFormat(d3.timeFormat("%Y")))
         .call(g => g.select(".domain").attr("display", "none"))
         .call(g => g.selectAll(".tick").selectAll("line").attr("stroke", "#D8D8D8").style("stroke-dasharray", "5 5"))
         .call(g => g.selectAll(".tick").selectAll("text").attr("transform", "translate(0," + (-height-20) + ")"));
+
+        svg.append("g")
+        .attr("color", "#333")
+        .style('font-size', '0.9rem')
+        .call(d3.axisBottom(x).tickSize(height).tickFormat(d3.timeFormat("%Y")))
+        .call(g => g.select(".domain").attr("display", "none"))
+        .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
 
     var y = d3.scaleBand()
         .range([ 0, height ])
@@ -93,8 +116,23 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-pop.csv", function(data) {
             .style('font-size', '0.75rem')
         .call(d3.axisLeft(y))
         .call(g => g.select(".domain").attr("display", "none"))
+        .call(g => g.selectAll(".tick").selectAll("text").attr("display", "none"))
         .call(g => g.selectAll(".tick").selectAll("line").attr("stroke", "#D8D8D8").style("stroke-dasharray", "5 5").attr("x2", width))
     
+        var yLabel = d3.scaleBand()
+        .range([ 0, height ])
+        .domain(pop.map(function(d) { 
+            if (d.city=="Jamaica" || d.city=="Suriname" || d.city=="Brazil" || d.city=="Barbados"){return d.country+" (All)"}
+            else { return d.city + ", " + d.country;}
+             }))
+        .padding(1);
+    svg.append("g")
+        .attr("color", "#333")
+            .style('font-size', '0.75rem')
+        .call(d3.axisLeft(yLabel))
+        .call(g => g.select(".domain").attr("display", "none"))
+        .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
+
   svg.selectAll("myline")
     .data(data)
     .enter()
@@ -149,7 +187,7 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-pop.csv", function(data) {
         .append("circle")
         .attr("cx", function(d) { return x(new Date(d.year,0,1)); })
         .attr("cy", function(d) { return y(d.city + ", " + d.country); })
-        .attr('r', d=>Math.sqrt(parseFloat(d.calc_total)))
+        .attr('r', d=>popScale(Math.sqrt(parseFloat(d.calc_total))))
         .attr("stroke", "#fff")
         .attr("stroke-width", 1.5)
         .style("fill", function(d){ return color(d.country)})
@@ -167,7 +205,7 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-pop.csv", function(data) {
                 .duration(100)    
                 .style("opacity", 0); 
         })
-        .attr("opacity", 0.4);
+        .attr("opacity", 0.6);
     
       svg.selectAll("mycircle")
         .data(bldg.map(function(d){
@@ -329,6 +367,51 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-pop.csv", function(data) {
             
         });
     
+        d3.select('#vis-legend').append('text')
+            .attr('color', '#333')
+            .text('Population Scale:')
+            .attr('x', 0)
+            .attr('y', d=>popScale(Math.sqrt(1500))+18);
+        
+        d3.select('#vis-legend').append('circle')
+            .attr('cx', 500/2.8)
+            .attr('cy', d=>popScale(Math.sqrt(1500))+10)
+            .attr('r', d=>popScale(Math.sqrt(1500)))
+            .attr('fill', "#17202A")
+            .attr('fill-opacity', 0.5)
+            .attr('stroke', '#fffff')
+            .attr('stroke-width', 1.5);
+        d3.select('#vis-legend').append('text')
+            .attr('color', '#333')
+            .text('1,500')
+            .attr('x', 500/2.8 + 55)
+            .attr('y', d=>popScale(Math.sqrt(1500))+18);
+        d3.select('#vis-legend').append('circle')
+            .attr('cx', d=>(500/2.8 + 55) + 20+ (2*popScale(Math.sqrt(500))))
+            .attr('cy', d=>popScale(Math.sqrt(1500))+10)
+            .attr('r', d=>popScale(Math.sqrt(500)))
+            .attr('fill', "#17202A")
+            .attr('fill-opacity', 0.5)
+            .attr('stroke', '#fffff')
+            .attr('stroke-width', 1.5);
+        d3.select('#vis-legend').append('text')
+            .attr('color', '#333')
+            .text('500')
+            .attr('x', d=>(500/2.8 + 55) + 20+ (2*popScale(Math.sqrt(500))) + 35)
+            .attr('y', d=>popScale(Math.sqrt(1500))+18);
+        d3.select('#vis-legend').append('circle')
+            .attr('cx', d=>(500/2.8 + 55) + 60+ (2*popScale(Math.sqrt(500))) + 35+ (2*popScale(Math.sqrt(10))))
+            .attr('cy', d=>popScale(Math.sqrt(1500))+10)
+            .attr('r', d=>popScale(Math.sqrt(10)))
+            .attr('fill', "#17202A")
+            .attr('fill-opacity', 0.5)
+            .attr('stroke', '#fffff')
+            .attr('stroke-width', 1.5);
+        d3.select('#vis-legend').append('text')
+            .attr('color', '#333')
+            .text('10')
+            .attr('x', (500/2.8 + 55) + 60+ (2*popScale(Math.sqrt(500))) + 35+ (2*popScale(Math.sqrt(10))) + 15)
+            .attr('y', d=>popScale(Math.sqrt(1500))+18);
 
 
 })
