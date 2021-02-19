@@ -100,14 +100,16 @@ layout: leaflet-map
                     {% assign bldgname = bldgnametwo | replace: " ", "-" %}
                     <div class="map" id="{{ bldgname }}" width="100%"></div>
                 </li>
+                {% if page.use_type == "synagogue" %}
                 <a href="{{ "/synagogue-map" | prepend: site.url }}"><li type="button" class="btn btn-light list-group-item px-1">Synagogue Map</li></a>
+                {% endif %}
             </ul>
             </div>                  
     </div>
 </div>
 <script>
     
-    {% assign varid = bldgname | remove: "-"%}
+    {% assign varid = bldgname | remove: "-" | remove: "."%}
     var {{ varid }}= L.map('{{ bldgname }}').setView([{{ page.lat }}, {{ page.lon }}], 13);
     var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
