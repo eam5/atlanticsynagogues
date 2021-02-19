@@ -23,6 +23,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/131/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 131,
@@ -93,6 +94,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/98/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 98,
@@ -163,6 +165,7 @@
     "loc_def": "gen",
     "cover_image": null,
     "file_path": "/assets/images/126/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 126,
@@ -233,6 +236,7 @@
     "loc_def": "gen",
     "cover_image": null,
     "file_path": "/assets/images/128/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 128,
@@ -303,6 +307,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/17/017_035.jpg",
     "file_path": "/assets/images/17/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 17,
@@ -373,6 +378,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/101/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 101,
@@ -443,6 +449,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/14/014_001.jpg",
     "file_path": "/assets/images/14/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 14,
@@ -513,6 +520,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/138/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 138,
@@ -583,6 +591,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/136/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 136,
@@ -653,6 +662,7 @@
     "loc_def": "est",
     "cover_image": null,
     "file_path": "/assets/images/144/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 144,
@@ -723,6 +733,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/132/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 132,
@@ -793,6 +804,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/0/000_237.jpg",
     "file_path": "/assets/images/0/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 0,
@@ -863,6 +875,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/1/001_001.jpg",
     "file_path": "/assets/images/1/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 1,
@@ -933,6 +946,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/2/002_004.jpg",
     "file_path": "/assets/images/2/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 2,
@@ -1003,6 +1017,7 @@
     "loc_def": "est",
     "cover_image": null,
     "file_path": "/assets/images/122/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 122,
@@ -1073,6 +1088,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/10/010_001.jpg",
     "file_path": "/assets/images/10/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 10,
@@ -1143,6 +1159,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/142/142_001.jpg",
     "file_path": "/assets/images/142/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 142,
@@ -1213,6 +1230,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/4/004_030.jpg",
     "file_path": "/assets/images/4/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 4,
@@ -1283,6 +1301,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/124/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 124,
@@ -1353,6 +1372,7 @@
     "loc_def": "gen",
     "cover_image": null,
     "file_path": "/assets/images/16/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 16,
@@ -1423,6 +1443,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/133/133_003.jpg",
     "file_path": "/assets/images/133/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 133,
@@ -1493,6 +1514,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/21/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 21,
@@ -1563,6 +1585,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/31/031_040.png",
     "file_path": "/assets/images/31/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 31,
@@ -1633,6 +1656,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/22/022_002.jpg",
     "file_path": "/assets/images/22/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 22,
@@ -1703,6 +1727,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/7/007_004.jpg",
     "file_path": "/assets/images/7/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 7,
@@ -1773,6 +1798,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/146/146_002.jpg",
     "file_path": "/assets/images/146/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 146,
@@ -1843,6 +1869,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/135/135_001.jpg",
     "file_path": "/assets/images/135/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 135,
@@ -1913,6 +1940,7 @@
     "loc_def": "est",
     "cover_image": null,
     "file_path": "/assets/images/145/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 145,
@@ -1983,6 +2011,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/41/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 41,
@@ -2053,6 +2082,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/134/134_009.jpg",
     "file_path": "/assets/images/134/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 134,
@@ -2123,6 +2153,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/149/149_001.jpg",
     "file_path": "/assets/images/149/",
+    "use_type": "private estate",
     "objects": [
       {
         "idbuildings": 149,
@@ -2217,6 +2248,7 @@
     "loc_def": "gen",
     "cover_image": null,
     "file_path": "/assets/images/109/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 109,
@@ -2287,6 +2319,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/148/148_001.jpg",
     "file_path": "/assets/images/148/",
+    "use_type": "private estate",
     "objects": [
       {
         "idbuildings": 148,
@@ -2381,6 +2414,7 @@
     "loc_def": "gen",
     "cover_image": null,
     "file_path": "/assets/images/130/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 130,
@@ -2451,6 +2485,7 @@
     "loc_def": "gen",
     "cover_image": null,
     "file_path": "/assets/images/113/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 113,
@@ -2521,6 +2556,7 @@
     "loc_def": "est",
     "cover_image": null,
     "file_path": "/assets/images/114/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 114,
@@ -2591,6 +2627,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/43/043_045.jpg",
     "file_path": "/assets/images/43/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 43,
@@ -2661,6 +2698,7 @@
     "loc_def": "est",
     "cover_image": null,
     "file_path": "/assets/images/125/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 125,
@@ -2731,6 +2769,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/40/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 40,
@@ -2801,6 +2840,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/33/033_007.jpg",
     "file_path": "/assets/images/33/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 33,
@@ -2871,6 +2911,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/127/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 127,
@@ -2941,6 +2982,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/100/100_003.png",
     "file_path": "/assets/images/100/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 100,
@@ -3011,6 +3053,7 @@
     "loc_def": "est",
     "cover_image": null,
     "file_path": "/assets/images/117/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 117,
@@ -3121,6 +3164,7 @@
     "loc_def": "est",
     "cover_image": null,
     "file_path": "/assets/images/139/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 139,
@@ -3191,6 +3235,7 @@
     "loc_def": "est",
     "cover_image": null,
     "file_path": "/assets/images/140/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 140,
@@ -3261,6 +3306,7 @@
     "loc_def": "gen",
     "cover_image": null,
     "file_path": "/assets/images/111/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 111,
@@ -3331,6 +3377,7 @@
     "loc_def": "gen",
     "cover_image": null,
     "file_path": "/assets/images/112/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 112,
@@ -3401,6 +3448,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/137/137_005.png",
     "file_path": "/assets/images/137/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 137,
@@ -3471,6 +3519,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/35/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 35,
@@ -3581,6 +3630,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/39/039_002.jpg",
     "file_path": "/assets/images/39/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 39,
@@ -3651,6 +3701,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/29/029_001.png",
     "file_path": "/assets/images/29/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 29,
@@ -3721,6 +3772,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/13/013_004.jpg",
     "file_path": "/assets/images/13/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 13,
@@ -3791,6 +3843,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/97/097_001.jpg",
     "file_path": "/assets/images/97/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 97,
@@ -3861,6 +3914,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/147/147_001.jpg",
     "file_path": "/assets/images/147/",
+    "use_type": "church",
     "objects": [
       {
         "idbuildings": 147,
@@ -3955,6 +4009,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/11/011_004.jpg",
     "file_path": "/assets/images/11/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 11,
@@ -4025,6 +4080,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/9/009_003.jpg",
     "file_path": "/assets/images/9/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 9,
@@ -4095,6 +4151,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/8/008_001.jpg",
     "file_path": "/assets/images/8/",
+    "use_type": "church",
     "objects": [
       {
         "idbuildings": 8,
@@ -4189,6 +4246,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/37/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 37,
@@ -4259,6 +4317,7 @@
     "loc_def": "gen",
     "cover_image": null,
     "file_path": "/assets/images/116/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 116,
@@ -4329,6 +4388,7 @@
     "loc_def": "gen",
     "cover_image": null,
     "file_path": "/assets/images/105/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 105,
@@ -4399,6 +4459,7 @@
     "loc_def": "gen",
     "cover_image": "/assets/images/115/115_001.jpg",
     "file_path": "/assets/images/115/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 115,
@@ -4469,6 +4530,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/19/019_002.png",
     "file_path": "/assets/images/19/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 19,
@@ -4539,6 +4601,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/118/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 118,
@@ -4609,6 +4672,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/119/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 119,
@@ -4679,6 +4743,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/120/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 120,
@@ -4749,6 +4814,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/20/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 20,
@@ -4819,6 +4885,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/143/143_001.png",
     "file_path": "/assets/images/143/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 143,
@@ -4889,6 +4956,7 @@
     "loc_def": "est",
     "cover_image": null,
     "file_path": "/assets/images/121/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 121,
@@ -4959,6 +5027,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/129/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 129,
@@ -5006,6 +5075,196 @@
     ]
   },
   {
+    "idbuildings": 57,
+    "building_name": "St. Bride's, Fleet Street",
+    "year_built": "1670",
+    "data_yr_built": 1670,
+    "year_built_acc": "accurate",
+    "year_opened": "1680",
+    "data_yr_open": 1680,
+    "year_opened_acc": "accurate",
+    "year_nonextant": null,
+    "data_yr_nonextant": null,
+    "year_non_acc": null,
+    "purpose_built": "TRUE",
+    "idlocation": 8,
+    "loc_simple": "London, England",
+    "city": "London",
+    "state": null,
+    "country": "England",
+    "region": "Western Europe",
+    "lat": 51.513889,
+    "lon": -0.105833,
+    "loc_def": "exact",
+    "cover_image": null,
+    "file_path": "/assets/images/57/",
+    "use_type": "church",
+    "objects": [
+      {
+        "idbuildings": 57,
+        "building_name": "St. Bride's, Fleet Street",
+        "use_type": "church",
+        "year_built": "1670",
+        "data_yr_built": 1670,
+        "year_built_acc": "accurate",
+        "year_opened": "1680",
+        "data_yr_open": 1680,
+        "year_opened_acc": "accurate",
+        "year_nonextant": null,
+        "data_yr_nonextant": null,
+        "year_non_acc": null,
+        "idlocation": 8,
+        "loc_simple": "London, England",
+        "city": "London",
+        "state": null,
+        "country": "England",
+        "region": "Western Europe",
+        "lat": 51.513889,
+        "lon": -0.105833,
+        "loc_def": "exact",
+        "purpose_built": "TRUE",
+        "idcongregation": null,
+        "congregation_name": null,
+        "yr_start": null,
+        "yr_end": null,
+        "rite": null,
+        "satellite_of": null,
+        "image_file": null,
+        "file_path": "/assets/images/57/"
+      }
+    ],
+    "congregations_associated": 1,
+    "congregations": [
+      {
+        "idbuildings": 57,
+        "building_name": "St. Bride's, Fleet Street",
+        "use_type": "church",
+        "year_built": "1670",
+        "data_yr_built": 1670,
+        "year_built_acc": "accurate",
+        "year_opened": "1680",
+        "data_yr_open": 1680,
+        "year_opened_acc": "accurate",
+        "year_nonextant": null,
+        "data_yr_nonextant": null,
+        "year_non_acc": null,
+        "idlocation": 8,
+        "loc_simple": "London, England",
+        "city": "London",
+        "state": null,
+        "country": "England",
+        "region": "Western Europe",
+        "lat": 51.513889,
+        "lon": -0.105833,
+        "loc_def": "exact",
+        "purpose_built": "TRUE",
+        "idcongregation": null,
+        "congregation_name": null,
+        "yr_start": null,
+        "yr_end": null,
+        "rite": null,
+        "satellite_of": null,
+        "image_file": null,
+        "file_path": "/assets/images/57/"
+      }
+    ]
+  },
+  {
+    "idbuildings": 3,
+    "building_name": "St. James, Piccadilly",
+    "year_built": "1683",
+    "data_yr_built": 1683,
+    "year_built_acc": "accurate",
+    "year_opened": "1684",
+    "data_yr_open": 1684,
+    "year_opened_acc": "accurate",
+    "year_nonextant": null,
+    "data_yr_nonextant": null,
+    "year_non_acc": null,
+    "purpose_built": null,
+    "idlocation": 8,
+    "loc_simple": "London, England",
+    "city": "London",
+    "state": null,
+    "country": "England",
+    "region": "Western Europe",
+    "lat": 51.508611,
+    "lon": -0.136667,
+    "loc_def": "exact",
+    "cover_image": null,
+    "file_path": "/assets/images/3/",
+    "use_type": "church",
+    "objects": [
+      {
+        "idbuildings": 3,
+        "building_name": "St. James, Piccadilly",
+        "use_type": "church",
+        "year_built": "1683",
+        "data_yr_built": 1683,
+        "year_built_acc": "accurate",
+        "year_opened": "1684",
+        "data_yr_open": 1684,
+        "year_opened_acc": "accurate",
+        "year_nonextant": null,
+        "data_yr_nonextant": null,
+        "year_non_acc": null,
+        "idlocation": 8,
+        "loc_simple": "London, England",
+        "city": "London",
+        "state": null,
+        "country": "England",
+        "region": "Western Europe",
+        "lat": 51.508611,
+        "lon": -0.136667,
+        "loc_def": "exact",
+        "purpose_built": null,
+        "idcongregation": null,
+        "congregation_name": null,
+        "yr_start": null,
+        "yr_end": null,
+        "rite": null,
+        "satellite_of": null,
+        "image_file": null,
+        "file_path": "/assets/images/3/"
+      }
+    ],
+    "congregations_associated": 1,
+    "congregations": [
+      {
+        "idbuildings": 3,
+        "building_name": "St. James, Piccadilly",
+        "use_type": "church",
+        "year_built": "1683",
+        "data_yr_built": 1683,
+        "year_built_acc": "accurate",
+        "year_opened": "1684",
+        "data_yr_open": 1684,
+        "year_opened_acc": "accurate",
+        "year_nonextant": null,
+        "data_yr_nonextant": null,
+        "year_non_acc": null,
+        "idlocation": 8,
+        "loc_simple": "London, England",
+        "city": "London",
+        "state": null,
+        "country": "England",
+        "region": "Western Europe",
+        "lat": 51.508611,
+        "lon": -0.136667,
+        "loc_def": "exact",
+        "purpose_built": null,
+        "idcongregation": null,
+        "congregation_name": null,
+        "yr_start": null,
+        "yr_end": null,
+        "rite": null,
+        "satellite_of": null,
+        "image_file": null,
+        "file_path": "/assets/images/3/"
+      }
+    ]
+  },
+  {
     "idbuildings": 42,
     "building_name": "Synagogue Cassipora",
     "year_built": "1671",
@@ -5029,6 +5288,7 @@
     "loc_def": "est",
     "cover_image": null,
     "file_path": "/assets/images/42/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 42,
@@ -5099,6 +5359,7 @@
     "loc_def": "gen",
     "cover_image": null,
     "file_path": "/assets/images/110/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 110,
@@ -5169,6 +5430,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/107/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 107,
@@ -5239,6 +5501,7 @@
     "loc_def": "gen",
     "cover_image": null,
     "file_path": "/assets/images/108/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 108,
@@ -5309,6 +5572,7 @@
     "loc_def": "est",
     "cover_image": null,
     "file_path": "/assets/images/123/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 123,
@@ -5379,6 +5643,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/6/006_001.jpg",
     "file_path": "/assets/images/6/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 6,
@@ -5449,6 +5714,7 @@
     "loc_def": "exact",
     "cover_image": null,
     "file_path": "/assets/images/141/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 141,
@@ -5519,6 +5785,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/23/023_001.png",
     "file_path": "/assets/images/23/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 23,
@@ -5589,6 +5856,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/34/034_037.jpg",
     "file_path": "/assets/images/34/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 34,
@@ -5699,6 +5967,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/36/036_026.png",
     "file_path": "/assets/images/36/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 36,
@@ -5769,6 +6038,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/12/012_001.jpg",
     "file_path": "/assets/images/12/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 12,
@@ -5839,6 +6109,7 @@
     "loc_def": "exact",
     "cover_image": "/assets/images/38/038_003.png",
     "file_path": "/assets/images/38/",
+    "use_type": "synagogue",
     "objects": [
       {
         "idbuildings": 38,

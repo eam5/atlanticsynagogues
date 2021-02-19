@@ -2,20 +2,34 @@
 layout: default
 title: Site Index
 ---
-<h1><a href="#syn-tag">Synagogues</a> - <a href="#cong-tag">Congregations</a> - <a href="#location-tag">Locations</a></h1>
+<h2><a href="#syn-tag">Synagogues</a> - <a href="#bldg-tag">Other Buildings</a> - <a href="#cong-tag">Congregations</a> - <a href="#location-tag">Locations</a></h2>
 <!-- <div class="container-lg">
     <div class="row">
         <div class="col-sm-7"> -->
-            <h2 id="syn-tag" class="pt-5">Synagogues</h2>
+            <h3 id="syn-tag" class="pt-5">Synagogues</h3>
                 <ul>
                     {% for building in site.data.buildings %}
+                    {% if building.use_type == "synagogue" %}
                     <li><a href="{{ building.idbuildings | datapage_url: 'buildings' }}">
                         {{building.building_name}} ({{building.year_opened}}), 
                         {% if building.city != null %}{{building.city}}{%endif%}{% if building.state != null %}, {{building.state}}{%endif%}{% if building.country != null %}, {{building.country}}{%endif%}
                     </a></li>
+                    {% endif %}
                     {% endfor %}
                 </ul>
-            <h2 id="cong-tag" class="pt-5">Congregations</h2>
+            <h3 id="bldg-tag" class="pt-5">Other Buildings</h3>
+                <ul>
+                    {% for building in site.data.buildings %}
+                    {% if building.use_type != "synagogue" %}
+                    <li><a href="{{ building.idbuildings | datapage_url: 'buildings' }}">
+                        {{building.building_name}} ({{building.year_opened}}), 
+                        {% if building.city != null %}{{building.city}}{%endif%}{% if building.state != null %}, {{building.state}}{%endif%}{% if building.country != null %}, {{building.country}}{%endif%}
+                    </a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+
+            <h3 id="cong-tag" class="pt-5">Congregations</h3>
                 <ul>
                     {% for congregation in site.data.congregations %}
                     <li><a href="{{ congregation.idcongregation | datapage_url: 'congregation' }}">
@@ -26,7 +40,7 @@ title: Site Index
                 </ul>
         <!-- </div>
         <div class="col-sm-5"> -->
-            <h2 id="location-tag" class="pt-5">Locations</h2>
+            <h3 id="location-tag" class="pt-5">Locations</h3>
                 <ul>
                     {% for location in site.data.locations %}
                     <li><a href="{{ location.idlocation | datapage_url: 'locations' }}">{{location.location_name}}</a></li>

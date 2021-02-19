@@ -7,13 +7,15 @@ layout: leaflet-map
 <div class="row">
     <div class="col-sm-9">
         <h1>{{page.title}}</h1>
-        <p>{% if page.city != null %}{{page.city}}{%endif%}{% if page.state != null %}, {{page.state}}{%endif%}{% if page.country != null %}, {{page.country}}{%endif%}</p>
+        <p><strong>{% if page.city != null %}{{page.city}}{%endif%}{% if page.state != null %}, {{page.state}}{%endif%}{% if page.country != null %}, {{page.country}}{%endif%}</strong></p>
         <!-- <p>Building ID: {{page.idbuildings}}</p> -->
         <p>Year Built: {{page.year_built}}</p>
         <p>Year Opened: {{page.year_opened}}</p>
         <p>Year Non-extant: {{page.year_nonextant}}</p>
+        <p>Use Type: {{page.use_type}}</p>
         <!-- <p>Latitude: {{page.lat}}</p>
         <p>Longitude: {{page.lon}}</p> -->
+        {% if page.use_type == "synagogue" %}
         <h4>Congregations:</h4>
         <ul>
             {% assign cong_sort = page.congregations | sort:"yr_start" %}
@@ -23,6 +25,7 @@ layout: leaflet-map
             <li><a href="{{ congname | prepend: site.url }}">{{congregation.congregation_name}} ({{congregation.yr_start}}-{{congregation.yr_end}}) ({{rite}})</a></li>
             {% endfor %}
         </ul>
+        {% endif %}
         <h3>Related Buildings</h3>
         <h4>Shares site with:</h4>
         <ul>
@@ -34,6 +37,7 @@ layout: leaflet-map
             <li><a href="{{ bldgname | prepend: site.url }}">{{building.building_name}} ({{building.year_opened}})</a></li>
             {% endif %}{% endif %}{% endfor %}
         </ul>
+        {% if page.use_type == "synagogue" %}
         <h4>Shares congregation with:</h4>
         <ul>
             {% for cong in page.congregations %}
@@ -49,6 +53,7 @@ layout: leaflet-map
             {% endfor %}{% endfor %}
             {% endfor %}
         </ul>
+        {% endif %}
         <h4>Other buildings in {% if page.city != null %}{{page.city}}{%endif%}{% if page.state != null %}, {{page.state}}{%endif%}{% if page.country != null %}, {{page.country}}{%endif%}:</h4>
         <ul>
             {% assign bldgs_sort = site.data.buildings | sort:"year_opened" %}

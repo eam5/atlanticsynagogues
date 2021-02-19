@@ -1,6 +1,6 @@
 ---
 layout: data-vis
-title: Image Test
+title: Images
 ---
 <style>
     #main {margin:0;padding:0;}
@@ -19,7 +19,7 @@ title: Image Test
         z-index: -1;
     }
     #image-galley-content {
-        margin-top: 26px;
+        margin: 1rem 2rem;
         /* position: absolute; */
         /* top: 56px; */
         /* left: 3%; */
@@ -46,6 +46,7 @@ a:hover {color:#212529; text-decoration: underline;}
     </div>
     <div class="d-flex flex-row flex-wrap justify-content-start container">            
         {% for building in site.data.building_images %}
+        {% if building.use_type == "synagogue" %}
             <div class="card mb-2 " style="max-width: 300px;">
                 <div class="row no-gutters">
                     <div class="col-md-4 d-flex">
@@ -63,6 +64,33 @@ a:hover {color:#212529; text-decoration: underline;}
                     </div>
                 </div>
             </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class='container'>
+        <h2>Other Buildings</h2>
+    </div>
+    <div class="d-flex flex-row flex-wrap justify-content-start container">            
+        {% for building in site.data.building_images %}
+        {% if building.use_type != "synagogue" %}
+            <div class="card mb-2 " style="max-width: 300px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex">
+                        <a href="{{ building.idbuildings | datapage_url: 'building-images' }}">
+                        <img src="{{ building.cover_image | prepend: site.url }}" alt="{{ filename }}" title="{{ filename }}" class="cover card-img-top img-thumbnail"/>
+                    </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="{{ building.idbuildings | datapage_url: 'building-images' }}">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">{{building.building_name}}</h6>
+                            <p><small>{% if building.city != null %}{{building.city}}{%endif%}{% if building.state != null %}, {{building.state}}{%endif%}{% if building.country != null %}, {{building.country}}{%endif%}</small></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
         {% endfor %}
     </div>
     <div class='container'>
