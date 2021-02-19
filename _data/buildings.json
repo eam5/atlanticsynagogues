@@ -27,6 +27,7 @@
       {
         "idbuildings": 131,
         "building_name": "Abudarham",
+        "use_type": "synagogue",
         "year_built": "1821",
         "data_yr_built": 1821,
         "year_built_acc": "accurate",
@@ -96,6 +97,7 @@
       {
         "idbuildings": 98,
         "building_name": "Beraka ve Shalom ve Gemilut Hasadim",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -165,6 +167,7 @@
       {
         "idbuildings": 126,
         "building_name": "Beraka ve Shalom ve Gemilut Hasadim (I)",
+        "use_type": "synagogue",
         "year_built": "1796",
         "data_yr_built": 1796,
         "year_built_acc": "accurate",
@@ -234,6 +237,7 @@
       {
         "idbuildings": 128,
         "building_name": "Beraka ve Shalom ve Gemilut Hasadim (II)",
+        "use_type": "synagogue",
         "year_built": "1812-13",
         "data_yr_built": 1812,
         "year_built_acc": "estimate",
@@ -303,6 +307,7 @@
       {
         "idbuildings": 17,
         "building_name": "Berakha ve Shalom Synagogue",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -372,6 +377,7 @@
       {
         "idbuildings": 101,
         "building_name": "Beth Elohim",
+        "use_type": "synagogue",
         "year_built": "",
         "data_yr_built": null,
         "year_built_acc": "",
@@ -441,6 +447,7 @@
       {
         "idbuildings": 14,
         "building_name": "Beth Elohim Synagogue",
+        "use_type": "synagogue",
         "year_built": "1792",
         "data_yr_built": 1792,
         "year_built_acc": "accurate",
@@ -510,6 +517,7 @@
       {
         "idbuildings": 138,
         "building_name": "Beth Israel",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -579,6 +587,7 @@
       {
         "idbuildings": 136,
         "building_name": "Beth Jacob",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -648,6 +657,7 @@
       {
         "idbuildings": 144,
         "building_name": "Beth Jacob",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -717,6 +727,7 @@
       {
         "idbuildings": 132,
         "building_name": "Beth Shalome",
+        "use_type": "synagogue",
         "year_built": "1822",
         "data_yr_built": 1822,
         "year_built_acc": "accurate",
@@ -786,6 +797,7 @@
       {
         "idbuildings": 0,
         "building_name": "Bevis Marks Synagogue",
+        "use_type": "synagogue",
         "year_built": "1699",
         "data_yr_built": 1699,
         "year_built_acc": "accurate",
@@ -855,6 +867,7 @@
       {
         "idbuildings": 1,
         "building_name": "Creechurch Lane Synagogue",
+        "use_type": "synagogue",
         "year_built": "1656",
         "data_yr_built": 1656,
         "year_built_acc": "accurate",
@@ -924,6 +937,7 @@
       {
         "idbuildings": 2,
         "building_name": "Creechurch Lane Synagogue [1675]",
+        "use_type": "synagogue",
         "year_built": "1674",
         "data_yr_built": 1674,
         "year_built_acc": "accurate",
@@ -993,6 +1007,7 @@
       {
         "idbuildings": 122,
         "building_name": "Darkhe Yesharim",
+        "use_type": "synagogue",
         "year_built": "1779",
         "data_yr_built": 1779,
         "year_built_acc": "accurate",
@@ -1062,6 +1077,7 @@
       {
         "idbuildings": 10,
         "building_name": "Dritt Shul",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -1131,6 +1147,7 @@
       {
         "idbuildings": 142,
         "building_name": "Dritt Sjoel",
+        "use_type": "synagogue",
         "year_built": "1777",
         "data_yr_built": 1777,
         "year_built_acc": "accurate",
@@ -1200,6 +1217,7 @@
       {
         "idbuildings": 4,
         "building_name": "Esnoga, Talmud Torah II",
+        "use_type": "synagogue",
         "year_built": "1670",
         "data_yr_built": 1670,
         "year_built_acc": "accurate",
@@ -1269,6 +1287,7 @@
       {
         "idbuildings": 124,
         "building_name": "Etz Chaim",
+        "use_type": "synagogue",
         "year_built": "1783",
         "data_yr_built": 1783,
         "year_built_acc": "accurate",
@@ -1338,6 +1357,7 @@
       {
         "idbuildings": 16,
         "building_name": "First Synagogue Curacao, Mikve Israel I",
+        "use_type": "synagogue",
         "year_built": "1674",
         "data_yr_built": 1674,
         "year_built_acc": "accurate",
@@ -1407,6 +1427,7 @@
       {
         "idbuildings": 133,
         "building_name": "Great Synagogue (Duke's Place, enlargement)",
+        "use_type": "synagogue",
         "year_built": "1765",
         "data_yr_built": 1765,
         "year_built_acc": "accurate",
@@ -1476,6 +1497,7 @@
       {
         "idbuildings": 21,
         "building_name": "Great Synagogue (first, near Duke's Place)",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -1545,6 +1567,7 @@
       {
         "idbuildings": 31,
         "building_name": "Great Synagogue (third, near Duke's Place)",
+        "use_type": "synagogue",
         "year_built": "1787",
         "data_yr_built": 1787,
         "year_built_acc": "accurate",
@@ -1614,6 +1637,7 @@
       {
         "idbuildings": 22,
         "building_name": "Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)",
+        "use_type": "synagogue",
         "year_built": "1720",
         "data_yr_built": 1720,
         "year_built_acc": "accurate",
@@ -1683,6 +1707,7 @@
       {
         "idbuildings": 7,
         "building_name": "Grote Sjoel (Great Synagogue)",
+        "use_type": "synagogue",
         "year_built": "1670",
         "data_yr_built": 1670,
         "year_built_acc": "accurate",
@@ -1752,6 +1777,7 @@
       {
         "idbuildings": 146,
         "building_name": "High German synagogue",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -1821,6 +1847,7 @@
       {
         "idbuildings": 135,
         "building_name": "Honen Dal ",
+        "use_type": "synagogue",
         "year_built": "1725",
         "data_yr_built": 1725,
         "year_built_acc": "accurate",
@@ -1890,6 +1917,7 @@
       {
         "idbuildings": 145,
         "building_name": "Honen Dal I",
+        "use_type": "synagogue",
         "year_built": "",
         "data_yr_built": null,
         "year_built_acc": "",
@@ -1959,6 +1987,7 @@
       {
         "idbuildings": 41,
         "building_name": "Honen Dalim Synagogue I",
+        "use_type": "synagogue",
         "year_built": "1739",
         "data_yr_built": 1739,
         "year_built_acc": "accurate",
@@ -2028,6 +2057,7 @@
       {
         "idbuildings": 134,
         "building_name": "Honen Dalim Synagogue II",
+        "use_type": "synagogue",
         "year_built": "1772",
         "data_yr_built": 1772,
         "year_built_acc": "accurate",
@@ -2070,6 +2100,100 @@
     ]
   },
   {
+    "idbuildings": 149,
+    "building_name": "Huis Vrijburgh",
+    "year_built": "1638",
+    "data_yr_built": null,
+    "year_built_acc": null,
+    "year_opened": "1639",
+    "data_yr_open": 1639,
+    "year_opened_acc": "accurate",
+    "year_nonextant": null,
+    "data_yr_nonextant": null,
+    "year_non_acc": null,
+    "purpose_built": "TRUE",
+    "idlocation": 3,
+    "loc_simple": "Mauricia, Brazil",
+    "city": "Mauricia",
+    "state": "Pernambuco",
+    "country": "Brazil",
+    "region": "South America",
+    "lat": -8.060805,
+    "lon": -34.87756,
+    "loc_def": "exact",
+    "cover_image": "/assets/images/149/149_001.jpg",
+    "file_path": "/assets/images/149/",
+    "objects": [
+      {
+        "idbuildings": 149,
+        "building_name": "Huis Vrijburgh",
+        "use_type": "private estate",
+        "year_built": "1638",
+        "data_yr_built": null,
+        "year_built_acc": null,
+        "year_opened": "1639",
+        "data_yr_open": 1639,
+        "year_opened_acc": "accurate",
+        "year_nonextant": null,
+        "data_yr_nonextant": null,
+        "year_non_acc": null,
+        "idlocation": 3,
+        "loc_simple": "Mauricia, Brazil",
+        "city": "Mauricia",
+        "state": "Pernambuco",
+        "country": "Brazil",
+        "region": "South America",
+        "lat": -8.060805,
+        "lon": -34.87756,
+        "loc_def": "exact",
+        "purpose_built": "TRUE",
+        "idcongregation": null,
+        "congregation_name": null,
+        "yr_start": null,
+        "yr_end": null,
+        "rite": null,
+        "satellite_of": null,
+        "image_file": "/assets/images/149/149_001.jpg",
+        "file_path": "/assets/images/149/"
+      }
+    ],
+    "congregations_associated": 1,
+    "congregations": [
+      {
+        "idbuildings": 149,
+        "building_name": "Huis Vrijburgh",
+        "use_type": "private estate",
+        "year_built": "1638",
+        "data_yr_built": null,
+        "year_built_acc": null,
+        "year_opened": "1639",
+        "data_yr_open": 1639,
+        "year_opened_acc": "accurate",
+        "year_nonextant": null,
+        "data_yr_nonextant": null,
+        "year_non_acc": null,
+        "idlocation": 3,
+        "loc_simple": "Mauricia, Brazil",
+        "city": "Mauricia",
+        "state": "Pernambuco",
+        "country": "Brazil",
+        "region": "South America",
+        "lat": -8.060805,
+        "lon": -34.87756,
+        "loc_def": "exact",
+        "purpose_built": "TRUE",
+        "idcongregation": null,
+        "congregation_name": null,
+        "yr_start": null,
+        "yr_end": null,
+        "rite": null,
+        "satellite_of": null,
+        "image_file": "/assets/images/149/149_001.jpg",
+        "file_path": "/assets/images/149/"
+      }
+    ]
+  },
+  {
     "idbuildings": 109,
     "building_name": "Magen Abraham",
     "year_built": "1648",
@@ -2097,6 +2221,7 @@
       {
         "idbuildings": 109,
         "building_name": "Magen Abraham",
+        "use_type": "synagogue",
         "year_built": "1648",
         "data_yr_built": 1648,
         "year_built_acc": "estimate",
@@ -2139,6 +2264,100 @@
     ]
   },
   {
+    "idbuildings": 148,
+    "building_name": "Mauritshuis",
+    "year_built": "1636",
+    "data_yr_built": null,
+    "year_built_acc": null,
+    "year_opened": "1641",
+    "data_yr_open": 1636,
+    "year_opened_acc": "accurate",
+    "year_nonextant": null,
+    "data_yr_nonextant": null,
+    "year_non_acc": null,
+    "purpose_built": "TRUE",
+    "idlocation": 41,
+    "loc_simple": "The Hague, Netherlands",
+    "city": "The Hague",
+    "state": null,
+    "country": "Netherlands",
+    "region": "Western Europe",
+    "lat": 52.080556,
+    "lon": 4.314444,
+    "loc_def": "exact",
+    "cover_image": "/assets/images/148/148_001.jpg",
+    "file_path": "/assets/images/148/",
+    "objects": [
+      {
+        "idbuildings": 148,
+        "building_name": "Mauritshuis",
+        "use_type": "private estate",
+        "year_built": "1636",
+        "data_yr_built": null,
+        "year_built_acc": null,
+        "year_opened": "1641",
+        "data_yr_open": 1636,
+        "year_opened_acc": "accurate",
+        "year_nonextant": null,
+        "data_yr_nonextant": null,
+        "year_non_acc": null,
+        "idlocation": 41,
+        "loc_simple": "The Hague, Netherlands",
+        "city": "The Hague",
+        "state": null,
+        "country": "Netherlands",
+        "region": "Western Europe",
+        "lat": 52.080556,
+        "lon": 4.314444,
+        "loc_def": "exact",
+        "purpose_built": "TRUE",
+        "idcongregation": null,
+        "congregation_name": null,
+        "yr_start": null,
+        "yr_end": null,
+        "rite": null,
+        "satellite_of": null,
+        "image_file": "/assets/images/148/148_001.jpg",
+        "file_path": "/assets/images/148/"
+      }
+    ],
+    "congregations_associated": 1,
+    "congregations": [
+      {
+        "idbuildings": 148,
+        "building_name": "Mauritshuis",
+        "use_type": "private estate",
+        "year_built": "1636",
+        "data_yr_built": null,
+        "year_built_acc": null,
+        "year_opened": "1641",
+        "data_yr_open": 1636,
+        "year_opened_acc": "accurate",
+        "year_nonextant": null,
+        "data_yr_nonextant": null,
+        "year_non_acc": null,
+        "idlocation": 41,
+        "loc_simple": "The Hague, Netherlands",
+        "city": "The Hague",
+        "state": null,
+        "country": "Netherlands",
+        "region": "Western Europe",
+        "lat": 52.080556,
+        "lon": 4.314444,
+        "loc_def": "exact",
+        "purpose_built": "TRUE",
+        "idcongregation": null,
+        "congregation_name": null,
+        "yr_start": null,
+        "yr_end": null,
+        "rite": null,
+        "satellite_of": null,
+        "image_file": "/assets/images/148/148_001.jpg",
+        "file_path": "/assets/images/148/"
+      }
+    ]
+  },
+  {
     "idbuildings": 130,
     "building_name": "Mickve Israel",
     "year_built": "1820",
@@ -2166,6 +2385,7 @@
       {
         "idbuildings": 130,
         "building_name": "Mickve Israel",
+        "use_type": "synagogue",
         "year_built": "1820",
         "data_yr_built": 1820,
         "year_built_acc": "accurate",
@@ -2235,6 +2455,7 @@
       {
         "idbuildings": 113,
         "building_name": "Mikve Israel II",
+        "use_type": "synagogue",
         "year_built": "1692",
         "data_yr_built": 1692,
         "year_built_acc": "accurate",
@@ -2304,6 +2525,7 @@
       {
         "idbuildings": 114,
         "building_name": "Mikve Israel III",
+        "use_type": "synagogue",
         "year_built": "1703",
         "data_yr_built": 1703,
         "year_built_acc": "accurate",
@@ -2373,6 +2595,7 @@
       {
         "idbuildings": 43,
         "building_name": "Mikve Israel Synagogue (IV)",
+        "use_type": "synagogue",
         "year_built": "1730",
         "data_yr_built": 1730,
         "year_built_acc": "accurate",
@@ -2442,6 +2665,7 @@
       {
         "idbuildings": 125,
         "building_name": "Mikveh Israel",
+        "use_type": "synagogue",
         "year_built": "1782-83",
         "data_yr_built": 1782,
         "year_built_acc": "estimate",
@@ -2511,6 +2735,7 @@
       {
         "idbuildings": 40,
         "building_name": "Mikveh Yisrael Synagogue",
+        "use_type": "synagogue",
         "year_built": "1796",
         "data_yr_built": 1796,
         "year_built_acc": "accurate",
@@ -2580,6 +2805,7 @@
       {
         "idbuildings": 33,
         "building_name": "Mill Street Synagogue, Shearith Israel I",
+        "use_type": "synagogue",
         "year_built": "1730",
         "data_yr_built": 1730,
         "year_built_acc": "accurate",
@@ -2649,6 +2875,7 @@
       {
         "idbuildings": 127,
         "building_name": "Nefusot Yehuda, Flemish Synagogue",
+        "use_type": "synagogue",
         "year_built": "1799",
         "data_yr_built": 1799,
         "year_built_acc": "accurate",
@@ -2718,6 +2945,7 @@
       {
         "idbuildings": 100,
         "building_name": "Neve Shalom",
+        "use_type": "synagogue",
         "year_built": "1835",
         "data_yr_built": 1835,
         "year_built_acc": "accurate",
@@ -2787,6 +3015,7 @@
       {
         "idbuildings": 117,
         "building_name": "Neve Shalom",
+        "use_type": "synagogue",
         "year_built": "1746",
         "data_yr_built": 1746,
         "year_built_acc": "accurate",
@@ -2818,6 +3047,7 @@
       {
         "idbuildings": 117,
         "building_name": "Neve Shalom",
+        "use_type": "synagogue",
         "year_built": "1746",
         "data_yr_built": 1746,
         "year_built_acc": "accurate",
@@ -2895,6 +3125,7 @@
       {
         "idbuildings": 139,
         "building_name": "Neve Shalom I",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -2964,6 +3195,7 @@
       {
         "idbuildings": 140,
         "building_name": "Neve Shalom II",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -3033,6 +3265,7 @@
       {
         "idbuildings": 111,
         "building_name": "Neve Zedek I",
+        "use_type": "synagogue",
         "year_built": "c. 1684",
         "data_yr_built": 1684,
         "year_built_acc": "estimate",
@@ -3102,6 +3335,7 @@
       {
         "idbuildings": 112,
         "building_name": "Neve Zedek II",
+        "use_type": "synagogue",
         "year_built": "c. 1719",
         "data_yr_built": 1719,
         "year_built_acc": "estimate",
@@ -3171,6 +3405,7 @@
       {
         "idbuildings": 137,
         "building_name": "Neveh Shalom",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -3240,6 +3475,7 @@
       {
         "idbuildings": 35,
         "building_name": "Neveh Shalom Synagogue",
+        "use_type": "synagogue",
         "year_built": "1718",
         "data_yr_built": 1718,
         "year_built_acc": "accurate",
@@ -3271,6 +3507,7 @@
       {
         "idbuildings": 35,
         "building_name": "Neveh Shalom Synagogue",
+        "use_type": "synagogue",
         "year_built": "1718",
         "data_yr_built": 1718,
         "year_built_acc": "accurate",
@@ -3348,6 +3585,7 @@
       {
         "idbuildings": 39,
         "building_name": "Neveh Shalom Synagogue",
+        "use_type": "synagogue",
         "year_built": "1704",
         "data_yr_built": 1704,
         "year_built_acc": "accurate",
@@ -3417,6 +3655,7 @@
       {
         "idbuildings": 29,
         "building_name": "New Synagogue [Bricklayer's Hall]",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -3486,6 +3725,7 @@
       {
         "idbuildings": 13,
         "building_name": "Nidhe Israel",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -3555,6 +3795,7 @@
       {
         "idbuildings": 97,
         "building_name": "Nidhe Israel",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -3597,6 +3838,100 @@
     ]
   },
   {
+    "idbuildings": 147,
+    "building_name": "Nieuwe Kerk",
+    "year_built": null,
+    "data_yr_built": null,
+    "year_built_acc": null,
+    "year_opened": "1645",
+    "data_yr_open": 1645,
+    "year_opened_acc": "accurate",
+    "year_nonextant": null,
+    "data_yr_nonextant": null,
+    "year_non_acc": null,
+    "purpose_built": "TRUE",
+    "idlocation": 62,
+    "loc_simple": "Haarlem, Netherlands",
+    "city": "Haarlem",
+    "state": null,
+    "country": "Netherlands",
+    "region": "Western Europe",
+    "lat": 52.377264,
+    "lon": 4.629734,
+    "loc_def": "exact",
+    "cover_image": "/assets/images/147/147_001.jpg",
+    "file_path": "/assets/images/147/",
+    "objects": [
+      {
+        "idbuildings": 147,
+        "building_name": "Nieuwe Kerk",
+        "use_type": "church",
+        "year_built": null,
+        "data_yr_built": null,
+        "year_built_acc": null,
+        "year_opened": "1645",
+        "data_yr_open": 1645,
+        "year_opened_acc": "accurate",
+        "year_nonextant": null,
+        "data_yr_nonextant": null,
+        "year_non_acc": null,
+        "idlocation": 62,
+        "loc_simple": "Haarlem, Netherlands",
+        "city": "Haarlem",
+        "state": null,
+        "country": "Netherlands",
+        "region": "Western Europe",
+        "lat": 52.377264,
+        "lon": 4.629734,
+        "loc_def": "exact",
+        "purpose_built": "TRUE",
+        "idcongregation": null,
+        "congregation_name": null,
+        "yr_start": null,
+        "yr_end": null,
+        "rite": null,
+        "satellite_of": null,
+        "image_file": "/assets/images/147/147_001.jpg",
+        "file_path": "/assets/images/147/"
+      }
+    ],
+    "congregations_associated": 1,
+    "congregations": [
+      {
+        "idbuildings": 147,
+        "building_name": "Nieuwe Kerk",
+        "use_type": "church",
+        "year_built": null,
+        "data_yr_built": null,
+        "year_built_acc": null,
+        "year_opened": "1645",
+        "data_yr_open": 1645,
+        "year_opened_acc": "accurate",
+        "year_nonextant": null,
+        "data_yr_nonextant": null,
+        "year_non_acc": null,
+        "idlocation": 62,
+        "loc_simple": "Haarlem, Netherlands",
+        "city": "Haarlem",
+        "state": null,
+        "country": "Netherlands",
+        "region": "Western Europe",
+        "lat": 52.377264,
+        "lon": 4.629734,
+        "loc_def": "exact",
+        "purpose_built": "TRUE",
+        "idcongregation": null,
+        "congregation_name": null,
+        "yr_start": null,
+        "yr_end": null,
+        "rite": null,
+        "satellite_of": null,
+        "image_file": "/assets/images/147/147_001.jpg",
+        "file_path": "/assets/images/147/"
+      }
+    ]
+  },
+  {
     "idbuildings": 11,
     "building_name": "Nieuwe Synagoge",
     "year_built": null,
@@ -3624,6 +3959,7 @@
       {
         "idbuildings": 11,
         "building_name": "Nieuwe Synagoge",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -3693,6 +4029,7 @@
       {
         "idbuildings": 9,
         "building_name": "Obbene Shul Synagogue",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -3735,6 +4072,100 @@
     ]
   },
   {
+    "idbuildings": 8,
+    "building_name": "Oosterkerk",
+    "year_built": null,
+    "data_yr_built": null,
+    "year_built_acc": null,
+    "year_opened": "1671",
+    "data_yr_open": 1671,
+    "year_opened_acc": "accurate",
+    "year_nonextant": null,
+    "data_yr_nonextant": null,
+    "year_non_acc": null,
+    "purpose_built": "TRUE",
+    "idlocation": 1,
+    "loc_simple": "Amsterdam, Netherlands",
+    "city": "Amsterdam",
+    "state": null,
+    "country": "Netherlands",
+    "region": "Western Europe",
+    "lat": 52.370025,
+    "lon": 4.919294,
+    "loc_def": "exact",
+    "cover_image": "/assets/images/8/008_001.jpg",
+    "file_path": "/assets/images/8/",
+    "objects": [
+      {
+        "idbuildings": 8,
+        "building_name": "Oosterkerk",
+        "use_type": "church",
+        "year_built": null,
+        "data_yr_built": null,
+        "year_built_acc": null,
+        "year_opened": "1671",
+        "data_yr_open": 1671,
+        "year_opened_acc": "accurate",
+        "year_nonextant": null,
+        "data_yr_nonextant": null,
+        "year_non_acc": null,
+        "idlocation": 1,
+        "loc_simple": "Amsterdam, Netherlands",
+        "city": "Amsterdam",
+        "state": null,
+        "country": "Netherlands",
+        "region": "Western Europe",
+        "lat": 52.370025,
+        "lon": 4.919294,
+        "loc_def": "exact",
+        "purpose_built": "TRUE",
+        "idcongregation": null,
+        "congregation_name": null,
+        "yr_start": null,
+        "yr_end": null,
+        "rite": null,
+        "satellite_of": null,
+        "image_file": "/assets/images/8/008_001.jpg",
+        "file_path": "/assets/images/8/"
+      }
+    ],
+    "congregations_associated": 1,
+    "congregations": [
+      {
+        "idbuildings": 8,
+        "building_name": "Oosterkerk",
+        "use_type": "church",
+        "year_built": null,
+        "data_yr_built": null,
+        "year_built_acc": null,
+        "year_opened": "1671",
+        "data_yr_open": 1671,
+        "year_opened_acc": "accurate",
+        "year_nonextant": null,
+        "data_yr_nonextant": null,
+        "year_non_acc": null,
+        "idlocation": 1,
+        "loc_simple": "Amsterdam, Netherlands",
+        "city": "Amsterdam",
+        "state": null,
+        "country": "Netherlands",
+        "region": "Western Europe",
+        "lat": 52.370025,
+        "lon": 4.919294,
+        "loc_def": "exact",
+        "purpose_built": "TRUE",
+        "idcongregation": null,
+        "congregation_name": null,
+        "yr_start": null,
+        "yr_end": null,
+        "rite": null,
+        "satellite_of": null,
+        "image_file": "/assets/images/8/008_001.jpg",
+        "file_path": "/assets/images/8/"
+      }
+    ]
+  },
+  {
     "idbuildings": 37,
     "building_name": "Rodeph Shalom",
     "year_built": null,
@@ -3762,6 +4193,7 @@
       {
         "idbuildings": 37,
         "building_name": "Rodeph Shalom",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -3831,6 +4263,7 @@
       {
         "idbuildings": 116,
         "building_name": "Santa Irmandad",
+        "use_type": "synagogue",
         "year_built": "1710s",
         "data_yr_built": 1710,
         "year_built_acc": "estimate",
@@ -3900,6 +4333,7 @@
       {
         "idbuildings": 105,
         "building_name": "Semah David Synogogue",
+        "use_type": "synagogue",
         "year_built": "1660s-70s",
         "data_yr_built": 1665,
         "year_built_acc": "estimate",
@@ -3969,6 +4403,7 @@
       {
         "idbuildings": 115,
         "building_name": "Shaar Ha Shamaim I",
+        "use_type": "synagogue",
         "year_built": "c. 1704",
         "data_yr_built": 1704,
         "year_built_acc": "estimate",
@@ -4038,6 +4473,7 @@
       {
         "idbuildings": 19,
         "building_name": "Shaar Ha Shamaim Synagogue (II)",
+        "use_type": "synagogue",
         "year_built": "1744",
         "data_yr_built": 1744,
         "year_built_acc": "accurate",
@@ -4107,6 +4543,7 @@
       {
         "idbuildings": 118,
         "building_name": "Shaar Hashamayim I",
+        "use_type": "synagogue",
         "year_built": "1749",
         "data_yr_built": 1749,
         "year_built_acc": "accurate",
@@ -4176,6 +4613,7 @@
       {
         "idbuildings": 119,
         "building_name": "Shaar Hashamayim II",
+        "use_type": "synagogue",
         "year_built": "1768",
         "data_yr_built": 1768,
         "year_built_acc": "accurate",
@@ -4245,6 +4683,7 @@
       {
         "idbuildings": 120,
         "building_name": "Shaar Hashamayim III, Great Synagogue of Gibraltar",
+        "use_type": "synagogue",
         "year_built": "1781-83",
         "data_yr_built": 1781,
         "year_built_acc": "estimate",
@@ -4314,6 +4753,7 @@
       {
         "idbuildings": 20,
         "building_name": "Shaare Yosher",
+        "use_type": "synagogue",
         "year_built": "1788",
         "data_yr_built": 1788,
         "year_built_acc": "accurate",
@@ -4383,6 +4823,7 @@
       {
         "idbuildings": 143,
         "building_name": "Shaare Yosher (II)",
+        "use_type": "synagogue",
         "year_built": "1837",
         "data_yr_built": 1837,
         "year_built_acc": "accurate",
@@ -4452,6 +4893,7 @@
       {
         "idbuildings": 121,
         "building_name": "Shearith Israel",
+        "use_type": "synagogue",
         "year_built": "1777-78",
         "data_yr_built": 1777,
         "year_built_acc": "estimate",
@@ -4521,6 +4963,7 @@
       {
         "idbuildings": 129,
         "building_name": "Shearith Israel (II)",
+        "use_type": "synagogue",
         "year_built": "1817-18",
         "data_yr_built": 1817,
         "year_built_acc": "estimate",
@@ -4590,6 +5033,7 @@
       {
         "idbuildings": 42,
         "building_name": "Synagogue Cassipora",
+        "use_type": "synagogue",
         "year_built": "1671",
         "data_yr_built": 1671,
         "year_built_acc": "accurate",
@@ -4659,6 +5103,7 @@
       {
         "idbuildings": 110,
         "building_name": "Synagogue Cayenne",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -4728,6 +5173,7 @@
       {
         "idbuildings": 107,
         "building_name": "Synagogue Nevis",
+        "use_type": "synagogue",
         "year_built": "1684",
         "data_yr_built": 1684,
         "year_built_acc": "accurate",
@@ -4797,6 +5243,7 @@
       {
         "idbuildings": 108,
         "building_name": "Synagogue St. Croix",
+        "use_type": "synagogue",
         "year_built": "1764",
         "data_yr_built": 1764,
         "year_built_acc": "accurate",
@@ -4866,6 +5313,7 @@
       {
         "idbuildings": 123,
         "building_name": "Synagogue St. Maarten",
+        "use_type": "synagogue",
         "year_built": "1783",
         "data_yr_built": 1783,
         "year_built_acc": "accurate",
@@ -4935,6 +5383,7 @@
       {
         "idbuildings": 6,
         "building_name": "Talmud Torah, Portuguese Synagogue I",
+        "use_type": "synagogue",
         "year_built": "1636",
         "data_yr_built": 1636,
         "year_built_acc": "accurate",
@@ -5004,6 +5453,7 @@
       {
         "idbuildings": 141,
         "building_name": "The Hambro Synagogue [Moses Marcus' Shul]",
+        "use_type": "synagogue",
         "year_built": null,
         "data_yr_built": null,
         "year_built_acc": "",
@@ -5073,6 +5523,7 @@
       {
         "idbuildings": 23,
         "building_name": "The Hambro Synagogue [Wolf Prager's Shul]",
+        "use_type": "synagogue",
         "year_built": "1721",
         "data_yr_built": 1721,
         "year_built_acc": "accurate",
@@ -5142,6 +5593,7 @@
       {
         "idbuildings": 34,
         "building_name": "Touro Synagogue",
+        "use_type": "synagogue",
         "year_built": "1759",
         "data_yr_built": 1759,
         "year_built_acc": "accurate",
@@ -5173,6 +5625,7 @@
       {
         "idbuildings": 34,
         "building_name": "Touro Synagogue",
+        "use_type": "synagogue",
         "year_built": "1759",
         "data_yr_built": 1759,
         "year_built_acc": "accurate",
@@ -5250,6 +5703,7 @@
       {
         "idbuildings": 36,
         "building_name": "Tzedek ve-Shalom Synagogue",
+        "use_type": "synagogue",
         "year_built": "1735",
         "data_yr_built": 1735,
         "year_built_acc": "accurate",
@@ -5319,6 +5773,7 @@
       {
         "idbuildings": 12,
         "building_name": "Uilenburgerstraat synagoge",
+        "use_type": "synagogue",
         "year_built": "1765",
         "data_yr_built": 1765,
         "year_built_acc": "accurate",
@@ -5388,6 +5843,39 @@
       {
         "idbuildings": 38,
         "building_name": "Zur Israel Synagogue",
+        "use_type": "synagogue",
+        "year_built": "1640",
+        "data_yr_built": 1640,
+        "year_built_acc": "estimate",
+        "year_opened": "1641",
+        "data_yr_open": 1641,
+        "year_opened_acc": "estimate",
+        "year_nonextant": "1900s",
+        "data_yr_nonextant": 1900,
+        "year_non_acc": "estimate",
+        "idlocation": 2,
+        "loc_simple": "Recife, Brazil",
+        "city": "Recife",
+        "state": "Pernambuco",
+        "country": "Brazil",
+        "region": "South America",
+        "lat": -8.06131,
+        "lon": -34.87132,
+        "loc_def": "exact",
+        "purpose_built": "TRUE",
+        "idcongregation": 29,
+        "congregation_name": "Oratory of St. Philip Neri",
+        "yr_start": 1679,
+        "yr_end": 1800,
+        "rite": "catholic",
+        "satellite_of": null,
+        "image_file": "/assets/images/38/038_003.png",
+        "file_path": "/assets/images/38/"
+      },
+      {
+        "idbuildings": 38,
+        "building_name": "Zur Israel Synagogue",
+        "use_type": "synagogue",
         "year_built": "1640",
         "data_yr_built": 1640,
         "year_built_acc": "estimate",
@@ -5417,7 +5905,7 @@
         "file_path": "/assets/images/38/"
       }
     ],
-    "congregations_associated": 1,
+    "congregations_associated": 2,
     "congregations": [
       {
         "idcongregation": 5,
@@ -5426,6 +5914,14 @@
         "yr_end": 1654,
         "satellite_of": null,
         "rite": "sephardic"
+      },
+      {
+        "idcongregation": 29,
+        "congregation_name": "Oratory of St. Philip Neri",
+        "yr_start": 1679,
+        "yr_end": 1800,
+        "satellite_of": null,
+        "rite": "catholic"
       }
     ]
   }
