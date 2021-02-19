@@ -1220,7 +1220,9 @@
                     
                     <div class="map" id="synagogue-st.-croix" width="100%"></div>
                 </li>
+                
                 <a href="https://eam5.github.io/atlanticsynagogues/synagogue-map"><li type="button" class="btn btn-light list-group-item px-1">Synagogue Map</li></a>
+                
             </ul>
             </div>                  
     </div>
@@ -1228,11 +1230,11 @@
 <script>
     
     
-    var synagoguest.croix= L.map('synagogue-st.-croix').setView([17.744036, -64.714997], 13);
+    var synagoguestcroix= L.map('synagogue-st.-croix').setView([17.744036, -64.714997], 13);
     var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-    L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(synagoguest.croix);
-    var marker = L.marker([17.744036, -64.714997]).addTo(synagoguest.croix);
+    L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(synagoguestcroix);
+    var marker = L.marker([17.744036, -64.714997]).addTo(synagoguestcroix);
     marker.bindPopup("<strong>Synagogue St. Croix</strong>");
 </script>
 
