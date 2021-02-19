@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Huis Vrijburgh - Atlantic Synagogues</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">    
+    <!-- <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css"> -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js'></script>
+
+    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+<!-- leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/marker-cluster.css">
+<!-- leaflet script -->
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+  <script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet.markercluster-src.js"></script>
+  <script src="https://elfalem.github.io/Leaflet.curve/src/leaflet.curve.js"></script>
+
+  <!-- After Leaflet and Leaflet.markercluster scripts -->
+<script src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"></script>
+<!-- Beautify Icons -->
+<script src="https://kit.fontawesome.com/b399f411bc.js" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/leaflet-beautify-marker-icon.css">
+<script src="https://eam5.github.io/atlanticsynagogues/assets/js/leaflet-beautify-marker-icon.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="https://eam5.github.io/atlanticsynagogues">Atlantic Synagogues</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+         
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Maps
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/map">Synagogue Map</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/migrations">Migrations</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/rabbi-map">Rabbi Locations</a>
+              
+            </div>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Timelines
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/ruling-powers">Ruling Colonial Powers</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/populations">Atlantic Jewish Populations</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/congregation-timeline">Congregations & Synagogues</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/rabbi-timeline">Rabbis</a>
+              
+            </div>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Data Visualizations
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/contributions">Contributions</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/access-paths">Access Paths</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/allbldgs_allfac">Facade Fractal Trees</a>
+              
+            </div>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+          </li>
+          
+          
+         
+
+          <!-- 
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues">Maps</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues">Timelines</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues">Data Visualizations</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+            
+           -->
+        </ul>
+  </div>
+</nav>
+  <div id="main" class="container-lg">
+    <style>
+    .map {height: 200px;}
+</style>
+<div class="row">
+    <div class="col-sm-9">
+        <h1>Huis Vrijburgh</h1>
+        <p>Mauricia, Pernambuco, Brazil</p>
+        <!-- <p>Building ID: 149</p> -->
+        <p>Year Built: 1638</p>
+        <p>Year Opened: 1639</p>
+        <p>Year Non-extant: </p>
+        <!-- <p>Latitude: -8.060805</p>
+        <p>Longitude: -34.87756</p> -->
+        <h4>Congregations:</h4>
+        <ul>
+            
+            
+            
+            
+            <li><a href="https://eam5.github.io/atlanticsynagogues/congregation/"> (-) ()</a></li>
+            
+        </ul>
+        <h3>Related Buildings</h3>
+        <h4>Shares site with:</h4>
+        <ul>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </ul>
+        <h4>Shares congregation with:</h4>
+        <ul>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/148">Mauritshuis (1641)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/147">Nieuwe Kerk (1645)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/8">Oosterkerk (1671)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </ul>
+        <h4>Other buildings in Mauricia, Pernambuco, Brazil:</h4>
+        <ul>
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+            <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/109">Magen Abraham (1648)</a></li>
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+         
+            
+            
+            
+           
+        </ul>
+    
+    </div>
+    <div class="col-sm-3">
+        <div class="card">
+            
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/149/149_001.jpg" title="/assets/images/149/149_001.jpg">
+                <img src="https://eam5.github.io/atlanticsynagogues/assets/images/149/149_001.jpg" alt="/assets/images/149/149_001.jpg" title="/assets/images/149/149_001.jpg" class="card-img-top image-fluid"/>
+            </a> 
+            
+            <!-- <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <a href="https://eam5.github.io/atlanticsynagogues/building-images/149"><li type="button" class="btn btn-light list-group-item px-1">Image Gallery</li></a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <a href="https://eam5.github.io/atlanticsynagogues/locations/3"><li type="button" class="btn btn-light list-group-item px-1">Mauricia, Pernambuco, Brazil</li></a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="list-group-item px-1 text-center">Location Accuracy: exact</li>
+                <li class="list-group-item" style="padding:0;">
+                    
+                    
+                    
+                    <div class="map" id="huis-vrijburgh" width="100%"></div>
+                </li>
+                <a href="https://eam5.github.io/atlanticsynagogues/synagogue-map"><li type="button" class="btn btn-light list-group-item px-1">Synagogue Map</li></a>
+            </ul>
+            </div>                  
+    </div>
+</div>
+<script>
+    
+    
+    var huisvrijburgh= L.map('huis-vrijburgh').setView([-8.060805, -34.87756], 13);
+    var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+    L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(huisvrijburgh);
+    var marker = L.marker([-8.060805, -34.87756]).addTo(huisvrijburgh);
+    marker.bindPopup("<strong>Huis Vrijburgh</strong>");
+</script>
+
+
+
+
+  </div>
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
+    
