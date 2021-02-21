@@ -156,6 +156,10 @@
         
         
         
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/152">Zuiderkerk (1611)</a></li>
+        
+        
+        
         <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/137">Neveh Shalom (1612)</a></li>
         
         
@@ -165,6 +169,18 @@
         
         
         <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/138">Beth Israel (1618)</a></li>
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/153">Noorderkerk (1623)</a></li>
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/151">Westerkerk (1631)</a></li>
+        
+        
+        
+        <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/150">Coymanshuis (1625)</a></li>
         
         
         
@@ -288,6 +304,24 @@
     <div class="container">
       <div class="row">
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -2008,6 +2042,14 @@
     
     
     
+
+    var bldLatLon = [];
+    bldLatLon.push(52.374478);
+    bldLatLon.push(4.885703);
+    locArray.push(bldLatLon);
+    console.log(bldLatLon)
+    
+    
     
     
     
@@ -2102,6 +2144,14 @@
     
 
     var bldLatLon = [];
+    bldLatLon.push(52.379444);
+    bldLatLon.push(4.886389);
+    locArray.push(bldLatLon);
+    console.log(bldLatLon)
+    
+    
+
+    var bldLatLon = [];
     bldLatLon.push(52.367139);
     bldLatLon.push(4.903745);
     locArray.push(bldLatLon);
@@ -2155,6 +2205,22 @@
     console.log(bldLatLon)
     
     
+
+    var bldLatLon = [];
+    bldLatLon.push(52.374444);
+    bldLatLon.push(4.883611);
+    locArray.push(bldLatLon);
+    console.log(bldLatLon)
+    
+    
+
+    var bldLatLon = [];
+    bldLatLon.push(52.370278);
+    bldLatLon.push(4.899722);
+    locArray.push(bldLatLon);
+    console.log(bldLatLon)
+    
+    
     console.log(locArray)
 
     var map = L.map('mapid');
@@ -2191,6 +2257,13 @@
     
     
     
+    
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.374478);
+    bldLatLon.push(4.885703);
+    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/150\">Coymanshuis (1625)</a></strong>"));
     
     
     
@@ -2280,6 +2353,13 @@
     
     
     var bldLatLon = [];
+    bldLatLon.push(52.379444);
+    bldLatLon.push(4.886389);
+    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/153\">Noorderkerk (1623)</a></strong>"));
+    
+    
+    
+    var bldLatLon = [];
     bldLatLon.push(52.367139);
     bldLatLon.push(4.903745);
     markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/9\">Obbene Shul Synagogue (1686)</a></strong>"));
@@ -2327,6 +2407,20 @@
     bldLatLon.push(52.370217);
     bldLatLon.push(4.90533);
     markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/12\">Uilenburgerstraat synagoge (1766)</a></strong>"));
+    
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.374444);
+    bldLatLon.push(4.883611);
+    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/151\">Westerkerk (1631)</a></strong>"));
+    
+    
+    
+    var bldLatLon = [];
+    bldLatLon.push(52.370278);
+    bldLatLon.push(4.899722);
+    markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/152\">Zuiderkerk (1611)</a></strong>"));
     
     
     map.addLayer(markers);

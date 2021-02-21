@@ -175,6 +175,18 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/6">1639-1931: Talmud Torah, Portuguese Synagogue I (1639)</a></li>
     
     
@@ -465,11 +477,15 @@
     
     
     
+    
+    
     var bldLatLon = [];
     bldLatLon.push(52.36753);
     bldLatLon.push(4.905336);
     locArray.push(bldLatLon);
     console.log(bldLatLon)
+    
+    
     
     
     
@@ -611,6 +627,10 @@
     
     
     
+    
+    
+    
+    
     console.log(locArray)
 
     var map = L.map('mapid');
@@ -623,6 +643,8 @@
 
         var markers = L.markerClusterGroup({showCoverageOnHover: false, zoomToBoundsOnClick: false, maxClusterRadius:4});
         
+    
+    
     
     
     
@@ -787,10 +809,16 @@
     
     
     
+    
+    
     var bldLatLon = [];
     bldLatLon.push(52.368577);
     bldLatLon.push(4.902246);
     markers.addLayer(L.marker(bldLatLon).bindPopup("<strong><a href=\"https://eam5.github.io/atlanticsynagogues/buildings/6\">Talmud Torah, Portuguese Synagogue I (1639)</a></strong></br>Location Accuracy: exact"));
+    
+    
+    
+    
     
     
     
