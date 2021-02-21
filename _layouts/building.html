@@ -96,7 +96,7 @@ layout: leaflet-map
                 <li class="list-group-item px-1 text-center">Location Accuracy: {{ page.loc_def }}</li>
                 <li class="list-group-item" style="padding:0;">
                     {% assign bldgnameone = page.building_name | downcase %}
-                    {% assign bldgnametwo = bldgnameone | remove: "," | remove: "[" | remove: "]" | remove: "(" | remove: ")" | remove: "'"%}
+                    {% assign bldgnametwo = bldgnameone | remove: "." | remove: "," | remove: "[" | remove: "]" | remove: "(" | remove: ")" | remove: "'"%}
                     {% assign bldgname = bldgnametwo | replace: " ", "-" %}
                     <div class="map" id="{{ bldgname }}" width="100%"></div>
                 </li>
@@ -108,9 +108,8 @@ layout: leaflet-map
     </div>
 </div>
 <script>
-    
-    {% assign varid = bldgname | remove: "-" | remove: "."%}
-    var {{ varid }}= L.map('{{ bldgname }}').setView([{{ page.lat }}, {{ page.lon }}], 13);
+    {% assign varid = bldgname | remove: "-" %}
+    var {{ varid }} = L.map('{{ bldgname }}').setView([{{ page.lat }}, {{ page.lon }}], 13);
     var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
     L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo({{varid}});

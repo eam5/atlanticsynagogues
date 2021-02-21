@@ -5266,7 +5266,7 @@
   },
   {
     "idbuildings": 57,
-    "building_name": "St. Bride's, Fleet Street\r",
+    "building_name": "St. Bride's, Fleet Street",
     "year_built": "1670",
     "data_yr_built": 1670,
     "year_built_acc": "accurate",
@@ -5286,13 +5286,13 @@
     "lat": 51.513889,
     "lon": -0.105833,
     "loc_def": "exact",
-    "cover_image": null,
+    "cover_image": "/assets/images/57/057_001.jpg",
     "file_path": "/assets/images/57/",
     "use_type": "church",
     "objects": [
       {
         "idbuildings": 57,
-        "building_name": "St. Bride's, Fleet Street\r",
+        "building_name": "St. Bride's, Fleet Street",
         "use_type": "church",
         "year_built": "1670",
         "data_yr_built": 1670,
@@ -5319,7 +5319,7 @@
         "yr_end": null,
         "rite": null,
         "satellite_of": null,
-        "image_file": null,
+        "image_file": "/assets/images/57/057_001.jpg",
         "file_path": "/assets/images/57/"
       }
     ],
@@ -5327,7 +5327,7 @@
     "congregations": [
       {
         "idbuildings": 57,
-        "building_name": "St. Bride's, Fleet Street\r",
+        "building_name": "St. Bride's, Fleet Street",
         "use_type": "church",
         "year_built": "1670",
         "data_yr_built": 1670,
@@ -5354,7 +5354,7 @@
         "yr_end": null,
         "rite": null,
         "satellite_of": null,
-        "image_file": null,
+        "image_file": "/assets/images/57/057_001.jpg",
         "file_path": "/assets/images/57/"
       }
     ]
@@ -5381,7 +5381,7 @@
     "lat": 51.508611,
     "lon": -0.136667,
     "loc_def": "exact",
-    "cover_image": null,
+    "cover_image": "/assets/images/3/003_001.jpg",
     "file_path": "/assets/images/3/",
     "use_type": "church",
     "objects": [
@@ -5414,7 +5414,7 @@
         "yr_end": null,
         "rite": null,
         "satellite_of": null,
-        "image_file": null,
+        "image_file": "/assets/images/3/003_001.jpg",
         "file_path": "/assets/images/3/"
       }
     ],
@@ -5449,7 +5449,7 @@
         "yr_end": null,
         "rite": null,
         "satellite_of": null,
-        "image_file": null,
+        "image_file": "/assets/images/3/003_001.jpg",
         "file_path": "/assets/images/3/"
       }
     ]
