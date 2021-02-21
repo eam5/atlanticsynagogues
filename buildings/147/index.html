@@ -887,6 +887,10 @@
                 
                 
                 
+                
+                
+                
+                
                 <li class="list-group-item px-1 text-center">Location Accuracy: exact</li>
                 <li class="list-group-item" style="padding:0;">
                     
@@ -901,8 +905,7 @@
 </div>
 <script>
     
-    
-    var nieuwekerk= L.map('nieuwe-kerk').setView([52.377264, 4.629734], 13);
+    var nieuwekerk = L.map('nieuwe-kerk').setView([52.377264, 4.629734], 13);
     var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
     L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(nieuwekerk);

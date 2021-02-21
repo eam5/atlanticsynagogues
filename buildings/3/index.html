@@ -443,7 +443,7 @@
             
             
             
-            <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/57">St. Bride's, Fleet Street (1680)</a></li>
+            <li><a href="https://eam5.github.io/atlanticsynagogues/buildings/57">St. Bride's, Fleet Street (1680)</a></li>
             
             
          
@@ -724,6 +724,10 @@
     <div class="col-sm-3">
         <div class="card">
             
+            <a href="https://eam5.github.io/atlanticsynagogues/assets/images/3/003_001.jpg" title="/assets/images/3/003_001.jpg">
+                <img src="https://eam5.github.io/atlanticsynagogues/assets/images/3/003_001.jpg" alt="/assets/images/3/003_001.jpg" title="/assets/images/3/003_001.jpg" class="card-img-top image-fluid"/>
+            </a> 
+            
             <!-- <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -798,6 +802,13 @@
                 
                 
                 
+                
+                
+                
+                
+                
+                
+                <a href="https://eam5.github.io/atlanticsynagogues/building-images/3"><li type="button" class="btn btn-light list-group-item px-1">Image Gallery</li></a>
                 
                 
                 
@@ -921,7 +932,7 @@
                     
                     
                     
-                    <div class="map" id="st.-james-piccadilly" width="100%"></div>
+                    <div class="map" id="st-james-piccadilly" width="100%"></div>
                 </li>
                 
             </ul>
@@ -930,8 +941,7 @@
 </div>
 <script>
     
-    
-    var stjamespiccadilly= L.map('st.-james-piccadilly').setView([51.508611, -0.136667], 13);
+    var stjamespiccadilly = L.map('st-james-piccadilly').setView([51.508611, -0.136667], 13);
     var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var osmAttrib = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
     L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(stjamespiccadilly);
