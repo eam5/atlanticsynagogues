@@ -1,0 +1,1008 @@
+idbuildings,building_name,year_opened,composition,additional_comp,filter_on,architectural_element,AE_type,element_type,comp_quant,year_added,idlocation,location,lat,longitude,idcitation,cit_short,pg
+0,"Bevis Marks Synagogue",1701,p0a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,p0a,plan_elem,plan,gallery,"two long plus one short","gallery: two long plus one short",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,p0a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,p0a,plan_elem,plan,"plan_bay types",A_B_B_B_B_A,"plan_bay types: A_B_B_B_B_A",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,p4a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,p4a,plan_elem,plan,gallery,"two long","gallery: two long",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,p4a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,p4a,plan_elem,plan,"plan_bay types",A_B_B_B_B_B_A,"plan_bay types: A_B_B_B_B_B_A",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+17,"Berakha ve Shalom Synagogue",1685,p17a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,NULL,NULL,NULL
+17,"Berakha ve Shalom Synagogue",1685,p17a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,NULL,NULL,NULL
+17,"Berakha ve Shalom Synagogue",1685,p17a,plan_elem,plan,gallery,"one short","gallery: one short",1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,NULL,NULL,NULL
+17,"Berakha ve Shalom Synagogue",1685,p17a,plan_elem,plan,"plan_bay types",A_B_B_B_B_B_B,"plan_bay types: A_B_B_B_B_B_B",1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,NULL,NULL,NULL
+34,"Touro Synagogue",1763,p34a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1763,25,"Newport, United States",41.489444,-71.311944,NULL,NULL,NULL
+34,"Touro Synagogue",1763,p34a,plan_elem,plan,gallery,"two long plus one short","gallery: two long plus one short",1,1763,25,"Newport, United States",41.489444,-71.311944,NULL,NULL,NULL
+34,"Touro Synagogue",1763,p34a,plan_elem,plan,footprint,"modified square basilica","footprint: modified square basilica",1,1763,25,"Newport, United States",41.489444,-71.311944,NULL,NULL,NULL
+34,"Touro Synagogue",1763,p34a,plan_elem,plan,"plan_bay types",A_B_B_B_B_A,"plan_bay types: A_B_B_B_B_A",1,1763,25,"Newport, United States",41.489444,-71.311944,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,p43a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",NULL
+43,"Mikve Israel Synagogue (IV)",1732,p43a,plan_elem,plan,gallery,"one long","gallery: one long",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",30
+43,"Mikve Israel Synagogue (IV)",1732,p43a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",NULL
+43,"Mikve Israel Synagogue (IV)",1732,p43a,plan_elem,plan,"plan_bay types",A_A_A,"plan_bay types: A_A_A",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",NULL
+36,"Tzedek ve-Shalom Synagogue",1735,p36a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,11,"Coen-Uzzielli, 2010",22
+36,"Tzedek ve-Shalom Synagogue",1735,p36a,plan_elem,plan,gallery,"two long plus one short","gallery: two long plus one short",1,1813,11,"Paramaribo, Suriname",5.828858,-55.156256,11,"Coen-Uzzielli, 2010",22
+36,"Tzedek ve-Shalom Synagogue",1735,p36a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,11,"Coen-Uzzielli, 2010",22
+36,"Tzedek ve-Shalom Synagogue",1735,p36a,plan_elem,plan,"plan_bay types",A_A_A_A_B_A_A_A,"plan_bay types: A_A_A_A_B_A_A_A",1,1813,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+38,"Zur Israel Synagogue",1641,p38a,plan_elem,plan,footprint,"repurposed tenement w/ upstairs prayer hall","footprint: repurposed tenement w/ upstairs prayer hall",1,1641,2,"Recife, Brazil",-8.06131,-34.87132,50,"Breda, 2007",177
+38,"Zur Israel Synagogue",1641,p38a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1641,2,"Recife, Brazil",-8.06131,-34.87132,50,"Breda, 2007",177
+38,"Zur Israel Synagogue",1641,p38a,plan_elem,plan,gallery,"one short","gallery: one short",1,1641,2,"Recife, Brazil",-8.06131,-34.87132,49,"Cunha, 2007",43
+1,"Creechurch Lane Synagogue",1657,p1a,plan_elem,plan,footprint,"repurposed tenement w/ upstairs prayer hall","footprint: repurposed tenement w/ upstairs prayer hall",1,1657,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,p2a,plan_elem,plan,gallery,"two long plus one short","gallery: two long plus one short",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",61
+33,"Mill Street Synagogue, Shearith Israel I",1730,p33a,plan_elem,plan,gallery,"two long plus one short","gallery: two long plus one short",1,1730,24,"New York, United States",40.705016,-74.010199,8,"Stiefel, 2014",241
+33,"Mill Street Synagogue, Shearith Israel I",1730,p33a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1730,24,"New York, United States",40.705016,-74.010199,8,"Stiefel, 2014",240
+129,"Shearith Israel (II)",1818,p129a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1818,24,"New York, United States",40.705016," -74.010199",8,"Stiefel, 2014",269
+129,"Shearith Israel (II)",1818,p129a,plan_elem,plan,gallery,,gallery,1,1818,24,"New York, United States",40.705016," -74.010199",23,"de Sola Pool, 1955",49
+2,"Creechurch Lane Synagogue [1675]",1675,p2a,plan_elem,plan,footprint,"repurposed tenement w/ upstairs prayer hall","footprint: repurposed tenement w/ upstairs prayer hall",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",61
+43,"Mikve Israel Synagogue (IV)",1732,p43a,plan_elem,plan,gallery,"two long plus one short","gallery: two long plus one short",1,1866,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",77
+21,"Great Synagogue (first, near Duke's Place)",1692,p21a,plan_elem,plan,footprint,"repurposed tenement w/ upstairs prayer hall","footprint: repurposed tenement w/ upstairs prayer hall",1,1702,8,"London, England",51.514313,-0.077881,72,"Roth, 1950",19
+22,"Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)",1722,p22a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1722,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",61
+22,"Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)",1722,p22a,plan_elem,plan,gallery,"one short","gallery: one short",1,1722,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",63
+133,"Great Synagogue (Duke's Place, enlargement)",1766,p133a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",62
+133,"Great Synagogue (Duke's Place, enlargement)",1766,p133a,plan_elem,plan,gallery,"two half-length long","gallery: two half-length long",1,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+133,"Great Synagogue (Duke's Place, enlargement)",1766,p133a,plan_elem,plan,"plan_bay types",A_A_A_A_B,"plan_bay types: A_A_A_A_B",1,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+133,"Great Synagogue (Duke's Place, enlargement)",1766,p133a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+31,"Great Synagogue (third, near Duke's Place)",1790,p31a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",73
+31,"Great Synagogue (third, near Duke's Place)",1790,p31a,plan_elem,plan,gallery,"two long plus one short","gallery: two long plus one short",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",76
+31,"Great Synagogue (third, near Duke's Place)",1790,p31a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",73
+31,"Great Synagogue (third, near Duke's Place)",1790,p31a,plan_elem,plan,"plan_bay types",A_B_B_B_B_B_A,"plan_bay types: A_B_B_B_B_B_A",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",73
+136,"Beth Jacob",1614,p136a,plan_elem,plan,footprint,"repurposed tenement w/ upstairs prayer hall","footprint: repurposed tenement w/ upstairs prayer hall",1,1614,1,"Amsterdam, Netherlands",52.36859,4.900492,85,"Cohen Paraira and Smith, 2013",18
+136,"Beth Jacob",1614,p136a,plan_elem,plan,gallery,,gallery,1,1614,1,"Amsterdam, Netherlands",52.36859,4.900492,85,"Cohen Paraira and Smith, 2013",18
+137,"Neveh Shalom",1612,p137a,plan_elem,plan,footprint,"repurposed tenement w/ upstairs prayer hall","footprint: repurposed tenement w/ upstairs prayer hall",1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",202
+137,"Neveh Shalom",1612,p137a,plan_elem,plan,gallery,"one short","gallery: one short",1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",202
+137,"Neveh Shalom",1612,p137a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",202
+137,"Neveh Shalom",1612,p137a,plan_elem,plan,"plan_bay types",A_B_B_B_B_B_A,"plan_bay types: A_B_B_B_B_B_A",1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",203
+138,"Beth Israel",1618,p138a,plan_elem,plan,footprint,"repurposed tenement w/ upstairs prayer hall","footprint: repurposed tenement w/ upstairs prayer hall",1,1618,1,"Amsterdam, Netherlands",52.368577,4.902246,85,"Cohen Paraira and Smith, 2013",19
+138,"Beth Israel",1618,p138a,plan_elem,plan,gallery,,gallery,1,1618,1,"Amsterdam, Netherlands",52.368577,4.902246,85,"Cohen Paraira and Smith, 2013",19
+6,"Talmud Torah, Portuguese Synagogue I",1639,p6a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,87,"Agt, 1974",8
+6,"Talmud Torah, Portuguese Synagogue I",1639,p6a,plan_elem,plan,gallery,"two long plus one short","gallery: two long plus one short",1,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,87,"Agt, 1974",8
+6,"Talmud Torah, Portuguese Synagogue I",1639,p6a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,87,"Agt, 1974",8
+6,"Talmud Torah, Portuguese Synagogue I",1639,p6a,plan_elem,plan,"plan_bay types",A_A_A_A_B,"plan_bay types: A_A_A_A_B",1,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,87,"Agt, 1974",8
+7,"Grote Sjoel (Great Synagogue)",1671,p7a,plan_elem,plan,gallery,"two long plus one short","gallery: two long plus one short",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,83,"Cohen Paraira, 1991",45
+7,"Grote Sjoel (Great Synagogue)",1671,p7a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",25
+7,"Grote Sjoel (Great Synagogue)",1671,p7a,plan_elem,plan,footprint,"modified square basilica","footprint: modified square basilica",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",25
+7,"Grote Sjoel (Great Synagogue)",1671,p7a,plan_elem,plan,"plan_bay types",A_B_A,"plan_bay types: A_B_A",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",25
+9,"Obbene Shul Synagogue",1686,p9a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,87,"Agt, 1974",25
+9,"Obbene Shul Synagogue",1686,p9a,plan_elem,plan,gallery,"one long one short","gallery: one long one short",1,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,87,"Agt, 1974",25
+9,"Obbene Shul Synagogue",1686,p9a,plan_elem,plan,gallery,"two long","gallery: two long",1,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,87,"Agt, 1974",25
+9,"Obbene Shul Synagogue",1686,p9a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,87,"Agt, 1974",25
+10,"Dritt Shul",1700,p10a,plan_elem,plan,footprint,"repurposed tenement w/ upstairs prayer hall","footprint: repurposed tenement w/ upstairs prayer hall",1,1700,1,"Amsterdam, Netherlands",52.367259,4.903681,90,"Joods Cultureel Kwartier",NULL
+142,"Dritt Sjoel",1778,p142a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1778,1,"Amsterdam, Netherlands",52.367259,4.903681,87,"Agt, 1974",25
+142,"Dritt Sjoel",1778,p142a,plan_elem,plan,gallery,"two long","gallery: two long",1,1778,1,"Amsterdam, Netherlands",52.367259,4.903681,87,"Agt, 1974",25
+13,"Nidhe Israel",1654,p13a,plan_elem,plan,footprint,"modified square basilica","footprint: modified square basilica",1,1654,4,"Bridgetown, Barbados",13.099444,-59.615278,51,"Miller, 2010",87
+97,"Nidhe Israel",1833,p97a,plan_elem,plan,footprint,"modified square basilica","footprint: modified square basilica",1,1833,4,"Bridgetown, Barbados",13.099444,-59.615278,51,"Miller, 2010",87
+134,"Honen Dalim Synagogue II",1773,p134a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,10,"Hartog, 1976",8
+134,"Honen Dalim Synagogue II",1773,p134a,plan_elem,plan,gallery,"two long plus one short","gallery: two long plus one short",1,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,8,"Stiefel, 2014",252
+134,"Honen Dalim Synagogue II",1773,p134a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,10,"Hartog, 1976",8
+134,"Honen Dalim Synagogue II",1773,p134a,plan_elem,plan,"plan_bay types",A_A_B_A_A,"plan_bay types: A_A_B_A_A",1,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,10,"Hartog, 1976",8
+39,"Neveh Shalom Synagogue",1704,p39a,plan_elem,plan,footprint,"rectangular basilica","footprint: rectangular basilica",1,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,8,"Stiefel, 2014",236
+39,"Neveh Shalom Synagogue",1704,p39a,plan_elem,plan,gallery,"two long plus one short","gallery: two long plus one short",1,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,96,"Andrade, 1941",41
+146,"High German synagogue",1648,p146a,plan_elem,plan,footprint,"repurposed tenement w/ upstairs prayer hall","footprint: repurposed tenement w/ upstairs prayer hall",1,1648,1,"Amsterdam, Netherlands",52.367887,4.901825,87,"Agt, 1974",20
+146,"High German synagogue",1648,p146a,plan_elem,plan,gallery,"one long","gallery: one long",1,1648,1,"Amsterdam, Netherlands",52.367887,4.901825,87,"Agt, 1974",20
+146,"High German synagogue",1648,p146a,plan_elem,plan,gallery,complete,"gallery: complete",1,1648,1,"Amsterdam, Netherlands",52.367887,4.901825,87,"Agt, 1974",20
+11,"Nieuwe Synagoge",1752,p11a,plan_elem,plan,footprint,"modified square basilica","footprint: modified square basilica",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",61
+11,"Nieuwe Synagoge",1752,p11a,plan_elem,plan,gallery,"two long","gallery: two long",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",61
+11,"Nieuwe Synagoge",1752,p11a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",61
+14,"Beth Elohim Synagogue",1794,p14a,plan_elem,plan,"axis of symmetry","longtitudinal axis","axis of symmetry: longtitudinal axis",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",170
+14,"Beth Elohim Synagogue",1794,p14a,plan_elem,plan,gallery,"two long plus one short","gallery: two long plus one short",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",170
+14,"Beth Elohim Synagogue",1794,p14a,plan_elem,plan,footprint,"rectangular basilica with appendage","footprint: rectangular basilica with appendage",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",170
+0,"Bevis Marks Synagogue",1701,f0w,w0a,window,"window frame",round-headed,"window frame: round-headed",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,w0a,window,"window frame",round-headed,"window frame: round-headed",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,w0a,window,"window frame",round-headed,"window frame: round-headed",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,w0a,window,"window frame",round-headed,"window frame: round-headed",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,w0a,window,keystone,plain,"keystone: plain",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,w0a,window,keystone,plain,"keystone: plain",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,w0a,window,keystone,plain,"keystone: plain",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,w0a,window,keystone,plain,"keystone: plain",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,w0a,window,architrave,simple,"architrave: simple",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,w0a,window,architrave,simple,"architrave: simple",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,w0a,window,architrave,simple,"architrave: simple",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,w0a,window,architrave,simple,"architrave: simple",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,w0a,window,"window sill",,"window sill",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,w0a,window,"window sill",,"window sill",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,w0a,window,"window sill",,"window sill",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,w0a,window,"window sill",,"window sill",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,w0b,window,"window frame",segmental,"window frame: segmental",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,w0b,window,"window frame",segmental,"window frame: segmental",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,w0b,window,"window frame",segmental,"window frame: segmental",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,w0b,window,keystone,plain,"keystone: plain",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,w0b,window,keystone,plain,"keystone: plain",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,w0b,window,keystone,plain,"keystone: plain",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,w0b,window,architrave,simple,"architrave: simple",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,w0b,window,architrave,simple,"architrave: simple",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,w0b,window,architrave,simple,"architrave: simple",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,w0b,window,"window sill",,"window sill",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,w0b,window,"window sill",,"window sill",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,w0b,window,"window sill",,"window sill",5,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,w0c,window,"window frame",elliptical,"window frame: elliptical",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,w0c,window,"window frame",elliptical,"window frame: elliptical",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,w0c,window,keystone,plain,"keystone: plain",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,w0c,window,keystone,plain,"keystone: plain",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,w0c,window,architrave,simple,"architrave: simple",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,w0c,window,architrave,simple,"architrave: simple",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,w0c,window,"window sill",,"window sill",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,w0c,window,"window sill",,"window sill",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,w4a,window,"window frame","rectangular ","window frame: rectangular ",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,w4a,window,"window frame","rectangular ","window frame: rectangular ",5,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,w4a,window,"window frame","rectangular ","window frame: rectangular ",6,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,w4a,window,"window frame","rectangular ","window frame: rectangular ",7,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,w4a,window,"window frame","rectangular ","window frame: rectangular ",6,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,w4a,window,"window frame","rectangular ","window frame: rectangular ",7,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,w4a,window,"window frame","rectangular ","window frame: rectangular ",2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,w4a,window,"window frame","rectangular ","window frame: rectangular ",5,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e1773,w4a,window,"window frame","rectangular ","window frame: rectangular ",3,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4w,w4a,window,architrave,simple,"architrave: simple",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,w4a,window,architrave,simple,"architrave: simple",5,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,w4a,window,architrave,simple,"architrave: simple",6,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,w4a,window,architrave,simple,"architrave: simple",7,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,w4a,window,architrave,simple,"architrave: simple",6,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,w4a,window,architrave,simple,"architrave: simple",7,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,w4a,window,architrave,simple,"architrave: simple",2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,w4a,window,architrave,simple,"architrave: simple",5,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e1773,w4a,window,architrave,simple,"architrave: simple",3,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4w,w4a,window,"window sill",,"window sill",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,w4a,window,"window sill",,"window sill",5,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,w4a,window,"window sill",,"window sill",6,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,w4a,window,"window sill",,"window sill",7,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,w4a,window,"window sill",,"window sill",6,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,w4a,window,"window sill",,"window sill",7,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,w4a,window,"window sill",,"window sill",2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,w4a,window,"window sill",,"window sill",5,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e1773,w4a,window,"window sill",,"window sill",3,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4w,w4b,window,"window frame",round-headed,"window frame: round-headed",5,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,w4b,window,"window frame",round-headed,"window frame: round-headed",7,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,w4b,window,"window frame",round-headed,"window frame: round-headed",7,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,w4b,window,"window frame",round-headed,"window frame: round-headed",5,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e1773,w4b,window,"window frame",round-headed,"window frame: round-headed",2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4w,w4b,window,architrave,simple,"architrave: simple",5,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,w4b,window,architrave,simple,"architrave: simple",7,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,w4b,window,architrave,simple,"architrave: simple",7,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,w4b,window,architrave,simple,"architrave: simple",5,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e1773,w4b,window,architrave,simple,"architrave: simple",2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4w,w4b,window,"window sill",,"window sill",5,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,w4b,window,"window sill",,"window sill",7,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,w4b,window,"window sill",,"window sill",7,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,w4b,window,"window sill",,"window sill",5,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e1773,w4b,window,"window sill",,"window sill",2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+33,"Mill Street Synagogue, Shearith Israel I",1730,f33n,w33a,window,"window frame",round-headed,"window frame: round-headed",2,1730,24,"New York, United States",40.705016,-74.010199,8,"Stiefel, 2014",240
+33,"Mill Street Synagogue, Shearith Israel I",1730,f33e,w33a,window,"window frame",round-headed,"window frame: round-headed",2,1730,24,"New York, United States",40.705016,-74.010199,24,"de Sola Pool, 1950",187
+33,"Mill Street Synagogue, Shearith Israel I",1730,f33w,w33a,window,"window frame",round-headed,"window frame: round-headed",3,1730,24,"New York, United States",40.705016,-74.010199,8,"Stiefel, 2014",240
+33,"Mill Street Synagogue, Shearith Israel I",1730,f33s,w33a,window,"window frame",round-headed,"window frame: round-headed",3,1730,24,"New York, United States",40.705016,-74.010199,8,"Stiefel, 2014",240
+33,"Mill Street Synagogue, Shearith Israel I",1730,f33n,w33a,window,architrave,,architrave,2,1730,24,"New York, United States",40.705016,-74.010199,8,"Stiefel, 2014",240
+33,"Mill Street Synagogue, Shearith Israel I",1730,f33e,w33a,window,architrave,,architrave,2,1730,24,"New York, United States",40.705016,-74.010199,24,"de Sola Pool, 1950",187
+33,"Mill Street Synagogue, Shearith Israel I",1730,f33w,w33a,window,architrave,,architrave,3,1730,24,"New York, United States",40.705016,-74.010199,8,"Stiefel, 2014",240
+33,"Mill Street Synagogue, Shearith Israel I",1730,f33s,w33a,window,architrave,,architrave,3,1730,24,"New York, United States",40.705016,-74.010199,8,"Stiefel, 2014",240
+34,"Touro Synagogue",1763,f34ei,w34a,window,"window frame",round-headed,"window frame: round-headed",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 6"
+34,"Touro Synagogue",1763,f34ni,w34a,window,"window frame",round-headed,"window frame: round-headed",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 7"
+34,"Touro Synagogue",1763,f34wi,w34a,window,"window frame",round-headed,"window frame: round-headed",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34s,w34a,window,"window frame",round-headed,"window frame: round-headed",4,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 5"
+34,"Touro Synagogue",1763,f34wi,w34a,window,"window frame",round-headed,"window frame: round-headed",3,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34ei,w34a,window,architrave,simple,"architrave: simple",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 6"
+34,"Touro Synagogue",1763,f34ni,w34a,window,architrave,simple,"architrave: simple",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 7"
+34,"Touro Synagogue",1763,f34wi,w34a,window,architrave,simple,"architrave: simple",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34s,w34a,window,architrave,simple,"architrave: simple",4,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 5"
+34,"Touro Synagogue",1763,f34wi,w34a,window,architrave,simple,"architrave: simple",3,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34ei,w34a,window,"window sill",,"window sill",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 6"
+34,"Touro Synagogue",1763,f34ni,w34a,window,"window sill",,"window sill",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 7"
+34,"Touro Synagogue",1763,f34wi,w34a,window,"window sill",,"window sill",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34s,w34a,window,"window sill",,"window sill",4,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 5"
+34,"Touro Synagogue",1763,f34wi,w34a,window,"window sill",,"window sill",3,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wii,w34b,window,"window frame","rectangular ","window frame: rectangular ",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34eii,w34b,window,"window frame","rectangular ","window frame: rectangular ",3,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 6"
+34,"Touro Synagogue",1763,f34wii,w34b,window,"window frame","rectangular ","window frame: rectangular ",3,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wii,w34b,window,"window sill",,"window sill",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34eii,w34b,window,"window sill",,"window sill",3,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 6"
+34,"Touro Synagogue",1763,f34wii,w34b,window,"window sill",,"window sill",3,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wii,w34b,window,architrave,simple,"architrave: simple",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34eii,w34b,window,architrave,simple,"architrave: simple",3,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 6"
+34,"Touro Synagogue",1763,f34wii,w34b,window,architrave,simple,"architrave: simple",3,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+43,"Mikve Israel Synagogue (IV)",1732,f43w,w43a,window,"window frame","rectangular ","window frame: rectangular ",4,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43n,w43a,window,"window frame","rectangular ","window frame: rectangular ",9,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43s,w43a,window,"window frame","rectangular ","window frame: rectangular ",8,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43e,w43a,window,"window frame","rectangular ","window frame: rectangular ",6,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,w43b,window,"window frame","rectangular ","window frame: rectangular ",6,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43n,w43b,window,"window frame","rectangular ","window frame: rectangular ",9,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43s,w43b,window,"window frame","rectangular ","window frame: rectangular ",8,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43e,w43b,window,"window frame","rectangular ","window frame: rectangular ",4,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,w43b,window,"window frame",fan,"window frame: fan",6,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43n,w43b,window,"window frame",fan,"window frame: fan",9,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43s,w43b,window,"window frame",fan,"window frame: fan",8,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43e,w43b,window,"window frame",fan,"window frame: fan",4,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,w43c,window,"window frame","rectangular ","window frame: rectangular ",3,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,w43c,window,"blind arch",round,"blind arch: round",3,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,r43a,roofline,"window frame","rectangular ","window frame: rectangular ",3,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43e,r43a,roofline,"window frame","rectangular ","window frame: rectangular ",3,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,r43a,roofline,"window frame",fan,"window frame: fan",3,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43e,r43a,roofline,"window frame",fan,"window frame: fan",3,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+133,"Great Synagogue (Duke's Place, enlargement)",1766,f133e,w133a,window,"window frame",round-headed,"window frame: round-headed",8,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",66
+133,"Great Synagogue (Duke's Place, enlargement)",1766,f133n,w133a,window,"window frame",round-headed,"window frame: round-headed",2,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",66
+133,"Great Synagogue (Duke's Place, enlargement)",1766,f133s,w133a,window,"window frame",round-headed,"window frame: round-headed",2,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",66
+133,"Great Synagogue (Duke's Place, enlargement)",1766,f133w,w133a,window,"window frame",round-headed,"window frame: round-headed",1,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,w31d,window,architrave,simple,"architrave: simple",2,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,w31d,window,"window frame","rectangular ","window frame: rectangular ",2,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,w31a,window,"window frame","rectangular ","window frame: rectangular ",5,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31w,w31a,window,"window frame","rectangular ","window frame: rectangular ",5,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,w31a,window,"window sill",,"window sill",5,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31w,w31a,window,"window sill",,"window sill",5,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,w31a,window,"blind arch",round,"blind arch: round",5,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31w,w31a,window,"blind arch",round,"blind arch: round",5,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,w31b,window,"window frame",round-headed,"window frame: round-headed",5,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31w,w31b,window,"window frame",round-headed,"window frame: round-headed",5,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,w31b,window,architrave,simple,"architrave: simple",5,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31w,w31b,window,architrave,simple,"architrave: simple",5,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,w31d,window,"window sill",,"window sill",2,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,r31a,roofline,"window frame",segmental,"window frame: segmental",5,1790,8,"London, England",51.514313,-0.077881,NULL,NULL,NULL
+31,"Great Synagogue (third, near Duke's Place)",1790,f31w,r31a,roofline,"window frame",segmental,"window frame: segmental",5,1790,8,"London, England",51.514313,-0.077881,NULL,NULL,NULL
+31,"Great Synagogue (third, near Duke's Place)",1790,f31s,r31b,roofline,"window frame",semicicular,"window frame: semicicular",1,1790,8,"London, England",51.514313,-0.077881,NULL,NULL,NULL
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,r31a,roofline,window,"clerestory window","window: clerestory window",5,1790,8,"London, England",51.514313,-0.077881,NULL,NULL,NULL
+31,"Great Synagogue (third, near Duke's Place)",1790,f31w,r31a,roofline,window,"clerestory window","window: clerestory window",5,1790,8,"London, England",51.514313,-0.077881,NULL,NULL,NULL
+31,"Great Synagogue (third, near Duke's Place)",1790,f31s,r31b,roofline,window,"clerestory window","window: clerestory window",1,1790,8,"London, England",51.514313,-0.077881,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,r43a,roofline,window,"gable window","window: gable window",3,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43e,r43a,roofline,window,"gable window","window: gable window",3,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,w31b,window,window,"recessed window","window: recessed window",5,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31w,w31b,window,window,"recessed window","window: recessed window",5,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+2,"Creechurch Lane Synagogue [1675]",1675,f2s,w2a,window,"window frame","rectangular ","window frame: rectangular ",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2s,w2b,window,"window frame","rectangular ","window frame: rectangular ",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2s,w2c,window,"window frame","rectangular ","window frame: rectangular ",2,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2s,w2d,window,"window frame","rectangular ","window frame: rectangular ",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2s,w2e,window,"window frame","rectangular ","window frame: rectangular ",4,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2s,w2e,window,window,dormer,"window: dormer",4,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+137,"Neveh Shalom",1612,f137w,w137b,window,"window frame","rectangular ","window frame: rectangular ",4,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137e,w137b,window,"window frame","rectangular ","window frame: rectangular ",4,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137w,w137b,window,window,"wall window","window: wall window",4,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137e,w137b,window,window,"wall window","window: wall window",4,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137w,r137a,roofline,"window frame","rectangular ","window frame: rectangular ",6,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137e,r137a,roofline,"window frame","rectangular ","window frame: rectangular ",6,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137w,r137a,roofline,window,"gable window","window: gable window",6,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137e,r137a,roofline,window,"gable window","window: gable window",6,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137w,r137a,roofline,shutter,,"shutter: ",6,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137e,r137a,roofline,shutter,,"shutter: ",6,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137w,w137b,window,shutter,,shutter,4,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137e,w137b,window,shutter,,shutter,4,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,w6a,window,"window frame","rectangular ","window frame: rectangular ",6,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,w6a,window,window,"wall window","window: wall window",6,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,w6a,window,shutter,,shutter,6,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7n,w7a,window,architrave,simple,"architrave: simple",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7s,w7a,window,architrave,simple,"architrave: simple",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7e,w7a,window,architrave,simple,"architrave: simple",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,w7a,window,architrave,simple,"architrave: simple",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7n,w7a,window,"window frame",round-headed,"window frame: round-headed",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7s,w7a,window,"window frame",round-headed,"window frame: round-headed",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7e,w7a,window,"window frame",round-headed,"window frame: round-headed",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,w7a,window,"window frame",round-headed,"window frame: round-headed",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7n,w7a,window,window,"wall window","window: wall window",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7s,w7a,window,window,"wall window","window: wall window",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7e,w7a,window,window,"wall window","window: wall window",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,w7a,window,window,"wall window","window: wall window",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7n,w7b,window,window,"wall window","window: wall window",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7s,w7b,window,window,"wall window","window: wall window",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7e,w7b,window,window,"wall window","window: wall window",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,w7b,window,window,"wall window","window: wall window",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,w7b,window,window,"wall window","window: wall window",4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7n,w7b,window,"window frame","rectangular ","window frame: rectangular ",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7s,w7b,window,"window frame","rectangular ","window frame: rectangular ",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7e,w7b,window,"window frame","rectangular ","window frame: rectangular ",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,w7b,window,"window frame","rectangular ","window frame: rectangular ",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,w7b,window,"window frame","rectangular ","window frame: rectangular ",4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7n,w7b,window,"window sill",,"window sill",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7s,w7b,window,"window sill",,"window sill",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7e,w7b,window,"window sill",,"window sill",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,w7b,window,"window sill",,"window sill",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,w7b,window,"window sill",,"window sill",4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7n,w7b,window,architrave,simple,"architrave: simple",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7s,w7b,window,architrave,simple,"architrave: simple",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7e,w7b,window,architrave,simple,"architrave: simple",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,w7b,window,architrave,simple,"architrave: simple",5,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,w7b,window,architrave,simple,"architrave: simple",4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+9,"Obbene Shul Synagogue",1686,f9w,w9a,window,"window frame",round-headed,"window frame: round-headed",3,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,NULL,NULL,NULL
+9,"Obbene Shul Synagogue",1686,f9e,w9a,window,"window frame",round-headed,"window frame: round-headed",3,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,NULL,NULL,NULL
+9,"Obbene Shul Synagogue",1686,f9n,w9a,window,"window frame",round-headed,"window frame: round-headed",3,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,NULL,NULL,NULL
+9,"Obbene Shul Synagogue",1686,f9w,w9b,window,"window frame",round-headed,"window frame: round-headed",2,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,NULL,NULL,NULL
+9,"Obbene Shul Synagogue",1686,f9e,w9b,window,"window frame",round-headed,"window frame: round-headed",2,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,NULL,NULL,NULL
+17,"Berakha ve Shalom Synagogue",1685,f17w,w17a,window,"window frame","rectangular ","window frame: rectangular ",2,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,8,"Stiefel, 2014",233
+17,"Berakha ve Shalom Synagogue",1685,f17w,w17a,window,window,"wall window","window: wall window",2,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,8,"Stiefel, 2014",233
+17,"Berakha ve Shalom Synagogue",1685,f17w,w17a,window,shutter,,shutter,2,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,8,"Stiefel, 2014",233
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,w36a,window,"window frame","rectangular ","window frame: rectangular ",6,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,w36a,window,"window frame","rectangular ","window frame: rectangular ",6,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36e,w36a,window,"window frame","rectangular ","window frame: rectangular ",2,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",NULL
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,w36a,window,"window frame",fan,"window frame: fan",6,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,w36a,window,"window frame",fan,"window frame: fan",6,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36e,w36a,window,"window frame",fan,"window frame: fan",2,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",NULL
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,w36a,window,shutter,,shutter,24,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,w36a,window,shutter,,shutter,24,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36e,w36a,window,shutter,,shutter,8,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",NULL
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,w36a,window,window,"wall window","window: wall window",6,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,w36a,window,window,"wall window","window: wall window",6,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36e,w36a,window,window,"wall window","window: wall window",2,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",NULL
+36,"Tzedek ve-Shalom Synagogue",1735,f36w,w36b,window,"window frame","rectangular ","window frame: rectangular ",2,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",NULL
+36,"Tzedek ve-Shalom Synagogue",1735,f36w,w36b,window,"window frame",fan,"window frame: fan",2,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",NULL
+36,"Tzedek ve-Shalom Synagogue",1735,f36w,w36b,window,window,"wall window","window: wall window",2,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",NULL
+134,"Honen Dalim Synagogue II",1773,f134w,w134a,window,"window frame",round-headed,"window frame: round-headed",2,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134w,w134a,window,"window frame",round-headed,"window frame: round-headed",3,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134s,w134a,window,"window frame",round-headed,"window frame: round-headed",4,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134s,w134a,window,"window frame",round-headed,"window frame: round-headed",3,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134n,w134a,window,"window frame",round-headed,"window frame: round-headed",4,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134e,w134a,window,"window frame",round-headed,"window frame: round-headed",2,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134w,w134a,window,"window sill",,"window sill",2,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134w,w134a,window,"window sill",,"window sill",3,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134s,w134a,window,"window sill",,"window sill",4,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134s,w134a,window,"window sill",,"window sill",3,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134n,w134a,window,"window sill",,"window sill",4,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134e,w134a,window,"window sill",,"window sill",2,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134w,w134a,window,architrave,simple,"architrave: simple",2,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134w,w134a,window,architrave,simple,"architrave: simple",3,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134s,w134a,window,architrave,simple,"architrave: simple",4,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134s,w134a,window,architrave,simple,"architrave: simple",3,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134n,w134a,window,architrave,simple,"architrave: simple",4,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134e,w134a,window,architrave,simple,"architrave: simple",2,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134w,w134a,window,window,"wall window","window: wall window",2,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134w,w134a,window,window,"wall window","window: wall window",3,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134s,w134a,window,window,"wall window","window: wall window",4,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134s,w134a,window,window,"wall window","window: wall window",3,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134n,w134a,window,window,"wall window","window: wall window",4,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134e,w134a,window,window,"wall window","window: wall window",2,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,w39a,window,"window frame",round-headed,"window frame: round-headed",2,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,w39a,window,"window frame",round-headed,"window frame: round-headed",3,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,w39a,window,window,"wall window","window: wall window",2,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,w39a,window,window,"wall window","window: wall window",3,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,w39a,window,architrave,simple,"architrave: simple",2,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,w39a,window,architrave,simple,"architrave: simple",3,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,w39a,window,"window sill",,"window sill",2,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,w39a,window,"window sill",,"window sill",3,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,w39a,window,"blind arch",round,"blind arch: round",2,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,w39a,window,"blind arch",round,"blind arch: round",3,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,r4a,roofline,"window frame",circular,"window frame: circular",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,r4a,roofline,"window frame",circular,"window frame: circular",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,r4a,roofline,window,dormer,"window: dormer",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,r4a,roofline,window,dormer,"window: dormer",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,r4a,roofline,architrave,simple,"architrave: simple",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,r4a,roofline,architrave,simple,"architrave: simple",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+11,"Nieuwe Synagoge",1752,f11n,w11b,window,window,"wall window","window: wall window",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,w11b,window,window,"wall window","window: wall window",5,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",25
+11,"Nieuwe Synagoge",1752,f11n,w11b,window,"window frame",round-headed,"window frame: round-headed",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,w11b,window,"window frame",round-headed,"window frame: round-headed",5,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",25
+11,"Nieuwe Synagoge",1752,f11n,w11b,window,architrave,simple,"architrave: simple",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,w11b,window,architrave,simple,"architrave: simple",5,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",25
+11,"Nieuwe Synagoge",1752,f11n,w11b,window,"window sill",,"window sill",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,w11b,window,"window sill",,"window sill",5,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",25
+11,"Nieuwe Synagoge",1752,f11n,w11c,window,window,"wall window","window: wall window",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,w11c,window,window,"wall window","window: wall window",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",NULL
+11,"Nieuwe Synagoge",1752,f11n,w11c,window,"window frame",segmental,"window frame: segmental",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,w11c,window,"window frame",segmental,"window frame: segmental",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",NULL
+11,"Nieuwe Synagoge",1752,f11n,w11c,window,architrave,simple,"architrave: simple",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,w11c,window,architrave,simple,"architrave: simple",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",NULL
+11,"Nieuwe Synagoge",1752,f11n,w11c,window,"window sill",,"window sill",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,w11c,window,"window sill",,"window sill",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",NULL
+11,"Nieuwe Synagoge",1752,f11n,w11d,window,window,"wall window","window: wall window",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,w11d,window,"window frame",round-headed,"window frame: round-headed",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,w11d,window,architrave,simple,"architrave: simple",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,w11d,window,"window sill",,"window sill",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,w11d,window,keystone,complex,"keystone: complex",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+14,"Beth Elohim Synagogue",1794,f14w,r14d,roofline,keystone,plain,"keystone: plain",48,1794,23,"Charleston, United States",32.782300,-79.932732,NULL,NULL,NULL
+14,"Beth Elohim Synagogue",1794,f14w,w14a,window,keystone,plain,"keystone: plain",6,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14s,w14a,window,keystone,plain,"keystone: plain",18,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14s,w14a,window,keystone,plain,"keystone: plain",15,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,w14a,window,keystone,plain,"keystone: plain",18,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,w14a,window,keystone,plain,"keystone: plain",15,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,w14a,window,keystone,plain,"keystone: plain",6,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14d,roofline,"window frame",round-headed,"window frame: round-headed",16,1794,23,"Charleston, United States",32.782300,-79.932732,NULL,NULL,NULL
+14,"Beth Elohim Synagogue",1794,f14w,w14a,window,"window frame",round-headed,"window frame: round-headed",2,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14s,w14a,window,"window frame",round-headed,"window frame: round-headed",6,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14s,w14a,window,"window frame",round-headed,"window frame: round-headed",5,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,w14a,window,"window frame",round-headed,"window frame: round-headed",6,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,w14a,window,"window frame",round-headed,"window frame: round-headed",5,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,w14a,window,"window frame",round-headed,"window frame: round-headed",2,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14d,roofline,window,"wall window","window: wall window",16,1794,23,"Charleston, United States",32.782300,-79.932732,NULL,NULL,NULL
+14,"Beth Elohim Synagogue",1794,f14w,w14a,window,window,"wall window","window: wall window",2,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14s,w14a,window,window,"wall window","window: wall window",6,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14s,w14a,window,window,"wall window","window: wall window",5,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,w14a,window,window,"wall window","window: wall window",6,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,w14a,window,window,"wall window","window: wall window",5,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,w14a,window,window,"wall window","window: wall window",2,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14d,roofline,shutter,,"shutter: ",32,1794,23,"Charleston, United States",32.782300,-79.932732,NULL,NULL,NULL
+14,"Beth Elohim Synagogue",1794,f14w,w14a,window,shutter,,shutter,4,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14s,w14a,window,shutter,,shutter,12,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14s,w14a,window,shutter,,shutter,10,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,w14a,window,shutter,,shutter,12,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,w14a,window,shutter,,shutter,10,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,w14a,window,shutter,,shutter,4,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14d,roofline,"window sill",,"window sill: ",16,1794,23,"Charleston, United States",32.782300,-79.932732,NULL,NULL,NULL
+14,"Beth Elohim Synagogue",1794,f14w,w14a,window,"window sill",,"window sill",2,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14s,w14a,window,"window sill",,"window sill",6,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14s,w14a,window,"window sill",,"window sill",5,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,w14a,window,"window sill",,"window sill",6,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,w14a,window,"window sill",,"window sill",5,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,w14a,window,"window sill",,"window sill",2,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,w14b,window,keystone,plain,"keystone: plain",3,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,w14b,window,"window frame",round-headed,"window frame: round-headed",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,w14b,window,"window frame","rectangular ","window frame: rectangular ",2,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,w14b,window,window,"wall window","window: wall window",3,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,w14b,window,shutter,,shutter,2,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,w14b,window,"window sill",,"window sill",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14a,roofline,"window frame",oculus,"window frame: oculus",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14b,roofline,"window frame",oculus,"window frame: oculus",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,r14b,roofline,"window frame",oculus,"window frame: oculus",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14a,roofline,architrave,simple,"architrave: simple",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14b,roofline,architrave,simple,"architrave: simple",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,r14b,roofline,architrave,simple,"architrave: simple",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14a,roofline,window,"gable window","window: gable window",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14b,roofline,window,"gable window","window: gable window",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,r14b,roofline,window,"gable window","window: gable window",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,w14d,window,window,"wall window","window: wall window",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,w14d,window,"window frame",fan,"window frame: fan",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+34,"Touro Synagogue",1763,f34ei,r34a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34ni,r34a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34s,r34a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,r34a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34eii,r34b,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34nii,r34b,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wii,r34b,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+0,"Bevis Marks Synagogue",1701,f0w,r0a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,r0a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,r0a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,r0a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,r0a,roofline,parapet,plain,"parapet: plain",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,r0a,roofline,parapet,plain,"parapet: plain",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,r0a,roofline,parapet,plain,"parapet: plain",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,r0a,roofline,parapet,plain,"parapet: plain",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,r43a,roofline,parapet,"shaped gable","parapet: shaped gable",3,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43e,r43a,roofline,parapet,"shaped gable","parapet: shaped gable",3,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,r43a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43e,r43a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+137,"Neveh Shalom",1612,f137w,r137a,roofline,roof,"stepped gable","roof: stepped gable",1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137e,r137a,roofline,roof,"stepped gable","roof: stepped gable",1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7n,r7b,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7s,r7b,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7e,r7b,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,r7a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,r7a,roofline,pediment,triangular,"pediment: triangular",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,r7a,roofline,cornice,"raking cornice","cornice: raking cornice",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,r7a,roofline,"window frame",circular,"window frame: circular",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+17,"Berakha ve Shalom Synagogue",1685,f17w,r17a,roofline,roof,"Dutch gable","roof: Dutch gable",1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,NULL,NULL,NULL
+17,"Berakha ve Shalom Synagogue",1685,f17e,r17a,roofline,roof,"Dutch gable","roof: Dutch gable",1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,r4a,roofline,cornice,"classical cornice","cornice: classical cornice",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,r4a,roofline,cornice,"classical cornice","cornice: classical cornice",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,r4a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,r4a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,r4a,roofline,balustrade,,balustrade,2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,r4a,roofline,balustrade,,balustrade,2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,r4a,roofline,pedestal,,pedestal,4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,r4a,roofline,pedestal,,pedestal,4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,r4a,roofline,parapet,plain,"parapet: plain",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,r4a,roofline,parapet,plain,"parapet: plain",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,r4a,roofline,"sculpted ornament",vase,"sculpted ornament: vase",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,r4a,roofline,"sculpted ornament",vase,"sculpted ornament: vase",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,r4b,roofline,cornice,"classical cornice","cornice: classical cornice",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,r4b,roofline,cornice,"classical cornice","cornice: classical cornice",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,r4b,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,r4b,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,r4b,roofline,balustrade,,balustrade,4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,r4b,roofline,balustrade,,balustrade,4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,r4b,roofline,pedestal,,pedestal,6,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,r4b,roofline,pedestal,,pedestal,6,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,r4b,roofline,parapet,plain,"parapet: plain",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,r4b,roofline,parapet,plain,"parapet: plain",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,r4b,roofline,"sculpted ornament",vase,"sculpted ornament: vase",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,r4b,roofline,"sculpted ornament",vase,"sculpted ornament: vase",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+146,"High German synagogue",1648,f146n,r146a,roofline,parapet,"stepped gable","parapet: stepped gable",3,1648,1,"Amsterdam, Netherlands",52.367887,4.901825,87,"Agt, 1974",20
+146,"High German synagogue",1648,f146s,r146a,roofline,parapet,"stepped gable","parapet: stepped gable",3,1648,1,"Amsterdam, Netherlands",52.367887,4.901825,87,"Agt, 1974",20
+11,"Nieuwe Synagoge",1752,f11n,r11a,roofline,"sculpted ornament",,"sculpted ornament",2,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,r11a,roofline,"sculpted ornament",,"sculpted ornament",2,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",NULL
+11,"Nieuwe Synagoge",1752,f11n,r11a,roofline,pedestal,,pedestal,4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,r11a,roofline,pedestal,,pedestal,4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",NULL
+11,"Nieuwe Synagoge",1752,f11n,r11a,roofline,balustrade,,balustrade,4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,r11a,roofline,balustrade,,balustrade,4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",NULL
+11,"Nieuwe Synagoge",1752,f11n,r11a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,r11a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",NULL
+11,"Nieuwe Synagoge",1752,f11n,r11a,roofline,pediment,scrolled,"pediment: scrolled",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,r11a,roofline,pediment,scrolled,"pediment: scrolled",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",NULL
+14,"Beth Elohim Synagogue",1794,f14w,r14a,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14a,roofline,pediment,triangular,"pediment: triangular",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14a,roofline,cornice,"raking cornice","cornice: raking cornice",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14b,roofline,roof,gable,"roof: gable",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,r14b,roofline,roof,gable,"roof: gable",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,r14b,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,r14b,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,r14c,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1794,23,"Charleston, United States",32.782300,-79.932732,NULL,NULL,NULL
+14,"Beth Elohim Synagogue",1794,f14s,r14c,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1794,23,"Charleston, United States",32.782300,-79.932732,NULL,NULL,NULL
+14,"Beth Elohim Synagogue",1794,f14w,r14d,roofline,plinth,,"plinth: ",2,1794,23,"Charleston, United States",32.782300,-79.932732,NULL,NULL,NULL
+14,"Beth Elohim Synagogue",1794,f14w,r14d,roofline,cornice,"element cap cornice","cornice: element cap cornice",1,1794,23,"Charleston, United States",32.782300,-79.932732,NULL,NULL,NULL
+14,"Beth Elohim Synagogue",1794,f14w,r14d,roofline,cornice,"roofline cornice","cornice: roofline cornice",1,1794,23,"Charleston, United States",32.782300,-79.932732,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,e0a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,e0a,entrance,architrave,simple,"architrave: simple",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,e0a,entrance,console,scrolled,"console: scrolled",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,e0a,entrance,plinth,square,"plinth: square",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,e0a,entrance,pediment,segmental,"pediment: segmental",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,e0a,entrance,tympanum,panelled,"tympanum: panelled",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,e0a,entrance,door,"double panelled","door: double panelled",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,e0a,entrance,cornice,"element cap cornice","cornice: element cap cornice",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,e0a,entrance,keystone,panelled,"keystone: panelled",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,e4a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,e4a,entrance,architrave,simple,"architrave: simple",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,e4a,entrance,plinth,square,"plinth: square",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,e4a,entrance,capital,tuscan,"capital: tuscan",2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,e4a,entrance,"column shaft",smooth,"column shaft: smooth",2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,e4a,entrance,base,attic,"base: attic",2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,e4a,entrance,cornice,"classical cornice","cornice: classical cornice",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,e4a,entrance,frieze,,frieze,1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,e4a,entrance,door,"double panelled","door: double panelled",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+38,"Zur Israel Synagogue",1641,f38e,e38a,entrance,"door frame",flat-headed,"door frame: flat-headed",6,1641,2,"Recife, Brazil",-8.06131,-34.87132,49,"Cunha, 2007",42
+38,"Zur Israel Synagogue",1641,f38e,e38a,entrance,architrave,,architrave,6,1641,2,"Recife, Brazil",-8.06131,-34.87132,49,"Cunha, 2007",42
+33,"Mill Street Synagogue, Shearith Israel I",1730,f33n,e33a,entrance,architrave,,architrave,1,1730,24,"New York, United States",40.705016,-74.010199,8,"Stiefel, 2014",240
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,stoop,"square, 3 steps","stoop: square, 3 steps",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,door,"double panelled","door: double panelled",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,entablature,,entablature,4,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,pilaster,,pilaster,8,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,"engaged column",smooth,"engaged column: smooth",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,"column shaft",smooth,"column shaft: smooth",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,capital,ionic,"capital: ionic",4,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,capital,tuscan,"capital: tuscan",8,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,base,attic,"base: attic",4,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,plinth,square,"plinth: square",4,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,arch,round,"arch: round",4,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,cornice,"element cap cornice","cornice: element cap cornice",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,cornice,"raking cornice","cornice: raking cornice",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,pediment,triangular,"pediment: triangular",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wi,e34a,entrance,tympanum,sunburst,"tympanum: sunburst",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wii,e34b,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wii,e34b,entrance,door,"single panelled","door: single panelled",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wii,e34b,entrance,architrave,simple,"architrave: simple",2,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wii,e34b,entrance,cornice,"element cap cornice","cornice: element cap cornice",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wii,e34b,entrance,cornice,"raking cornice","cornice: raking cornice",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wii,e34b,entrance,pediment,triangular,"pediment: triangular",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wii,e34b,entrance,stoop,"square, 3 steps","stoop: square, 3 steps",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+0,"Bevis Marks Synagogue",1701,f0w,e0a,entrance,stoop,"rectangle, 3 step","stoop: rectangle, 3 step",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+1,"Creechurch Lane Synagogue",1657,f1n,e1a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1657,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+1,"Creechurch Lane Synagogue",1657,f1n,e1a,entrance,door,,door,1,1657,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,e2a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,e2a,entrance,door,"double panelled","door: double panelled",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,e2a,entrance,"window frame",fan,"window frame: fan",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,e2a,entrance,bench,,bench,2,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,e2a,entrance,"column shaft",,"column shaft",2,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,e2a,entrance,base,,base,2,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,e2a,entrance,architrave,,architrave,1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,e2a,entrance,pediment,,pediment,1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,e2a,entrance,stoop,,stoop,1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,e2a,entrance,roof,,roof,1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,e2a,entrance,cornice,,cornice,1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2e,e2b,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2e,e2b,entrance,door,"single panelled","door: single panelled",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,e43a,entrance,"engaged column",compound,"engaged column: compound",2,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,e43a,entrance,capital,moulded,"capital: moulded",2,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,e43a,entrance,base,attic,"base: attic",2,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,e43a,entrance,plinth,square,"plinth: square",2,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,e43a,entrance,"door frame",round-headed,"door frame: round-headed",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,e43a,entrance,door,"double panelled","door: double panelled",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,e43a,entrance,architrave,simple,"architrave: simple",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,e43a,entrance,entablature,,entablature,1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,e43a,entrance,frieze,,frieze,1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,e43a,entrance,cornice,"element cap cornice","cornice: element cap cornice",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,e43a,entrance,spandrel,,spandrel,2,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43s,e43b,entrance,"door frame",,"door frame",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+22,"Great Synagogue [Moses Hart's Shul] (second, near Duke's Place)",1722,f22n,e22a,entrance,"door frame",,"door frame",2,1722,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",61
+133,"Great Synagogue (Duke's Place, enlargement)",1766,f133n,e133a,entrance,"door frame",,"door frame",1,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",66
+133,"Great Synagogue (Duke's Place, enlargement)",1766,f133n,e133b,entrance,"door frame",,"door frame",1,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",66
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,e31a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,e31a,entrance,door,"single panelled","door: single panelled",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,e31a,entrance,architrave,simple,"architrave: simple",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,e31a,entrance,"blind arch",round,"blind arch: round",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,e31b,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,e31b,entrance,door,"single panelled","door: single panelled",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,e31b,entrance,architrave,simple,"architrave: simple",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,e31b,entrance,"blind arch",round,"blind arch: round",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31n,e31c,entrance,"door frame",,"door frame",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31w,e31d,entrance,"door frame",,"door frame",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",73
+31,"Great Synagogue (third, near Duke's Place)",1790,f31w,e31e,entrance,"door frame",,"door frame",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",73
+31,"Great Synagogue (third, near Duke's Place)",1790,f31n,e31c,entrance,architrave,simple,"architrave: simple",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31n,e31c,entrance,pediment,triangular,"pediment: triangular",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31n,e31c,entrance,console,,console,2,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31n,e31c,entrance,"blind arch",round,"blind arch: round",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+31,"Great Synagogue (third, near Duke's Place)",1790,f31n,e31c,entrance,stoop,,stoop,1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+137,"Neveh Shalom",1612,f137w,e137a,entrance,door,"single panelled","door: single panelled",2,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137e,e137a,entrance,door,"single panelled","door: single panelled",2,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137w,e137a,entrance,"door frame",flat-headed,"door frame: flat-headed",2,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137e,e137a,entrance,"door frame",flat-headed,"door frame: flat-headed",2,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137w,e137b,entrance,door,"single panelled","door: single panelled",1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137w,e137b,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137w,e137c,entrance,door,"single panelled","door: single panelled",1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137w,e137c,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,e6a,entrance,"door frame",round-headed,"door frame: round-headed",1,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,e6a,entrance,door,"double panelled","door: double panelled",1,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,e6a,entrance,keystone,,keystone,1,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,e6b,entrance,"door frame",flat-headed,"door frame: flat-headed",2,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,e6b,entrance,door,"single panelled","door: single panelled",2,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,e6b,entrance,stoop,,stoop,2,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,e7a,entrance,door,"double panelled","door: double panelled",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,e7a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,e7a,entrance,architrave,,architrave,1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,e7a,entrance,console,,console,2,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,e7a,entrance,entablature,,entablature,1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,e7a,entrance,"sculpted ornament",festoon,"sculpted ornament: festoon",2,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,e7a,entrance,pilaster,,pilaster,2,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,e7a,entrance,"window frame",circular,"window frame: circular",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,e7a,entrance,cornice,"element cap cornice","cornice: element cap cornice",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,NULL,NULL,NULL
+17,"Berakha ve Shalom Synagogue",1685,f17n,e17a,entrance,door,,door,1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,8,"Stiefel, 2014",233
+17,"Berakha ve Shalom Synagogue",1685,f17s,e17a,entrance,door,,door,1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,8,"Stiefel, 2014",233
+17,"Berakha ve Shalom Synagogue",1685,f17n,e17a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,8,"Stiefel, 2014",233
+17,"Berakha ve Shalom Synagogue",1685,f17s,e17a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,8,"Stiefel, 2014",233
+17,"Berakha ve Shalom Synagogue",1685,f17n,e17a,entrance,stoop,"semicircle steps","stoop: semicircle steps",1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,8,"Stiefel, 2014",233
+17,"Berakha ve Shalom Synagogue",1685,f17s,e17a,entrance,stoop,"semicircle steps","stoop: semicircle steps",1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,8,"Stiefel, 2014",233
+17,"Berakha ve Shalom Synagogue",1685,f17w,e17b,entrance,"door frame",flat-headed,"door frame: flat-headed",2,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,15,"Böhm, 1979",102
+17,"Berakha ve Shalom Synagogue",1685,f17w,e17b,entrance,door,,door,2,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,15,"Böhm, 1979",102
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,e36a,entrance,door,"double panelled","door: double panelled",1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,e36a,entrance,door,"double panelled","door: double panelled",1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,e36a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,e36a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,e36a,entrance,"window frame",fan,"window frame: fan",1,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,e36a,entrance,"window frame",fan,"window frame: fan",1,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,e36a,entrance,architrave,simple,"architrave: simple",1,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,e36a,entrance,architrave,simple,"architrave: simple",1,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,e36a,entrance,cornice,"element cap cornice","cornice: element cap cornice",1,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,e36a,entrance,cornice,"element cap cornice","cornice: element cap cornice",1,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,e36a,entrance,pilaster,,pilaster,2,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,e36a,entrance,pilaster,,pilaster,2,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,e36a,entrance,capital,tuscan,"capital: tuscan",2,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,e36a,entrance,capital,tuscan,"capital: tuscan",2,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,e36a,entrance,plinth,square,"plinth: square",2,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,e36a,entrance,plinth,square,"plinth: square",2,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,e36a,entrance,stoop,"semicircle steps","stoop: semicircle steps",1,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,e36a,entrance,stoop,"semicircle steps","stoop: semicircle steps",1,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36w,e36b,entrance,door,"double panelled","door: double panelled",1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36w,e36b,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36w,e36b,entrance,architrave,simple,"architrave: simple",1,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36w,e36b,entrance,"window frame",fan,"window frame: fan",1,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+134,"Honen Dalim Synagogue II",1773,f134w,e134a,entrance,"door frame",round-headed,"door frame: round-headed",1,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134w,e134a,entrance,architrave,simple,"architrave: simple",1,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134s,e134b,entrance,"door frame",round-headed,"door frame: round-headed",1,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134s,e134b,entrance,architrave,simple,"architrave: simple",1,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,e39a,entrance,door,"double panelled","door: double panelled",1,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,e39a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,e39a,entrance,"window frame",fan,"window frame: fan",1,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,e39a,entrance,roof,gable,"roof: gable",1,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,e39a,entrance,pediment,triangular,"pediment: triangular",1,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,e39a,entrance,stoop,,stoop,1,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,e39a,entrance,"column shaft",smooth,"column shaft: smooth",4,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,e39a,entrance,capital,tuscan,"capital: tuscan",4,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,f39w,e39a,entrance,entablature,,entablature,1,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,e4a,entrance,cornice,"element cap cornice","cornice: element cap cornice",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,e4b,entrance,door,"double panelled","door: double panelled",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,e4b,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,e4b,entrance,"window frame","rectangular ","window frame: rectangular ",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,e4c,entrance,door,false,"door: false",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,e4c,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,e4c,entrance,"window frame","rectangular ","window frame: rectangular ",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,e4d,entrance,door,"double panelled","door: double panelled",NULL,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4s,e4d,entrance,door,"double panelled","door: double panelled",NULL,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4n,e4d,entrance,"door frame",flat-headed,"door frame: flat-headed",NULL,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4s,e4d,entrance,"door frame",flat-headed,"door frame: flat-headed",NULL,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+11,"Nieuwe Synagoge",1752,f11n,e11a,entrance,stoop,"rounded, 3 steps","stoop: rounded, 3 steps",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,e11a,entrance,door,"double panelled","door: double panelled",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,e11a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,e11a,entrance,architrave,simple,"architrave: simple",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,e11a,entrance,capital,ionic,"capital: ionic",2,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,e11a,entrance,base,attic,"base: attic",2,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,e11a,entrance,"column shaft",smooth,"column shaft: smooth",2,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,e11a,entrance,entablature,,entablature,1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,e11a,entrance,frieze,,frieze,1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,e11a,entrance,cornice,"classical cornice","cornice: classical cornice",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,e11a,entrance,pediment,scrolled,"pediment: scrolled",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,e11a,entrance,plinth,"plinth block","plinth: plinth block",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+14,"Beth Elohim Synagogue",1794,f14w,e14a,entrance,"window frame",fan,"window frame: fan",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,e14a,entrance,architrave,simple,"architrave: simple",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,e14a,entrance,"door frame",flat-headed,"door frame: flat-headed",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,e14a,entrance,door,"double panelled","door: double panelled",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+0,"Bevis Marks Synagogue",1701,f0w,facade_elem,facade,plinth,square,"plinth: square",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,facade_elem,facade,band-course,moulded,"band-course: moulded",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,facade_elem,facade,plinth,square,"plinth: square",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,facade_elem,facade,band-course,moulded,"band-course: moulded",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0n,facade_elem,facade,quoin,"in-and-out bond","quoin: in-and-out bond",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0w,facade_elem,facade,quoin,"in-and-out bond","quoin: in-and-out bond",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,facade_elem,facade,plinth,square,"plinth: square",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,facade_elem,facade,band-course,moulded,"band-course: moulded",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,facade_elem,facade,plinth,square,"plinth: square",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,facade_elem,facade,band-course,moulded,"band-course: moulded",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0s,facade_elem,facade,quoin,"in-and-out bond","quoin: in-and-out bond",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,f0e,facade_elem,facade,quoin,"in-and-out bond","quoin: in-and-out bond",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+1,"Creechurch Lane Synagogue",1657,f1n,facade_elem,facade,"window frame",,"window frame",2,1657,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+1,"Creechurch Lane Synagogue",1657,f1n,facade_elem,facade,"window frame",,"window frame",3,1657,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+1,"Creechurch Lane Synagogue",1657,f1n,facade_elem,facade,balcony,,balcony,1,1657,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+1,"Creechurch Lane Synagogue",1657,f1s,facade_elem,facade,"window frame",,"window frame",3,1657,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+1,"Creechurch Lane Synagogue",1657,f1s,facade_elem,facade,wall,,wall,1,1657,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+1,"Creechurch Lane Synagogue",1657,f1n,facade_elem,facade,wall,,wall,1,1657,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,facade_elem,facade,"window frame",,"window frame",4,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,facade_elem,facade,"window frame",,"window frame",5,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2e,facade_elem,facade,"door frame",,"door frame",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2e,facade_elem,facade,door,,door,1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2e,facade_elem,facade,balcony,,balcony,1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2e,facade_elem,facade,"window frame",,"window frame",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2n,facade_elem,facade,wall,,wall,1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2e,facade_elem,facade,wall,,wall,1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+2,"Creechurch Lane Synagogue [1675]",1675,f2s,facade_elem,facade,"window frame",,"window frame",3,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,facade_elem,facade,pilaster,,pilaster,4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,facade_elem,facade,wall,,wall,1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,facade_elem,facade,base,"buttress (small) ","base: buttress (small) ",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4w,facade_elem,facade,plinth,"plinth course","plinth: plinth course",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,facade_elem,facade,pilaster,,pilaster,4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,facade_elem,facade,wall,,wall,1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,facade_elem,facade,base,"buttress (small) ","base: buttress (small) ",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4n,facade_elem,facade,plinth,"plinth course","plinth: plinth course",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,facade_elem,facade,pilaster,,pilaster,4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,facade_elem,facade,wall,,wall,1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,facade_elem,facade,base,"buttress (small) ","base: buttress (small) ",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4s,facade_elem,facade,plinth,"plinth course","plinth: plinth course",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,facade_elem,facade,pilaster,,pilaster,4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,facade_elem,facade,wall,,wall,1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,facade_elem,facade,base,"buttress (small) ","base: buttress (small) ",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,facade_elem,facade,plinth,"plinth course","plinth: plinth course",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,facade_elem,facade,door,,door,1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,facade_elem,facade,stoop,"square, 3 steps","stoop: square, 3 steps",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,facade_elem,facade,balcony,,balcony,2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,facade_elem,facade,roof,,roof,2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e,facade_elem,facade,wall,,wall,2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,f4e1773,facade_elem,facade,pilaster,,pilaster,8,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4e1773,facade_elem,facade,base,"buttress (large)","base: buttress (large)",4,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4e1773,facade_elem,facade,plinth,"plinth course","plinth: plinth course",1,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4e1773,facade_elem,facade,cornice,"classical cornice","cornice: classical cornice",1,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4e1773,facade_elem,facade,wall,,wall,1,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4e1773,facade_elem,facade,roof,,roof,1,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4n,facade_elem,facade,wall,,wall,1,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4s,facade_elem,facade,wall,,wall,1,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4n,facade_elem,facade,cornice,"classical cornice","cornice: classical cornice",1,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4s,facade_elem,facade,cornice,"classical cornice","cornice: classical cornice",1,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,84,"Krabbe and de Room, 2013",94
+4,"Esnoga, Talmud Torah II",1675,f4e1773,facade_elem,facade,"blind arch",round,"blind arch: round",3,1773,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,facade_elem,facade,pilaster,,pilaster,8,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,8,"Stiefel, 2014",221
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,facade_elem,facade,capital,corinthian,"capital: corinthian",8,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,8,"Stiefel, 2014",221
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,facade_elem,facade,base,attic,"base: attic",8,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,8,"Stiefel, 2014",221
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,facade_elem,facade,pedestal,,pedestal,8,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,8,"Stiefel, 2014",221
+6,"Talmud Torah, Portuguese Synagogue I",1639,f6w,facade_elem,facade,band-course,moulded,"band-course: moulded",1,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,8,"Stiefel, 2014",221
+7,"Grote Sjoel (Great Synagogue)",1671,f7n,facade_elem,facade,pilaster,,pilaster,4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7n,facade_elem,facade,cornice,"element cap cornice","cornice: element cap cornice",4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7n,facade_elem,facade,wall,,wall,1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7s,facade_elem,facade,pilaster,,pilaster,4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7s,facade_elem,facade,cornice,"element cap cornice","cornice: element cap cornice",4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7s,facade_elem,facade,wall,,wall,1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7e,facade_elem,facade,pilaster,,pilaster,4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7e,facade_elem,facade,cornice,"element cap cornice","cornice: element cap cornice",4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7e,facade_elem,facade,wall,,wall,1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,facade_elem,facade,pilaster,,pilaster,4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,facade_elem,facade,cornice,"element cap cornice","cornice: element cap cornice",4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",NULL
+7,"Grote Sjoel (Great Synagogue)",1671,f7w,facade_elem,facade,wall,,wall,1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",NULL
+9,"Obbene Shul Synagogue",1686,f9w,facade_elem,facade,wall,,wall,1,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,NULL,NULL,NULL
+11,"Nieuwe Synagoge",1752,f11n,facade_elem,facade,pilaster,,pilaster,2,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11n,facade_elem,facade,frontispiece,,frontispiece,1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,f11e,facade_elem,facade,pilaster,,pilaster,2,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+14,"Beth Elohim Synagogue",1794,f14w,facade_elem,facade,band-course,moulded,"band-course: moulded",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,facade_elem,facade,band-course,moulded,"band-course: moulded",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,facade_elem,facade,band-course,moulded,"band-course: moulded",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14s,facade_elem,facade,band-course,moulded,"band-course: moulded",1,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,facade_elem,facade,quoin,"in-and-out bond","quoin: in-and-out bond",4,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14e,facade_elem,facade,quoin,"in-and-out bond","quoin: in-and-out bond",2,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14n,facade_elem,facade,quoin,"in-and-out bond","quoin: in-and-out bond",3,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14s,facade_elem,facade,quoin,"in-and-out bond","quoin: in-and-out bond",3,1794,23,"Charleston, United States",32.782300,-79.932732,94,"Ackermann, 2007",164
+14,"Beth Elohim Synagogue",1794,f14w,facade_elem,facade,wall,,wall,3,1794,23,"Charleston, United States",32.782300,-79.932732,8,"Stiefel, 2014",266
+14,"Beth Elohim Synagogue",1794,f14e,facade_elem,facade,wall,,wall,1,1794,23,"Charleston, United States",32.782300,-79.932732,8,"Stiefel, 2014",266
+14,"Beth Elohim Synagogue",1794,f14n,facade_elem,facade,wall,,wall,2,1794,23,"Charleston, United States",32.782300,-79.932732,8,"Stiefel, 2014",266
+14,"Beth Elohim Synagogue",1794,f14s,facade_elem,facade,wall,,wall,2,1794,23,"Charleston, United States",32.782300,-79.932732,8,"Stiefel, 2014",266
+17,"Berakha ve Shalom Synagogue",1685,f17n,facade_elem,facade,wall,,wall,1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,NULL,NULL,NULL
+17,"Berakha ve Shalom Synagogue",1685,f17s,facade_elem,facade,wall,,wall,1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,NULL,NULL,NULL
+17,"Berakha ve Shalom Synagogue",1685,f17w,facade_elem,facade,wall,,wall,1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,NULL,NULL,NULL
+17,"Berakha ve Shalom Synagogue",1685,f17e,facade_elem,facade,wall,,wall,1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,NULL,NULL,NULL
+31,"Great Synagogue (third, near Duke's Place)",1790,f31e,facade_elem,facade,band-course,moulded,"band-course: moulded",1,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",75
+34,"Touro Synagogue",1763,f34wi,facade_elem,facade,band-course,"running bond","band-course: running bond",1,1763,25,"Newport, United States",41.489444,-71.311944,8,"Stiefel, 2014",256
+34,"Touro Synagogue",1763,f34wi,facade_elem,facade,plinth,square,"plinth: square",1,1763,25,"Newport, United States",41.489444,-71.311944,8,"Stiefel, 2014",256
+34,"Touro Synagogue",1763,f34ei,facade_elem,facade,band-course,"running bond","band-course: running bond",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 6"
+34,"Touro Synagogue",1763,f34ei,facade_elem,facade,plinth,square,"plinth: square",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 6"
+34,"Touro Synagogue",1763,f34ni,facade_elem,facade,band-course,"running bond","band-course: running bond",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 7"
+34,"Touro Synagogue",1763,f34ni,facade_elem,facade,plinth,square,"plinth: square",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 7"
+34,"Touro Synagogue",1763,f34s,facade_elem,facade,band-course,"running bond","band-course: running bond",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 5"
+34,"Touro Synagogue",1763,f34s,facade_elem,facade,plinth,square,"plinth: square",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 5"
+34,"Touro Synagogue",1763,f34nii,facade_elem,facade,band-course,"common bond","band-course: common bond",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 7"
+34,"Touro Synagogue",1763,f34nii,facade_elem,facade,plinth,square,"plinth: square",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 7"
+34,"Touro Synagogue",1763,f34wii,facade_elem,facade,band-course,"common bond","band-course: common bond",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34wii,facade_elem,facade,plinth,square,"plinth: square",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 4"
+34,"Touro Synagogue",1763,f34eii,facade_elem,facade,band-course,"common bond","band-course: common bond",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 6"
+34,"Touro Synagogue",1763,f34eii,facade_elem,facade,plinth,square,"plinth: square",1,1763,25,"Newport, United States",41.489444,-71.311944,53,"HABS, 1993","Sheet 6"
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,facade_elem,facade,wall,,wall,1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36s,facade_elem,facade,plinth,,plinth,1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,facade_elem,facade,wall,,wall,1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36n,facade_elem,facade,plinth,,plinth,1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+36,"Tzedek ve-Shalom Synagogue",1735,f36w,facade_elem,facade,wall,,wall,1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",NULL
+36,"Tzedek ve-Shalom Synagogue",1735,f36w,facade_elem,facade,plinth,,plinth,1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",NULL
+36,"Tzedek ve-Shalom Synagogue",1735,f36e,facade_elem,facade,wall,,wall,1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",NULL
+36,"Tzedek ve-Shalom Synagogue",1735,f36e,facade_elem,facade,plinth,,plinth,1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",NULL
+39,"Neveh Shalom Synagogue",1704,f39w,facade_elem,facade,band-course,"running bond","band-course: running bond",1,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,8,"Stiefel, 2014",236
+39,"Neveh Shalom Synagogue",1704,f39w,facade_elem,facade,wall,,wall,1,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,8,"Stiefel, 2014",236
+43,"Mikve Israel Synagogue (IV)",1732,f43w,facade_elem,facade,plinth,square,"plinth: square",4,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,facade_elem,facade,"engaged column",smooth,"engaged column: smooth",4,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,f43w,facade_elem,facade,capital,moulded,"capital: moulded",4,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",36
+134,"Honen Dalim Synagogue II",1773,f134w,facade_elem,facade,wall,,wall,1,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134s,facade_elem,facade,wall,,wall,1,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134n,facade_elem,facade,wall,,wall,1,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134e,facade_elem,facade,wall,,wall,1,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,NULL,NULL,NULL
+134,"Honen Dalim Synagogue II",1773,f134e,facade_elem,facade,quoin,"in-and-out bond","quoin: in-and-out bond",2,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,8,"Stiefel, 2014",252
+134,"Honen Dalim Synagogue II",1773,f134w,facade_elem,facade,quoin,"in-and-out bond","quoin: in-and-out bond",2,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,8,"Stiefel, 2014",252
+134,"Honen Dalim Synagogue II",1773,f134n,facade_elem,facade,quoin,"in-and-out bond","quoin: in-and-out bond",2,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,8,"Stiefel, 2014",252
+134,"Honen Dalim Synagogue II",1773,f134s,facade_elem,facade,quoin,"in-and-out bond","quoin: in-and-out bond",2,1773,17,"Orangjestad, St. Eustatius",17.482597,-62.981295,8,"Stiefel, 2014",252
+137,"Neveh Shalom",1612,f137w,facade_elem,facade,wall,,wall,1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+137,"Neveh Shalom",1612,f137e,facade_elem,facade,wall,,wall,1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",NULL
+146,"High German synagogue",1648,f146e,facade_elem,facade,window,dormer,"window: dormer",1,1648,1,"Amsterdam, Netherlands",52.367887,4.901825,87,"Agt, 1974",20
+146,"High German synagogue",1648,f146w,facade_elem,facade,window,dormer,"window: dormer",1,1648,1,"Amsterdam, Netherlands",52.367887,4.901825,87,"Agt, 1974",20
+146,"High German synagogue",1648,f146n,facade_elem,facade,window,"wall window","window: wall window",8,1648,1,"Amsterdam, Netherlands",52.367887,4.901825,87,"Agt, 1974",20
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,c133a,ceiling,"window frame","rectangular ","window frame: rectangular ",2,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,c133b,ceiling,"window frame","rectangular ","window frame: rectangular ",4,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,c133a,ceiling,window,skylight,"window: skylight",2,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,c133b,ceiling,window,skylight,"window: skylight",4,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+11,"Nieuwe Synagoge",1752,s11a,c11a,ceiling,window,skylight,"window: skylight",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,s11a,c11a,ceiling,ceiling,domed,"ceiling: domed",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+34,"Touro Synagogue",1763,s34a,if34a,interior_framing,"column shaft",smooth,"column shaft: smooth",12,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 2"
+34,"Touro Synagogue",1763,s34a,if34b,interior_framing,"column shaft",smooth,"column shaft: smooth",12,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 3"
+43,"Mikve Israel Synagogue (IV)",1732,s43a,if34b,interior_framing,"column shaft",smooth,"column shaft: smooth",4,1866,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",28
+0,"Bevis Marks Synagogue",1701,s0a,if0a,interior_framing,"column shaft",smooth,"column shaft: smooth",10,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,s0a,if0b,interior_framing,"column shaft","interlocked compound pier","column shaft: interlocked compound pier",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+2,"Creechurch Lane Synagogue [1675]",1675,s2a,if2a,interior_framing,"column shaft",,"column shaft",8,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",61
+43,"Mikve Israel Synagogue (IV)",1732,s43a,if43a,interior_framing,"column shaft",smooth,"column shaft: smooth",4,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",26
+43,"Mikve Israel Synagogue (IV)",1732,s43a,if43b,interior_framing,"column shaft",smooth,"column shaft: smooth",2,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",26
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,if133a,interior_framing,"column shaft",smooth,"column shaft: smooth",2,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",66
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,if133b,interior_framing,"column shaft",smooth,"column shaft: smooth",8,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+31,"Great Synagogue (third, near Duke's Place)",1790,s31a,if31a,interior_framing,"column shaft",smooth,"column shaft: smooth",8,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",73
+136,"Beth Jacob",1614,s136a,if136a,interior_framing,"column shaft",,"column shaft",1,1614,1,"Amsterdam, Netherlands",52.36859,4.900492,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,if6a,interior_framing,"column shaft",smooth,"column shaft: smooth",10,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,s7a,if7a,interior_framing,"column shaft",smooth,"column shaft: smooth",4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",27
+9,"Obbene Shul Synagogue",1686,s9a,if9a,interior_framing,"column shaft",smooth,"column shaft: smooth",5,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,87,"Agt, 1974",25
+17,"Berakha ve Shalom Synagogue",1685,s17a,if17a,interior_framing,"column shaft",,"column shaft",4,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,15,"Böhm, 1979",101
+36,"Tzedek ve-Shalom Synagogue",1735,s36a,if36a,interior_framing,"column shaft",octogonal,"column shaft: octogonal",12,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+39,"Neveh Shalom Synagogue",1704,s39a,if39a,interior_framing,"column shaft",smooth,"column shaft: smooth",6,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,96,"Andrade, 1941",41
+4,"Esnoga, Talmud Torah II",1675,s4a,if4a,interior_framing,"column shaft",smooth,"column shaft: smooth",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,s4a,if4b,interior_framing,"column shaft",smooth,"column shaft: smooth",12,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+11,"Nieuwe Synagoge",1752,s11a,if11a,interior_framing,"column shaft",smooth,"column shaft: smooth",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+14,"Beth Elohim Synagogue",1794,s14a,if14a,interior_framing,"column shaft",smooth,"column shaft: smooth",12,1794,23,"Charleston, South Carolina",32.782300,-79.932732,94,"Ackermann, 2007",171
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,if6b,interior_framing,pier,"railing section","pier: railing section",20,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+31,"Great Synagogue (third, near Duke's Place)",1790,s31a,if31a,interior_framing,cornice,crown-moulding,"cornice: crown-moulding",8,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",73
+0,"Bevis Marks Synagogue",1701,s0a,section_elem,section,cornice,"element cap cornice","cornice: element cap cornice",3,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+34,"Touro Synagogue",1763,s34a,section_elem,section,cornice,"element cap cornice","cornice: element cap cornice",3,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 17"
+34,"Touro Synagogue",1763,s34a,section_elem,section,cornice,"element cap cornice","cornice: element cap cornice",4,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 17"
+2,"Creechurch Lane Synagogue [1675]",1675,s2a,section_elem,section,cornice,"element cap cornice","cornice: element cap cornice",3,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",61
+7,"Grote Sjoel (Great Synagogue)",1671,s7a,section_elem,section,cornice,"classical cornice","cornice: classical cornice",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",27
+4,"Esnoga, Talmud Torah II",1675,s4a,section_elem,section,cornice,"element cap cornice","cornice: element cap cornice",2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,80,"Vlaardingerbroek, ed., 2013",64
+14,"Beth Elohim Synagogue",1794,s14a,section_elem,section,cornice,"element cap cornice","cornice: element cap cornice",2,1794,23,"Charleston, South Carolina",32.782300,-79.932732,94,"Ackermann, 2007",171
+34,"Touro Synagogue",1763,s34a,if34a,interior_framing,capital,ionic,"capital: ionic",12,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 2"
+34,"Touro Synagogue",1763,s34a,if34b,interior_framing,capital,corinthian,"capital: corinthian",12,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 3"
+43,"Mikve Israel Synagogue (IV)",1732,s43a,if34b,interior_framing,capital,corinthian,"capital: corinthian",4,1866,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",28
+0,"Bevis Marks Synagogue",1701,s0a,if0a,interior_framing,capital,tuscan,"capital: tuscan",10,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,s0a,if0b,interior_framing,capital,moulded,"capital: moulded",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+2,"Creechurch Lane Synagogue [1675]",1675,s2a,if2a,interior_framing,capital,doric,"capital: doric",8,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",61
+43,"Mikve Israel Synagogue (IV)",1732,s43a,if43a,interior_framing,capital,moulded,"capital: moulded",4,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",26
+43,"Mikve Israel Synagogue (IV)",1732,s43a,if43b,interior_framing,capital,moulded,"capital: moulded",2,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",26
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,if133a,interior_framing,capital,corinthian,"capital: corinthian",2,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",66
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,if133b,interior_framing,capital,doric,"capital: doric",8,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+31,"Great Synagogue (third, near Duke's Place)",1790,s31a,if31a,interior_framing,capital,ionic,"capital: ionic",8,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",73
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,if6a,interior_framing,capital,tuscan,"capital: tuscan",10,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,s7a,if7a,interior_framing,capital,doric,"capital: doric",4,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",27
+9,"Obbene Shul Synagogue",1686,s9a,if9a,interior_framing,capital,doric,"capital: doric",5,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,87,"Agt, 1974",25
+36,"Tzedek ve-Shalom Synagogue",1735,s36a,if36a,interior_framing,capital,doric,"capital: doric",12,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+39,"Neveh Shalom Synagogue",1704,s39a,if39a,interior_framing,capital,square,"capital: square",6,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,96,"Andrade, 1941",41
+4,"Esnoga, Talmud Torah II",1675,s4a,if4a,interior_framing,capital,ionic,"capital: ionic",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,s4a,if4b,interior_framing,capital,ionic,"capital: ionic",12,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+11,"Nieuwe Synagoge",1752,s11a,if11a,interior_framing,capital,ionic,"capital: ionic",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+14,"Beth Elohim Synagogue",1794,s14a,if14a,interior_framing,capital,moulded,"capital: moulded",12,1794,23,"Charleston, South Carolina",32.782300,-79.932732,94,"Ackermann, 2007",171
+0,"Bevis Marks Synagogue",1701,s0a,if0a,interior_framing,plinth,square,"plinth: square",10,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,s0a,if0b,interior_framing,plinth,square,"plinth: square",2,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,s43a,if43a,interior_framing,plinth,square,"plinth: square",4,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",26
+43,"Mikve Israel Synagogue (IV)",1732,s43a,if43b,interior_framing,plinth,square,"plinth: square",2,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",26
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,if133a,interior_framing,plinth,square,"plinth: square",2,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",66
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,if133b,interior_framing,plinth,square,"plinth: square",8,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,if6a,interior_framing,plinth,square,"plinth: square",10,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,s4a,if4a,interior_framing,plinth,square,"plinth: square",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,s4a,if4b,interior_framing,plinth,square,"plinth: square",12,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,s0a,section_elem,section,plinth,,plinth,3,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+31,"Great Synagogue (third, near Duke's Place)",1790,s31a,if31a,interior_framing,entablature,,entablature,16,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",73
+39,"Neveh Shalom Synagogue",1704,s39a,if39a,interior_framing,entablature,,entablature,6,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,96,"Andrade, 1941",41
+34,"Touro Synagogue",1763,s34a,section_elem,section,entablature,,entablature,3,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 14"
+34,"Touro Synagogue",1763,s34a,section_elem,section,entablature,,entablature,4,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 17"
+7,"Grote Sjoel (Great Synagogue)",1671,s7a,section_elem,section,entablature,,entablature,1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",27
+4,"Esnoga, Talmud Torah II",1675,s4a,section_elem,section,entablature,,entablature,2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,80,"Vlaardingerbroek, ed., 2013",64
+43,"Mikve Israel Synagogue (IV)",1732,s43a,section_elem,section,entablature,,entablature,2,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,s0a,section_elem,section,architrave,simple,"architrave: simple",3,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+34,"Touro Synagogue",1763,s34a,c34a,ceiling,ceiling,coved,"ceiling: coved",1,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 18"
+34,"Touro Synagogue",1763,s34a,c34b,ceiling,ceiling,flat,"ceiling: flat",1,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993",NULL
+0,"Bevis Marks Synagogue",1701,s0a,c0a,ceiling,ceiling,flat,"ceiling: flat",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,s0a,c0b,ceiling,ceiling,flat,"ceiling: flat",1,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+2,"Creechurch Lane Synagogue [1675]",1675,s2a,c2a,ceiling,ceiling,coved,"ceiling: coved",1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",61
+43,"Mikve Israel Synagogue (IV)",1732,s43a,c43a,ceiling,ceiling,vaulted,"ceiling: vaulted",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,s43a,c43a,ceiling,ceiling,vaulted,"ceiling: vaulted",1,1876,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",28
+43,"Mikve Israel Synagogue (IV)",1732,s43a,c43b,ceiling,ceiling,beam,"ceiling: beam",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,s43a,c43b,ceiling,ceiling,beam,"ceiling: beam",2,1866,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",28
+43,"Mikve Israel Synagogue (IV)",1732,s43a,c43b,ceiling,ceiling,beam,"ceiling: beam",3,1876,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",28
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,c133a,ceiling,ceiling,coved,"ceiling: coved",1,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,c133b,ceiling,ceiling,coved,"ceiling: coved",1,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+31,"Great Synagogue (third, near Duke's Place)",1790,s31a,c31a,ceiling,ceiling,coved,"ceiling: coved",1,1790,8,"London, England",51.514313,-0.077881,NULL,NULL,NULL
+31,"Great Synagogue (third, near Duke's Place)",1790,s31a,c31a,ceiling,ceiling,beam,"ceiling: beam",1,1790,8,"London, England",51.514313,-0.077881,NULL,NULL,NULL
+137,"Neveh Shalom",1612,s137a,c137a,ceiling,ceiling,beam,"ceiling: beam",1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",204
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,c6a,ceiling,ceiling,vaulted,"ceiling: vaulted",1,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,c6b,ceiling,ceiling,vaulted,"ceiling: vaulted",2,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,s7a,c7a,ceiling,ceiling,vaulted,"ceiling: vaulted",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",25
+7,"Grote Sjoel (Great Synagogue)",1671,s7a,c7b,ceiling,ceiling,beam,"ceiling: beam",2,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",27
+9,"Obbene Shul Synagogue",1686,s9a,c9a,ceiling,ceiling,vaulted,"ceiling: vaulted",1,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,87,"Agt, 1974",25
+36,"Tzedek ve-Shalom Synagogue",1735,s36a,c36a,ceiling,ceiling,vaulted,"ceiling: vaulted",1,1813,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+39,"Neveh Shalom Synagogue",1704,s39a,c39a,ceiling,ceiling,coved,"ceiling: coved",1,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,s4a,c4a,ceiling,ceiling,vaulted,"ceiling: vaulted",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,s4a,c4b,ceiling,ceiling,beam,"ceiling: beam",2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+11,"Nieuwe Synagoge",1752,s11a,c11a,ceiling,ceiling,vaulted,"ceiling: vaulted",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+11,"Nieuwe Synagoge",1752,s11a,c11b,ceiling,ceiling,flat,"ceiling: flat",4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",25
+14,"Beth Elohim Synagogue",1794,s14a,c14a,ceiling,ceiling,vaulted,"ceiling: vaulted",1,1794,23,"Charleston, South Carolina",32.782300,-79.932732,94,"Ackermann, 2007",171
+14,"Beth Elohim Synagogue",1794,s14a,c14b,ceiling,ceiling,flat,"ceiling: flat",2,1794,23,"Charleston, South Carolina",32.782300,-79.932732,94,"Ackermann, 2007",171
+14,"Beth Elohim Synagogue",1794,s14a,c14b,ceiling,ceiling,flat,"ceiling: flat",3,1794,23,"Charleston, South Carolina",32.782300,-79.932732,94,"Ackermann, 2007",171
+43,"Mikve Israel Synagogue (IV)",1732,s43a,c43a,ceiling,vault,"barrel vault","vault: barrel vault",3,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,s43a,c43a,ceiling,vault,"barrel vault","vault: barrel vault",3,1876,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",28
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,c6a,ceiling,vault,"barrel vault","vault: barrel vault",2,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,c6b,ceiling,vault,"groin vault","vault: groin vault",2,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+7,"Grote Sjoel (Great Synagogue)",1671,s7a,c7a,ceiling,vault,"barrel vault","vault: barrel vault",3,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",25
+9,"Obbene Shul Synagogue",1686,s9a,c9a,ceiling,vault,"barrel vault","vault: barrel vault",1,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,87,"Agt, 1974",25
+36,"Tzedek ve-Shalom Synagogue",1735,s36a,c36a,ceiling,vault,"barrel vault","vault: barrel vault",3,1813,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+4,"Esnoga, Talmud Torah II",1675,s4a,c4a,ceiling,vault,"barrel vault","vault: barrel vault",3,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+11,"Nieuwe Synagoge",1752,s11a,c11a,ceiling,vault,"barrel vault","vault: barrel vault",3,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+14,"Beth Elohim Synagogue",1794,s14a,c14a,ceiling,vault,"barrel vault","vault: barrel vault",1,1794,23,"Charleston, South Carolina",32.782300,-79.932732,94,"Ackermann, 2007",171
+0,"Bevis Marks Synagogue",1701,s0a,section_elem,section,frieze,,frieze,3,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+2,"Creechurch Lane Synagogue [1675]",1675,s2a,section_elem,section,paneling,,paneling,2,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",61
+14,"Beth Elohim Synagogue",1794,s14a,section_elem,section,paneling,wainscot,"paneling: wainscot",3,1794,23,"Charleston, South Carolina",32.782300,-79.932732,94,"Ackermann, 2007",171
+34,"Touro Synagogue",1763,s34a,c34a,ceiling,"sculpted ornament",rosette,"sculpted ornament: rosette",5,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 18"
+0,"Bevis Marks Synagogue",1701,s0a,c0a,ceiling,"sculpted ornament",rosette,"sculpted ornament: rosette",11,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,s43a,c43a,ceiling,"sculpted ornament",rosette,"sculpted ornament: rosette",10,1732,6,"Willemstad, Curacao",12.105110,-68.932573,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,s43a,c43a,ceiling,"sculpted ornament",rosette,"sculpted ornament: rosette",10,1876,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",28
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,c133a,ceiling,"sculpted ornament",rosette,"sculpted ornament: rosette",5,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,c133b,ceiling,"sculpted ornament",rosette,"sculpted ornament: rosette",5,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+31,"Great Synagogue (third, near Duke's Place)",1790,s31a,c31a,ceiling,"sculpted ornament",rosette,"sculpted ornament: rosette",7,1790,8,"London, England",51.514313,-0.077881,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,s4a,c4a,ceiling,"sculpted ornament",rosette,"sculpted ornament: rosette",26,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,s0a,section_elem,section,"sculpted ornament",,"sculpted ornament",12,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+34,"Touro Synagogue",1763,s34a,if34a,interior_framing,base,attic,"base: attic",12,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 2"
+34,"Touro Synagogue",1763,s34a,if34b,interior_framing,base,attic,"base: attic",12,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 3"
+43,"Mikve Israel Synagogue (IV)",1732,s43a,if34b,interior_framing,base,attic,"base: attic",4,1866,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",28
+0,"Bevis Marks Synagogue",1701,s0a,if0a,interior_framing,base,attic,"base: attic",10,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+2,"Creechurch Lane Synagogue [1675]",1675,s2a,if2a,interior_framing,base,attic,"base: attic",8,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",61
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,if133a,interior_framing,base,attic,"base: attic",2,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",66
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,if133b,interior_framing,base,attic,"base: attic",8,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+31,"Great Synagogue (third, near Duke's Place)",1790,s31a,if31a,interior_framing,base,attic,"base: attic",8,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",73
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,if6a,interior_framing,base,attic,"base: attic",10,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+9,"Obbene Shul Synagogue",1686,s9a,if9a,interior_framing,base,attic,"base: attic",5,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,87,"Agt, 1974",25
+36,"Tzedek ve-Shalom Synagogue",1735,s36a,if36a,interior_framing,base,attic,"base: attic",12,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+4,"Esnoga, Talmud Torah II",1675,s4a,if4a,interior_framing,base,attic,"base: attic",4,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+4,"Esnoga, Talmud Torah II",1675,s4a,if4b,interior_framing,base,attic,"base: attic",12,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+11,"Nieuwe Synagoge",1752,s11a,if11a,interior_framing,base,,base,4,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+14,"Beth Elohim Synagogue",1794,s14a,if14a,interior_framing,base,attic,"base: attic",12,1794,23,"Charleston, South Carolina",32.782300,-79.932732,94,"Ackermann, 2007",171
+34,"Touro Synagogue",1763,s34a,c34a,ceiling,moulding,guilloche,"moulding: guilloche",4,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 18"
+2,"Creechurch Lane Synagogue [1675]",1675,s2a,section_elem,section,balustrade,,balustrade,1,1675,8,"London, England",51.513685,-0.079298,1,"Samuel, 1924",61
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,section_elem,section,balustrade,,balustrade,2,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,87,"Agt, 1974",8
+9,"Obbene Shul Synagogue",1686,s9a,section_elem,section,balustrade,,balustrade,2,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,NULL,NULL,NULL
+39,"Neveh Shalom Synagogue",1704,s39a,section_elem,section,balustrade,,balustrade,3,1704,15,"Spanish Town, Jamaica",17.996980,-76.952828,NULL,NULL,NULL
+0,"Bevis Marks Synagogue",1701,s0a,section_elem,section,roof,hipped,"roof: hipped",1,1701,8,"London, England",51.514473,-0.078938,55,"Kadish, 2002",9
+34,"Touro Synagogue",1763,s34a,section_elem,section,roof,hipped,"roof: hipped",1,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993",NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,section_elem,section,roof,hipped,"roof: hipped",1,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,8,"Stiefel, 2014",220
+43,"Mikve Israel Synagogue (IV)",1732,s43a,section_elem,section,roof,gable,"roof: gable",3,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",28
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,section_elem,section,roof,hipped,"roof: hipped",2,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",67
+137,"Neveh Shalom",1612,s137a,section_elem,section,roof,"stepped gable","roof: stepped gable",1,1612,1,"Amsterdam, Netherlands",52.368346,4.902987,86,"Zantkuyl, 1970",202
+9,"Obbene Shul Synagogue",1686,s9a,section_elem,section,roof,gable,"roof: gable",1,1686,1,"Amsterdam, Netherlands",52.367139,4.903745,87,"Agt, 1974",25
+7,"Grote Sjoel (Great Synagogue)",1671,s7a,section_elem,section,roof,hipped,"roof: hipped",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",25
+146,"High German synagogue",1648,s146a,section_elem,section,roof,hipped,"roof: hipped",1,1648,1,"Amsterdam, Netherlands",52.367887,4.901825,87,"Agt, 1974",20
+17,"Berakha ve Shalom Synagogue",1685,s17a,section_elem,section,roof,gable,"roof: gable",1,1685,10,"Jodensavanne, Suriname",5.429176,-54.984273,4,"Gallery, 2016",67
+36,"Tzedek ve-Shalom Synagogue",1735,s36a,section_elem,section,roof,hipped,"roof: hipped",1,1735,11,"Paramaribo, Suriname",5.828858,-55.156256,8,"Stiefel, 2014",250
+4,"Esnoga, Talmud Torah II",1675,s4a,section_elem,section,roof,hipped,"roof: hipped",1,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,8,"Stiefel, 2014",228
+11,"Nieuwe Synagoge",1752,s11a,section_elem,section,roof,hipped,"roof: hipped",1,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+14,"Beth Elohim Synagogue",1794,s14a,section_elem,section,roof,gable,"roof: gable",1,1794,23,"Charleston, South Carolina",32.782300,-79.932732,94,"Ackermann, 2007",NULL
+31,"Great Synagogue (third, near Duke's Place)",1790,s31a,if31a,interior_framing,trellis,"standing height","trellis: standing height",8,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",73
+0,"Bevis Marks Synagogue",1701,s0a,section_elem,section,trellis,"seated height","trellis: seated height",3,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+43,"Mikve Israel Synagogue (IV)",1732,s43a,section_elem,section,trellis,"standing height","trellis: standing height",1,1732,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",30
+133,"Great Synagogue (Duke's Place, enlargement)",1766,s133a,section_elem,section,trellis,"standing height","trellis: standing height",2,1766,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",66
+4,"Esnoga, Talmud Torah II",1675,s4a,section_elem,section,trellis,"standing height","trellis: standing height",2,1675,1,"Amsterdam, Netherlands",52.367530,4.905336,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,section_elem,section,trellis,"full height","trellis: full height",2,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,87,"Agt, 1974",8
+7,"Grote Sjoel (Great Synagogue)",1671,s7a,section_elem,section,trellis,"standing height","trellis: standing height",1,1671,1,"Amsterdam, Netherlands",52.367274,4.903893,87,"Agt, 1974",27
+146,"High German synagogue",1648,s146a,section_elem,section,trellis,"full height","trellis: full height",1,1648,1,"Amsterdam, Netherlands",52.367887,4.901825,87,"Agt, 1974",20
+146,"High German synagogue",1648,s146a,section_elem,section,trellis,"standing height","trellis: standing height",4,1648,1,"Amsterdam, Netherlands",52.367887,4.901825,87,"Agt, 1974",20
+11,"Nieuwe Synagoge",1752,s11a,section_elem,section,trellis,"standing height","trellis: standing height",2,1752,1,"Amsterdam, Netherlands",52.367077,4.904008,87,"Agt, 1974",60
+34,"Touro Synagogue",1763,s34a,section_elem,section,trellis,"seated height","trellis: seated height",3,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993",NULL
+34,"Touro Synagogue",1763,s34a,if34b,interior_framing,pedestal,,pedestal,12,1763,25,"Newport, Rhode Island",41.489444,-71.311944,53,"HABS, 1993","Sheet 3"
+43,"Mikve Israel Synagogue (IV)",1732,s43a,if34b,interior_framing,pedestal,,pedestal,4,1866,6,"Willemstad, Curacao",12.105110,-68.932573,21,"Maduro, 1982",28
+31,"Great Synagogue (third, near Duke's Place)",1790,s31a,if31a,interior_framing,pedestal,,pedestal,8,1790,8,"London, England",51.514313,-0.077881,76,"Epstein, 1996",73
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,if6b,interior_framing,pedestal,,pedestal,20,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL
+36,"Tzedek ve-Shalom Synagogue",1735,s36a,if36a,interior_framing,pedestal,,pedestal,12,1854,11,"Paramaribo, Suriname",5.828858,-55.156256,91,"Groll, 2002",374
+0,"Bevis Marks Synagogue",1701,s0a,section_elem,section,pedestal,,pedestal,12,1701,8,"London, England",51.514473,-0.078938,NULL,NULL,NULL
+6,"Talmud Torah, Portuguese Synagogue I",1639,s6a,if6b,interior_framing,corbel,swan-necked,"corbel: swan-necked",20,1639,1,"Amsterdam, Netherlands",52.368577,4.902246,NULL,NULL,NULL

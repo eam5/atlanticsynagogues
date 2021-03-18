@@ -2,8 +2,9 @@
 layout: data-vis
 title: Congregation Timeline
 ---
+<script src="https://unpkg.com/textures@1.2.0/dist/textures.js"></script>
 <style>
-    .svg-container {
+  .svg-container {
         display: inline-block;
         position: relative;
         width: 100%;
@@ -12,11 +13,13 @@ title: Congregation Timeline
         margin: 1rem 0 4rem ;
     }
     .svg-content {
-        /* overflow: visible; */
+         overflow-y: visible; 
+        display: block;
         /* display: inline-block;
         position: absolute;
         top: 0;
         left: 0; */
+        margin: 0 0 4px 0;
     }
 
     div.tooltip {
@@ -36,14 +39,23 @@ title: Congregation Timeline
     #clearBtn {
         display: none;
     }
+    
+    .row {
+        height: 80px;
+    }
 </style>
 <body>
     <div class="d-flex flex-wrap align-items-baseline">
         <h1>Congregation Timeline: Buildings</h1>
     </div>
-    <div class="d-flex align-items-baseline">
-        <span id='title' class="title"></span>
-        <button id="clearBtn" class='btn btn-link'>(show all)</button>    
+    <div class="row">
+    <div class="col-5">
+        <div class="d-flex align-items-baseline">
+            <span id='title' class="title"></span>
+            <button id="clearBtn" class='btn btn-link'>(show all)</button>    
+        </div>
+    </div>
+    <div class="col-7"><svg id="legend"></svg></div>
     </div>
     <div id="my_dataviz" class="svg-container"></div>
 </body>
@@ -68,8 +80,15 @@ title: Congregation Timeline
         // .attr("height", 10 + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + ",0)");
+    
 
-d3.csv("{{site.url}}/assets/data/congregations_bldgs_12_27_20-3.csv", function(data) {
+    const woven =textures.lines()
+   .heavier()
+    .size(10)
+  .stroke("#00608c");
+    svgM.call(woven);
+    
+d3.csv("{{site.url}}/assets/data/congregations_bldgs_3_18_21.csv", function(data) {
 console.log(data) 
     var index25 = data.findIndex(({ idcongregation }) => idcongregation === "25");
     if (index25 !== -1) {
@@ -97,10 +116,11 @@ console.log(data)
                 lat: parseFloat(d[0].bld_lat),
                 longitude: parseFloat(d[0].bld_long),
                 data: d,
-                amt: d.length
+                amt: d.length,
+                first_est: parseFloat(d[0].first_est)
             }
         })
-        .sort(function(a,b){return b.lat - a.lat})
+        .sort(function(a,b){return a.first_est - b.first_est})
         .value();
     _.each(locations, function(l,i){
         _.each(l.data, function(b,k){
@@ -156,12 +176,19 @@ console.log(data)
     let names = _.uniq(data.map(d=>d.idcongregation))
     console.log(names.length)
 
-    let color = d3.scaleOrdinal()
-        .domain(names) 
-        .range(chroma.scale(["#17becf","#1f77b4","#aec7e8","#f0027f","#f781bf","#ff7f0e","#ffbb78","#ffd92f","#98df8a", "#2ca02c", "#7b4173", "#a55194", "#ce6dbd", "#f1b6da"]).colors(names.length));
+    let colorScale = d3.scaleOrdinal()
+    .domain("sephardic", "ashkenazi", "sephardic-ashkenazi","Judeo-African")
+//        .domain(names) 
+    .range(["#bc5090","#00608c","#ff6361","#ffa600"])
+    
+    let colorCongregation = d3.scaleOrdinal()
+    .domain("sephardic", "ashkenazi", "sephardic-ashkenazi","Judeo-African")
+//        .domain(names) 
+    .range(["#e5a1c8","#81aed0","#ffaba2","#ffa600"])
+//        .range(chroma.scale(["#17becf","#1f77b4","#aec7e8","#f0027f","#f781bf","#ff7f0e","#ffbb78","#ffd92f","#98df8a", "#2ca02c", "#7b4173", "#a55194", "#ce6dbd", "#f1b6da"]).colors(names.length));
 
     const x = d3.scaleTime()
-        .domain([new Date(1597, 0, 1), new Date(1838, 0, 1)])
+        .domain([new Date(1597, 0, 1), new Date(1825, 0, 1)])
         .range([0, width]);
     svgM.append("g")
         .attr('id', 'xAxisDate')
@@ -180,7 +207,7 @@ _.each(locations, function(c, i, locations){
         .attr("preserveAspectRatio", "xMinYMin")
         .attr("viewBox", "0 0 1200 " + heightB )
         .classed("svg-content", true)
-        .attr("overflow", "hidden")
+//        .attr("overflow", "hidden")
         // .attr("width", width + margin.left + margin.right)
         // .attr("height", heightB)
         .style("background-color", function(l){
@@ -190,8 +217,86 @@ _.each(locations, function(c, i, locations){
         .append("g")
         .attr("transform", "translate(" + margin.left + ",0)");
     
+    
+          // Textures need to be generated multiple times,
+          // once for each color they are paired with.
+       var   textureGenerators = [
+//            function(){
+//              return textures.lines().heavier().size(2);
+//            },
+//            function(){
+//              return textures.lines().orientation("3/8", "7/8").heavier().size(2);
+//            },
+//           function(){
+//              return textures.lines().orientation("3/8", "7/8").heavier().size(2);
+//            },
+           function(){
+              return textures.lines().heavier().size(10);
+            }
+          ],
+          
+          // Create a scale that encapsulates texture mappings.
+          textureScale = d3.scaleOrdinal()
+            .domain(["sephardic", "ashkenazi","sephardic-ashkenazi","Judeo-African"])
+            .range(textureGenerators),
+
+          // Create a scale that encapsulates colors.
+          // Colors from http://colorbrewer2.org/
+//          colorScale = d3.scaleOrdinal()
+//            .domain(["sephardic", "ashkenazi"])
+//            .range(["#1b9e77", "#d95f02"]),
+          
+          // Create a nested ordinal scale for color and texture.
+          colorTextureScale = d3.scaleOrdinal()
+      
+            // The first level is for color.
+            .domain(colorScale.domain())
+            .range(colorScale.range().map(function(color){
+              
+              // The second level is for texture.
+              return d3.scaleOrdinal()
+                .domain(textureScale.domain())
+                .range(textureScale.range().map(function(generateTexture){
+
+                  // Generate a new texture for each (color, texture) pair.
+                  return colorizeTexture(generateTexture(), color);
+                }))
+            }));
+
+
+      // Makes the given texture appear as the given color.
+      function colorizeTexture(texture, color){
+
+        // Use stroke, present on all textures.
+        var texture = texture.stroke(color);
+
+        // Use fill, present only on some textures (e.g. "circles", not "lines").
+        if(texture.fill){
+          texture.fill(color);
+        }
+
+        return texture;
+      }
+      
+      // Initialize defs for each (texture, color) pair.
+      colorTextureScale.range().forEach(function(scale){
+        scale.range().forEach(svg.call, svg);
+      });
+    
+//const woven =textures.lines()
+//   .heavier()
+//    .size(10)
+////    .thinner(1.5)
+//  .stroke("lightgray");
+//    
+//    svg.call(woven);
+//svg.call(crosses);
+//svg.call(danish);
+//svg.call(french);
+//    svg.call(creole);
+    
     const x = d3.scaleTime()
-        .domain([new Date(1597, 0, 1), new Date(1838, 0, 1)])
+        .domain([new Date(1597, 0, 1), new Date(1825, 0, 1)])
         .range([0, width]);
     svg.append("g")
         .attr('id', 'xAxisDate')
@@ -205,17 +310,18 @@ _.each(locations, function(c, i, locations){
     const y = d3.scaleBand()
         .range([ 0, heightB])
         .domain(c.buildings.map(d=>d.idbuildings))
-        .padding(1);
+//        .padding(1)
+    ;
     svg.append("g")
         .call(d3.axisLeft(y))
         .call(g => g.select(".domain").attr("display", "none"))
         .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
         .call(g => g.selectAll(".tick").selectAll("text").attr("display", "none"));
 
-        var gradientFull = svg.append("defs").selectAll("linearGradient")
+    var gradientFull = svg.append("defs").selectAll("linearGradient")
         .data(c.buildings)
         .enter().append("linearGradient")
-        .attr("id", function(d){ return "gradient-" + d.idcongregation; })
+        .attr("id", function(d){ return "gradient-" + d.rite; })
         .attr("x1", "0%")
         .attr("x2", "100%")
         .attr("y1", "100%")
@@ -228,13 +334,13 @@ _.each(locations, function(c, i, locations){
             .attr("stop-opacity", 1);
             gradientFull.append("stop")
             .attr('class', 'start')
-            .attr("offset", "5%")
-            .attr("stop-color", function(d) {return color(d.idcongregation)})
+            .attr("offset", "15%")
+            .attr("stop-color", function(d) {return colorScale(d.rite)})
             .attr("stop-opacity", 1);
             gradientFull.append("stop")
             .attr('class', 'start')
-            .attr("offset", "95%")
-            .attr("stop-color", function(d) {return color(d.idcongregation)})
+            .attr("offset", "85%")
+            .attr("stop-color", function(d) {return colorScale(d.rite)})
             .attr("stop-opacity", 1);
             gradientFull.append("stop")
             .attr('class', 'end')
@@ -245,7 +351,7 @@ _.each(locations, function(c, i, locations){
     var gradientStart = svg.append("defs").selectAll("linearGradient")
         .data(c.buildings)
         .enter().append("linearGradient")
-        .attr("id", function(d){ return "gradientS-" + d.idcongregation; })
+        .attr("id", function(d){ return "gradientS-" + d.rite; })
         .attr("x1", "100%")
         .attr("x2", "0%")
         .attr("y1", "100%")
@@ -253,8 +359,8 @@ _.each(locations, function(c, i, locations){
 
         gradientStart.append("stop")
             .attr('class', 'start')
-            .attr("offset", "85%")
-            .attr("stop-color", function(d) {return color(d.idcongregation)})
+            .attr("offset", "75%")
+            .attr("stop-color", function(d) {return colorScale(d.rite)})
             .attr("stop-opacity", 1);
         gradientStart.append("stop")
             .attr('class', 'end')
@@ -265,7 +371,7 @@ _.each(locations, function(c, i, locations){
         var gradientEnd = svg.append("defs").selectAll("linearGradient")
             .data(c.buildings)
             .enter().append("linearGradient")
-            .attr("id", function(d){ return "gradientE-" + d.idcongregation; })
+            .attr("id", function(d){ return "gradientE-" + d.rite; })
             .attr("x1", "0%")
             .attr("x2", "100%")
             .attr("y1", "100%")
@@ -273,8 +379,8 @@ _.each(locations, function(c, i, locations){
 
             gradientEnd.append("stop")
                 .attr('class', 'start')
-                .attr("offset", "90%")
-                .attr("stop-color", function(d) {return color(d.idcongregation)})
+                .attr("offset", "80%")
+                .attr("stop-color", function(d) {return colorScale(d.rite)})
                 .attr("stop-opacity", 1);
             gradientEnd.append("stop")
                 .attr('class', 'end')
@@ -289,14 +395,21 @@ _.each(locations, function(c, i, locations){
         .append("rect")
         .attr("class", "building")
         .attr("x", function(d) { return x(new Date(parseFloat(d.yr_start),0,1))})
-        .attr("y", function(d) { return y(d.idbuildings)-4; })
+        .attr("y", function(d) { return y(d.idbuildings); })
         .attr("width", function(d) { 
             if(d.yr_end=="NULL") {return x(new Date(2020,0,1)) - x(new Date(parseFloat(d.yr_start),0,1)) }
             else {return x(new Date(parseFloat(d.yr_end),0,1)) - x(new Date(parseFloat(d.yr_start),0,1)) }
         })
-        .attr("height", 8)
+        .attr("height", 12)
         // .attr("fill", d=>color(d.idcongregation))
-        .attr("stroke", "#fff")
+        .attr("stroke", function(d){
+        if (d.rite==="Judeo-African"){return colorTextureScale(d.rite)(d.rite).url();}
+         if (d.purpose_built==="FALSE"){return colorTextureScale(d.rite)(d.rite).url();}
+        if (d.rite==="sephardic-ashkenazi" || d.idbuildings==33 || d.idbuildings==129){ return "#ffd6ed"}
+        if (d.rite==="sephardic"){ return "#c4e6ff"}
+            else {return "#ffd6d1"}
+//        else{return colorCongregation(d.rite)}
+          })
         .attr("stroke-width", 1)
         .style('cursor', 'pointer')
         .on('mouseover.tooltip', function(d) {
@@ -342,84 +455,41 @@ _.each(locations, function(c, i, locations){
 
     d3.selectAll(".building")
         .attr("fill", function(d) {
+        if (d.purpose_built==="FALSE"){return colorTextureScale(d.rite)(d.rite).url();}
+        if (d.idbuildings==33 || d.idbuildings==129){return "#bc5090"}
+         if (d.rite==="Judeo-African"){return colorTextureScale(d.rite)(d.rite).url();}
             if (d.year_opened_acc==="estimate" && d.year_nonextant==d.yr_end && d.year_non_acc==="estimate") 
-                {return "url(#gradient-" + d.idcongregation + ")";}
+                {return "url(#gradient-" + d.rite + ")";}
             if (d.year_nonextant===d.yr_end && d.year_non_acc==="estimate") 
-                {return "url(#gradientE-" + d.idcongregation + ")";}
+                {return "url(#gradientE-" + d.rite + ")";}
             if (d.year_opened_acc==="estimate") 
-                {return "url(#gradientS-" + d.idcongregation + ")";}
-            else {return color(d.idcongregation)}
+                {return "url(#gradientS-" + d.rite + ")";}
+            else {return colorScale(d.rite)}
         });
 
-    // svg.selectAll("emissary")
-    //     .data(c.rabbis.filter(d=>d.title=="Emissary"))
-    //     .enter().append("circle").attr("class", "rabbi")
-    //     .attr("cx", function(d) { 
-    //         if(d.year_start=="" && d.year_end !="") {return x(new Date(d.year_end,0,1)) }
-    //         else {return x(new Date(d.year_start,0,1)) }
-    //     })
-    //     .attr("cy", function(d) { return y(d.name); })
-    //     .attr("r", "6")
-    //     .attr("stroke", "#fff")
-    //     .attr("stroke-width", 1)
-    //     .style("fill", d=>{
-    //         if (d.amt<2){return "#B8B8B8"}
-    //         else {return color(d.idpeople)}
-    //     })
-    //     .style('cursor', 'pointer')
-    //     .on('mouseover.tooltip', function(d) {
-    //         div.transition()    
-    //             .duration(100)    
-    //             .style("opacity", 0.95);    
-    //         div.html( d.name +"</br>"+ d.congregation_name +"</br>" + d.title +"</br>" + d.year_start +"-"+ d.year_end +"</br>(" + d.cit_short + ")" )  
-    //             .style("left", (d3.event.pageX + 12) + "px")   
-    //             .style("top", (d3.event.pageY - 28) + "px");  
-    //     })          
-    //     .on('mouseout.tooltip', function(d) {   
-    //         div.transition()    
-    //             .duration(100)    
-    //             .style("opacity", 0); 
-    //     })
-    //     .on('click',function(d){
-    //         let current = d.idpeople
-    //         let cong = d.idcongregation
-    //         d3.selectAll('.rabbi')
-    //         .attr('fill-opacity', function(o) {
-    //                 if (o.idpeople === current){
-    //                     return 1;
-    //                 } else return 0.2;
-    //             });
-    //         d3.selectAll('.congregations')
-    //         .attr('opacity', function(o) {
-    //                 if (o.idcongregation === cong){
-    //                     return 1;
-    //                 } else return 0.1;
-    //             });
-
-    //         title.text('Rabbi: ' + d.name);
-    //         clearBtn.style('display', 'block').on('click', function(b){
-    //             d3.selectAll('.rabbi').attr('fill-opacity', 1);
-    //             d3.selectAll('.congregations').attr('opacity', 1);
-    //             title.text('');
-    //             clearBtn.style('display', 'none');
-    //         });
-    //     });
     
     svg.selectAll("myCircle")
         .data(c.buildings)
-        .enter().append("line")
+        .enter()
+        .append("line")
         .attr("class", "congregations")
         .attr("x1", function(d) { return x(new Date(parseFloat(d.year_est),0,1)); })
         .attr("x2", function(d) { return x(new Date(parseFloat(d.year_est),0,1)); })
-        .attr("y1", function(d) { return y(d.idbuildings)-8; })
-        .attr("y2", function(d) { return y(d.idbuildings)+8; })
-        .attr("stroke-width", 5)
-        .style("stroke", function(d){
-            // if (d.rite=="sephardic"){return "#00608c"}
-            // else {return "#d65ca2"}
-            return color(d.idcongregation)
-        })
+        .attr("y1", function(d) { return y(d.idbuildings)-2; })
+        .attr("y2", function(d) { return y(d.idbuildings)+13; })
+        .attr("stroke-width", 8)
+    .style("stroke", function(d){
+        if (d.rite==="Judeo-African"){return colorTextureScale(d.rite)(d.rite).url();}
+        if (d.rite==="sephardic-ashkenazi"){ return "#e5a1c8"}
+            else {return colorCongregation(d.rite)}
+          })
+//        .style("stroke", function(d){
+//             if (d.rite=="sephardic"){return woven.url()}
+//             else {return "#d65ca2"}
+////            return color(d.idcongregation)
+//        })
         .style('cursor', 'pointer')
+//    .attr("opacity", 0.5)
         .on('mouseover.tooltip', function(d) {
                 div.transition()    
                     .duration(100)    
@@ -473,38 +543,59 @@ _.each(locations, function(c, i, locations){
         .call(d3.axisLeft(yLabels))
         .call(g => g.select(".domain").attr("display", "none"))
         .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"));
-        
-        // .call(g => g.selectAll(".tick").selectAll("text").attr("cursor", "pointer").on('mouseover.tooltip', function(n) {
-        //     div.data(c.rabbis).enter();
-        //     div.transition()    
-        //         .duration(100)    
-        //         .style("opacity", 0.95);    
-        //     div .html( d=>d.congregation_name +"</br>"+ d.target_location + "</br>Est."+ d.year_est )  
-        //         .style("left", (d3.event.pageX + 12) + "px")   
-        //         .style("top", (d3.event.pageY - 28) + "px");  
-        //     })          
-        //     .on('mouseout.tooltip', function(d) {   
-        //         div.transition()    
-        //         .duration(100)    
-        //         .style("opacity", 0); 
-        //     })
-        // );
-    // var yLabels2 = d3.scaleBand()
-    //     .range([ heightB, 0 ])
-    //     .domain(c.buildings.filter(d=>d.target_location!="Amsterdam, Netherlands").map(d=>d.target_location))
-    //     .padding(1);
-    // svg.append("g")
-    //     .attr('class', 'label-loc')
-    //     .attr("color", "#333")
-    //     .style('font-size', '0.7rem')
-    //     .attr("transform", "translate(" + margin.left/3 + ",0)")
-    //     .call(d3.axisLeft(yLabels2))
-    //     .call(g => g.select(".domain").attr("display", "none"))
-    //     .call(g => g.selectAll(".tick").selectAll("line").attr("display", "none"))
-    //     .call(g => g.selectAll(".tick").selectAll("text"));
-    // d3.selectAll('.label-loc').attr('text-anchor', 'start');
-
-
+    
+    const colorLegend = d3.scaleOrdinal().range(["#00608c","#ff6361","#bc5090","#ffa600"]);
+    const legend = d3.select('#legend')
+            .attr('width', 800)
+            .attr('height', 80);
+        const legendNode =  legend.selectAll('path .node')
+            .data(['Sephardic Synagogue', 'Ashkenazi Synagogue', 'Sephardic Rites w/ Majority Ashkenazi Congregants','Judeo-African Brotherhood', 'Remodeled Space']).enter().append('path')
+            .attr('x', (d,i)=>(i*80)+70)
+            .attr('y', 15)
+            .attr('transform', (d,i)=>"translate(" + ((i*80)+70) + "," + 15 + ")")
+            .attr("d", d3.symbol()
+                    .size(d=>200) 
+                    .type(function(d) {return d3.symbolSquare}))
+            .attr("class", "node")
+            .style("fill", function(d){
+                if (d==="Remodeled Space"){return woven.url()}
+                else { return colorLegend(d)}
+            });
+        const legendNodeLabel = legend.selectAll('text .label')
+        .data(['Sephardic Synagogue', 'Ashkenazi Synagogue', 'Sephardic Rites w/ Majority Ashkenazi Congregants','Judeo-African Brotherhood', 'Remodeled Space'])
+        .enter().append('text').attr('class', 'label')
+            .attr('transform', (d,i)=>"translate(" + ((i*80)+70) + "," + 18 + ")")
+            .attr('y', 18)
+            .attr('dy', '.35em')
+            .attr('text-anchor', 'middle')
+        .attr("color", "#333")
+            .style('font-size', '0.7rem')
+            .text(d=>d)
+            .call(wrap, 80);
+    
+    function wrap(text, width) {
+          text.each(function() {
+            var text = d3.select(this),
+                words = text.text().split(/\s+/).reverse(),
+                word,
+                line = [],
+                lineNumber = 0,
+                lineHeight = 1.1, // ems
+                y = text.attr("y"),
+                dy = parseFloat(text.attr("dy")),
+                tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+            while (word = words.pop()) {
+              line.push(word);
+              tspan.text(line.join(" "));
+              if (tspan.node().getComputedTextLength() > width) {
+                line.pop();
+                tspan.text(line.join(" "));
+                line = [word];
+                tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+              }
+            }
+          });
+        }
 });
 
 });

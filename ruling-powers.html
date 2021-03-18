@@ -2,6 +2,7 @@
 layout: data-vis
 title: Colonial Powers
 ---
+<script src="https://unpkg.com/textures@1.2.0/dist/textures.js"></script>
 <style>
   .svg-container {
         display: inline-block;
@@ -61,12 +62,23 @@ var svg = d3.select("div#container")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("{{site.url}}/assets/data/synagogues-powers-1.csv", function(bldg){
-d3.csv("{{site.url}}/assets/data/congregations-powers-1.csv", function(cong){
-d3.csv("{{site.url}}/assets/data/ruling-powers-4.csv", function(data) {
+const woven =textures.lines().heavier().size(10).stroke("lightgray");
+const crosses = textures.lines().heavier().size(8).stroke("lightgray");
+const danish =  textures.circles().size(10).heavier().fill("#ffdcd0");
+const french = textures.circles().size(10).heavier().fill("#ccc");
+const creole =textures.lines().heavier().size(9).stroke("#00608c");
+svg.call(woven);
+svg.call(crosses);
+svg.call(danish);
+svg.call(french);
+svg.call(creole);
+
+d3.csv("{{site.url}}/assets/data/synagogues-powers-3-18-21.csv", function(bldg){
+d3.csv("{{site.url}}/assets/data/congregation-powers-3-18-21.csv", function(cong){
+d3.csv("{{site.url}}/assets/data/ruling-powers-3-18-21.csv", function(data) {
 
     const x = d3.scaleTime()
-        .domain([new Date(1580, 0, 1), new Date(1850, 0, 1)])
+        .domain([new Date(1600, 0, 1), new Date(1838, 0, 1)])
         .range([0, width]);
     svg.append("g")
         .attr('id', 'xAxisDate')
@@ -87,25 +99,32 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-4.csv", function(data) {
     .call(g => g.selectAll(".tick").selectAll("line").attr("stroke", "#D8D8D8").style("stroke-dasharray", "5 5").attr("x2", width))
     .call(g => g.selectAll(".tick").selectAll("text").attr("display", "none"));
     
-  svg.selectAll("myline")
+    svg.selectAll("myline")
     .data(data)
     .enter()
+//    .append('rect')
+//     .attr("x", function(d) { return x(new Date(d.year_start,0,1)); })
+//      .attr("y", function(d) { return y(d.lat)-5; })
+//    .attr("width", function(d) { return (x(new Date(d.year_end,0,1)))-(x(new Date(d.year_start,0,1))) })
+//    .attr("height", 10)
     .append("line")
       .attr("x1", function(d) { return x(new Date(d.year_start,0,1)); })
       .attr("x2", function(d) { return x(new Date(d.year_end,0,1)); })
       .attr("y1", function(d) { return y(d.lat); })
       .attr("y2", function(d) { return y(d.lat); })
       .attr("stroke", function(d){
-      if (d.idruling_powers <= 7) {return "#aaecdb";}
-      if (d.idruling_powers == 8 || d.idruling_powers == 9) {return "#e9c5f7"}
-      if (d.idruling_powers == 10 ) {return "#fff0c7"}
-      if (d.idruling_powers == 11 ) {return "#a3d3ff"}
+      if (d.idruling_powers <= 7){return "#e9c5f7";}
+      if (d.idruling_powers == 8 || d.idruling_powers == 9) {return "#aaecdb"}
+      if (d.idruling_powers == 10 )  {return french.url()}
+      if (d.idruling_powers == 11 ) { return woven.url() }
+//      {return "#a3d3ff"}
       if (d.idruling_powers == 12 || d.idruling_powers == 13) {return "#ffdcd0"}
-      if (d.idruling_powers == 14 ) {return "#c6cdff"}
+      if (d.idruling_powers == 14 ) { return crosses.url() }
+//      {return "#c6cdff"}
       if (d.idruling_powers == 15) {return "#fdcfe7"}
       else {return "#69b3a2"}})
-      .attr("stroke-width", "12px")
-    .style('cursor', 'pointer');
+      .attr("stroke-width", "15px");
+    // .style('cursor', 'pointer');
     // .on('mouseover.tooltip', function(d) {
     //         div.transition()    
     //             .duration(100)    
@@ -131,7 +150,9 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-4.csv", function(data) {
     .attr("stroke-width", 1)
       .style("fill", function(d){
           if (d.rite=="sephardic"){return "#00608c"}
-          else {return "#d65ca2"}
+     if (d.rite=="sephardic-ashkenazi"){return "#bc5090"}
+     if (d.rite=="Judeo-African Brotherhood"){return creole.url()}
+          else {return "#ff6361"}
       })
     .style('cursor', 'pointer')
     .on('mouseover.tooltip', function(d) {
@@ -156,9 +177,22 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-4.csv", function(data) {
       .attr("y", function(d) { return y(d.lat); })
     .attr("width", 10)
     .attr("height", 10)
-    .attr("stroke", "#fff")
-    .attr("stroke-width", 1)
-    .style("fill", "#ff6a66")
+    .attr("stroke", function(d){
+         if (d.purpose_built==="TRUE" && d.rite==="sephardic"){return "#00608c"}
+      if (d.purpose_built==="TRUE" && d.rite=="sephardic-ashkenazi"){return "#bc5090"}
+      if (d.purpose_built==="TRUE" && d.rite=="ashkenazi"){return "#ff6361"}
+        if (d.rite==="Judeo-African Brotherhood"){return creole.url()}
+          else {return "#fff"}
+//      #d65ca2
+      })
+    .attr("stroke-width", 3)
+    .style("fill", function(d){
+      if (d.purpose_built==="FALSE" && d.rite==="sephardic"){return "#00608c"}
+      if (d.purpose_built==="FALSE" && d.rite=="sephardic-ashkenazi"){return "#bc5090"}
+      if (d.purpose_built==="FALSE" && d.rite=="ashkenazi"){return "#ff6361"}
+    if (d.purpose_built==="FALSE" &&  d.rite==="Judeo-African Brotherhood"){return creole.url()}
+      else {return "#fff"}
+  })
     .attr("title", d=>d.city)
 .style('cursor', 'pointer')
     .on('mouseover.tooltip', function(d) {
@@ -181,6 +215,8 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-4.csv", function(data) {
         .domain(data.map(function(d){
             if (d.country=="United States"){ return d.city + ", US"; }
             else if (d.city=="Gibraltar"){ return d.city; }
+            else if (d.country=="Netherlands"){ return d.city; }
+            else if (d.city=="London"){ return d.city; }
             else if (d.city=="Montreal"){ return d.city+ ", Canada"; }
             else if (d.country=="Brazil"){ return "Pernambuco, Brazil"; }
             else {return d.country}
@@ -195,69 +231,120 @@ d3.csv("{{site.url}}/assets/data/ruling-powers-4.csv", function(data) {
 
 const color = d3.scaleOrdinal()
         .domain(['Dutch', 'British', 'Spanish', 'Portuguese', 'French', 'Danish', 'US'])
-        .range(['#e9c5f7','#aaecdb', '#a3d3ff','#c6cdff','#fff0c7','#ffdcd0','#fdcfe7']);
+        .range(['#aaecdb','#e9c5f7', '#a3d3ff','#c6cdff','#fff0c7','#ffdcd0','#fdcfe7']);
 
 const legend = d3.select('#legend')
             .attr('width', 500)
-            .attr('height', 75);
+            .attr('height', 80);
         const legendNode =  legend.selectAll('path .node')
             .data(['Dutch', 'British', 'Spanish', 'Portuguese', 'French', 'Danish', 'US']).enter().append('path')
             .attr('x', (d,i)=>(i*60)+60)
-            .attr('y', 25)
-            .attr('transform', (d,i)=>"translate(" + ((i*60)+60) + "," + 25 + ")")
+            .attr('y', 15)
+            .attr('transform', (d,i)=>"translate(" + ((i*60)+60) + "," + 15 + ")")
             .attr("d", d3.symbol()
                     .size(d=>200) 
                     .type(function(d) {return d3.symbolSquare}))
             .attr("class", "node")
-            .style("fill", function(d){return color(d)});
+            .style("fill", function(d){
+                if (d==="Spanish"){return woven.url()}
+                if (d==="Portuguese"){return crosses.url()}
+                if (d==="French"){return french.url()}
+                if (d==="Danish"){return "#ffdcd0"}
+                else{return color(d)}
+            });
         const legendNodeLabel = legend.selectAll('text .label')
         .data(['Dutch', 'British', 'Spanish', 'Portuguese', 'French', 'Danish', 'US'])
         .enter().append('text').attr('class', 'label')
-            .attr('transform', (d,i)=>"translate(" + ((i*60)+60) + "," + 25 + ")")
-            .attr('y', 25)
+            .attr('transform', (d,i)=>"translate(" + ((i*60)+60) + "," + 18 + ")")
+            .attr('y', 18)
             .attr('dy', '.35em')
             .attr('text-anchor', 'middle')
             .style('font-size', '0.7rem')
             .text(d=>d);
 
         const screen = d3.select('#screens')
-            .attr('width', 500)
-            .attr('height', 75);
+            .attr('width', 600)
+            .attr('height', 80);
         const screenNode =  screen.selectAll('path .node')
-            .data(['Sephardi Congregation', 'Ashkenazi Congregation', 'Synagogue']).enter()
+            .data(['Sephardic Congregation', 'Ashkenazi Congregation', 'Sephardic Rites w/ Majority Ashkenazi Congregants','Judeo-African Brotherhood', 'Purpose-built Synagogue', 'Remodeled Space']).enter()
             .append('path')
-            .attr('x', (d,i)=>(i*140)+60)
-            .attr('y', 25)
-            .attr('transform', (d,i)=>"translate(" + ((i*140)+60) + "," + 25 + ")")
+            .attr('x', (d,i)=>(i*100)+60)
+            .attr('y', 15)
+            .attr('transform', (d,i)=>"translate(" + ((i*100)+60) + "," + 15 + ")")
             .attr("d", d3.symbol()
                     .size(d=>160) 
                     .type(function(d) {
-                      if (d==="Synagogue"){return d3.symbolSquare}
+                      if (d==="Purpose-built Synagogue" || d==="Remodeled Space"){return d3.symbolSquare}
                       else {return d3.symbolCircle}
                     }))
             .attr("class", "node")
-            .attr("stroke", "#fff")
-            .attr("stroke-width", 1)
-            .style("fill", function(d){
-                if (d==="Sephardi Congregation"){
+            .attr("stroke", function(d){
+                if (d==="Purpose-built Synagogue"){
                     return "#00608c"
                 }
+                else {return "#fff"}
+            })
+            .attr("stroke-width", function(d){
+                if (d==="Purpose-built Synagogue" || d==="Remodeled Space"){
+                    return 3
+                }
+                else {return 1}
+            })
+            .style("fill", function(d){
+                if (d==="Sephardic Congregation"){
+                    return "#00608c"
+                }
+                if (d==="Sephardic Rites w/ Majority Ashkenazi Congregants"){
+                    return "#bc5090"
+                }
                 if (d==="Ashkenazi Congregation"){
-                    return "#d65ca2"
+                    return "#ff6361"
                 }
-                if (d==="Synagogue"){
-                    return "#ff6a66"
+                 if (d==="Judeo-African Brotherhood"){
+                    return creole.url()
                 }
+                if (d==="Purpose-built Synagogue"){
+                    return "#fff"
+                }
+                if (d==="Remodeled Space"){
+                    return "#00608c"
+                }
+                
             });
         const screenNodeLabel = screen.selectAll('text .label')
-            .data(['Sephardi Congregation', 'Ashkenazi Congregation', 'Synagogue'])
+            .data(['Sephardic Congregation', 'Ashkenazi Congregation', 'Sephardic Rites w/ Majority Ashkenazi Congregants','Judeo-African Brotherhood', 'Purpose-built Synagogue','Remodeled Space'])
             .enter().append('text').attr('class', 'label')
-            .attr('transform', (d,i)=>"translate(" + ((i*140)+60) + "," + 25 + ")")
-            .attr('y', 25)
+            .attr('transform', (d,i)=>"translate(" + ((i*100)+60) + "," + 18 + ")")
+            .attr('y', 18)
             .attr('dy', '.35em')
             .attr('text-anchor', 'middle')
             .style('font-size', '0.7rem')
-            .text(d=>d);
+            .text(d=>d)
+            .call(wrap, 80);
+    
+        function wrap(text, width) {
+          text.each(function() {
+            var text = d3.select(this),
+                words = text.text().split(/\s+/).reverse(),
+                word,
+                line = [],
+                lineNumber = 0,
+                lineHeight = 1.1, // ems
+                y = text.attr("y"),
+                dy = parseFloat(text.attr("dy")),
+                tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+            while (word = words.pop()) {
+              line.push(word);
+              tspan.text(line.join(" "));
+              if (tspan.node().getComputedTextLength() > width) {
+                line.pop();
+                tspan.text(line.join(" "));
+                line = [word];
+                tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+              }
+            }
+          });
+        }
 
 })
 }) })
