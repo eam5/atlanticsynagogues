@@ -2,6 +2,7 @@
 layout: data-vis
 title: Synagogues
 ---
+<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
 <style>
     .svg-container {
         display: inline-block;
@@ -24,13 +25,16 @@ title: Synagogues
     .label:hover {
         text-decoration: underline;
     }
+    text.label {
+        text-anchor: middle;
+    }
 </style>
 
 <div id='axis-buttons'></div>
 <div id="container" class="svg-container"></div>
 
 <script>
-    const margin = {top: 40, right: 10, bottom: 40, left: 10},
+    const margin = {top: 40, right: 10, bottom: 40, left: 100},
         width = 1200 - margin.left - margin.right,
         height = 1800 - margin.top - margin.bottom;
         

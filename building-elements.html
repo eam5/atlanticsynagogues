@@ -1,0 +1,227 @@
+---
+layout: data-vis
+title: Building Elements Table
+---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style>
+    #chart {
+        overflow-x: scroll;
+    }
+    
+</style>
+<h1>Building Elements Table</h1>
+<h4>Filter by architectural element type:</h4>
+<div class="d-flex justify-content-start mt-3">
+    <div id="filter" class="d-flex flex-column form-item form-checkboxes checkbox">
+        <form method="post" action="" class="form"></form>
+    </div>    
+<div id="chart"></div>
+</div>
+<script>
+
+    /////////////////////
+    // Begin Chart stuff
+    /////////////////////
+
+    d3.csv("{{site.url}}/assets/data/bldg_union_all_w_sec_2_17_21.csv", function (error, graph) {
+        const csv = _.chain(graph)
+            .sort(function(a,b){return parseFloat(a.year_opened) - parseFloat(b.year_opened)})
+            .value();
+        
+
+
+        // Build collator to sort arrays naturally (e.g. ['v001', 'v4', 'v6', 'v11', 'v1'].sort(collator.compare) outputs ["v001", "v1", "v4", "v6", "v11"] )
+        var collator = new Intl.Collator(undefined, {
+            numeric: true,
+            sensitivity: 'base'
+        });
+
+
+        /////////////////////////////////////////
+        // Data loading and checkbox rendering
+        /////////////////////////////////////////
+
+        // Filter on this column
+        var filter_on = 'element_type'
+
+        // Building an array with the values to filter on
+        var filter_list = d3.map(csv, function (d) {
+            return d[filter_on];
+        }).keys()
+
+        // Sort filter_list naturally
+        filter_list.sort(collator.compare);
+
+        // Building the filter checkboxes
+        d3.select("#filter")
+            .selectAll("input")
+            .data(filter_list)
+            .enter()
+            .append("label")
+            .append("input")
+            .attr("type", "checkbox")
+            .attr("class", "filter-check")
+            .attr("value", function (d) {
+                return d
+            })
+            .attr("id", function (d) {
+                return d
+            });
+
+        d3.selectAll("label")
+            .data(filter_list)
+            .attr("class", "checkbox")
+            .append("text").text(function (d) {
+                return " " + d
+            })
+
+
+        // Parsing URL parameters and filter data: Look at the URL parameters and adjust the data accordingly
+        // We'll use encodeURIComponent and decodeURIComponent to get the values we want to 
+        // filter on from the URL, and also to change the URL when we filter with the checkboxes
+
+        // URL parameter parse. Using a simple version, we don't need key and values, 
+        // just an URI encoded version of the value we want to sort on
+        function parseURLParameters() {
+            var query = (window.location.search || '?').substr(1),
+                map = [];
+            query.replace(/([^&=]+)=?([^&]*)(?:&+|$)/g, function (match, key, value) {
+                map.push(key);
+            });
+            return map;
+        }
+
+        var choices = parseURLParameters(window.location.href)
+
+        // Bad URL parameter management (e.g. if '&foo' gets tacked onto the URL, we delete it)
+        choices = _.remove(choices, function (d) {
+            return _.includes(encodeURIComponent(filter_list), d);
+        })
+
+        // var to tack behind the URL if needed
+        var URL = choices.join('&')
+
+        if (choices == undefined) {
+            var choices = []
+        } // if no parameters, change to empty array instead of undefined
+        if (choices.length > 0) {
+            // Set the URL in case the URL was messy
+            window.history.pushState({
+                page: choices
+            }, choices, window.location.pathname + "?" + URL);
+            for (i = 0; i < choices.length; i++) {
+                document.getElementById(decodeURIComponent(choices[i])).checked = true;
+            }
+            data = csv.filter(function (d) {
+                return _.includes(decodeURIComponent(choices), d[filter_on])
+            });
+        } else {
+            // Set the URL in case the URL was messy
+            window.history.pushState({
+                page: choices
+            }, choices, window.location.pathname);
+            data = csv;
+        }
+
+        //////////////////////////////////////////
+        // Build table for the first time
+        //////////////////////////////////////////
+
+        function tabulate(data, columns) {
+            var table = d3.select('#chart').append('table').attr("class", "table table-sm")
+            var thead = table.append('thead')
+            var tbody = table.append('tbody');
+
+            // append the header row
+            thead.append('tr')
+                .selectAll('th')
+                .data(columns).enter()
+                .append('th')
+                .text(function (column) {
+                    return column;
+                });
+
+            // create a row for each object in the data
+            var rows = tbody.selectAll('tr')
+                .data(data)
+                .enter()
+                .append('tr');
+
+            // create a cell in each row for each column
+            var cells = rows.selectAll('td')
+                .data(function (row) {
+                    return columns.map(function (column) {
+                        return {
+                            column: column,
+                            value: row[column]
+                        };
+                    });
+                })
+                .enter()
+                .append('td')
+                .text(function (d) {
+                    return d.value;
+                });
+
+            return table;
+        }
+
+        // render the table(s)
+        tabulate(data, ['building_name', 'year_opened', 'element_type', 'filter_on', 'comp_quant', 'year_added', 'location', 'cit_short', 'pg']); // 4 column table
+
+
+        ///////////////////////////////////
+        // Update chart on checkbox change
+        //////////////////////////////////
+        var checkBox = d3.selectAll(".filter-check")
+        checkBox.on("change", function () {
+
+
+            ////////////////////////////
+            // Manage data and URL state
+            ////////////////////////////
+
+            // When checkbox changes, refresh choices array with checked values
+            var choices = []
+            var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+            for (var i = 0; i < checkboxes.length; i++) {
+                choices.push(encodeURIComponent(checkboxes[i].value))
+            }
+            // feeding data filtered from choices array
+            if (choices.length > 0) {
+                data = csv.filter(function (d, i) {
+                    return _.includes(decodeURIComponent(choices), d[filter_on]);
+                });
+            } else {
+                data = csv; // so that no boxes checked shows all data
+            }
+            // update url with help of new choices array
+            var URL = choices.join('&').replace(/\s/g, "=")
+            if (choices.length > 0) {
+                window.history.pushState({
+                    page: choices
+                }, choices, window.location.pathname + "?" + URL);
+            }
+            // remove ? at end of URL if checkboxes are empty again
+            else {
+                window.history.pushState({
+                    page: choices
+                }, choices, window.location.pathname);
+            }
+
+
+            /////////////////////////////////////////////////////////////////////////////////////////////
+            // Rebuilding the table
+            // (this is quick and dirty, adjust accordingly to add a proper enter, exit, update pattern)
+            /////////////////////////////////////////////////////////////////////////////////////////////
+
+            d3.select("table").remove();
+            tabulate(data, ['building_name', 'year_opened', 'element_type', 'filter_on', 'comp_quant', 'year_added', 'location', 'cit_short', 'pg']); // 4 column table
+
+
+        }); ////////////// //////////////////////////
+        // End on checkbox change update function
+        /////////////////////////////////////////
+
+    });
+</script>
