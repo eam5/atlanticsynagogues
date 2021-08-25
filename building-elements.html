@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Building Elements Table - Atlantic Synagogues</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+    <!-- d3 and others -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js'></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/gka/chroma.js/master/chroma.min.js"></script> 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script> -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="https://eam5.github.io/atlanticsynagogues">Atlantic Synagogues</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+         
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Maps
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/map">Synagogue Map</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/migrations">Migrations</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/rabbi-map">Rabbi Locations</a>
+              
+            </div>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Timelines
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/ruling-powers">Ruling Colonial Powers</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/populations">Atlantic Jewish Populations</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/congregation-timeline">Congregations & Synagogues</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/rabbi-timeline">Rabbis</a>
+              
+            </div>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Data Visualizations
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/contributions">Contributions</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/access-paths">Access Paths</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/allbldgs_allfac">Facade Fractal Trees</a>
+              
+            </div>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+          </li>
+          
+          
+         
+
+          <!-- 
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues">Maps</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues">Timelines</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues">Data Visualizations</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+            
+           -->
+        </ul>
+  </div>
+</nav>
+    <div id="main" class="container-fluid">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style>
+    #chart {
+        overflow-x: scroll;
+    }
+    
+</style>
+<h1>Building Elements Table</h1>
+<h4>Filter by architectural element type:</h4>
+<div class="d-flex justify-content-start mt-3">
+    <div id="filter" class="d-flex flex-column form-item form-checkboxes checkbox">
+        <form method="post" action="" class="form"></form>
+    </div>    
+<div id="chart"></div>
+</div>
+<script>
+
+    /////////////////////
+    // Begin Chart stuff
+    /////////////////////
+
+    d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/bldg_union_all_w_sec_2_17_21.csv", function (error, graph) {
+        const csv = _.chain(graph)
+            .sort(function(a,b){return parseFloat(a.year_opened) - parseFloat(b.year_opened)})
+            .value();
+        
+
+
+        // Build collator to sort arrays naturally (e.g. ['v001', 'v4', 'v6', 'v11', 'v1'].sort(collator.compare) outputs ["v001", "v1", "v4", "v6", "v11"] )
+        var collator = new Intl.Collator(undefined, {
+            numeric: true,
+            sensitivity: 'base'
+        });
+
+
+        /////////////////////////////////////////
+        // Data loading and checkbox rendering
+        /////////////////////////////////////////
+
+        // Filter on this column
+        var filter_on = 'element_type'
+
+        // Building an array with the values to filter on
+        var filter_list = d3.map(csv, function (d) {
+            return d[filter_on];
+        }).keys()
+
+        // Sort filter_list naturally
+        filter_list.sort(collator.compare);
+
+        // Building the filter checkboxes
+        d3.select("#filter")
+            .selectAll("input")
+            .data(filter_list)
+            .enter()
+            .append("label")
+            .append("input")
+            .attr("type", "checkbox")
+            .attr("class", "filter-check")
+            .attr("value", function (d) {
+                return d
+            })
+            .attr("id", function (d) {
+                return d
+            });
+
+        d3.selectAll("label")
+            .data(filter_list)
+            .attr("class", "checkbox")
+            .append("text").text(function (d) {
+                return " " + d
+            })
+
+
+        // Parsing URL parameters and filter data: Look at the URL parameters and adjust the data accordingly
+        // We'll use encodeURIComponent and decodeURIComponent to get the values we want to 
+        // filter on from the URL, and also to change the URL when we filter with the checkboxes
+
+        // URL parameter parse. Using a simple version, we don't need key and values, 
+        // just an URI encoded version of the value we want to sort on
+        function parseURLParameters() {
+            var query = (window.location.search || '?').substr(1),
+                map = [];
+            query.replace(/([^&=]+)=?([^&]*)(?:&+|$)/g, function (match, key, value) {
+                map.push(key);
+            });
+            return map;
+        }
+
+        var choices = parseURLParameters(window.location.href)
+
+        // Bad URL parameter management (e.g. if '&foo' gets tacked onto the URL, we delete it)
+        choices = _.remove(choices, function (d) {
+            return _.includes(encodeURIComponent(filter_list), d);
+        })
+
+        // var to tack behind the URL if needed
+        var URL = choices.join('&')
+
+        if (choices == undefined) {
+            var choices = []
+        } // if no parameters, change to empty array instead of undefined
+        if (choices.length > 0) {
+            // Set the URL in case the URL was messy
+            window.history.pushState({
+                page: choices
+            }, choices, window.location.pathname + "?" + URL);
+            for (i = 0; i < choices.length; i++) {
+                document.getElementById(decodeURIComponent(choices[i])).checked = true;
+            }
+            data = csv.filter(function (d) {
+                return _.includes(decodeURIComponent(choices), d[filter_on])
+            });
+        } else {
+            // Set the URL in case the URL was messy
+            window.history.pushState({
+                page: choices
+            }, choices, window.location.pathname);
+            data = csv;
+        }
+
+        //////////////////////////////////////////
+        // Build table for the first time
+        //////////////////////////////////////////
+
+        function tabulate(data, columns) {
+            var table = d3.select('#chart').append('table').attr("class", "table table-sm")
+            var thead = table.append('thead')
+            var tbody = table.append('tbody');
+
+            // append the header row
+            thead.append('tr')
+                .selectAll('th')
+                .data(columns).enter()
+                .append('th')
+                .text(function (column) {
+                    return column;
+                });
+
+            // create a row for each object in the data
+            var rows = tbody.selectAll('tr')
+                .data(data)
+                .enter()
+                .append('tr');
+
+            // create a cell in each row for each column
+            var cells = rows.selectAll('td')
+                .data(function (row) {
+                    return columns.map(function (column) {
+                        return {
+                            column: column,
+                            value: row[column]
+                        };
+                    });
+                })
+                .enter()
+                .append('td')
+                .text(function (d) {
+                    return d.value;
+                });
+
+            return table;
+        }
+
+        // render the table(s)
+        tabulate(data, ['building_name', 'year_opened', 'element_type', 'filter_on', 'comp_quant', 'year_added', 'location', 'cit_short', 'pg']); // 4 column table
+
+
+        ///////////////////////////////////
+        // Update chart on checkbox change
+        //////////////////////////////////
+        var checkBox = d3.selectAll(".filter-check")
+        checkBox.on("change", function () {
+
+
+            ////////////////////////////
+            // Manage data and URL state
+            ////////////////////////////
+
+            // When checkbox changes, refresh choices array with checked values
+            var choices = []
+            var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+            for (var i = 0; i < checkboxes.length; i++) {
+                choices.push(encodeURIComponent(checkboxes[i].value))
+            }
+            // feeding data filtered from choices array
+            if (choices.length > 0) {
+                data = csv.filter(function (d, i) {
+                    return _.includes(decodeURIComponent(choices), d[filter_on]);
+                });
+            } else {
+                data = csv; // so that no boxes checked shows all data
+            }
+            // update url with help of new choices array
+            var URL = choices.join('&').replace(/\s/g, "=")
+            if (choices.length > 0) {
+                window.history.pushState({
+                    page: choices
+                }, choices, window.location.pathname + "?" + URL);
+            }
+            // remove ? at end of URL if checkboxes are empty again
+            else {
+                window.history.pushState({
+                    page: choices
+                }, choices, window.location.pathname);
+            }
+
+
+            /////////////////////////////////////////////////////////////////////////////////////////////
+            // Rebuilding the table
+            // (this is quick and dirty, adjust accordingly to add a proper enter, exit, update pattern)
+            /////////////////////////////////////////////////////////////////////////////////////////////
+
+            d3.select("table").remove();
+            tabulate(data, ['building_name', 'year_opened', 'element_type', 'filter_on', 'comp_quant', 'year_added', 'location', 'cit_short', 'pg']); // 4 column table
+
+
+        }); ////////////// //////////////////////////
+        // End on checkbox change update function
+        /////////////////////////////////////////
+
+    });
+</script>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

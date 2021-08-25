@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Building Elements Table - Atlantic Synagogues</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://eam5.github.io/atlanticsynagogues/assets/css/main.css">
+    <!-- d3 and others -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js'></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/gka/chroma.js/master/chroma.min.js"></script> 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script> -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="https://eam5.github.io/atlanticsynagogues">Atlantic Synagogues</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+         
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Maps
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/map">Synagogue Map</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/migrations">Migrations</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/rabbi-map">Rabbi Locations</a>
+              
+            </div>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Timelines
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/ruling-powers">Ruling Colonial Powers</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/populations">Atlantic Jewish Populations</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/congregation-timeline">Congregations & Synagogues</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/rabbi-timeline">Rabbis</a>
+              
+            </div>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Data Visualizations
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/contributions">Contributions</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/access-paths">Access Paths</a>
+              
+              <a class="dropdown-item" href="https://eam5.github.io/atlanticsynagogues/allbldgs_allfac">Facade Fractal Trees</a>
+              
+            </div>
+          </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+          </li>
+          
+          
+         
+
+          <!-- 
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/index-tree">Synagogues</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/images">Images</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues">Maps</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues">Timelines</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues">Data Visualizations</a>
+          
+          <a class="nav-item nav-link" href="https://eam5.github.io/atlanticsynagogues/site-index">Site Index</a>
+            
+           -->
+        </ul>
+  </div>
+</nav>
+    <div id="main" class="container-fluid">
+      <style>
+    #chart {
+        overflow-x: scroll;
+    }
+    
+</style>
+<h1>Building Elements Table</h1>
+<h4>Filter by architectural element type:</h4>
+<div id="FilterableTable"></div>
+<div class="d-flex justify-content-start mt-3">
+<div id="chart"></div>
+</div>
+<script>
+
+d3.select("#FilterableTable").append("div")
+  .attr("class", "SearchBar")
+  .append("p")
+    .attr("class", "SearchBar")
+    .text("Search By Building Name:");
+
+d3.select(".SearchBar")
+  .append("input")
+    .attr("class", "SearchBar")
+    .attr("id", "search")
+    .attr("type", "text")
+    .attr("placeholder", "Search...");
+
+    /////////////////////
+    // Begin Chart stuff
+    /////////////////////
+
+    d3.csv("https://eam5.github.io/atlanticsynagogues/assets/data/bldg_union_all_w_sec_2_17_21.csv", function (error, graph) {
+        const data = _.chain(graph)
+            .sort(function(a,b){return parseFloat(a.year_opened) - parseFloat(b.year_opened)})
+            .value();
+        
+
+        const columns = ['building_name', 'year_opened', 'element_type', 'filter_on', 'comp_quant', 'year_added', 'location', 'cit_short', 'pg'];
+        
+
+        //////////////////////////////////////////
+        // Build table for the first time
+        //////////////////////////////////////////
+
+        // function tabulate(data, columns) {
+            var table = d3.select('#chart').append('table')
+                .attr("id", "table")
+                .attr("data-search", true)
+                .attr("data-custom-search","customSearch")
+                .attr("class", "table table-sm")
+            var thead = table.append('thead')
+            var tbody = table.append('tbody');
+
+            // append the header row
+            thead.append('tr')
+                .selectAll('th')
+                .data(columns).enter()
+                .append('th')
+                .text(function (column) {
+                    return column;
+                });
+
+            // create a row for each object in the data
+            var rows = tbody.selectAll('tr')
+                .data(data)
+                .enter()
+                .append('tr');
+
+            // create a cell in each row for each column
+            var cells = rows.selectAll('td')
+                .data(function (row) {
+                    return columns.map(function (column) {
+                        return {
+                            column: column,
+                            value: row[column]
+                        };
+                    });
+                })
+                .enter()
+                .append('td')
+                .text(function (d) {
+                    return d.value;
+                });
+
+            // return table;
+
+            /**  search functionality **/
+d3.select("#search")
+      .on("keyup", function() { // filter according to key pressed 
+        var searched_data = data,
+            text = this.value.trim();
+        
+        var searchResults = searched_data.map(function(r) {
+          var regex = new RegExp("^" + text + ".*", "i");
+          if (regex.test(r.building_name)) { // if there are any results
+            return regex.exec(r.building_name)[0]; // return them to searchResults
+          } 
+        })
+	    
+	    // filter blank entries from searchResults
+        searchResults = searchResults.filter(function(r){ 
+          return r != undefined;
+        })
+        
+        // filter dataset with searchResults
+        searched_data = searchResults.map(function(r) {
+           return data.filter(function(p) {
+            return p.building_name.indexOf(r) != -1;
+          })
+        })
+
+        // flatten array 
+		searched_data = [].concat.apply([], searched_data)
+        
+        // data bind with new data
+		rows = table.select("tbody").selectAll("tr")
+		  .data(searched_data, function(d){ return d.id; })
+		
+        // enter the rows
+        rows.enter()
+         .append("tr");
+         
+        // enter td's in each row
+        row_entries = rows.selectAll("td")
+            .data(function(d) { 
+              var arr = [];
+              for (var k in d) {
+                if (d.hasOwnProperty(k)) {
+		          arr.push(d[k]);
+                }
+              }
+              return [arr[3],arr[1],arr[2],arr[0]];
+            })
+          .enter()
+            .append("td") 
+
+        // draw row entries with no anchor 
+        row_entries_no_anchor = row_entries.filter(function(d) {
+          return (/https?:\/\//.test(d) == false)
+        })
+        row_entries_no_anchor.text(function(d) { return d; })
+
+        // draw row entries with anchor
+        row_entries_with_anchor = row_entries.filter(function(d) {
+          return (/https?:\/\//.test(d) == true)  
+        })
+        row_entries_with_anchor
+          .append("a")
+          .attr("href", function(d) { return d; })
+          .attr("target", "_blank")
+        .text(function(d) { return d; })
+        
+        // exit
+        rows.exit().remove();
+      })
+
+        // }
+
+        // render the table(s)
+        // tabulate(data, ); // 4 column table
+
+
+
+
+    });
+</script>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
